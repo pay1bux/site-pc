@@ -1,0 +1,77 @@
+/* ------------------->>> Button Styles <<<-----------------------*/
+button {
+	border: 0; 
+	cursor: pointer; 
+	font-weight: bold;
+	text-align: center;
+	outline: 0;
+}
+
+button span { 
+	position: relative; 
+	display: block; 
+	white-space: nowrap; 
+	padding: 0 0 0 11px; 
+	margin-right: 14px;
+}
+button.submitButton {
+	background: url(../images/slidingDoors/button-right.png) right no-repeat; 
+	font-weight: normal;
+}
+button.submitButton:hover {
+	/*background: url(../images/slidingDoors/button-hover-right.png) right no-repeat; */
+}
+
+button.submitButton span { 
+	font-size: 17px; 
+	height: 31px; 
+	line-height: 30px;
+	background: url(../images/slidingDoors/button-left.png) left no-repeat;
+	color: #ffffff; 
+	font-weight: bold;
+	padding-left: 18px;
+	text-transform: none;
+}
+button.submitButton:hover span {
+	color: #dbf1e0;
+	/*background: url(../images/slidingDoors/button-hover-left.png) left no-repeat;*/
+}
+
+
+button.submitButton2 {
+	width: 167px;
+	height: 26px;
+	margin-left: 3px;
+	margin-top: 2px;
+	background: url(../images/class/add-to-calendar.png) right no-repeat; 
+	font-weight: normal;
+}
+button.submitButton2:hover {
+	background: url(../images/class/add-to-calendar-hover.png) right no-repeat; 
+}
+
+
+* html button { 
+	width: auto; 
+	overflow: visible;
+	position: relative;
+	margin-top: -4px;
+}
+
+* html button span { 
+	margin-top: 4px;
+}
+
+*:first-child+html button { 
+	width: auto; 
+	overflow: visible; 
+}
+ /*FOR IE7*/
+*:first-child+html button{ 
+	margin-top: -2px;
+}
+ /*FOR IE7*/
+*:first-child+html button span{ 
+	margin-top: 0px;
+}
+
