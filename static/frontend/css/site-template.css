@@ -1,0 +1,176 @@
+/*******************************************************************************/
+/*                                  CONTENT                                    */
+/*
+	
+	- LAYOUT (html, body, wrapper, header, footer and others containers position on the stage)
+	- HEADER
+	- CONTENT
+	- FOOTER
+	- GENERAL (global tag styles: H1, H2, etc, a, p, input and other general classes for floating, clearing, etc)
+	
+*/
+/*******************************************************************************/
+
+
+
+/****************** >     LAYOUT      < ******************/
+* {
+	margin: 0;
+	padding: 0;
+	font-family: Tahoma, Geneva, Kalimati, sans-serif;
+}
+
+
+html, body {
+	height: 100%;
+	min-width: 1010px;
+}
+
+body {
+	color: #343e33;
+	font-size: 12px;
+	line-height: 20px;
+	text-align: center;
+	background: url("../images/common/bg-content.png") repeat-y scroll center top;
+}
+
+img {
+	border: 0 none;
+	display: block;
+}
+
+#header-wrapper {
+	background: url("../images/common/bg-header.png") no-repeat scroll center top;
+	min-width: 1010px;
+}
+
+#header {
+	height: 414px;
+	margin: 0 auto;
+	position: relative;
+	width: 980px;
+}
+
+a {
+    outline-style: none;
+    text-decoration: none;
+}
+
+#logo {
+	left: 0px;
+	position: absolute;
+	top: 0px;
+}
+
+#lamp {
+	right: -73px;
+	position: absolute;
+	top: 0px;
+	z-index: 5;
+}
+
+#tools {
+	right: 0px;
+	position: absolute;
+	bottom: -77px;
+	z-index: 4;
+}
+
+#banner {
+	left: 0px;
+	bottom: 80px;
+	z-index: 3;
+	position: absolute;
+}
+
+#content {
+	margin:0 auto;
+	padding-bottom:15px;
+	padding-top: 35px;
+	position:relative;
+	text-align:left;
+	width:980px;
+}
+
+#content-wrapper {
+	background: url("../images/common/bg-content-top.png") no-repeat scroll center top;
+	min-width: 1010px;
+}
+
+#footer {
+	color: #2e524a;
+	font-size: 10px;
+}
+
+
+#content-middle {
+	min-height: 400px; /*firefox, opera, ie7 */
+    height: auto !important; /*firefox, opera, ie7 */
+    height: 400px; /* ie6 */
+}
+
+#content-left {
+	float: left;
+	width: 640px;
+	padding-right: 55px;
+}
+
+#content-right {
+	float: left;
+	width: 285px;	
+}
+
+
+	#main-menu {
+		list-style-type: none;
+		position: absolute;
+		top: 305px;
+		left: 0px;
+		/*width: 651px;*/
+		height: 94px;
+		z-index: 5;
+	}
+		#main-menu li {
+			float: left;
+		}
+			#main-menu a {
+				height: 94px;
+				text-decoration: none;
+				display: block;
+				float: left;
+				background: url(../images/common/menu.png) no-repeat;
+				text-indent: -9999em;
+			}
+			
+			#main-menu .item1, #main-menu .item1-active {
+				width: 168px; background-position: 0px 0px;
+			}
+			#main-menu .item1:hover, #main-menu .item1:focus, #main-menu .item1-active {
+				background-position: 0px -94px;
+			}
+			
+			#main-menu .item2, #main-menu .item2-active {
+				width: 157px; background-position: -168px 0px;
+			}
+			#main-menu .item2:hover, #main-menu .item2:focus, #main-menu .item2-active {
+				background-position: -168px -94px;
+			}
+			
+			#main-menu .item3, #main-menu .item3-active {
+				width: 160px; background-position: -325px 0px;
+			}
+			#main-menu .item3:hover, #main-menu .item3:focus, #main-menu .item3-active {
+				background-position: -325px -94px;
+			}
+			
+			#main-menu .item4, #main-menu .item4-active {
+				width: 168px; background-position: -485px 0px;
+			}
+			#main-menu .item4:hover, #main-menu .item4:focus, #main-menu .item4-active {
+				background-position: -485px -94px;
+			}
+			
+
+
+
+

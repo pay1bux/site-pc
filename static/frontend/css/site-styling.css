@@ -1,0 +1,88 @@
+.dotted-bottom {
+	background:url("../images/common/border.png") repeat-x left bottom;
+}
+
+h1 {
+	line-height: 34px;
+	font-size: 30px;
+	font-weight: bold;
+}
+
+ul.gallery  {
+	list-style-type:none;
+}
+
+.gallery li {
+	float: left;
+	margin-right: 12px;
+	margin-bottom: 12px;
+}
+
+.gallery img {
+	border: 1px solid #cfcfc7;
+    padding: 2px;
+}
+
+.gallery img:hover {
+    border: 1px solid #769279;
+}
+
+ul.portofoliu  {
+	list-style-type:none;
+}
+
+.portofoliu li {
+	display: block;
+}
+
+ul.servicii  {
+	list-style-type:none;
+}
+
+.servicii li {
+	display: block;
+}
+
+h2 {
+	line-height: 30px;
+	font-size: 18px;
+	color: #cd4a3c;
+}
+h3 {
+	font-size: 14px;
+}
+
+ul.diplome  {
+	list-style-type:none;
+}
+
+.diplome li {
+	float: left;
+	margin-right: 12px;
+	margin-bottom: 12px;
+}
+
+ul.albume  {
+	list-style-type:none;
+}
+
+.albume li {
+	display: block;
+	margin-bottom: 12px;
+}
+
+.albume a {
+	color: #343e33;
+	text-decoration: none;
+	font-size: 14px;
+	font-weight: bold;
+}
+
+.albume a:hover {
+	text-decoration: none;
+	color: #cd4a3c;
+}
+
+.albume a.active {
+	color: #cd4a3c;
+}

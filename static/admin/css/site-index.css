@@ -1,0 +1,175 @@
+/**************************************/
+/*              LAYOUT                */
+/**************************************/
+* {
+	margin: 0;
+	padding: 0;
+	font-family: Tahoma, Geneva, Kalimati, sans-serif;
+}
+
+html, body {
+	width: 100%;
+}
+
+body {
+	text-align: center;
+	min-width: 500px;
+	color: #111111;
+	font-size: 12px;
+	background: url(../images/index/bg-index.gif) repeat-x 0 235px;
+}
+
+
+#wrapper {
+	position: relative; /* pt. IE */
+	width: 391px;
+	margin: 0 auto;
+	text-align: center;
+	padding-top: 113px;
+	background: White;
+}
+
+
+
+
+/*************************************/
+/*              INDEX                */
+/*************************************/
+#logo img {
+	margin: 0 auto 30px auto;
+}
+
+
+.login-box {
+	background: url(../images/index/box-login-top.png) no-repeat left top;
+	width: 370px;
+	margin: 0 auto;
+	padding-top: 5px;
+}
+	.login-box .bg {
+		background: url(../images/index/box-login-bg.png) repeat-y left top;
+	}
+		.login-box .bg .content {
+			padding-top: 15px;
+			background: url(../images/index/box-login-bottom.png) no-repeat left bottom;
+			padding-bottom: 20px;
+		}
+			
+			#formLogin {
+				margin: 0 auto;
+				width: 264px;
+			}
+				#formLogin label {
+					width: 90px;
+				}
+				#formLogin .textInput {
+					width: 120px;
+				}
+				#formLogin .buttonHolder {
+					padding-left: 100px;
+				}
+				
+				#formLogin .formHint {
+					border-bottom: 1px #f5f5f5 solid;
+					padding-bottom: 3px;
+					padding-left: 100px;
+				}
+				#formLogin .checkbox-wrapper {
+					border-top: 1px #dedede solid;
+					padding-top: 10px;
+					padding-bottom: 8px;
+					padding-left: 100px;
+				}
+				
+				#formLogin .checkbox-label, 
+				#formLogin a:link, #formLogin a:visited {
+					color: #5f5f5f;
+					font-size: 10px;
+					text-decoration: none;
+				}
+				#formLogin .checkbox-label:hover, 
+				#formLogin a:hover {
+					color: #019bce;
+				}
+				#formLogin .checkbox-label {
+					padding-top: 1px;
+				}
+				
+				#formLogin .buttonHolder {
+					padding: 0;
+					margin: 0;
+					text-align: center;
+				}
+
+
+
+
+/***************************************/
+/*              GENERAL                */
+/***************************************/
+h1 {
+	color: #982f4b;
+	font-size: 23px;
+	font-weight: normal;
+	margin-bottom: 0;
+	text-transform: uppercase;
+}
+h2 {
+	color: #982f4b;
+	font-size: 18px;
+	font-weight: normal;
+	padding-bottom: 0;
+	margin-bottom: 0;
+}
+h3 {
+	color: #333333;
+	font-size: 17px;
+	font-weight: normal;
+	padding-bottom: 0;
+	margin-bottom: 0;
+}
+
+p {
+	line-height: 140%;
+}
+
+img {
+	border: 0;
+	display: block;
+}
+
+a:link, a:visited {
+	border: 0;
+	cursor: pointer;
+	outline: 0;
+	color: #019bce;
+	text-decoration: underline;
+}
+a:hover {
+	text-decoration: none;
+}
+
+
+input, select, textarea {
+	font-size: 12px;
+	background: #f4f4f4;
+	border: 1px solid #eaeaea;
+	color: #6b6b6b;
+	padding: 3px 2px 2px 2px;
+}
+input:focus, select:focus, textarea:focus {
+	background: #f4f4f4;
+	border: 1px solid #01b6d1;
+}
+.submit {
+	display: block;
+	background: #cd036c;
+	border: 1px #8f8f8f solid;
+	color: #FFFFFF;
+	line-height: 16px;
+	height: 22px;
+	font-weight: bold;
+	padding: 0px 5px 2px 5px;
+	cursor: pointer;
+	font-size: 12px;
+}
