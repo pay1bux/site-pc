@@ -15,12 +15,12 @@
 	{
 		case 'LIVE':
 			error_reporting(0);
-			define('BASE_URL',		'http://www.electrologus.ro/');
+			define('BASE_URL',		'http://www.poartacerului.ro/');
 		break;
 	
 		case 'DEV':
 			error_reporting(E_ALL);
-			define('BASE_URL',		'http://localhost/electrologus/');
+			define('BASE_URL',		'http://localhost/pc/');
 		break;
 	}
 /*
