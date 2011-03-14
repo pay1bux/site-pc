@@ -1,0 +1,95 @@
+#container {
+    width: 900px;
+    text-align: center;
+    margin-left: auto ;
+    margin-right: auto ;
+
+}
+body {
+    background: #b6b6b6;
+    margin: auto;
+    font-family: arial;
+}
+
+#logo {
+    background: url(../images/logo.png) repeat-x 0 0;
+    margin: 10 10 auto;
+    width: 300px;
+    height: 100px;
+    -moz-border-radius: 4px;
+}
+#top_menu {
+    background: white;
+    margin: -75 320 auto;
+    width: 590px;
+    height: 30px;
+    -moz-border-radius: 10px;
+}
+#banner {
+    background: white;
+    margin: 80 0 auto;
+    width: 600px;
+    height: 300px;
+    -moz-border-radius: 6px;
+}
+#first_button {
+    background: white;
+    margin: -20 610 auto;
+    width: 300px;
+    height: 100px;
+    -moz-border-radius: 5px;
+}
+#second_button {
+    background: white;
+    margin: 5 610 auto;
+    width: 300px;
+    height: 100px;
+    -moz-border-radius: 5px;
+}
+#third_button {
+    background: white;
+    margin: 7 610 auto;
+    width: 300px;
+    height: 88px;
+    -moz-border-radius: 5px;
+}
+#video {
+    background: white;
+    margin: 7 0 auto;
+    width: 295px;
+    height: 200px;
+    -moz-border-radius: 5px;
+}
+#urm_eveniment {
+    background: white;
+    margin: -18 305 auto;
+    width: 295px;
+    height: 200px;
+    -moz-border-radius: 5px;
+}
+#stiri {
+    background: #adff2f;
+    margin: -200 610 auto;
+    width: 300px;
+    height: 400px;
+    -moz-border-radius: 5px;
+    overflow:scroll;
+}
+#copyright {
+    margin: 200 110 0;
+    width: 400px;
+}
+#contact {
+    margin: 0 110 0;
+    width: 400px;
+}
+#linkuri {
+    background: white;
+    margin: 10 0 0;
+    width: 910px;
+    height: 200px;
+    -moz-border-radius: 5px;
+}
+input[type=submit] {
+    margin: -390 100 0;
+}

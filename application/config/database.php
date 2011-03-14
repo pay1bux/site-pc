@@ -58,7 +58,7 @@ switch(ENVIRONMENT)
 		$db['default']['hostname'] = 'localhost';
 		$db['default']['username'] = 'root';
 		$db['default']['password'] = '';
-		$db['default']['database'] = 'pc_db';
+		$db['default']['database'] = 'blog';
 		$db['default']['dbdriver'] = 'mysql';
 		$db['default']['dbprefix'] = '';
 		$db['default']['pconnect'] = TRUE;
