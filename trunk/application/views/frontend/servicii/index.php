@@ -24,14 +24,7 @@
             <center><?php echo 'Urmatorul eveniment'; ?></center>
         </div>
         <div id="stiri">
-            <center><?php echo 'Ultimele Comentarii'; ?></center>
-            <?php if ($query->num_rows() > 0): ?>
-                <?php foreach ($query->result() as $row): ?>
-                    <p><?php echo $row->body ?></p>
-                    <p><?php echo $row->author ?></p>
-                    <hr>
-                <?php endforeach; ?>
-            <?php endif; ?>
+            <center><?php echo 'Bla' ?></center>
             <?php
                 echo form_open('site/readmore');
                 echo form_submit('submit', 'Read More');
