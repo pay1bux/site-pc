@@ -1,10 +1,33 @@
+#header {
+    width: 911px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    /*border: 1px solid white;*/
+}
+
+#pagination a, #pagination strong {
+    background: #e3e3e3;
+    padding: 4px 7px;
+    text-decoration: none;
+    border: 1px solid #cac9c9;
+    color: #292929;
+    font-size: 13px;
+}
+
+#pagination strong, #pagination a:hover {
+    font-weight: normal;
+    background: #cac9c9;
+}
+
 #container {
     width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    margin: auto;
     text-align: center;
-    margin-left: auto ;
-    margin-right: auto ;
-
 }
+
 body {
     background: #b6b6b6;
     margin: auto;
@@ -18,6 +41,7 @@ body {
     height: 100px;
     -moz-border-radius: 4px;
 }
+
 #top_menu {
     background: white;
     margin: -75 320 auto;
@@ -25,20 +49,24 @@ body {
     height: 30px;
     -moz-border-radius: 10px;
 }
+
 #banner {
-    background: white;
+    background: url(../images/banner.png) repeat-x 0 0;
     margin: 80 0 auto;
     width: 600px;
     height: 300px;
     -moz-border-radius: 6px;
+    overflow: auto;
 }
+
 #first_button {
     background: white;
-    margin: -20 610 auto;
+    margin: -300 610 auto;
     width: 300px;
     height: 100px;
     -moz-border-radius: 5px;
 }
+
 #second_button {
     background: white;
     margin: 5 610 auto;
@@ -46,6 +74,7 @@ body {
     height: 100px;
     -moz-border-radius: 5px;
 }
+
 #third_button {
     background: white;
     margin: 7 610 auto;
@@ -53,43 +82,83 @@ body {
     height: 88px;
     -moz-border-radius: 5px;
 }
+
+#sub_video {
+    width: 600px;
+    margin: auto;
+
+}
+
 #video {
     background: white;
-    margin: 7 0 auto;
+    margin: 7 -150 auto;
     width: 295px;
-    height: 200px;
     -moz-border-radius: 5px;
 }
+
 #urm_eveniment {
     background: white;
-    margin: -18 305 auto;
+    margin: -612 150 auto;
     width: 295px;
-    height: 200px;
     -moz-border-radius: 5px;
 }
+
 #stiri {
-    background: #adff2f;
-    margin: -200 610 auto;
+    background: white;
+    /*margin: auto;*/
     width: 300px;
-    height: 400px;
     -moz-border-radius: 5px;
-    overflow:scroll;
+    overflow: visible;
 }
-#copyright {
-    margin: 200 110 0;
+
+#stiri2 {
+    background: white;
+    margin: 10 auto;
+    width: 300px;
+    -moz-border-radius: 5px;
+    overflow: visible;
+}
+
+#right_side {
+    width: 300px;
+    margin: -475 935 0;
+    /*border: 1px solid green;*/
+}
+
+#main_content {
+    width: 600px;
+    margin: -1370 330 0;
+    text-align: left;
+}
+#articles {
+    width: 600px;
+    border: 1px solid white;
+
+}
+
+#copyright1 {
     width: 400px;
+    margin: 0 200 0
 }
+
 #contact {
-    margin: 0 110 0;
     width: 400px;
+    margin: 0 100 0;
 }
+
 #linkuri {
     background: white;
-    margin: 10 0 0;
     width: 910px;
     height: 200px;
     -moz-border-radius: 5px;
 }
+
 input[type=submit] {
     margin: -390 100 0;
+}
+
+#footer {
+    width: 910px;
+    margin: auto;
+
 }

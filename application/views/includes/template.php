@@ -2,6 +2,10 @@
 
     $this->load->view('includes/header'); ?>
 
+<?php
+
+    $this->load->view('includes/right_side'); ?>
+
 
 <?php
 
