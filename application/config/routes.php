@@ -47,6 +47,12 @@ $route['galerie'] = "frontend/galerie";
 $route['galerie/(\d+)/(.*)'] = "frontend/galerie/index/$1";
 $route['portofoliu'] = "frontend/portofoliu";
 $route['contact'] = "frontend/contact";
+$route['video'] = "frontend/video/index";
+$route['video/pagina/(\d+)'] = "frontend/video/index";
+$route['video/view/(\d+)'] = "frontend/video/view";
 $route['admin'] = "admin/auth/login";
+$route['toate'] = "frontend/video/";
+$route['cereri'] = "frontend/cereri/index";
+$route['cereri/pagina/(\d+)'] = "frontend/cereri/index";
 /* End of file routes.php */
 /* Location: ./system/application/config/routes.php */
