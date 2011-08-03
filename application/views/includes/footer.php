@@ -1,11 +1,9 @@
-<div id="footer">
-    <div id="copyright1">
-        <?php echo '&copy 2011 Poarta Cerului.'; ?>
-    </div>
-<div id="contact">
-        <?php echo 'Tel: 0256 281 108 Mail: poartacerului@gmail.com'; ?>
-</div>
-<div id="linkuri">
-        <?php echo 'Linkuri utile'; ?>
-</div>
-</div>
+        </div>
+        <div id="footer">
+            <hr>
+            <p class="url">www.poartacerului.ro </p>
+            <div class="menu"><p class="menu">Despre noi &nbsp;&nbsp; Gaseste-ti locul &nbsp;&nbsp; Devotional &nbsp;&nbsp;
+                Resurse &nbsp;&nbsp; Contact</p></div>
+        </div>
+    </body>
+</html>

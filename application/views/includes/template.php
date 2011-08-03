@@ -4,7 +4,7 @@
 
 <?php
 
-    $this->load->view('includes/right_side'); ?>
+    //$this->load->view('includes/right_side'); ?>
 
 
 <?php
