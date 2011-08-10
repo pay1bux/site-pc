@@ -23,9 +23,11 @@
 <div id="middle">
     <div class="promo">
         <div class="chenar" id="devotional">
-            <p class="devotional"> &nbsp;&nbsp;Ai mei n-au avut habar cat de sus pot eu sa sar. Acum cand nu mai am
-                nimic de
-                ascuns pot sa ma intorc mai sus...</p>
+            <p class="devotional">
+                <?php echo myTruncate($devotional[0]->continut, 120, " "); ?>
+                {elapsed_time}
+            </p>
+            
             <a id="buton_devotional" href="#"></a>
         </div>
         <div class="chenar" id="promovare">
@@ -34,7 +36,7 @@
         <div class="clear"></div>
         <a href="#"><div id="mic1" class="chenar mic"></div></a>
         <a href="#"><div id="mic2" class="chenar mic"></div></a>
-        <a href="#"><div id="mic3" class="chenar mic"></div></a>
+        <a href="<?php echo $buletin[0]->url; ?>"><div id="mic3" class="chenar mic"></div></a>
         <a href="#"><div id="mic4" class="chenar mic"></div></a>
     </div>
     <div id="evenimente">
