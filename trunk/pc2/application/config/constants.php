@@ -45,10 +45,9 @@ define('ADMIN_CSS',				ADMIN_PATH.'css/');
 define('ADMIN_JS',				ADMIN_PATH.'js/');
 
 # Frontend assets
-define('FRONTEND_PATH',			STATIC_PATH.'frontend/');
-define('FRONTEND_IMAGES',		FRONTEND_PATH.'images/');
-define('FRONTEND_CSS',			FRONTEND_PATH.'css/');
-define('FRONTEND_JS',			FRONTEND_PATH.'js/');
+define('IMAGES_PATH',		STATIC_PATH.'images/');
+define('CSS_PATH',			STATIC_PATH.'css/');
+define('JS_PATH',			STATIC_PATH.'js/');
 
 
 /* End of file constants.php */
