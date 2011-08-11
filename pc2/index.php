@@ -34,7 +34,7 @@ if (defined('ENVIRONMENT'))
 	{
 		case 'development':
 			error_reporting(E_ALL);
-            define('BASE_URL',		'http://localhost/site-pc/pc2');
+            define('BASE_URL',		'http://localhost/pc/pc2/');
 		break;
 	
 		case 'production':
