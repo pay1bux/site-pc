@@ -6,8 +6,7 @@
 		<?php $this->load->view('frontend/includes/head_includes'); ?>
 	</head>
 
-	<body id="<?php echo $this->router->class;?>">
-
+	<body>
 		<!-- Header -->
 		<?php $this->load->view('frontend/includes/header'); ?>
 
