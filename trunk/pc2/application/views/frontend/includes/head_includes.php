@@ -6,9 +6,9 @@
             - Poarta Cerului
         </title>
 		
-		<link href="<?php echo FRONTEND_CSS; ?>poartacerului.css" rel="stylesheet" type="text/css" media="screen" />
+		<link href="<?php echo CSS_PATH; ?>poartacerului.css" rel="stylesheet" type="text/css" media="screen" />
 
-		<link href="<?php echo base_url(); ?>static/favicon.ico" rel="shortcut icon" />
+		<link href="<?php echo BASE_URL(); ?>/static/favicon.ico" rel="shortcut icon" />
 		
 		<meta name="description" lang="en" content="" />
 		<meta name="keywords" lang="en" content="poarta cerului, poartacerului, biserica penticostala, arhiva video, arhiva audio, mp3, download, video, audio" />
@@ -23,4 +23,4 @@
       	</script>
 		
 		<script type="text/javascript" src="http://code.jquery.com/jquery-1.6.2.min.js"></script>
-        <script type="text/javascript" src="<?php echo FRONTEND_JS; ?>fader.js"></script>
+        <script type="text/javascript" src="<?php echo JS_PATH; ?>fader.js"></script>
