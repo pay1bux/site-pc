@@ -35,7 +35,7 @@
         <div class="clear"></div>
         <a href="#"><div id="mic1" class="chenar mic"></div></a>
         <a href="#"><div id="mic2" class="chenar mic"></div></a>
-        <a href="<?php echo $buletin[0]->url; ?>"<div id="mic3" class="chenar mic"></div></a>
+        <a href="<?php echo $buletin[0]->url; ?>"><div id="mic3" class="chenar mic"></div></a>
         <a href="#"><div id="mic4" class="chenar mic"></div></a>
     </div>
     <div id="evenimente">
