@@ -1,0 +1,22 @@
+*--- baza de date ---*
+
+verifica in application/config
+
+--> pentru localhost 
+
+$db['default']['hostname'] = 'localhost';
+$db['default']['username'] = 'root';
+$db['default']['password'] = '';
+<b>$db['default']['database'] = 'pc-nou';</b>
+$db['default']['dbdriver'] = 'mysql';
+
+
+*--- problema css ---*
+
+verifica in index.php
+
+e defapt de la Base Url - trebuie specificat pentru localhost 
+
+case 'development':
+	error_reporting(E_ALL);
+<b> define('BASE_URL',   'http://localhost/site-pc/pc2/');</b>
