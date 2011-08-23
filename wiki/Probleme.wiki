@@ -4,15 +4,15 @@ verifica in application/config
 
 --> pentru localhost 
 
-$db['default']['hostname'] = 'localhost';
-$db['default']['username'] = 'root';
-$db['default']['password'] = '';
-<b>$db['default']['database'] = 'pc-nou';</b>
-$db['default']['dbdriver'] = 'mysql';
+$db['default']['hostname'] = 'localhost';<br />
+$db['default']['username'] = 'root';<br />
+$db['default']['password'] = '';<br />
+<b>$db['default']['database'] = 'pc-nou';</b><br />
+$db['default']['dbdriver'] = 'mysql';<br />
 
-
+<br />
 *--- problema css ---*
-
+<br />
 verifica in index.php
 
 e defapt de la Base Url - trebuie specificat pentru localhost 
@@ -20,3 +20,5 @@ e defapt de la Base Url - trebuie specificat pentru localhost
 case 'development':
 	error_reporting(E_ALL);
 <b> define('BASE_URL',   'http://localhost/site-pc/pc2/');</b>
+
+asa gaseste calea de localhost sa gaseasca cssul :)
