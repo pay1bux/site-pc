@@ -22,3 +22,14 @@ case 'development':
 <b> define('BASE_URL',   'http://localhost/site-pc/pc2/');</b>
 
 asa gaseste calea de localhost sa gaseasca cssul :)
+
+<br />
+*--- problema rute ---*
+<br />
+rutele pe localhost vor functiona DAR dupa index.php
+
+exemplu: 
+
+$route['biblia'] = "frontend/biblia";
+
+va fii accesata de aici http://localhost/site-pc/pc2/index.php/biblia
