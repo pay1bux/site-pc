@@ -20,7 +20,7 @@
 	
 		case 'DEV':
 			error_reporting(E_ALL);
-			define('BASE_URL',		'http://localhost/pc/');
+			define('BASE_URL',		'http://localhost/site-pc');
 		break;
 	}
 /*
