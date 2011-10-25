@@ -40,9 +40,9 @@ div#topbar {
 div.chenar {
     background-color: #0b0c04;
     border: .15em solid #fff;
-    -moz-box-shadow: 0px 0px 5px #000000;
-    -webkit-box-shadow: 0px 0px 5px #000000;
-    box-shadow: 0px 0px 5px #000000;
+    -moz-box-shadow: 0px 0px 5px #787878;
+    -webkit-box-shadow: 0px 0px 5px #787878;
+    box-shadow: 0px 0px 5px #787878;
     top: 30px;
 }
 
@@ -50,47 +50,99 @@ div.chenar {
 div.chenar .dreptunghi {
     background-color: #fff;
     /*border: .1em solid #ccc; */
-    float: right;
-    margin: 20 20 0 0;
-    width: 224px;
-    height: 122px;
+
+    margin-top:12px;
+	margin-right: 10px;
+    width: 197px;   
+    height: 105px;
+    position: relative;
+    display:inline
 }
 
 #live {
-    background: url(../images/home_elements.png);
+    background: url(../images/home_elements.png)  0 -211px;;
+    float: right;
+    display:inline
+
 }
 
 #buton_live {
     display: block;
     position: relative;
-    top: 80px;
-    left: 12px;
-    width: 60px;
-    height: 30px;
+    top: 70px;
+    left: 9px;
+    width: 61px;
+    height: 25px;
     background-color: transparent;
 }
 
 #video {
-    background: url(../images/home_elements.png) 0 -122px;
+    background: url(../images/home_elements.png);
+     float: right;
 }
 
 .buton_arhiva {
     display: block;
     position: relative;
-    top: 80px;
-    left: 13px;
+    top: 63px;
+    left: 9px;
     width: 59px;
-    height: 29px;
+    height: 28px;
     background-color: transparent;
 }
 
 #audio {
-    background: url(../images/home_elements.png) 0 -244px;
+    background: url(../images/home_elements.png) 0 -105px;
+     float: right;
 }
 
+#player
+    {
+    float:left;
+    }
+
+/* Subscribe buletin duminical */
+
+#sub_buletin {
+    background: url(../images/subscribe_buletin.png) no-repeat;
+    position: relative;
+    height: 224px;
+    width: 40px;
+    margin-top: -45px;
+    left:729px;
+}
+
+
+#buton_sub_buletin {
+    display: block;
+    position: relative;
+    top: 7px;
+    left: 10px;
+    width: 21px;
+    height: 20px;
+    background-color: transparent;
+}
+
+input#subscribe {
+width: 161px;
+    height: 17px;
+background-color: #e8dfc0;
+    border: 0;
+    position: absolute;
+    left: 37px;
+    top: 8px;
+}
+
+
 /* #### MIDDLE #### */
+
+#middle
+{
+    padding-bottom: 50px;
+    height: auto;   
+}
 #devotional {
-    background: url(../images/home_footer.png) -135px 265px;
+    background: url(../images/home_footer.png) 275px 265px;
     float: left;
     position: relative;
     width: 275px;
@@ -100,7 +152,7 @@ div.chenar .dreptunghi {
 #devotional p {
     color: #7b7b7b;
     font-family: "Arial";
-    font-weight: bold;
+    font-weight: normal;
     font-size: 100%;
     margin-left: 15px;
     margin-top: 60px;
@@ -109,11 +161,10 @@ div.chenar .dreptunghi {
 
 #buton_devotional {
     display: block;
-    position: relative;
-    left: 20px;
-    width: 75px;
-    height: 25px;
-    background-color: transparent;
+    position: absolute;
+    left: 25px;
+    bottom: 12px;
+
 }
 
 #promovare {
@@ -143,13 +194,17 @@ div.chenar .dreptunghi {
     margin-top: 30px;
 }
 
+
 #evenimente p.text {
     color: #6b6b6b;
     font-family: "Arial";
-    font-weight: bold;
-    font-size: 60%;
+    font-weight: normal;
+    font-size: 70%;
     margin-bottom: 5px;
 }
+
+
+
 
 /* #### HIGHLIGHTINGS #### */
 #evenimente p.text::selection, td.data p::selection {
@@ -229,8 +284,8 @@ div#calendar {
 /* ##### F A D E R #### */
 
 div.rotator {
-    height: 434px;
-    width: 674px;
+    height: 404px;
+    width: 720px;
     margin-left: -40px;
     float: left;
 }
@@ -278,11 +333,26 @@ div.menu {
     margin-bottom: 20px;
 }
 
+div.menutop {
+    background-color: transparent;
+    display: block;
+    margin-top: -50px;
+    float: right;
+}
+
 p.menu {
     color: #7b7b7b;
     font-family: "Arial";
-    font-weight: bold;
+    font-weight: normal;
     font-size: 100%;
+    margin-left: 20px;
+}
+
+p.menutop{
+    color: #7b7b7b;
+    font-family: "Arial";
+    font-weight: normal;
+    font-size: 110%;
     margin-left: 20px;
 }
 
@@ -299,4 +369,20 @@ p.menu {
     height: 100px;
     margin-right: 14px;
     margin-top: 20px;
+}
+
+/* ### TEXTE ###  */
+
+h1{
+    font-size: 24px;
+    font-family:"Arial";
+    color: #6b6b6b;
+    font-weight: normal;
+}
+
+h2{
+    font-size: 16px;
+    font-family:"Arial";
+    color: #6b6b6b;
+    font-weight:normal;
 }
