@@ -2,5 +2,21 @@
 
         <div class="content">
             <div id="logo"></div>
-              <div class="menutop" class="top"><p class="menutop">Despre noi &nbsp;&nbsp; Gaseste-ti locul &nbsp;&nbsp; Devotional &nbsp;&nbsp;
-                Resurse &nbsp;&nbsp; Contact &nbsp;&nbsp; Live</p></div>
+             <div id="meniul">
+   <ul id="menu">
+        <li class="parinte" ><a href="#">Despre Noi</a></li>
+        <li class="parinte" ><a href="#">Gaseste-ti locul</a></li>
+        <li class="parinte" ><a href="#">Devotional</a></li>
+        <li class="parinte" >
+                <a href="#">Resurse</a>
+                <ul>
+                        <li><a href="#">Arhiva video</a></li>
+                        <li><a href="#">Arhiva audio</a></li>
+                        <li><a href="#">Album Foto</a></li>
+                </ul>
+        </li>
+        <li class="parinte" ><a href="#">Contact</a></li>
+        <li class="parinte" ><a href="#">Live</a></li>
+</ul>
+             <hr id="submeniu"> </hr>
+             </div>
