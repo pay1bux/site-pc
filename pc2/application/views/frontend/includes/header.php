@@ -7,8 +7,8 @@
         <li class="parinte" ><a href="#">Despre Noi</a></li>
         <li class="parinte" ><a href="#">Gaseste-ti locul</a></li>
         <li class="parinte" ><a href="#">Devotional</a></li>
-        <li class="parinte" >
-                <a href="#">Resurse</a>
+        <li style="padding-right: 5px" class="dropdown" >
+                <a  href="#">Resurse</a>
                 <ul>
                         <li><a href="#">Arhiva video</a></li>
                         <li><a href="#">Arhiva audio</a></li>
