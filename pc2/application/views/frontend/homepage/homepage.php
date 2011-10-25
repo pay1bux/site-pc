@@ -55,43 +55,28 @@
     <div id="evenimente">
         <br/><br/>
         <table>
-            <tr>
-                <td class="data" valign=top>
-                    <p>18 AUG</p>
-                </td>
-                <td>
-                    <p class="eveniment">Conferinta Nationala de tineret</p>
+            <?php if ($evenimente != null): ?>
+            <?php foreach($evenimente as $eveniment): ?>
+                <tr>
+                    <td class="data" valign=top>
+                        <p><?php echo prepareDate($eveniment->data); ?></p>
+                    </td>
+                    <td>
+                        <p class="eveniment"><?php echo $eveniment->titlu; ?></p>
 
-                    <p class="text">Seara dedicata tuturor tinerilor care vor fii alaturi de noi la programul de
-                        lauda
-                        si inchiare.
-                </td>
-            </tr>
-            <tr>
-                <td class="data" valign=top>
-                    <p>21 SEP</p>
-                </td>
-                <td>
-                    <p class="eveniment">Masa rotunda</p>
-
-                    <p class="text">Seara dedicata tuturor tinerilor care vor fii alaturi de noi la programul de
-                        lauda
-                        si inchiare.
-                </td>
-            </tr>
-            <tr>
-                <td class="data" valign=top>
-                    <p>04 DEC</p>
-                </td>
-                <td>
-                    <p class="eveniment">Concert Adi Gliga</p>
-
-                    <p class="text">Seara dedicataara dedicata  tuturor tinerilor care vor fii alaturi de noi la programul de
-                        lauda dedicataara dedicata  tuturor tinerilor care vor fii alaturi de noi la programul de
-                        lauda
-                        si inchinara dedicata ara dedicata ara dedicata ara dedicata ara dedicata are.
-                </td>
-            </tr>
+                        <p class="text"><?php echo $eveniment->continut; ?>
+                    </td>
+                </tr>
+            <?php endforeach ?>
+            <?php else: ?>
+                <tr>
+                    <td>
+                    </td>
+                    <td class="data" valign=top colspan="2">
+                        <p>Nu exista evenimente</p>
+                    </td>
+                </tr>
+            <?php endif; ?>
             <tr>
                 <td>
                 </td>

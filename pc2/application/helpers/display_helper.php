@@ -17,3 +17,13 @@ function  myTruncate($string, $limit, $break=".", $pad="...") {
 
   return $string;
 }
+
+function prepareDate($data) {
+    $luni = array(0 => "IAN", 1 => "FEB", 2 => "MAR", 3 => "APR", 4 => "MAI", 5 => "IUN", 6 => "IUL", 7 => "AUG", 8 => "SEP"
+                , 10 => "OCT", 11 => "NOI", 12 => "DEC", );
+
+    $time = strtotime($data);
+    $luna = $luni[date('m', $time)];
+
+    return date('d', $time) . " " . $luna;
+}
