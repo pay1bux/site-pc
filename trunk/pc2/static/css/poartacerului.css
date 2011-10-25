@@ -409,6 +409,14 @@ hr#submeniu
         position: relative;
 }
 
+#menu li.dd
+{
+        float: left;
+        padding: 0 0 10px 0;
+        position: relative;
+    padding-right: 20px;
+}
+
 #menu a
 {
         float: left;
@@ -439,6 +447,24 @@ border-top-left-radius: 5px;
 border-top-right-radius: 5px;
     text-shadow: none;
 }
+
+#menu li.dropdown:hover > a
+{
+     text-decoration:none;
+    display: block;
+    background: #c7ca77 url(../images/icons/menu_arrow.png) no-repeat center right;
+    -webkit-border-top-left-radius: 5px;
+    -webkit-border-top-right-radius: 5px;
+    -moz-border-radius-topleft: 5px;
+    -moz-border-radius-topright: 5px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    text-shadow: none;
+    padding-right: 20px;
+    margin-right: -10px;
+}
+
+
 
 *html #menu li a:hover /* IE6 */
 {
