@@ -71,4 +71,15 @@ class Resurse_model extends CI_Model{
             return null;
         }
     }
+
+    function getResursaById($idResursa){
+        $sql = "SELECT * FROM resurse r where r.id = $idResursa LIMIT 1";
+        $q = $this->db->query($sql);
+
+        if($q->num_rows() > 0) {
+            return $q->row_array();
+        } else {
+            return null;
+        }
+    }
 }

@@ -25,21 +25,11 @@ class Resurse extends CI_Controller {
 
         $this->load->model('tip_model');
         $tipuri = $this->tip_model->getTipuri();
-
-        $tipuriBune = array();
-        foreach($tipuri as $tip) {
-            $tipuriBune[$tip["id"]] = $tip["nume"];
-        }
-        $data['tipuri'] = $tipuriBune;
+        $data['tipuri'] = adaptArray($tipuri);
 
         $this->load->model('autor_model');
         $autori = $this->autor_model->getAutori();
-
-        $autoriBune = array();
-        foreach($autori as $autor) {
-            $autoriBune[$autor["id"]] = $autor["nume"];
-        }
-        $data['autori'] = $autoriBune;
+        $data['autori'] = adaptArray($autori);
 
         $data['main_content'] = 'admin/resurse/edit';
         $this->load->view('frontend/template', $data);
@@ -49,8 +39,31 @@ class Resurse extends CI_Controller {
         $this->load->helper(array('form', 'url'));
 		$this->load->library('form_validation');
 
-        $data['main_content'] = 'admin/resurse/lista';
+
+
+        $this->load->model('resurse_model');
+        $data['form_values'] = $this->resurse_model->getResursaById($idResursa);
+
+        $this->load->model('tip_model');
+        $tipuri = $this->tip_model->getTipuri();
+        $data['tipuri'] = $this->adaptArray($tipuri);
+
+        $this->load->model('autor_model');
+        $autori = $this->autor_model->getAutori();
+        $data['autori'] = $this->adaptArray($autori);
+//        var_dump($data['form_values']);
+//        die();
+
+        $data['main_content'] = 'admin/resurse/edit';
 		$this->load->view('frontend/template', $data);
+    }
+
+    function adaptArray($arr) {
+        $arrayBun = array();
+        foreach($arr as $ar) {
+            $arrayBun[$ar["id"]] = $ar["nume"];
+        }
+        return $arrayBun;
     }
 }
 

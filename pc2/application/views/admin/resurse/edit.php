@@ -9,7 +9,7 @@ echo form_open(current_url());
 <table>
     <tr>
         <td><?php echo form_label('Titlu', 'resurse[titlu]');?> </td>
-        <td><?php echo form_input('resurse[titlu]'); ?></td>
+        <td><?php echo form_input(array('name' => 'resurse[titlu]', 'value'=>(isset($form_values['titlu'])?$form_values['titlu']:''))); ?></td>
     </tr>
 
     <tr>
