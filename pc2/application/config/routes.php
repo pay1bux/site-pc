@@ -41,7 +41,9 @@
 $route['default_controller'] = "frontend/homepage";
 $route['login'] = "admin/login";
 $route['verificare'] = "admin/verificare";
-$route['adauga_resursa'] = "admin/adauga_resursa";
+$route['admin/adauga-resursa'] = "admin/resurse/add";
+$route['admin/editeaza-resursa/(\d+)'] = "admin/resurse/edit/$1";
+$route['admin/lista-resurse'] = "admin/resurse/lista";
 $route['404_override'] = '';
 
 /* End of file routes.php */
