@@ -44,6 +44,7 @@ $route['verificare'] = "admin/verificare";
 $route['admin/adauga-resursa'] = "admin/resurse/add";
 $route['admin/editeaza-resursa/(\d+)'] = "admin/resurse/edit/$1";
 $route['admin/lista-resurse'] = "admin/resurse/lista";
+$route['ajax/abonare-buletin'] = "frontend/ajax/abonareBuletin";
 $route['404_override'] = '';
 
 /* End of file routes.php */

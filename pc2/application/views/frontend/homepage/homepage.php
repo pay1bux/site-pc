@@ -1,5 +1,3 @@
-<script type="text/javascript" src="<?php echo JS_PATH; ?>util-functions.js"></script>
-<script type="text/javascript" src="<?php echo JS_PATH; ?>clear-default-text.js"></script>
 <div id="wrapper">
     <div class="chenar" style="width:940px; height: 406px;">
 
@@ -30,7 +28,7 @@
         <div id="video" class="dreptunghi"><a class="buton_arhiva" href="#"></a></div>
         <div id="audio" class="dreptunghi"><a class="buton_arhiva" href="#"></a></div>
     </div>
-    <div id="sub_buletin" style="width:224px; height:40px"><a id="buton_sub_buletin" href="#"></a><input id="subscribe" type="text" name="buletin" value="Aboneaza-te la buletinul duminical" class="cleardefault" /> </div>
+    <div id="sub_buletin" style="width:224px; height:40px"><a id="buton_sub_buletin" href=""></a><input id="subscribe" type="text" name="buletin" value="Aboneaza-te la buletinul duminical" class="cleardefault" /> </div>
 </div>
 
 
