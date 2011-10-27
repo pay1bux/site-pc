@@ -25,11 +25,11 @@ class Resurse extends CI_Controller {
 
         $this->load->model('tip_model');
         $tipuri = $this->tip_model->getTipuri();
-        $data['tipuri'] = adaptArray($tipuri);
+        $data['tipuri'] = $this->adaptArray($tipuri);
 
         $this->load->model('autor_model');
         $autori = $this->autor_model->getAutori();
-        $data['autori'] = adaptArray($autori);
+        $data['autori'] = $this->adaptArray($autori);
 
         $data['main_content'] = 'admin/resurse/edit';
         $this->load->view('frontend/template', $data);
