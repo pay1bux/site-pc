@@ -1,7 +1,7 @@
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 		<title>
             <?php if(isset($page_title)): ?>
-				<?php echo $page_title; ?>, 
+				<?php echo $page_title; ?>
             <?php endif; ?>
             - Poarta Cerului
         </title>
