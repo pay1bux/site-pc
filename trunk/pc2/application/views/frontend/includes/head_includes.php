@@ -22,5 +22,8 @@
       		var path_web_root = '<?php echo base_url(); ?>';
       	</script>
 		
-		<script type="text/javascript" src="http://code.jquery.com/jquery-1.6.2.min.js"></script>
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
         <script type="text/javascript" src="<?php echo JS_PATH; ?>fader.js"></script>
+        <script type="text/javascript" src="<?php echo JS_PATH; ?>pc.ajax.js"></script>
+        <script type="text/javascript" src="<?php echo JS_PATH; ?>util-functions.js"></script>
+        <script type="text/javascript" src="<?php echo JS_PATH; ?>clear-default-text.js"></script>
