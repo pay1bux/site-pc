@@ -45,6 +45,15 @@ $route['admin/adauga-resursa'] = "admin/resurse/add";
 $route['admin/editeaza-resursa/(\d+)'] = "admin/resurse/edit/$1";
 $route['admin/lista-resurse'] = "admin/resurse/lista";
 $route['ajax/abonare-buletin'] = "frontend/ajax/abonareBuletin";
+
+$route['admin/adauga-autori'] = "admin/autori/add";
+$route['admin/editeaza-autori/(\d+)'] = "admin/autori/edit/$1";
+$route['admin/lista-autori'] = "admin/autori/lista";
+
+$route['admin/adauga-categorii'] = "admin/categorii/add";
+$route['admin/editeaza-categorii/(\d+)'] = "admin/categorii/edit/$1";
+$route['admin/lista-categorii'] = "admin/categorii/lista";
+
 $route['404_override'] = '';
 
 /* End of file routes.php */

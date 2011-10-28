@@ -581,3 +581,13 @@ border-top-right-radius: 5px;
 *:first-child+html #menu { zoom: 1; } /* IE7 */
 
 
+/*  ### TABELE / LISTE ### */
+
+table.lista, td.lista, th .lista
+{
+    width: auto;
+    border-collapse: collapse;
+    border: 1px solid #7b7b7b;
+    padding: 4px;
+}
+
