@@ -18,8 +18,6 @@ class Resurse extends CI_Controller {
 
             $this->load->model('resurse_model');
             $this->resurse_model->create($input);
-            var_dump($input);
-            die();
             redirect('admin/lista-resurse');
         }
 
@@ -31,15 +29,19 @@ class Resurse extends CI_Controller {
         $autori = $this->autor_model->getAutori();
         $data['autori'] = $this->adaptArray($autori);
 
+        $this->load->model('categorie_model');
+        $categorii = $this->categorie_model->getCategorii();
+        $data['categorii'] = $this->adaptArray($categorii);
+
         $data['main_content'] = 'admin/resurse/edit';
         $this->load->view('frontend/template', $data);
     }
 
     function edit($idResursa) {
+
+         if (! strcmp($_SERVER['REQUEST_METHOD'],'POST'))
+            $this->load->helper(array('form', 'url'));
         $this->load->helper(array('form', 'url'));
-		$this->load->library('form_validation');
-
-
 
         $this->load->model('resurse_model');
         $data['form_values'] = $this->resurse_model->getResursaById($idResursa);
@@ -51,6 +53,10 @@ class Resurse extends CI_Controller {
         $this->load->model('autor_model');
         $autori = $this->autor_model->getAutori();
         $data['autori'] = $this->adaptArray($autori);
+
+        $this->load->model('categorie_model');
+        $categorii = $this->categorie_model->getCategorii();
+        $data['categorii'] = $this->adaptArray($categorii);
 //        var_dump($data['form_values']);
 //        die();
 

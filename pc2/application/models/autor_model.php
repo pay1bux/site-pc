@@ -50,4 +50,15 @@ class Autor_model extends CI_Model{
         }
     }
 
+      function getAutorById($idAutor){
+        $sql = "SELECT * FROM $this->table a WHERE a.id = $idAutor LIMIT 1";
+        $q = $this->db->query($sql);
+
+        if($q->num_rows() > 0) {
+            return $q->row_array();
+        } else {
+            return null;
+        }
+    }
+
 }
