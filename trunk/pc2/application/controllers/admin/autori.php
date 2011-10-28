@@ -7,7 +7,7 @@ class Autori extends CI_Controller {
             $this->load->helper(array('form', 'url'));
 //            $this->load->library('form_validation');
 
-            $postdata = $this->input->post('autor');
+            $postdata = $this->input->post('autori');
             $input = array(
 							'nume' => $postdata['nume']
 						);
@@ -25,6 +25,19 @@ class Autori extends CI_Controller {
     }
 
     function edit($idAutor) {
+        if (! strcmp($_SERVER['REQUEST_METHOD'],'POST')) {
+            $this->load->helper(array('form', 'url'));
+//            $this->load->library('form_validation');
+
+            $postdata = $this->input->post('autori');
+            $input = array(
+							'nume' => $postdata['nume']
+						);
+
+            $this->load->model('autor_model');
+            $this->autor_model->update($idAutor, $input);
+            redirect('admin/lista-autori');
+        }
         $this->load->helper(array('form', 'url'));
     	$this->load->library('form_validation');
 
