@@ -3,6 +3,7 @@
 class Autor_model extends CI_Model{
 
     var $table = 'autor';
+    var $primary_key = 'id';
 
     function create($data) {
         $this->db->insert($this->table, $data);
