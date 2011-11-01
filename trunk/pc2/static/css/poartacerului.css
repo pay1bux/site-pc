@@ -165,7 +165,8 @@ background-color: #e8dfc0;
     position: absolute;
     left: 25px;
     bottom: 12px;
-
+    border: none;
+    border-width: 0px;
 }
 
 #promovare {
@@ -389,7 +390,7 @@ hr#submeniu
 {
     float: right;
     width: 590px;
-    top: 12px;
+    top: 10px;
 }
 /* Main menu */
 #menu
@@ -591,3 +592,23 @@ table.lista, td.lista, th .lista
     padding: 4px;
 }
 
+/*  ### INPUTuri ### */
+
+.textlung
+{
+    width: 700px;
+}
+
+/* a visited */
+a:visited, a:link, a:active, a:hover {
+    border: none;
+     outline:none;
+}
+a:focus {
+    border:  none;
+     outline:none;
+}
+a, a:hover, a:visited, a:active {
+   border:none;
+   outline:none;
+}

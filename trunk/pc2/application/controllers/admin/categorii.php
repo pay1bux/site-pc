@@ -24,10 +24,18 @@ class Categorii extends CI_Controller {
     }
 
     function edit($idCategorie) {
-        $this->load->helper(array('form', 'url'));
-    	$this->load->library('form_validation');
+        if (! strcmp($_SERVER['REQUEST_METHOD'],'POST')) {
+            $this->load->helper(array('form', 'url'));
 
+            $postdata = $this->input->post('categorie');
+            $input = array(
+							'nume' => $postdata['nume']
+						);
 
+            $this->load->model('categorie_model');
+            $this->categorie_model->update($idCategorie, $input);
+            redirect('admin/lista-categorii');
+        }
 
         $this->load->model('categorie_model');
         $data['form_values'] = $this->categorie_model->getCategoriiById($idCategorie);
@@ -51,5 +59,15 @@ class Categorii extends CI_Controller {
         }
         return $arrayBun;
     }
+
+        function lista() {
+        $this->load->model('categorie_model');
+        $categorii = $this->categorie_model->getCategorii();
+        $data['categorii'] = $categorii;
+        $data['main_content'] = 'admin/categorii/lista';
+		$this->load->view('frontend/template', $data);
+    }
+
+
 }
 

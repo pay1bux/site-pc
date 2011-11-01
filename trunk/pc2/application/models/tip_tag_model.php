@@ -1,9 +1,8 @@
 <?php
 
-class Autor_model extends CI_Model{
+class Tip_tag_model extends CI_Model{
 
-    var $table = 'autor';
-    var $primary_key = 'id';
+        var $table = 'tip_tag';
 
     function create($data) {
         $this->db->insert($this->table, $data);
@@ -40,8 +39,8 @@ class Autor_model extends CI_Model{
         return FALSE;
     }
 
-    function getAutori(){
-        $sql = "SELECT * FROM $this->table ORDER BY ID DESC";
+    function getTipuri(){
+        $sql = "SELECT * FROM $this->table";
         $q = $this->db->query($sql);
 
         if($q->num_rows() > 0) {
@@ -51,17 +50,15 @@ class Autor_model extends CI_Model{
         }
     }
 
-      function getAutorById($idAutor){
-        $sql = "SELECT * FROM $this->table a WHERE a.id = $idAutor LIMIT 1";
+
+          function getTipuriTag(){
+        $sql = "SELECT * FROM $this->table";
         $q = $this->db->query($sql);
 
-        if($q->num_rows() > 0) {
-            return $q->row_array();
+       if($q->num_rows() > 0) {
+            return $q->result_array();
         } else {
             return null;
         }
     }
-
-    
-
 }

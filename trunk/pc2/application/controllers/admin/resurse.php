@@ -5,7 +5,6 @@ class Resurse extends CI_Controller {
 	function add() {
         if (! strcmp($_SERVER['REQUEST_METHOD'],'POST')) {
             $this->load->helper(array('form', 'url'));
-//            $this->load->library('form_validation');
 
             $postdata = $this->input->post('resurse');
             $input = array(
@@ -37,11 +36,23 @@ class Resurse extends CI_Controller {
         $this->load->view('frontend/template', $data);
     }
 
-    function edit($idResursa) {
-
-         if (! strcmp($_SERVER['REQUEST_METHOD'],'POST'))
+    function edit($idResursa)  {
+        if (! strcmp($_SERVER['REQUEST_METHOD'],'POST')) {
             $this->load->helper(array('form', 'url'));
-        $this->load->helper(array('form', 'url'));
+
+            $postdata = $this->input->post('resurse');
+            $input = array(
+							'titlu' => $postdata['titlu'],
+							'autor_id' => $postdata['autor'],
+							'categorie_id' => $postdata['categorie'],
+							'continut' => $postdata['continut'],
+							'data' => $postdata['data']
+						);
+
+            $this->load->model('resurse_model');
+            $this->resurse_model->update($idResursa, $input);
+            redirect('admin/lista-resurse');
+        }
 
         $this->load->model('resurse_model');
         $data['form_values'] = $this->resurse_model->getResursaById($idResursa);
@@ -71,5 +82,19 @@ class Resurse extends CI_Controller {
         }
         return $arrayBun;
     }
+
+           function lista() {
+        $this->load->model('resurse_model');
+        $resurse = $this->resurse_model->getResurseWithAll();
+        $data['resurse'] = $resurse;
+
+       $this->load->model('atasament_model');
+       $nr_atasamente =  $this->atasament_model->getNumarAtasamente(2);
+       $data['nr_atasamente'] = $nr_atasamente;
+
+        $data['main_content'] = 'admin/resurse/lista';
+		$this->load->view('frontend/template', $data);
+    }
+
 }
 

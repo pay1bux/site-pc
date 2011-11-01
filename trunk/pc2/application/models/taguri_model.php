@@ -1,8 +1,8 @@
 <?php
 
-class Autor_model extends CI_Model{
+class Taguri_model extends CI_Model{
 
-    var $table = 'autor';
+    var $table = 'tag';
     var $primary_key = 'id';
 
     function create($data) {
@@ -40,28 +40,35 @@ class Autor_model extends CI_Model{
         return FALSE;
     }
 
-    function getAutori(){
-        $sql = "SELECT * FROM $this->table ORDER BY ID DESC";
+
+     function getTaguriWithAllById($idResursa){
+         // Stai sa ne intelegem: avem asa: nume tip tag, si valoare... altceva nu mai este
+           $sql = "SELECT t.*, tt.tip_tag as nume_tip
+                    FROM $this->table t, tip_tag tt
+                    WHERE t.tip_tag_id = tt.id
+                    AND t.resurse_id = $idResursa";
+
         $q = $this->db->query($sql);
 
-        if($q->num_rows() > 0) {
+        if($q->num_rows() >= 0) {
             return $q->result_array();
         } else {
-            return null;
+            return null ;
         }
     }
 
-      function getAutorById($idAutor){
-        $sql = "SELECT * FROM $this->table a WHERE a.id = $idAutor LIMIT 1";
+     function getTagById($idTag){
+          {
+        $sql = "SELECT * FROM $this->table t WHERE t.id = $idTag";
         $q = $this->db->query($sql);
 
-        if($q->num_rows() > 0) {
+        if ($q->num_rows() > 0) {
             return $q->row_array();
         } else {
             return null;
         }
     }
+     }
 
-    
 
 }
