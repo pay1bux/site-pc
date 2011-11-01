@@ -3,6 +3,7 @@
 class Resurse_model extends CI_Model{
 
     var $table = 'resurse';
+    var $primary_key = 'id';
 
     function create($data) {
         $this->db->insert($this->table, $data);
@@ -63,6 +64,45 @@ class Resurse_model extends CI_Model{
 
     function getUltimulBuletin(){
         $sql = "SELECT a.url FROM resurse r, attachment a WHERE r.tip_id = 6 AND a.resurse_id = r.id ORDER BY r.id DESC LIMIT 1";
+        $q = $this->db->query($sql);
+
+        if($q->num_rows() > 0) {
+            return $q->row_array();
+        } else {
+            return null;
+        }
+    }
+
+    function getResurse(){
+           $sql = "SELECT * FROM $this->table";
+        $q = $this->db->query($sql);
+
+        if($q->num_rows() > 0) {
+            return $q->result_array();
+        } else {
+            return null;
+        }
+    }
+
+    function getResurseWithAll(){
+           $sql = "SELECT r.*, a.nume as autor_nume, c.nume as categorie_nume, t.nume as tip_nume
+                    FROM $this->table r, autor a, tip_resurse t, categorie_resurse c
+                    WHERE r.autor_id = a.id AND r.tip_id = t.id AND r.categorie_id = c.id
+                    ORDER BY ID DESC";
+        $q = $this->db->query($sql);
+
+        if($q->num_rows() > 0) {
+            return $q->result_array();
+        } else {
+            return null;
+        }
+    }
+
+        function getResurseWithAllById($idResursa){
+           $sql = "SELECT r.*, a.nume as autor_nume, c.nume as categorie_nume, t.nume as tip_nume
+                    FROM $this->table r, autor a, tip_resurse t, categorie_resurse c
+                    WHERE r.autor_id = a.id AND r.tip_id = t.id AND r.categorie_id = c.id AND r.id = $idResursa";
+
         $q = $this->db->query($sql);
 
         if($q->num_rows() > 0) {

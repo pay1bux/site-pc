@@ -20,7 +20,7 @@ echo form_open(current_url());
 
     <tr>
         <td><?php echo form_label('Tipul', 'resurse[tip_id]');  ?></td>
-        <td><?php echo form_dropdown('resurse[tip_id]', $tipuri); ?></td>
+        <td><?php echo form_dropdown('resurse[tip_id]', $tipuri, (isset($form_values['tip_id'])?$form_values['tip_id']:'')); ?></td>
     </tr>
 
     <tr>

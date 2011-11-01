@@ -54,6 +54,15 @@ $route['admin/adauga-categorii'] = "admin/categorii/add";
 $route['admin/editeaza-categorii/(\d+)'] = "admin/categorii/edit/$1";
 $route['admin/lista-categorii'] = "admin/categorii/lista";
 
+$route['admin/lista-atasamente-resursa/(\d+)'] = "admin/atasamente/lista/$1";
+$route['admin/adauga-atasament/(\d+)'] = "admin/atasamente/add/$1";
+$route['admin/editeaza-atasament/(\d+)/(\d+)'] = "admin/atasamente/edit/$1/$2";
+
+$route['admin/lista-taguri-resursa/(\d+)'] = "admin/taguri/lista/$1";
+$route['admin/adauga-tag/(\d+)'] = "admin/taguri/add/$1";
+$route['admin/editeaza-tag/(\d+)/(\d+)'] = "admin/taguri/edit/$1/$2";
+
+
 $route['404_override'] = '';
 
 /* End of file routes.php */

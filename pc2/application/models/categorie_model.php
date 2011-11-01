@@ -3,6 +3,7 @@
 class Categorie_model extends CI_Model{
 
     var $table = 'categorie_resurse';
+    var $primary_key = 'id';
 
     function create($data) {
         $this->db->insert($this->table, $data);
@@ -40,7 +41,7 @@ class Categorie_model extends CI_Model{
     }
 
     function getCategorii(){
-        $sql = "SELECT * FROM $this->table";
+        $sql = "SELECT * FROM $this->table ORDER BY ID DESC";
         $q = $this->db->query($sql);
 
         if($q->num_rows() > 0) {
