@@ -1,5 +1,5 @@
         <div id="topbar"></div>
-
+          <link href='http://fonts.googleapis.com/css?family=Terminal+Dosis' rel='stylesheet' type='text/css'>
         <div class="content">
             <div id="logo"></div>
              <div id="meniul">

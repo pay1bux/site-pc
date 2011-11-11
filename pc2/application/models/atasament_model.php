@@ -52,6 +52,8 @@ class Atasament_model extends CI_Model
         }
     }
 
+
+
     function getAtasament($idAtasament)
     {
         $sql = "SELECT * FROM $this->table a WHERE a.id = $idAtasament";
@@ -76,5 +78,7 @@ class Atasament_model extends CI_Model
         //          $numaratoare = $q->result_array();
         //            return $numaratoare;
     }
+
+
 
 }

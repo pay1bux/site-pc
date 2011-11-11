@@ -24,7 +24,7 @@ div#footer {
 }
 
 div#logo {
-    background: url(../images/logo.png) no-repeat;
+    background: url(../images/home/logo.png) no-repeat;
     height: 53px;
     width: 269px;
     padding-top: 5px;
@@ -45,6 +45,19 @@ div.chenar {
     -webkit-box-shadow: 0px 0px 5px #787878;
     box-shadow: 0px 0px 5px #787878;
     top: 30px;
+    height:auto;
+}
+
+div.right .chenar
+{
+    height: 158px;
+    width: 215px;
+    margin-bottom: 25px;
+
+}
+
+div.chenar.banner {
+    height: 235px;
 }
 
 /* #### DREPTUNGHIURI DREAPTA #### */
@@ -61,7 +74,7 @@ div.chenar .dreptunghi {
 }
 
 #live {
-    background: url(../images/home_elements.png)  0 -211px;;
+    background: url(../images/home/home_elements.png)  0 -211px;;
     float: right;
     display:inline
 
@@ -78,7 +91,7 @@ div.chenar .dreptunghi {
 }
 
 #video {
-    background: url(../images/home_elements.png);
+    background: url(../images/home/home_elements.png);
      float: right;
 }
 
@@ -93,7 +106,7 @@ div.chenar .dreptunghi {
 }
 
 #audio {
-    background: url(../images/home_elements.png) 0 -105px;
+    background: url(../images/home/home_elements.png) 0 -105px;
      float: right;
 }
 
@@ -105,7 +118,7 @@ div.chenar .dreptunghi {
 /* Subscribe buletin duminical */
 
 #sub_buletin {
-    background: url(../images/subscribe_buletin.png) no-repeat;
+    background: url(../images/home/subscribe_buletin.png) no-repeat;
     position: relative;
     height: 224px;
     width: 40px;
@@ -139,11 +152,34 @@ background-color: #e8dfc0;
 
 #middle
 {
+
     padding-bottom: 50px;
     height: auto;   
 }
+
+
+.continut
+{
+    margin-top: 30px;
+    padding-bottom: 50px;
+    height: auto;
+    width: 673px;
+    display: inline-block;
+}
+
+.right
+{
+      margin-top: 30px;
+   padding-bottom: 50px;
+    height: auto;
+    width: 245px;
+    float: right;
+    display: inline-block;
+}
+
+
 #devotional {
-    background: url(../images/home_footer.png) 275px 265px;
+    background: url(../images/home/home_footer.png) 275px 265px;
     float: left;
     position: relative;
     width: 275px;
@@ -170,7 +206,7 @@ background-color: #e8dfc0;
 }
 
 #promovare {
-    background: url(../images/home_footer.png) -135px 0;
+    background: url(../images/home/home_footer.png) -135px 0;
     float: left;
     left: 40px;
     position: relative;
@@ -189,7 +225,7 @@ background-color: #e8dfc0;
 }
 
 #evenimente {
-    background: url(../images/home_footer.png) -105px -440px no-repeat;
+    background: url(../images/home/home_footer.png) -105px -440px no-repeat;
     float: right;
     height: 300px;
     width: 300px;
@@ -247,7 +283,7 @@ p.eveniment {
 
 /* #### DREPTUNGHIURI MICI + BUTOANE #### */
 div#mic1 {
-    background: url(../images/home_footer.png) 0 0;
+    background: url(../images/home/home_footer.png) 0 0;
     width: 135px;
     height: 100px;
     position: relative;
@@ -257,19 +293,19 @@ div#mic1 {
 }
 
 div#mic2 {
-    background: url(../images/home_footer.png) 0 370px;
+    background: url(../images/home/home_footer.png) 0 370px;
 }
 
 div#mic3 {
-    background: url(../images/home_footer.png) 0 270px;
+    background: url(../images/home/home_footer.png) 0 270px;
 }
 
 div#mic4 {
-    background: url(../images/home_footer.png) 0 170px;
+    background: url(../images/home/home_footer.png) 0 170px;
 }
 
 div#calendar {
-    background: url(../images/home_footer.png) right 60px;
+    background: url(../images/home/home_footer.png) right 60px;
     width: 114px;
     height: 28px;
     float: right;
@@ -365,14 +401,21 @@ p.menu_footer {
 
 h1{
     font-size: 24px;
-    font-family:"Arial";
+    font-family: 'Terminal Dosis', sans-serif;
     color: #6b6b6b;
     font-weight: normal;
 }
 
 h2{
     font-size: 16px;
-    font-family:"Arial";
+    font-family: 'Terminal Dosis', sans-serif;
+    color: #6b6b6b;
+    font-weight:normal;
+}
+
+p.text{
+    font-size: 16px;
+    font-family: 'Terminal Dosis', sans-serif;
     color: #6b6b6b;
     font-weight:normal;
 }
@@ -389,7 +432,7 @@ h2{
 hr#submeniu
 {
     float: right;
-    width: 590px;
+    width: 490px;
     top: 10px;
 }
 /* Main menu */
@@ -424,7 +467,6 @@ hr#submeniu
         height: 25px;
         padding: 0 10px;
         color: #707070;
-        text-transform: uppercase;
         font: normal 14px/26px Arial;
         text-decoration: none;
         text-shadow: 0 1px 0 #fff;
