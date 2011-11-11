@@ -122,4 +122,31 @@ class Resurse_model extends CI_Model{
             return null;
         }
     }
+
+
+        function getResursaByTip($idTip){
+        $sql = "SELECT * FROM resurse r where r.tip_id = $idTip";
+        $q = $this->db->query($sql);
+
+        if($q->num_rows() > 0) {
+            return $q->result_array();
+        } else {
+            return null;
+        }
+    }
+
+            function getResurseByTipWithAtt($idTip){
+           $sql = "SELECT r.*, a.*
+                    FROM $this->table r, attachment a
+                    WHERE r.tip_id = $idTip AND a.resurse_id = r.id";
+        $q = $this->db->query($sql);
+
+        if($q->num_rows() > 0) {
+            return $q->result_array();
+        } else {
+            return null;
+        }
+    }
+
+
 }
