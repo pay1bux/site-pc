@@ -27,3 +27,14 @@ function prepareDate($data) {
 
     return date('d', $time) . " " . $luna;
 }
+
+function prepareDateWithYear($data) {
+    $luni = array(0 => "Ianuarie", 1 => "Februarie", 2 => "Martie", 3 => "Aprilie", 4 => "Mai", 5 => "Iunie", 6 => "Iulie", 7 => "August", 8 => "Septembrie"
+                , 10 => "Octombrie", 11 => "Noiembrie", 12 => "Decembrie", );
+
+    $time = strtotime($data);
+    $luna = $luni[date('m', $time)];
+    $an = date('Y', $time);
+
+    return date('d', $time) . " " . $luna . " " . $an;
+}

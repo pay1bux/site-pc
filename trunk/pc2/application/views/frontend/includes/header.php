@@ -6,7 +6,7 @@
    <ul id="menu">
         <li class="parinte" ><a href="#">Despre Noi</a></li>
         <li class="parinte" ><a href="#">Gaseste-ti locul</a></li>
-        <li class="parinte" ><a href="#">Devotional</a></li>
+        <li class="parinte" ><a href="<?php echo site_url('devotional');?>">Devotional</a></li>
         <li style="padding-right: 5px" class="dropdown" >
                 <a  href="#">Resurse</a>
                 <ul>
@@ -15,8 +15,8 @@
                         <li><a href="#">Album Foto</a></li>
                 </ul>
         </li>
-        <li class="parinte" ><a href="#">Contact</a></li>
-        <li class="parinte" ><a href="#">Live</a></li>
+        <li class="parinte" ><a href="<?php echo site_url('contact');?>">Contact</a></li>
+        <li class="parinte" ><a href="<?php echo site_url('live');?>" >Live</a></li>
 </ul>
              <hr id="submeniu"> </hr>
              </div>

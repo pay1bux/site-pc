@@ -50,4 +50,34 @@ class Email_model extends CI_Model{
         }
     }
 
+    function send($email)
+    {
+           $this->load->library('email');
+
+        $this->email->from($email['email'], $email['nume']);
+        $this->email->to($email['destinatar']);
+        $this->email->cc('another@another-example.com');
+        $this->email->bcc('poartacerului@gmail.com');
+
+        $this->email->subject('Contact Poarta Cerului');
+        $this->email->message($email['mesaj']);
+
+        $this->email->send();
+
+        echo $this->email->print_debugger();
+    }
+
+        function getDestinatari(){
+        $sql = "SELECT id,email,nume FROM user u WHERE u.public='1' ";
+        $q = $this->db->query($sql);
+
+        if($q->num_rows() > 0) {
+            return $q->result_array();
+        } else {
+            return null;
+        }
+    }
+
+
+
 }

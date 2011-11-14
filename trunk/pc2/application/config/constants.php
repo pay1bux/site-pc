@@ -49,6 +49,8 @@ define('IMAGES_PATH',		STATIC_PATH.'images/');
 define('CSS_PATH',			STATIC_PATH.'css/');
 define('JS_PATH',			STATIC_PATH.'js/');
 
+define('TIP_DEVOTIONAL', 8);
+
 
 /* End of file constants.php */
 /* Location: ./application/config/constants.php */
