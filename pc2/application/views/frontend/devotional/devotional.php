@@ -3,23 +3,35 @@
 
     </div>
 
-    <div class="continut">
+    <div class="continut" style="padding-left: 15px;">
 
-        <table  style="padding-left: 10px;">
-            <? foreach ($devotionale as $devotional) : ?>
+        <h1><?php echo $devotionale['titlu'];?></h1>
+
+        <h2><?php echo prepareDateWithYear($devotionale['data']);?></h2>
+        <br/>
+
+        <p class="text"><?php echo $devotionale['continut'];?></p>
+        <br/>
+        <table style="width:100%;">
             <tr>
-                <td style="padding: 10px;" width="152" height="130"><img src="<?php echo $devotional['url'];?>"/></td>
-                <td style="padding-bottom: 10px;">
-                    <h1><?php echo $devotional['titlu'];?></h1>
-                    <p class="text"><?php echo  $devotional['data']; ?></p>
-<br/>
-                    <p class="text"><?php echo  myTruncate($devotional['continut'], 230, " "); ?></p>
+                <?php if ($prev != 0): ?>
+                <td style="width:50%;">
+                    <p class="text" align="left"><<
+                        <a href="<?php echo site_url('devotional/' . $prev['id']); ?>"/> <?php echo $prev['titlu']; ?> </a>
+                    </p>
                 </td>
+                <?php endif; ?>
+
+                <?php if ($next != 0): ?>
+                <td style="width:50%;">
+                    <p class="text" align="right">
+                        <a href="<?php echo site_url('devotional/' . $next['id']); ?>"/> <?php echo $next['titlu'];?> </a>
+                        >> </p>
+                </td>
+                <?php endif; ?>
             </tr>
 
-            <?php endforeach;?>
         </table>
-
     </div>
     <div class="right">
         <div class="chenar" style="background-image: url(<?php echo IMAGES_PATH; ?>right/1.png)"></div>

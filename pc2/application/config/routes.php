@@ -41,7 +41,11 @@
 $route['default_controller'] = "frontend/homepage";
 
 $route['devotional'] = "frontend/devotional/lista";
-$route['devotional/(\d+)'] = "frontend/devotional/$1";
+$route['devotional/(\d+)'] = "frontend/devotional/index/$1";
+
+$route['live'] = "frontend/live/live";
+
+$route['contact'] = "frontend/contact";
 
 $route['login'] = "admin/login";
 $route['verificare'] = "admin/verificare";
