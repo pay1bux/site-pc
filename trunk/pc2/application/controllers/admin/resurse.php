@@ -10,6 +10,7 @@ class Resurse extends CI_Controller {
             $input = array(
 							'titlu' => $postdata['titlu'],
 							'autor_id' => $postdata['autor'],
+                            'tip_id' => $postdata['tip_id'],
 							'categorie_id' => $postdata['categorie'],
 							'continut' => $postdata['continut'],
 							'data' => $postdata['data']
