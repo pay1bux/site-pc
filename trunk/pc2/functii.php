@@ -13,7 +13,7 @@ function connect() {
 }
 
 function select_db($link) {
-	mysql_select_db('pcnou', $link) or die('Could not select database.');
+	mysql_select_db('pc-nou', $link) or die('Could not select database.');
 }
 
 function insertResursa($titlu, $autor_id, $categorie_id,  $tip_id, $continut, $data, $data_adaugare) {
