@@ -6,7 +6,8 @@ select_db($link);
 
 //resolvePrograme();
 //resolveTineret();
-resolveStudii();
+//resolveStudii();
+resolveAudio();
 
 function resolvePrograme(){
     echo "\nArhiva\n";
@@ -283,6 +284,7 @@ function resolveStudii(){
         insertAttachment($src, $row['embed_code'], 'flv', $resurse_id, $row['source_thumb']);
     }
 }
+
 function resolveEvenimente(){
     echo "\nEvenimente\n";
 
@@ -315,6 +317,38 @@ function resolveEvenimente(){
             $src = substr($src, 0, $pos);
         }
         insertAttachment($src, $row['embed_code'], 'flv', $resurse_id, $row['source_thumb']);
+    }
+}
+
+function resolveAudio(){
+    echo "\nAudio\n";
+
+    // Select evenimente
+    $q = "SELECT * FROM pec_audio_list order by id";
+    $r = mysql_query($q);
+
+    while ($row = mysql_fetch_assoc($r)) {
+        $tipuri_resurse = array("3" => "5", "4" => "3", "3" => "5", "3" => "5", "3" => "5", );
+        $data = null;
+        $data_adaugare = $row['datainsert'];
+
+        $title_parts = explode("-", $row['title']);
+
+        $autor = trim($title_parts[0]);
+        var_dump($autor);
+
+        $pos = strpos($title_parts, '-');
+        $titlu = substr($title_parts, $pos, strlen($title_parts) - $pos);
+        var_dump($titlu);
+
+        $autor_id = checkExistingAuthor($autor);
+        if ($autor_id == -1) {
+            $autor_id = insertAutor($autor);
+        }
+
+        $resurse_id = insertResursa($titlu, $autor_id, null, $tipuri_resurse['id_cat1'], null, $data, $data_adaugare, $row['views']);
+
+        insertAttachment($row['source'], null, 'mp3', $resurse_id, null, transformInSeconds($row['durata']));
     }
 }
 

@@ -80,12 +80,18 @@ function insertCategorie($categorie) {
 	return mysql_insert_id();
 }
 
-function insertAttachment($url, $embed, $format, $resurse_id, $thumb) {
-	$q2 = "INSERT INTO attachment (url, embed, format, resurse_id, thumb) VALUES('$url', '$embed', '$format', '$resurse_id', '$thumb');";
+function insertAttachment($url, $embed, $format, $resurse_id, $thumb, $durata = null) {
+	$q2 = "INSERT INTO attachment (url, embed, format, resurse_id, thumb, durata) VALUES('$url', '$embed', '$format', '$resurse_id', '$thumb', '$durata');";
 	$r2 = mysql_query($q2);
 
 	if (!$r2)
 	die("Error insertion attachment: " . $embed);
 
 	return mysql_insert_id();
+}
+
+function transformInSeconds($durata) {
+	$parts = explode(":", $durata);
+    $seconds = $parts[2] + $parts[1] * 60 + $parts[0] * 3600;
+    return $seconds;
 }
