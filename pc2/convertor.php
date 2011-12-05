@@ -7,6 +7,7 @@ select_db($link);
 //resolvePrograme();
 //resolveTineret();
 //resolveStudii();
+//resolveEvenimente();
 resolveAudio();
 
 function resolvePrograme(){
@@ -121,6 +122,7 @@ function resolveTineret(){
         $title_parts = explode("-", $raw_title);
 
         $titlu = trim($title_parts[0]);
+        var_dump($titlu);
 
         $data_eveniment = trim($title_parts[1]);
         $data_zi = substr($data_eveniment, 0, 2);
@@ -146,7 +148,7 @@ function resolveTineret(){
             $autor_id = insertAutor($autor_poarta_cerului);
         }
 
-        $resurse_id = insertResursa($titlu + $data_eveniment, $autor_id, null, 10, null, $data, $data_adaugare, $row['views']);
+        $resurse_id = insertResursa($titlu . " " . $data_eveniment, $autor_id, null, 10, null, $data, $data_adaugare, $row['views']);
 
         // evenimente: Masa Rotunda Marturii Echipa Teen Challange Conferinta Concert
         // unknown ***** Partea 2
@@ -328,17 +330,18 @@ function resolveAudio(){
     $r = mysql_query($q);
 
     while ($row = mysql_fetch_assoc($r)) {
-        $tipuri_resurse = array("3" => "5", "4" => "3", "3" => "5", "3" => "5", "3" => "5", );
+        $tipuri_resurse = array("3" => "5", "4" => "3", "5" => "4", "6" => "9", "7" => "11", );
         $data = null;
         $data_adaugare = $row['datainsert'];
-
-        $title_parts = explode("-", $row['title']);
+        $rawTitle = str_replace("&amp;", "si", $row['title']);
+        $title_parts = explode("-", $rawTitle);
 
         $autor = trim($title_parts[0]);
         var_dump($autor);
 
-        $pos = strpos($title_parts, '-');
-        $titlu = substr($title_parts, $pos, strlen($title_parts) - $pos);
+        // TODO: nu insereaza caracterul '
+        $pos = strpos($rawTitle, "-");
+        $titlu = trim(substr($rawTitle, $pos + 1, strlen($rawTitle) - $pos));
         var_dump($titlu);
 
         $autor_id = checkExistingAuthor($autor);
@@ -346,9 +349,9 @@ function resolveAudio(){
             $autor_id = insertAutor($autor);
         }
 
-        $resurse_id = insertResursa($titlu, $autor_id, null, $tipuri_resurse['id_cat1'], null, $data, $data_adaugare, $row['views']);
+        $resurse_id = insertResursa($titlu, $autor_id, null, $tipuri_resurse[$row["id_cat1"]], null, $data, $data_adaugare, $row['views']);
 
-        insertAttachment($row['source'], null, 'mp3', $resurse_id, null, transformInSeconds($row['durata']));
+        insertAttachment($row['source'], null, 'mp3', $resurse_id, null, transformInSeconds($row['durata']), $row['marimea']);
     }
 }
 

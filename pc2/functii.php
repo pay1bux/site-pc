@@ -17,7 +17,7 @@ function select_db($link) {
 }
 
 function insertResursa($titlu, $autor_id, $categorie_id, $tip_id, $continut, $data, $data_adaugare, $views) {
-
+    $titlu =  mysql_real_escape_string($titlu);
     $q2 = "INSERT INTO resurse(titlu, autor_id, categorie_id, tip_id, continut, data, data_adaugare, views)
 	        VALUES('$titlu', '$autor_id', '$categorie_id',  '$tip_id', '$continut', '$data', '$data_adaugare', '$views');";
 	$r2 = mysql_query($q2);
@@ -39,7 +39,7 @@ function checkExistingAuthor($autor) {
 }
 
 function insertAutor($nume) {
-
+    $nume =  mysql_real_escape_string($nume);
     $q2 = "INSERT INTO autor(nume) VALUES('$nume');";
 	$r2 = mysql_query($q2);
 
@@ -50,6 +50,7 @@ function insertAutor($nume) {
 }
 
 function insertTag($tip_tag_id, $resurse_id, $valoare) {
+    $valoare =  mysql_real_escape_string($valoare);
 	$q2 = "INSERT INTO tag (tip_tag_id, resurse_id, valoare) VALUES('$tip_tag_id', '$resurse_id', '$valoare');";
 	$r2 = mysql_query($q2);
 
@@ -70,7 +71,7 @@ function checkExistingCategorie($categorie) {
 }
 
 function insertCategorie($categorie) {
-
+    $categorie =  mysql_real_escape_string($categorie);
     $q2 = "INSERT INTO categorie_resurse(nume) VALUES('$categorie');";
 	$r2 = mysql_query($q2);
 
@@ -80,8 +81,9 @@ function insertCategorie($categorie) {
 	return mysql_insert_id();
 }
 
-function insertAttachment($url, $embed, $format, $resurse_id, $thumb, $durata = null) {
-	$q2 = "INSERT INTO attachment (url, embed, format, resurse_id, thumb, durata) VALUES('$url', '$embed', '$format', '$resurse_id', '$thumb', '$durata');";
+function insertAttachment($url, $embed, $format, $resurse_id, $thumb, $durata = null, $marime = null) {
+    $url =  mysql_real_escape_string($url);
+	$q2 = "INSERT INTO attachment (url, embed, format, resurse_id, thumb, durata, marime) VALUES('$url', '$embed', '$format', '$resurse_id', '$thumb', '$durata', '$marime');";
 	$r2 = mysql_query($q2);
 
 	if (!$r2)
