@@ -47,6 +47,8 @@ $route['live'] = "frontend/live/live";
 
 $route['contact'] = "frontend/contact";
 
+$route['arhiva-audio'] = "frontend/arhiva/audio";
+
 $route['login'] = "admin/login";
 $route['verificare'] = "admin/verificare";
 $route['admin/adauga-resursa'] = "admin/resurse/add";
