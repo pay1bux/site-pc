@@ -4,10 +4,10 @@ require_once 'functii.php';
 connect();
 select_db($link);
 
-//resolvePrograme();
-//resolveTineret();
-//resolveStudii();
-//resolveEvenimente();
+resolvePrograme();
+resolveTineret();
+resolveStudii();
+resolveEvenimente();
 resolveAudio();
 
 function resolvePrograme(){
