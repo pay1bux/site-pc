@@ -16,6 +16,8 @@
 
 		<!-- Footer -->
 		<?php $this->load->view('frontend/includes/footer'); ?>
-		
-	</body>
-</html>
+
+        </div>
+    </div>
+    </body>
+    </html>

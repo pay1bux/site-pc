@@ -19,11 +19,11 @@ function  myTruncate($string, $limit, $break=".", $pad="...") {
 }
 
 function prepareDate($data) {
-    $luni = array(0 => "IAN", 1 => "FEB", 2 => "MAR", 3 => "APR", 4 => "MAI", 5 => "IUN", 6 => "IUL", 7 => "AUG", 8 => "SEP"
+    $luni = array(1 => "IAN", 2 => "FEB", 3 => "MAR", 4 => "APR", 5 => "MAI", 6 => "IUN", 7 => "IUL", 8 => "AUG", 9 => "SEP"
                 , 10 => "OCT", 11 => "NOI", 12 => "DEC", );
 
     $time = strtotime($data);
-    $luna = $luni[date('m', $time)];
+    $luna = $luni[date('n', $time)];
 
     return date('d', $time) . " " . $luna;
 }

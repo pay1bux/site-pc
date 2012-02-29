@@ -55,7 +55,7 @@ class Resurse_model extends CI_Model
 
     function getUltimulDevotional()
     {
-        $sql = "SELECT continut FROM resurse WHERE tip_id = 8 ORDER BY id DESC LIMIT 1";
+        $sql = "SELECT titlu, continut, id FROM resurse WHERE tip_id = 8 ORDER BY id DESC LIMIT 1";
         $q = $this->db->query($sql);
 
         if ($q->num_rows() > 0) {

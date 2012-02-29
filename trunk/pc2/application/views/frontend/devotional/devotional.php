@@ -3,7 +3,7 @@
 
     </div>
 
-    <div class="continut" style="padding-left: 15px;">
+    <div class="continut">
 
         <h1><?php echo $devotionale['titlu'];?></h1>
 
