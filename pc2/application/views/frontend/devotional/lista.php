@@ -5,7 +5,7 @@
 
     <div class="continut">
 
-        <table  style="padding-left: 10px;">
+        <table  >
             <? foreach ($devotionale as $devotional) : ?>
             <tr>
                 <td style="padding: 0px;" width="152" height="130"><img src="<?php echo $devotional['url'];?>"/></td>

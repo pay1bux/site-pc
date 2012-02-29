@@ -45,9 +45,12 @@ $route['devotional/(\d+)'] = "frontend/devotional/index/$1";
 
 $route['live'] = "frontend/live/live";
 
-$route['contact'] = "frontend/contact";
+$route['despre-noi'] = "frontend/despre/index";
 
-$route['arhiva-audio'] = "frontend/arhiva/audio";
+$route['contact'] = "frontend/contact";
+$route['contact/send'] = "frontend/contact/send";
+
+$route['arhiva-audio'] = "frontend/audio";
 
 $route['login'] = "admin/login";
 $route['verificare'] = "admin/verificare";
