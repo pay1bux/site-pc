@@ -44,13 +44,40 @@ Founded in 2004 by Ps Russell and Sam Evans, it has flourished under their leade
                 <div class="clearBoth"></div>
       </div>
              <div class="clearBoth"></div>
+
+            <div id="incontinut" style="">
+                   <div class="item">
+                   <div class="picture" style="background-image: url(<?php echo IMAGES_PATH; ?>comitet/1.png)"></div>
+                   <p>Nelu Filip</p>
+                </div>
+
+                   <div class="item">
+                   <div class="picture" style="background-image: url(<?php echo IMAGES_PATH; ?>comitet/1.png)"></div>
+                   <p>Sandu Guler</p>
+                </div>
+
+                   <div class="item">
+                   <div class="picture" style="background-image: url(<?php echo IMAGES_PATH; ?>comitet/1.png)"></div>
+                   <p>Doru Hriscu</p>
+                </div>
+
+                   <div class="item">
+                   <div class="picture" style="background-image: url(<?php echo IMAGES_PATH; ?>comitet/1.png)"></div>
+                   <p>Eusebiu Stanila</p>
+                </div>
+
+                   <div class="item" style="margin-right: 0px;">
+                   <div class="picture" style="background-image: url(<?php echo IMAGES_PATH; ?>comitet/1.png)";"></div>
+                   <p>Romica Florescu</p>
+                </div>
+            </div>
 </div>
 
 
 
 
+
     <div id="right">
-       
         <div class="item" style="background-image: url(<?php echo IMAGES_PATH; ?>right/1.png)"></div>
         <div class="item" style="background-image: url(<?php echo IMAGES_PATH; ?>right/2.png)"></div>
         <div class="item" style="background-image: url(<?php echo IMAGES_PATH; ?>right/3.png)"></div>
