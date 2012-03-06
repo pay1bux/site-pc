@@ -536,6 +536,7 @@ body {
 	font-size:12px; color:#666;
     margin-bottom: 0px;
     margin-top: 0px;
+    line-height: 15px;
 }
 
 .p_text .i_details .bold {
@@ -726,4 +727,55 @@ body {
 	-moz-box-shadow: 0 0 10px #999;
 	-webkit-box-shadow: 0 0 10px #999;
 	box-shadow: 0 0 10px #999;
+}
+
+#form
+{
+    width:524px; height: auto;
+    float: left;
+}
+
+#form input, textarea
+{
+       width: 250px;
+        margin-bottom: 15px;
+		border: none;
+		background: white;
+        border:1px solid #b1b1b1;
+		font-size:12px;
+        color: #b1b1b1;
+    padding: 3px;
+}
+
+#form textarea
+{
+    width: 400px;
+    height: 150px;
+    resize: none
+}
+
+#form .checkbox
+{
+   float:left;
+   width: auto;
+   margin-right: 20px;
+  margin-top: 1px;
+}
+
+#form .submit
+{
+    width: 80px;
+    margin-left: 330px;
+    margin-top: 10px;
+    padding:0 8px 0 10px; line-height:26px;
+	color:#000; font-size:12px;
+	height:26px; border:1px solid #bfbebd;
+	background-attachment:scroll;
+	background-clip:border-box;
+	background-color:transparent;
+	background-image:url(../images/repeat_x.gif);
+	background-origin:padding-box;
+	background-position:0 0;
+	background-repeat:repeat-x;
+	background-size:auto;
 }
