@@ -10,16 +10,24 @@ $scurte='class="cleardefault  scurte"';
 ?>
 
 
-<div id="wrapper">
-    <div class="continut">
- <div id="player">
-    <object  style="margin-top: -20px;" width="940" height="528"> <param name="movie" value="http://www.poartacerului.ro/media/player_live_streaming/player.swf"><param name="flashvars" value="src=http%3A%2F%2Fwww.poartacerului.ro%2Fmedia%2Fplayer_live_streaming%2Fwirecast.f4m&poster=http%3A%2F%2Fwww.poartacerului.ro%2Fmedia%2Fplayer_live_streaming%2Flogo_live.jpg"><param name="allowFullScreen" value="true"><param name="allowscriptaccess" value="always"><embed src="http://www.poartacerului.ro/media/player_live_streaming/player.swf" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" width="940" height="528" flashvars="src=http%3A%2F%2Fwww.poartacerului.ro%2Fmedia%2Fplayer_live_streaming%2Fwirecast.f4m&poster=http%3A%2F%2Fwww.poartacerului.ro%2Fmedia%2Fplayer_live_streaming%2Flogo_live.jpg"  wmode="transparent"></embed></object>
-</div>
-        <p class="info" > -Cerinte minime pentru buna functionare a transmisiei live:<br/>
-- Pentru functionarea transmisiei LIVE, aveti nevoie de Flash Player versiunea 10.1.0 sau superioara;<br/>
-- Pentru orice alte probleme sau sugestii ,ne puteti contacta cu incredere la Yahoo ID: poartacerului.live sau email: poartacerului@gmail.com
-</p>
-        <br />
+    <div class="clearBoth" style="height:10px;"></div>
+    <div id="PageContent">
+<div id="continut">
+    <object style="margin-top: -10px;" width="940" height="528"> <param name="movie" value="http://www.poartacerului.ro/media/player_live_streaming/player.swf"><param name="flashvars" value="src=http%3A%2F%2Fwww.poartacerului.ro%2Fmedia%2Fplayer_live_streaming%2Fwirecast.f4m&poster=http%3A%2F%2Fwww.poartacerului.ro%2Fmedia%2Fplayer_live_streaming%2Flogo_live.jpg"><param name="allowFullScreen" value="true"><param name="allowscriptaccess" value="always"><embed src="http://www.poartacerului.ro/media/player_live_streaming/player.swf" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" width="940" height="528" flashvars="src=http%3A%2F%2Fwww.poartacerului.ro%2Fmedia%2Fplayer_live_streaming%2Fwirecast.f4m&poster=http%3A%2F%2Fwww.poartacerului.ro%2Fmedia%2Fplayer_live_streaming%2Flogo_live.jpg"  wmode="transparent"></embed></object>
+
+
+
+        <div class="p_text">
+            <div class="i_details">
+
+                <p class="mic">-Cerinte minime pentru buna functionare a transmisiei live:</p>
+                <p class="mic">- Pentru functionarea transmisiei LIVE, aveti nevoie de Flash Player versiunea 10.1.0 sau superioara;</p>
+                <p class="mic">- Pentru orice alte probleme sau sugestii ,ne puteti contacta cu incredere la Yahoo ID: poartacerului.live sau email: poartacerului@gmail.com</p>
+      </div>
+            </div>
+
+
+        
 
         <h1> Cerere de rugaciune</h1>
          <?php echo $this->session->flashdata('cerere'); ?>
@@ -59,11 +67,10 @@ pe site-ul bisericii Poarta cerului in cadrul listei de rugaciune</p></td>
 
         </table>
 </div>
-    <div class="clear"></div>
 
-
-    <div class="clear"></div>
-
+  <div class="clearBoth"></div>
 </div>
-<div class="clear"></div>
+
+  <div class="clearBoth"></div>
+
         
