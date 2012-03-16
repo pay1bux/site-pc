@@ -11,6 +11,7 @@
 <script type="text/javascript" src="<?php echo JS_PATH; ?>general.js"></script>
 <script type="text/javascript" src="<?php echo JS_PATH; ?>nivo-slider/jquery-1.6.1.min.js"></script>
 <script type="text/javascript" src="<?php echo JS_PATH; ?>nivo-slider/jquery.nivo.slider.js"></script>
+<script type="text/javascript" src="<?php echo JS_PATH; ?>jquery.jplayer.min.js"></script>
 <script type="text/javascript" src="http://live.jahos.net/swfobject.js"></script>
 
 <!---->
