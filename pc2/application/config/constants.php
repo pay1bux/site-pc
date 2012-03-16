@@ -49,7 +49,8 @@ define('IMAGES_PATH',		STATIC_PATH.'images/');
 define('CSS_PATH',			STATIC_PATH.'css/');
 define('JS_PATH',			STATIC_PATH.'js/');
 
-define('TIP_DEVOTIONAL', 8);
+define('TIP_DEVOTIONAL', "articole");
+define('TIP_CANTEC_AUDIO', "cantec-audio");
 
 
 /* End of file constants.php */
