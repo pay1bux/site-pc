@@ -17,7 +17,7 @@ function select_db($link) {
 }
 
 function getLocalitati() {
-	$q = "SELECT * FROM localitati order by id limit 2000";
+	$q = "SELECT * FROM localitati";
 	$r = mysql_query($q);
 
     return $r;
