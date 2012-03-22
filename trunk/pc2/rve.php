@@ -24,7 +24,7 @@ class MC_TCPDF extends TCPDF {
 		// add a new page
 		$this->AddPage();
 		// set columns
-		$this->setEqualColumns(2);
+		$this->setEqualColumns(2, 110);
 		// print chapter body
 		$this->ChapterBody($content, $mode);
 	}
@@ -38,7 +38,7 @@ class MC_TCPDF extends TCPDF {
 	public function ChapterBody($content, $mode=false) {
 		$this->selectColumn();
 		// set font
-		$this->SetFont('times', '', 15);
+		$this->SetFont('times', '', 14);
 		$this->SetTextColor(50, 50, 50);
 		// print content
 		if ($mode) {
@@ -76,7 +76,7 @@ $pdf = new MC_TCPDF(PDF_PAGE_ORIENTATION, PDF_UNIT, PDF_PAGE_FORMAT, true, 'UTF-
 //$pdf->SetDefaultMonospacedFont(PDF_FONT_MONOSPACED);
 
 //set margins
-$pdf->SetMargins(5, 5, 5);
+$pdf->SetMargins(10, 10, 0, 0);
 $pdf->SetHeaderMargin(0);
 $pdf->SetFooterMargin(0);
 
@@ -96,13 +96,32 @@ $text = "";
 $i = 0;
 while ($row = mysql_fetch_assoc($result)) {
     $i++;
-    $text = $text . "<strong>= COLET CADOU, GRATUIT =</strong><br /><strong><u><i>Destinatar:</i></u></strong><br />Reprezentantul localitatii<br />"
+    $text = $text . "<div align=\"center\"><strong>= COLET CADOU, GRATUIT =</strong></div><strong><u><i>Destinatar:</i></u></strong><br />Reprezentantul localitatii<br />"
             . $row["localitate"] ."<br />in Consiliul Primariei (sau Consilierului local)<br />loc. "
-            . $row["localitate"] ."<br />cod " . $row["cod_postal"] ."<br />jud. " . $row["judet"] ."<br /><br /><br />";
+            . $row["localitate"] ."<br />jud. " . $row["judet"] ."";
+    if ($i % 8 != 0) {
+        $text .= "<br /><br /><br /><br />";
+    }
+    if ($i % 8 == 2) {
+        $text .= "<br />";
+    }
+    if ($i % 8 == 3) {
+        $text .= "<br />";
+    }
+    if ($i % 8 == 6) {
+        $text .= "<br />";
+    }
+    if ($i % 8 == 7) {
+        $text .= "<br />";
+    }
     if ($i % 8 == 0) {
         $pdf->PrintChapter($text, true);
         $text = "";
     }
+}
+
+if ($i % 8 != 0) {
+    $pdf->PrintChapter($text, true);
 }
 
 // print TEXT
