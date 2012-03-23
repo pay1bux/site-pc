@@ -59,60 +59,41 @@ class MC_TCPDF extends TCPDF {
 $pdf = new MC_TCPDF(PDF_PAGE_ORIENTATION, PDF_UNIT, PDF_PAGE_FORMAT, true, 'UTF-8', false);
 
 // set document information
-//$pdf->SetCreator(PDF_CREATOR);
-//$pdf->SetAuthor('Nicola Asuni');
-//$pdf->SetTitle('TCPDF Example 010');
-//$pdf->SetSubject('TCPDF Tutorial');
-//$pdf->SetKeywords('TCPDF, PDF, example, test, guide');
-
-// set default header data
-//$pdf->SetHeaderData(PDF_HEADER_LOGO, PDF_HEADER_LOGO_WIDTH, PDF_HEADER_TITLE.' 010', PDF_HEADER_STRING);
-
-// set header and footer fonts
-//$pdf->setHeaderFont(Array(PDF_FONT_NAME_MAIN, '', PDF_FONT_SIZE_MAIN));
-//$pdf->setFooterFont(Array(PDF_FONT_NAME_DATA, '', PDF_FONT_SIZE_DATA));
-
-// set default monospaced font
-//$pdf->SetDefaultMonospacedFont(PDF_FONT_MONOSPACED);
+$pdf->SetCreator("Laurentiu Trica");
+$pdf->SetAuthor('Laurentiu Trica');
+$pdf->SetTitle('Etichete Proiect 10.000');
+$pdf->SetSubject('Etichete Proiect 10.000');
 
 //set margins
-$pdf->SetMargins(10, 10, 0, 0);
+$pdf->SetMargins(10, 10, 0, true);
 $pdf->SetHeaderMargin(0);
 $pdf->SetFooterMargin(0);
 
 //set auto page breaks
-$pdf->SetAutoPageBreak(TRUE, PDF_MARGIN_BOTTOM);
-
-//set image scale factor
-//$pdf->setImageScale(PDF_IMAGE_SCALE_RATIO);
-
-//set some language-dependent strings
-$pdf->setLanguageArray($l);
-
-// ---------------------------------------------------------
+$pdf->SetAutoPageBreak(TRUE, 0);
 
 $result = getLocalitati();
 $text = "";
 $i = 0;
 while ($row = mysql_fetch_assoc($result)) {
     $i++;
-    $text = $text . "<div align=\"center\"><strong>= COLET CADOU, GRATUIT =</strong></div><strong><u><i>Destinatar:</i></u></strong><br />Reprezentantul localitatii<br />"
+    $text = $text . "<div align=\"center\"><strong>= COLET CADOU, GRATUIT =</strong></div><br /><strong><u><i>Destinatar:</i></u></strong><br />Reprezentantul localitatii<br />"
             . $row["localitate"] ."<br />in Consiliul Primariei (sau Consilierului local)<br />loc. "
-            . $row["localitate"] ."<br />jud. " . $row["judet"] ."";
+            . $row["localitate"] ."<br /><table><tr><td align=\"left\">jud. " . $row["judet"] ."</td><td align=\"right\"><img src=\"imprimate.png\" width=\"60\"/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td></tr></table>";
     if ($i % 8 != 0) {
-        $text .= "<br /><br /><br /><br />";
+//        $text .= "<br />";
     }
     if ($i % 8 == 2) {
-        $text .= "<br />";
+//        $text .= "<br />";
     }
     if ($i % 8 == 3) {
-        $text .= "<br />";
+//        $text .= "<br />";
     }
     if ($i % 8 == 6) {
-        $text .= "<br />";
+//        $text .= "<br />";
     }
     if ($i % 8 == 7) {
-        $text .= "<br />";
+//        $text .= "<br />";
     }
     if ($i % 8 == 0) {
         $pdf->PrintChapter($text, true);
@@ -123,14 +104,6 @@ while ($row = mysql_fetch_assoc($result)) {
 if ($i % 8 != 0) {
     $pdf->PrintChapter($text, true);
 }
-
-// print TEXT
-//$pdf->PrintChapter(1, 'LOREM IPSUM [TEXT]', 'tcpdf/cache/chapter_demo_1.txt', false);
-
-// print HTML
-//$pdf->PrintChapter(2, 'LOREM IPSUM [HTML]', 'tcpdf/cache/chapter_demo_2.txt', true);
-
-// ---------------------------------------------------------
 
 //Close and output PDF document
 $pdf->Output('etichete.pdf', 'I');
