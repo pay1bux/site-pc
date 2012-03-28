@@ -65,7 +65,7 @@ $pdf->SetTitle('Etichete Proiect 10.000');
 $pdf->SetSubject('Etichete Proiect 10.000');
 
 //set margins
-$pdf->SetMargins(10, 10, 0, true);
+$pdf->SetMargins(10, 4, 0, true);
 $pdf->SetHeaderMargin(0);
 $pdf->SetFooterMargin(0);
 
@@ -77,24 +77,20 @@ $text = "";
 $i = 0;
 while ($row = mysql_fetch_assoc($result)) {
     $i++;
+    if ($i % 4 == 0 || $i % 8 == 0) {
     $text = $text . "<div align=\"center\"><strong>= COLET CADOU, GRATUIT =</strong></div><br /><strong><u><i>Destinatar:</i></u></strong><br />Reprezentantul localitatii<br />"
             . $row["localitate"] ."<br />in Consiliul Primariei (sau Consilierului local)<br />loc. "
+            . $row["localitate"] ."<br /><table><tr><td align=\"left\">jud. " . $row["judet"] ."</td><td align=\"right\"><img src=\"imprimate.png\" width=\"50\"/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td></tr></table>";
+    } else {
+        $text = $text . "<div align=\"center\"><strong>= COLET CADOU, GRATUIT =</strong></div><br /><strong><u><i>Destinatar:</i></u></strong><br />Reprezentantul localitatii<br />"
+            . $row["localitate"] ."<br />in Consiliul Primariei (sau Consilierului local)<br />loc. "
             . $row["localitate"] ."<br /><table><tr><td align=\"left\">jud. " . $row["judet"] ."</td><td align=\"right\"><img src=\"imprimate.png\" width=\"60\"/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td></tr></table>";
-    if ($i % 8 != 0) {
-//        $text .= "<br />";
     }
-    if ($i % 8 == 2) {
-//        $text .= "<br />";
+
+    if ($i % 8 == 1 || $i % 8 == 5) {
+        $text .= "<br />";
     }
-    if ($i % 8 == 3) {
-//        $text .= "<br />";
-    }
-    if ($i % 8 == 6) {
-//        $text .= "<br />";
-    }
-    if ($i % 8 == 7) {
-//        $text .= "<br />";
-    }
+
     if ($i % 8 == 0) {
         $pdf->PrintChapter($text, true);
         $text = "";
