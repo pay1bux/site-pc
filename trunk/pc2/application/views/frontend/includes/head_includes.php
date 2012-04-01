@@ -7,6 +7,7 @@
 <!-- Se includ fisierele css si javascript -->
 <link rel="shortcut icon" href="img/browsericon.png" />
 <link rel="stylesheet" charset="utf-8" type="text/css" href="<?php echo CSS_PATH; ?>poartacerului.css" />
+<link rel="stylesheet" charset="utf-8" type="text/css" href="<?php echo CSS_PATH; ?>jplayer.blue.monday.css" />
 <link rel="stylesheet" charset="utf-8" type="text/css" href="<?php echo CSS_PATH; ?>nivo-slider/nivo-slider.css" />
 <script type="text/javascript" src="<?php echo JS_PATH; ?>general.js"></script>
 <script type="text/javascript" src="<?php echo JS_PATH; ?>nivo-slider/jquery-1.6.1.min.js"></script>
