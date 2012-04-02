@@ -5,6 +5,7 @@ echo validation_errors();
 echo form_open(current_url());
 $checkbox='class="checkbox"';
 $buton='class="submit"';
+$clear='class="cleardefault"';
 
 
 ?>
@@ -37,10 +38,10 @@ Daca aveti o cerere de rugaciune sau un motiv de multumire si ati dori sa il imp
     </p>
 
    <div id="form">
-                <?php echo form_input('cerere[nume]', 'Numele si Prenumele*'); ?>
+                <?php echo form_input('cerere[nume]', 'Numele si Prenumele*', $clear); ?>
 <br />
 
-               <?php echo form_input('cerere[localitate]','Localitate'); ?>
+               <?php echo form_input('cerere[localitate]','Localitate', $clear); ?>
 <br />
                <?php echo form_textarea('cerere[continut]'); ?>
 
@@ -57,7 +58,7 @@ pe site-ul bisericii Poarta cerului in cadrul listei de rugaciune</p></td>
         <?php
             echo form_fieldset_close();
 
-            echo form_submit('sumbit', 'Trimite', $buton);
+            echo form_submit('submit', 'Trimite', $buton);
 
             echo form_close(); ?>
 
