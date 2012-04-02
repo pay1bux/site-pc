@@ -144,7 +144,7 @@ class Resurse_model extends CI_Model
         }
     }
 
-    function getResurseByTipWithAtt($codTip, $limit = 10)
+    function getResurseByTipWithAtt($codTip, $limit = 9)
     {
         $sql = "SELECT r.*, r.id as r_id, a.*, tr.*
                     FROM $this->table r, attachment a, tip_resurse tr

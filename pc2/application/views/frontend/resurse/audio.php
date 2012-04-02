@@ -132,29 +132,20 @@
     //]]>
 </script>
 
+<div class="clearBoth" style="height:10px;"></div>
+  <div id="PageContent">
 
-<div id="wrapper">
-    <div class="chenar audio">
 
-        <div class="chenar audioheader">
-            <h1 style="line-height: 55px; margin-left: 20px;"> Arhiva Audio</h1>
+      <div id="continut">
 
-        </div>
-        <div class="chenar audioplayer">
-        </div>
+<div id="wrapper_audio">
 
-        <div id="audiomenu">
-
-            <ul>
-                <li><a href="#" tabindex="1">Cele mai noi</a></li>
-                <li><a href="#" tabindex="2">Cele mai ascultate</a></li>
-                <li><a href="#" tabindex="3">Predici</a></li>
-                <li><a href="#" tabindex="4">Muzica</a></li>
-                <li><a href="#" tabindex="5">Poezii</a></li>
-                <li><a href="#" tabindex="6">Marturii</a></li>
-                <li><a href="#" tabindex="7">Diverse</a></li>
-            </ul>
-
+<div id="header_audio">
+       <div class="p_text">
+	<div class="i_title" style="margin-top: 15px; margin-left: 10px;">Arhiva audio</div>
+           </div>
+  </div>
+<div id="audio_playlist">
             <div id="jquery_jplayer"></div>
 
 
@@ -165,13 +156,13 @@
                         <ul class="jp-controls">
                             <li><a href="#" id="jplayer_play" class="jp-play" tabindex="1">play</a></li>
                             <li><a href="#" id="jplayer_pause" class="jp-pause" tabindex="1">pause</a></li>
-                            <li><a href="#" id="jplayer_stop" class="jp-stop" tabindex="1">stop</a></li>
+<!--                            <li><a href="#" id="jplayer_stop" class="jp-stop" tabindex="1">stop</a></li>-->
                             <li><a href="#" id="jp-mute" class="jp-mute" tabindex="1">min volume</a></li>
                             <li><a href="#" id="jp-unmute" class="jp-unmute" tabindex="1">min volume</a></li>
-<!--                            <li><a href="#" id="jplayer_volume_max" class="jp-volume-max" tabindex="1">max volume</a>-->
-                            </li>
-                            <li><a href="#" id="jplayer_previous" class="jp-previous" tabindex="1">previous</a></li>
-                            <li><a href="#" id="jplayer_next" class="jp-next" tabindex="1">next</a></li>
+<!--                            <li><a href="#" id="jplayer_volume_max" class="jp-volume-max" tabindex="1">max volume</a></li-->
+
+<!--                            <li><a href="#" id="jplayer_previous" class="jp-previous" tabindex="1">previous</a></li>-->
+<!--                            <li><a href="#" id="jplayer_next" class="jp-next" tabindex="1">next</a></li>-->
                         </ul>
                         <div class="jp-progress">
                             <div id="jplayer_seek_bar" class="jp-seek-bar">
@@ -181,24 +172,44 @@
                         <div id="jplayer_volume_bar" class="jp-volume-bar">
                             <div id="jplayer_volume_bar_value" class="jp-volume-bar-value"></div>
                         </div>
-                        <div id="jplayer_play_time" class="jp-current-time"></div>
+<!--                        <div id="jplayer_play_time" class="jp-current-time"></div>-->
                         <div id="jplayer_total_time" class="jp-duration"></div>
                     </div>
                     <div id="jplayer_playlist" class="jp-playlist">
                         <ul>
                             <?php foreach ($audio as $i => $playlistItem): ?>
-                            <li>
+                            <li> <div class="audioline_playlist" ></div>
                                 <a href="<?php echo($playlistItem["url"]) ?>"
-                                   class="track<?php if ($i == 0) echo " track-default"?>">&nbsp;</a>
+                                   class="track<?php if ($i == 0) echo " track-default"?>" >&nbsp;</a>
                                 <span><?php echo($playlistItem["titlu"]) ?></span>
+
                             </li>
                             <?php endforeach; ?>
                         </ul>
                     </div>
                 </div>
             </div>
-
+</div>
+    <div id="audio_categories">
+      <ul id="audio">
+                <li><a href="#" tabindex="1">Cele mai noi</a><div class="audioline"></div></li>
+                <li><a href="#" tabindex="2">Cele mai ascultate</a><div class="audioline"></div></li>
+                <li><a href="#" tabindex="3">Predici</a><div class="audioline"></div></li>
+                <li><a href="#" tabindex="4">Muzica</a><div class="audioline"></div></li>
+                <li><a href="#" tabindex="5">Poezii</a><div class="audioline"></div></li>
+                <li><a href="#" tabindex="6">Marturii</a><div class="audioline"></div></li>
+                <li><a href="#" tabindex="7">Diverse</a><div class="audioline"></div></li>
+            </ul>
+</div>
+</div>
             <div class="clear"></div>
         </div>
-    </div>
-</div>
+
+         
+          </div>
+
+
+
+
+
+<div class="clearBoth"></div>

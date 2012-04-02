@@ -17,4 +17,5 @@
             <li class="i_mt"><a href="<?php echo site_url("despre-noi")?>">Despre noi</a></li>
             <li class="i_mt"><a href="<?php echo site_url("default_controller")?>">Acasa</a></li>
         </ul>
+           <div class="FooterLine" style="width: 600px; margin-top : 35px; margin-left: 63px;"></div>
     </div>
