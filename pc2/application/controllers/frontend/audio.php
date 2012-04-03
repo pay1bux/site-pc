@@ -8,7 +8,7 @@ class Audio extends CI_Controller {
         $data['page_title'] = 'Arhiva Audio - Biserica Penticostala Poarta Cerului, Timisoara';
 
         $this->load->model('resurse_model');
-        $data['audio'] = $this->resurse_model->getResurseByTipWithAtt(TIP_CANTEC_AUDIO);
+        $data['audio'] = $this->resurse_model->getResurseByTipWithAtt(TIP_CANTEC_AUDIO, 400);
 
         $this->load->view('frontend/template', $data);
     }

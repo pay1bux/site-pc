@@ -229,21 +229,22 @@ div.jp-volume-bar-value {
 	height:5px;
 }
 div.jp-current-time,
+div.jp-time-separator,
 div.jp-duration {
 	position: absolute;
 	top:47px;
 	width:80px;
 	font-size:1em;
-	font-style:oblique;
+	/*font-style:oblique;*/
 }
 div.jp-duration {
 	text-align: right;
 }
-div.jp-single-player div.jp-current-time,
-div.jp-single-player div.jp-duration {
-	left:130px;
+div.jp-time-separator {
+	text-align: center;
 }
 div.jp-playlist-player div.jp-current-time,
+div.jp-playlist-player div.jp-time-separator,
 div.jp-playlist-player div.jp-duration {
 	left:440px;
 
