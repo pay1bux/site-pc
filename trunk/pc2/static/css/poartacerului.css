@@ -784,9 +784,20 @@ ul#audio a:hover
 	border-bottom:1px solid #FFF;
     width: 250px;
     margin: 3px 0 3px 10px;
-    width: 665px;
+    width: 455px;
 
 }
+
+#scrollbar1 { width: 665px; clear: both; margin: 0px 0 10px; }
+#scrollbar1 .viewport { width: 500px; height: 360px; overflow: hidden; position: relative; }
+#scrollbar1 .overview { list-style: none; position: absolute; left: 0; top: 0; }
+#scrollbar1 .thumb .end,
+#scrollbar1 .thumb { background-color: #666; }
+#scrollbar1 .scrollbar { position: relative; float: right; width: 15px; }
+#scrollbar1 .tracking { background-color: #F4F4F4; height: 100%; width:13px; position: relative; padding: 0 1px; margin: 5px 0 0px;}
+#scrollbar1 .thumb { height: 20px; width: 13px; cursor: pointer; overflow: hidden; position: absolute; top: 0; }
+#scrollbar1 .thumb .end { overflow: hidden; height: 5px; width: 13px; }
+#scrollbar1 .disable{ display: none; }
 
 #continut {
 	width:670px; height: auto;
