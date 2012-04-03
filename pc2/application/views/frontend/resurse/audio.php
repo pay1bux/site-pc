@@ -7,15 +7,11 @@
 
         // Local copy of jQuery selectors, for performance.
         var my_jPlayer = $("#jquery_jplayer"),
-                my_trackName = $("#jp_container .track-name"),
-                my_playState = $("#jp_container .play-state"),
-                my_extraPlayInfo = $("#jp_container .extra-play-info");
+                my_trackName = $(".jp-track-name");
 
         // Some options
         var opt_play_first = false, // If true, will attempt to auto-play the default track on page loads. No effect on mobile devices, like iOS.
-                opt_auto_play = true, // If true, when a track is selected, it will auto-play.
-                opt_text_playing = "Now playing", // Text when playing
-                opt_text_selected = "Track selected"; // Text when not playing
+                opt_auto_play = true; // Text when not playing
 
         // A flag to capture the first track
         var first_track = true;
@@ -26,22 +22,11 @@
         $.jPlayer.timeFormat.sepMin = ":";
         $.jPlayer.timeFormat.sepSec = "";
 
-        // Initialize the play state text
-        my_playState.text(opt_text_selected);
 
         // Instance jPlayer
         my_jPlayer.jPlayer({
             ready:function () {
                 $("#jp_container .track-default").click();
-            },
-            timeupdate:function (event) {
-                my_extraPlayInfo.text(parseInt(event.jPlayer.status.currentPercentAbsolute, 10) + "%");
-            },
-            play:function (event) {
-                my_playState.text(opt_text_playing);
-            },
-            pause:function (event) {
-                my_playState.text(opt_text_selected);
             },
             ended:function (event) {
                 playNext();
@@ -82,26 +67,7 @@
                     wanted.removeClass('playing');
                     item.addClass('playing');
                     my_jPlayer.jPlayer("stop");
-                    my_jPlayer.jPlayer("setMedia", {
-                        mp3:item.attr("href")
-                    });
-                    my_jPlayer.jPlayer("play");
-                    return false;
-                }
-                if (item.attr('class').indexOf('playing') != -1) {
-                    wanted = item;
-                }
-            });
-        }
-
-        function playPrev() {
-            var wanted;
-            $($(".track").get().reverse()).each(function() {
-                var item = $(this);
-                if (wanted != null) {
-                    wanted.removeClass('playing');
-                    item.addClass('playing');
-                    my_jPlayer.jPlayer("stop");
+                    my_trackName.text(item.next("span").text());
                     my_jPlayer.jPlayer("setMedia", {
                         mp3:item.attr("href")
                     });
@@ -116,7 +82,7 @@
 
         // Create click handlers for the different tracks
         $("#jp_container .track").click(function (e) {
-            my_trackName.text($(this).text());
+            my_trackName.text($(this).next("span").text());
             my_jPlayer.jPlayer("setMedia", {
                 mp3:$(this).attr("href")
             });
@@ -166,6 +132,7 @@
                                 <!--                            <li><a href="#" id="jplayer_previous" class="jp-previous" tabindex="1">previous</a></li>-->
                                 <!--                            <li><a href="#" id="jplayer_next" class="jp-next" tabindex="1">next</a></li>-->
                             </ul>
+                            <div class="jp-track-name">teeeeeeeest</div>
                             <div class="jp-progress">
                                 <div id="jplayer_seek_bar" class="jp-seek-bar">
                                     <div id="jplayer_play_bar" class="jp-play-bar"></div>
