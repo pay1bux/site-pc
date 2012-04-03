@@ -784,12 +784,12 @@ ul#audio a:hover
 	border-bottom:1px solid #FFF;
     width: 250px;
     margin: 3px 0 3px 10px;
-    width: 455px;
+    width: 650px;
 
 }
 
 #scrollbar1 { width: 665px; clear: both; margin: 0px 0 10px; }
-#scrollbar1 .viewport { width: 500px; height: 360px; overflow: hidden; position: relative; }
+#scrollbar1 .viewport { width: 650px; height: 360px; overflow: hidden; position: relative; }
 #scrollbar1 .overview { list-style: none; position: absolute; left: 0; top: 0; }
 #scrollbar1 .thumb .end,
 #scrollbar1 .thumb { background-color: #666; }
