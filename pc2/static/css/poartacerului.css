@@ -789,7 +789,7 @@ ul#audio a:hover
 }
 .download {
     float:right;
-    padding-right:10px;
+    padding-right:15px;
 }
 
 #scrollbar1 { width: 665px; clear: both; margin: 0px 0 10px; }
