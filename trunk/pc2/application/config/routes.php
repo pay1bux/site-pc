@@ -51,6 +51,13 @@ $route['contact'] = "frontend/contact";
 $route['contact/send'] = "frontend/contact/send";
 
 $route['arhiva-audio'] = "frontend/audio";
+$route['arhiva-audio/cele-mai-ascultate'] = "frontend/audio/celeMaiAscultate";
+$route['arhiva-audio/predici'] = "frontend/audio/predici";
+$route['arhiva-audio/studii'] = "frontend/audio/studii";
+$route['arhiva-audio/muzica'] = "frontend/audio/muzica";
+$route['arhiva-audio/poezii'] = "frontend/audio/poezii";
+$route['arhiva-audio/marturii'] = "frontend/audio/marturii";
+$route['arhiva-audio/diverse'] = "frontend/audio/diverse";
 
 $route['login'] = "admin/login";
 $route['verificare'] = "admin/verificare";

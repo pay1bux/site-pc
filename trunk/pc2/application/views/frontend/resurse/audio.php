@@ -132,7 +132,7 @@
                                 <!--                            <li><a href="#" id="jplayer_previous" class="jp-previous" tabindex="1">previous</a></li>-->
                                 <!--                            <li><a href="#" id="jplayer_next" class="jp-next" tabindex="1">next</a></li>-->
                             </ul>
-                            <div class="jp-track-name">teeeeeeeest</div>
+                            <div class="jp-track-name"></div>
                             <div class="jp-progress">
                                 <div id="jplayer_seek_bar" class="jp-seek-bar">
                                     <div id="jplayer_play_bar" class="jp-play-bar"></div>
@@ -151,15 +151,17 @@
                                 <div class="overview">
                                     <div id="jplayer_playlist" class="jp-playlist">
                                         <ul>
-                                        <?php foreach ($audio as $i => $playlistItem): ?>
-                                            <li>
-                                                <div class="audioline_playlist"></div>
-                                                <a href="<?php echo($playlistItem["url"]) ?>"
-                                                   class="track<?php if ($i == 0) echo " track-default"?>">&nbsp;</a>
-                                                <span class="titlu"><?php echo($playlistItem["titlu"]) ?></span>
-                                                <span class="download"><?php echo(sec2hms($playlistItem["durata"])) ?><a href="<?php echo($playlistItem["url"]) ?>">Download</a></span>
-                                            </li>
-                                        <?php endforeach; ?>
+                                        <?php if ($audio != null): ?>
+                                            <?php foreach ($audio as $i => $playlistItem): ?>
+                                                <li>
+                                                    <div class="audioline_playlist"></div>
+                                                    <a href="<?php echo($playlistItem["url"]) ?>"
+                                                       class="track<?php if ($i == 0) echo " track-default"?>">&nbsp;</a>
+                                                    <span class="titlu"><?php echo(cropText($playlistItem["titlu"] . " - " . $playlistItem["nume_autor"], 60)) ?></span>
+                                                    <span class="download"><?php echo(sec2hms($playlistItem["durata"])) ?><a href="<?php echo($playlistItem["url"]) ?>">Download</a></span>
+                                                </li>
+                                            <?php endforeach; ?>
+                                        <?php endif; ?>
                                         </ul>
                                     </div>
                                 </div>
@@ -170,35 +172,35 @@
             </div>
             <div id="audio_categories">
                 <ul id="audio">
-                    <li><a href="#" tabindex="1">Cele mai noi</a>
+                    <li><a href="<?php echo site_url("arhiva-audio") ?>" tabindex="1" <?php if ($selected == 'celeMaiNoi') echo 'class="selected"'; ?>>Cele mai noi</a>
 
                         <div class="audioline"></div>
                     </li>
-                    <li><a href="#" tabindex="2">Cele mai ascultate</a>
+                    <li><a href="<?php echo site_url("arhiva-audio/cele-mai-ascultate") ?>" tabindex="2" <?php if ($selected == 'celeMaiAscultate') echo 'class="selected"'; ?>>Cele mai ascultate</a>
 
                         <div class="audioline"></div>
                     </li>
-                    <li><a href="#" tabindex="3">Predici</a>
+                    <li><a href="<?php echo site_url("arhiva-audio/predici") ?>" tabindex="3" <?php if ($selected == 'predici') echo 'class="selected"'; ?>>Predici</a>
 
                         <div class="audioline"></div>
                     </li>
-                    <li><a href="#" tabindex="4">Studii</a>
+                    <li><a href="<?php echo site_url("arhiva-audio/studii") ?>" tabindex="4" <?php if ($selected == 'studii') echo 'class="selected"'; ?>>Studii</a>
 
                         <div class="audioline"></div>
                     </li>
-                    <li><a href="#" tabindex="5">Muzica</a>
+                    <li><a href="<?php echo site_url("arhiva-audio/muzica") ?>" tabindex="5" <?php if ($selected == 'muzica') echo 'class="selected"'; ?>>Muzica</a>
 
                         <div class="audioline"></div>
                     </li>
-                    <li><a href="#" tabindex="6">Poezii</a>
+                    <li><a href="<?php echo site_url("arhiva-audio/poezii") ?>" tabindex="6" <?php if ($selected == 'poezii') echo 'class="selected"'; ?>>Poezii</a>
 
                         <div class="audioline"></div>
                     </li>
-                    <li><a href="#" tabindex="7">Marturii</a>
+                    <li><a href="<?php echo site_url("arhiva-audio/marturii") ?>" tabindex="7" <?php if ($selected == 'marturii') echo 'class="selected"'; ?>>Marturii</a>
 
                         <div class="audioline"></div>
                     </li>
-                    <li><a href="#" tabindex="8">Diverse</a>
+                    <li><a href="<?php echo site_url("arhiva-audio/diverse") ?>" tabindex="8" <?php if ($selected == 'diverse') echo 'class="selected"'; ?>>Diverse</a>
 
                         <div class="audioline"></div>
                     </li>

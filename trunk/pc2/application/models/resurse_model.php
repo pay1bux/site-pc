@@ -144,12 +144,74 @@ class Resurse_model extends CI_Model
         }
     }
 
-    function getResurseByTipWithAtt($codTip, $limit = 9)
+    function getResurseByTipWithAtt($codTip, $limit = 0)
     {
         $sql = "SELECT r.*, r.id as r_id, a.*, tr.*
                     FROM $this->table r, attachment a, tip_resurse tr
-                    WHERE r.tip_id=tr.id AND a.resurse_id = r.id AND tr.cod='$codTip'
-                    LIMIT $limit";
+                    WHERE r.tip_id=tr.id AND a.resurse_id = r.id AND tr.cod='$codTip'";
+        if ($limit != 0) {
+            $sql .= " LIMIT $limit";
+        }
+
+        $q = $this->db->query($sql);
+
+        if ($q->num_rows() > 0) {
+            return $q->result_array();
+        } else {
+            return null;
+        }
+    }
+
+    function getResurseByTipWithAttLike($domeniu, $limit = 0)
+    {
+        $sql = "SELECT r.*, r.id as r_id, a.*, tr.*
+                    FROM $this->table r, attachment a, tip_resurse tr
+                    WHERE r.tip_id=tr.id AND a.resurse_id = r.id AND tr.cod LIKE '%$domeniu%'";
+        if ($limit != 0) {
+            $sql .= " LIMIT $limit";
+        }
+        $q = $this->db->query($sql);
+
+        if ($q->num_rows() > 0) {
+            return $q->result_array();
+        } else {
+            return null;
+        }
+    }
+
+    function getResurseWithAtt($filters)
+    {
+        if (isset($filters["categorie"])) {
+            $sql = "SELECT r.*, r.id as r_id, a.*, tr.*, aut.nume as nume_autor, cr.*
+                        FROM $this->table r, attachment a, tip_resurse tr, autor aut, categorie_resurse cr
+                        WHERE r.tip_id=tr.id AND r.autor_id=aut.id AND r.categorie_id=cr.id AND a.resurse_id = r.id";
+        } else {
+            $sql = "SELECT r.*, r.id as r_id, a.*, tr.*, aut.nume as nume_autor
+                        FROM $this->table r, attachment a, tip_resurse tr, autor aut
+                        WHERE r.tip_id=tr.id AND r.autor_id=aut.id AND a.resurse_id = r.id";
+        }
+
+        if (isset($filters["categorie"])) {
+            $sql .= " AND cr.id = '%" . $filters["categorie"] . "%'";
+        }
+
+        if (isset($filters["domeniu"])) {
+            $sql .= " AND tr.cod LIKE '%" . $filters["domeniu"] . "%'";
+        }
+        if (isset($filters["tip"])) {
+            $sql .= " AND tr.cod = '" . $filters["tip"] . "'";
+        }
+        if (isset($filters["order"])) {
+            $sql .= " ORDER BY " . $filters["order"] . " ";
+        }
+        if (isset($filters["orderType"])) {
+            $sql .= " " . $filters["orderType"] . " ";
+        }
+
+        if (isset($filters["limit"])) {
+            $sql .= " LIMIT " . $filters["limit"];
+        }
+        
         $q = $this->db->query($sql);
 
         if ($q->num_rows() > 0) {

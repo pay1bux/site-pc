@@ -72,3 +72,15 @@ function sec2hms($sec, $padHours = false) {
 // done!
     return $hms;
 }
+
+function cropText($text, $charsNr){
+    $text = strip_tags($text);
+    if (strlen($text) > $charsNr) {
+        $text = substr($text, 0, $charsNr);
+
+        if (false !== ($last_space_pos = strrpos($text, " ")))
+            $text = substr($text, 0, $last_space_pos) . '...';
+    }
+
+    return $text;
+}

@@ -754,22 +754,31 @@ ul#audio a
    
 }
 
+ul#audio a.selected
+{
+	margin: 10px;
+    padding-left: 20px;
+    /*text-decoration: underline;*/
+    color: #6e6e6e;
+    background-image:url(../images/player-audio/audio_arrow.png);
+    background-repeat: no-repeat;
+    background-position: 2px 5px;
+    position: relative;
+    z-index: 3;
+}
 
 ul#audio a:hover
 {
-	 margin: 10px;
-       padding-left: 20px;
+    margin: 10px;
+    padding-left: 20px;
     text-decoration: underline;
     color: #6e6e6e;
     background-image:url(../images/player-audio/audio_arrow.png);
     background-repeat: no-repeat;
     background-position: 2px 5px;
-     position: relative;
+    position: relative;
     z-index: 3;
-
-
 }
-
 
 .audioline {
 	height:1px; background-color:#d7d7d7;
@@ -790,6 +799,10 @@ ul#audio a:hover
 .download {
     float:right;
     padding-right:15px;
+    margin-left: 5px;
+}
+div.jp-playlist ul li .download a  {
+    margin-left: 0px;
 }
 
 #scrollbar1 { width: 665px; clear: both; margin: 0px 0 10px; }
