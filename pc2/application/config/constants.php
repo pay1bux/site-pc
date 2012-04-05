@@ -50,8 +50,12 @@ define('CSS_PATH',			STATIC_PATH.'css/');
 define('JS_PATH',			STATIC_PATH.'js/');
 
 define('TIP_DEVOTIONAL', "articole");
+define('TIP_PREDICA_AUDIO', "predica-audio");
+define('TIP_STUDIU_AUDIO', "studiu-audio");
 define('TIP_CANTEC_AUDIO', "cantec-audio");
-
+define('TIP_POEZIE_AUDIO', "poezie-audio");
+define('TIP_MARTURIE_AUDIO', "marturie-audio");
+define('TIP_DIVERSE_AUDIO', "diverse-audio");
 
 /* End of file constants.php */
 /* Location: ./application/config/constants.php */
