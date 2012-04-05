@@ -156,8 +156,8 @@
                                                 <div class="audioline_playlist"></div>
                                                 <a href="<?php echo($playlistItem["url"]) ?>"
                                                    class="track<?php if ($i == 0) echo " track-default"?>">&nbsp;</a>
-                                                <span><?php echo($playlistItem["titlu"]) ?></span>
-
+                                                <span class="titlu"><?php echo($playlistItem["titlu"]) ?></span>
+                                                <span class="download"><?php echo(sec2hms($playlistItem["durata"])) ?><a href="<?php echo($playlistItem["url"]) ?>">Download</a></span>
                                             </li>
                                         <?php endforeach; ?>
                                         </ul>
@@ -182,19 +182,23 @@
 
                         <div class="audioline"></div>
                     </li>
-                    <li><a href="#" tabindex="4">Muzica</a>
+                    <li><a href="#" tabindex="4">Studii</a>
 
                         <div class="audioline"></div>
                     </li>
-                    <li><a href="#" tabindex="5">Poezii</a>
+                    <li><a href="#" tabindex="5">Muzica</a>
 
                         <div class="audioline"></div>
                     </li>
-                    <li><a href="#" tabindex="6">Marturii</a>
+                    <li><a href="#" tabindex="6">Poezii</a>
 
                         <div class="audioline"></div>
                     </li>
-                    <li><a href="#" tabindex="7">Diverse</a>
+                    <li><a href="#" tabindex="7">Marturii</a>
+
+                        <div class="audioline"></div>
+                    </li>
+                    <li><a href="#" tabindex="8">Diverse</a>
 
                         <div class="audioline"></div>
                     </li>
