@@ -1,50 +1,68 @@
-<div id="wrapper">
-    <div class="chenar banner" style="background-image: url(<?php echo IMAGES_PATH; ?>banner/devotional.png)">
+<div class="clearBoth" style="height:10px;"></div>
+<div id="PageContent">
+<div id="header" style="background-image: url(<?php echo IMAGES_PATH; ?>banner/devotional.png)">
 
-    </div>
+</div>
 
-    <div class="continut">
+    <div id="continut">
 
-        <h1><?php echo $devotionale['titlu'];?></h1>
+        <div class="p_text">
+        <div class="i_title" style="margin-bottom: 0px;"><?php echo $devotionale['titlu'];?></div>
+        <div class="i_details">
+            <p class="mic" style="margin"><?php echo prepareDateWithYear($devotionale['data']);?></p>
+            <br/>
 
-        <h2><?php echo prepareDateWithYear($devotionale['data']);?></h2>
-        <br/>
+            <p><?php echo $devotionale['continut'];?> </p>
 
-        <p class="text"><?php echo $devotionale['continut'];?></p>
-        <br/>
-        <table style="width:100%;">
-            <tr>
-                <?php if ($prev != 0): ?>
-                <td style="width:50%;">
-                    <p class="text" align="left"><<
-                        <a href="<?php echo site_url('devotional/' . $prev['id']); ?>"/> <?php echo $prev['titlu']; ?> </a>
+
+
+
+             <?php if ($prev != 0): ?>
+                    <p align="left">
+                        <a class="buton_prev" href="<?php echo site_url('devotional/' . $prev['id']); ?>"/> &laquo; <?php echo $prev['titlu']; ?> </a>
                     </p>
-                </td>
+
                 <?php endif; ?>
 
                 <?php if ($next != 0): ?>
-                <td style="width:50%;">
-                    <p class="text" align="right">
-                        <a href="<?php echo site_url('devotional/' . $next['id']); ?>"/> <?php echo $next['titlu'];?> </a>
-                        >> </p>
-                </td>
+
+                    <p align="right">
+                        <a class="buton_next" href="<?php echo site_url('devotional/' . $next['id']); ?>"/> <?php echo $next['titlu'];?> &raquo; </a>
+                         </p>
+
                 <?php endif; ?>
-            </tr>
-
-        </table>
-    </div>
-    <div class="right">
-        <div class="chenar" style="background-image: url(<?php echo IMAGES_PATH; ?>right/1.png)"></div>
-        <div class="chenar" style="background-image: url(<?php echo IMAGES_PATH; ?>right/2.png)"></div>
-        <div class="chenar" style="background-image: url(<?php echo IMAGES_PATH; ?>right/3.png)"></div>
-    </div>
 
 
-    <div class="clear"></div>
+        </div>
+            <div class="clearBoth"></div>
+  </div>
+         <div class="clearBoth"></div>
 
 
-    <div class="clear"></div>
 
 </div>
-<div class="clear"></div>
-        
+
+
+<div id="right">
+    <div class="item" style="background-image: url(<?php echo IMAGES_PATH; ?>right/1.png)"></div>
+    <div class="item" style="background-image: url(<?php echo IMAGES_PATH; ?>right/2.png)"></div>
+    <div class="item" style="background-image: url(<?php echo IMAGES_PATH; ?>right/3.png)"></div>
+
+
+<div >
+
+                   <p class="mediu">Postari recente</p>
+ 
+    <div class="ModuleLine"></div>
+
+    </div>
+
+
+    </div>
+
+
+  <div class="clearBoth"></div>
+
+</div>
+
+

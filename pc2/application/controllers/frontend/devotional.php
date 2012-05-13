@@ -6,6 +6,7 @@ class Devotional extends CI_Controller {
 
         $this->load->model('resurse_model');
         $data['devotionale'] = $this->resurse_model->getResurseByIdAndTip('articole', $id);
+    //    $data['recente'] = $this->resurse_model->getResurseByIdAndTip('articole', $id);
 
         $data['main_content'] = 'frontend/devotional/devotional';
         $data['page_title'] = $data['devotionale']['titlu'] . ' - Biserica Penticostala Poarta Cerului, Timisoara';

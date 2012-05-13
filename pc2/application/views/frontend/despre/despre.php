@@ -10,17 +10,12 @@
         	<div class="i_title">Biserica Poarta Cerului</div>
             <div class="i_details">
                 <p class="bold">ISTORIC</p>
-                <p>Biserica "Poarta Cerului" din Timisoara a luat fiinta prin voia lui Dumnezeu, ca urmare a viziunii pe care El a dat-o pastorului
-Nelu Filip în anul 2005.</p>
+                <p>Biserica „Poarta Cerului” din Timisoara a luat fiinta prin voia lui Dumnezeu, ca urmare a viziunii pe care El a dat-o pastorului Nelu Filip în anul 2005. Împreuna cu un grup de 28 de credinciosi au început sa se adune la partasii de rugaciune timp de câteva luni, perioada în care aceasta viziune s-a cristalizat , iar în 11 decembrie ale aceluiasi an Poarta Cerului si-a deschis portile pentru oameni doritori sa intre pe dorita poarta a cerului, a fericirii vesnice cu Isus Cristos. </p>
 
-<p>Welcome to Planetshakers City Church. Since it’s foundation in February 2004, this church has seen considerable growth across all ministries, and under Senior Pastors Russell and Sam’s leadership, discipleship and vision, Planetshakers City Church continues to see this generation empowered.</p>
+<p>La Poarta Cerului, entuziasmul slujirii lui Dumnezeu este la el acasa. O biserica tânara, formata din oameni tineri care si-au pus la dispozitia lui Dumnezeu talentele lor, puterea lor, timpul lor si viata lor. Aici închinarea este molipsitoare, învatatura este motivatoare, partasia este atragatoare pentru ca prezenta lui Dumnezeu este coplesitoare.</p>
+<p>Poarta Cerului este mai mult decât un nume, este o realitate în care credem, este locul în care oamenii pot gusta din atmosfera cerească, pot arunca o privire spre Cerul pregătit de Dumnezeu pentru răscumpăraţii lui, pot asculta glasul lui Dumnezeu care vorbeşte, pot asculta cântarea cerească adusă pe pământ şi pot lua hotărârea de a păşi dincolo, în Împărăţia lui Dumnezeu spre a fi cu El şi aici şi apoi ACOLO pentru vecii vecilor. </p>
 
-                <p>Planetshakers City Church is driven to bring the good news of Jesus Christ to the city of Melbourne & Geelong. Reaching 
-out with a message of hope, faith & love.</p>
-                <p>With a strong biblical foundation, Planetshakers City Church is driven by the belief that God has the power to transform and revolutionise the lives of all people, propelling them into their God-given destiny.</p>
-
-                <p>We’d love to invite you to take a look closer at the vision of Planetshakers City Church, hear the story and meet the team.</p>
-
+             
 
                   <p class="bold">COMITETUL</p>
                 <p>Russell and Sam Evans are the Senior Pastors of Planetshakers City Church in Melbourne, Australia. Their desire is to see each person empowered by the Holy Spirit to reach their God-given destiny.</p>
