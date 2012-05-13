@@ -531,6 +531,20 @@ body {
 	font-size:16px; color:#666; line-height:20px;
 }
 
+.p_text .i_details a {
+	display:block;
+	font-size:16px; color:#666;
+    width: auto;
+}
+
+
+
+.p_text .i_details a:hover {
+	display:block;
+	font-size:16px; color:#666;
+    text-decoration: underline;
+}
+
 .p_text .i_details .mic {
 	display:block;
 	font-size:12px; color:#666;
@@ -546,6 +560,48 @@ body {
 }
 
 
+.buton_next
+{
+    float: right;
+}
+
+.buton_prev
+{
+    float: left;
+}
+
+p.mediu
+{
+    display:block;
+    font-size: 20px;
+    color:#666;
+    margin-left: 0px;
+}
+
+
+
+.articol
+{
+       float: left;
+    margin-right: 10px;
+    margin-left: 10px;
+    margin-bottom: 15px;
+    margin-top: 10px;
+}
+
+
+.imgdev
+{
+   float: left;
+  margin-right: 10px;
+}
+
+.ModuleLine {
+	height:1px; background-color:#d7d7d7;
+	border-bottom:1px solid #FFF;
+    width: 215px;
+    margin-top: 10px;
+}
 
 #Footer {
 	margin-top:30px; margin-right:20px;
@@ -796,13 +852,35 @@ ul#audio a:hover
     width: 650px;
 
 }
+
+.durata {
+    float:right;
+    padding-right:15px;
+    margin-left: 5px;
+    padding-top: 5px;
+
+}
+
 .download {
     float:right;
     padding-right:15px;
     margin-left: 5px;
+
+
+
 }
+
+
 div.jp-playlist ul li .download a  {
     margin-left: 0px;
+    background-image: url(../images/player-audio/download.png);
+    background-position: 2px 1px;
+background-repeat: no-repeat;
+    font-size: 12px;
+    color: white;
+   padding: 5px 5px 5px 5px;
+     
+    vertical-align: middle;
 }
 
 #scrollbar1 { width: 665px; clear: both; margin: 0px 0 10px; }
@@ -864,12 +942,13 @@ div.jp-playlist ul li .download a  {
 
 
 #right {
+      float: left;
 	width:224px; height: auto;
     margin-top:20px;
     margin-left:40px;
 	display: inline;
  display: block;
-    float: left;
+
 }
 
 #right .item {
@@ -912,6 +991,26 @@ div.jp-playlist ul li .download a  {
     width: 400px;
     height: 150px;
     resize: none
+}
+
+#form select, option
+{
+     width: 258px;
+    resize: none;
+    border: 1px solid #b1b1b1;
+    color: #b1b1b1;
+        padding: 3px;
+       margin-bottom: 15px;
+}
+
+.dropdown
+{
+font-size:12px;
+
+   padding: 0px;
+
+   border: 1px solid #ccc;
+
 }
 
 #form .checkbox

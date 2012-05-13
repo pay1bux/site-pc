@@ -31,7 +31,7 @@ class Live extends CI_Controller {
             $this->load->model('cerere_model');
             $this->cerere_model->create($input);
             $this->session->set_flashdata('cerere', 'Cererea dumneavoastra a fost trimisa!');
-            redirect('live');
+            redirect('live2');
 
         }
 

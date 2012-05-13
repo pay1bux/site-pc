@@ -149,6 +149,7 @@ class Resurse_model extends CI_Model
         $sql = "SELECT r.*, r.id as r_id, a.*, tr.*
                     FROM $this->table r, attachment a, tip_resurse tr
                     WHERE r.tip_id=tr.id AND a.resurse_id = r.id AND tr.cod='$codTip'";
+                   // WHERE r.tip_id=tr.id AND a.resurse_id = r.id AND tr.cod='$codTip'";
         if ($limit != 0) {
             $sql .= " LIMIT $limit";
         }

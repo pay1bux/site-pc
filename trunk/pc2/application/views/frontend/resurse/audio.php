@@ -157,8 +157,10 @@
                                                     <div class="audioline_playlist"></div>
                                                     <a href="<?php echo($playlistItem["url"]) ?>"
                                                        class="track<?php if ($i == 0) echo " track-default"?>">&nbsp;</a>
-                                                    <span class="titlu"><?php echo(cropText($playlistItem["titlu"] . " - " . $playlistItem["nume_autor"], 60)) ?></span>
-                                                    <span class="download"><?php echo(sec2hms($playlistItem["durata"])) ?><a href="<?php echo($playlistItem["url"]) ?>">Download</a></span>
+                                                    <span class="titlu"><?php echo(cropText($playlistItem["titlu"] . " - " . $playlistItem["nume_autor"], 50)) ?></span>
+                                                    <span class="download"><a href="<?php echo($playlistItem["url"]) ?>">Download</a></span>
+                                                    <span class="durata"> <?php echo(sec2hms($playlistItem["durata"])) ?></span>
+
                                                 </li>
                                             <?php endforeach; ?>
                                         <?php endif; ?>

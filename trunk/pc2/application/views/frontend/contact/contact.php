@@ -5,32 +5,37 @@ $this->load->helper('form');
 
 echo validation_errors();
 echo form_open(current_url());
-$lungi='class="cleardefault  lungi"';
-$scurte='class="cleardefault  scurte"';
+$dropdown = 'class="dropdown"';
+$clear='class="cleardefault"';
+$buton='class="submit"';
 
 ?>
+<div class="clearBoth" style="height:10px;"></div>
+ <div id="PageContent">
+ <div id="header" style="background-image: url(<?php echo IMAGES_PATH; ?>banner/contact.png)">
 
-<div id="wrapper">
-    <div class="chenar banner" style="background-image: url(<?php echo IMAGES_PATH; ?>banner/contact.png)">
+ </div>
 
-    </div>
+     <div id="continut">
 
-    <div class="continut">
-        <h1> Contact</h1>
-        <p class="text" >Daca aveti intrebari, idei sau sugestii, scrieti-ne un mesaj</p>
-        <?php echo $this->session->flashdata('contact'); ?> <br/>
-        <table>
+         <div class="p_text">
+         <div class="i_title">Contact</div>
+         <div class="i_details">
+             <p class="mic ">Daca aveti intrebari, idei sau sugestii, scrieti-ne un mesaj</p>
+            <?php echo $this->session->flashdata('contact'); ?> <br/>
+             <div id="form">
+    <table>
             <tr>
-                <td><?php echo form_input('contact[nume]', 'Numele si Prenumele*', $scurte); ?></td>
+                <td><?php echo form_input('contact[nume]', 'Numele si Prenumele*', $clear ); ?></td>
             </tr>
             <tr>
-                <td><?php echo form_input('contact[email]','Email (nu va fi publicat)', $scurte); ?></td>
+                <td><?php echo form_input('contact[email]','Email (nu va fi publicat)', $clear); ?></td>
             </tr>
             <tr>
-                <td><?php echo form_dropdown('contact[destinatar]', $destinatari, $scurte); ?></td>
+                <td><?php echo form_dropdown('contact[destinatar]', $destinatari,'', $dropdown); ?></td>
             </tr>
             <tr>
-                 <td><?php echo form_textarea('contact[mesaj]', '', $lungi); ?> </td>
+                 <td><?php echo form_textarea('contact[mesaj]', ''); ?> </td>
             </tr>
 
 
@@ -39,27 +44,28 @@ $scurte='class="cleardefault  scurte"';
         <?php
             echo form_fieldset_close();
 
-            echo form_submit('sumbit', 'Trimite');
+            echo form_submit('sumbit', 'Trimite', $buton);
 
             echo form_close(); ?>
                 </td>
             </tr>
 
         </table>
+         </div>
+             <div class="clearBoth"></div>
+   </div>
+          <div class="clearBoth"></div>
 
 
-    </div>
-    <div class="right">
-        <div class="chenar" style="background-image: url(<?php echo IMAGES_PATH; ?>right/4.png)"></div>
-
-    </div>
+         </div>
+ </div>
 
 
-    <div class="clear"></div>
+ <div id="right">
+     <div class="item" style="background-image: url(<?php echo IMAGES_PATH; ?>right/1.png)"></div>
+     <div class="item" style="background-image: url(<?php echo IMAGES_PATH; ?>right/2.png)"></div>
+     <div class="item" style="background-image: url(<?php echo IMAGES_PATH; ?>right/3.png)"></div>
+ </div>
 
-
-    <div class="clear"></div>
-
+   <div class="clearBoth"></div>
 </div>
-<div class="clear"></div>
-        
