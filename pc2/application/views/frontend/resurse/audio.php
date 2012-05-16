@@ -3,7 +3,7 @@
 
     $(document).ready(function () {
 
-        $('#scrollbar1').tinyscrollbar();
+        $('#scrollbar1').tinyscrollbar({ sizethumb: 50 });
 
         // Local copy of jQuery selectors, for performance.
         var my_jPlayer = $("#jquery_jplayer"),
@@ -158,7 +158,7 @@
                                                     <a href="<?php echo($playlistItem["url"]) ?>"
                                                        class="track<?php if ($i == 0) echo " track-default"?>">&nbsp;</a>
                                                     <span class="titlu"><?php echo(cropText($playlistItem["titlu"] . " - " . $playlistItem["nume_autor"], 50)) ?></span>
-                                                    <span class="download"><a href="<?php echo($playlistItem["url"]) ?>">Download</a></span>
+                                                    <span class="download"><a href="<?php echo($playlistItem["url"]) ?>"><img src="<?php echo IMAGES_PATH;?>/player-audio/download.png" /></a></span>
                                                     <span class="durata"> <?php echo(sec2hms($playlistItem["durata"])) ?></span>
 
                                                 </li>
