@@ -47,6 +47,8 @@ $route['live2'] = "frontend/live/live";
 
 $route['despre-noi'] = "frontend/despre/index";
 
+$route['gaseste'] = "frontend/gaseste/index";
+
 $route['contact'] = "frontend/contact";
 $route['contact/send'] = "frontend/contact/send";
 

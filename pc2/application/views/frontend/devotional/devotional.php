@@ -9,7 +9,7 @@
         <div class="p_text">
         <div class="i_title" style="margin-bottom: 0px;"><?php echo $devotionale['titlu'];?></div>
         <div class="i_details">
-            <p class="mic" style="margin"><?php echo prepareDateWithYear($devotionale['data']);?></p>
+            <p class="mic" ><?php echo prepareDateWithYear($devotionale['data']);?></p>
             <br/>
 
             <p><?php echo $devotionale['continut'];?> </p>
