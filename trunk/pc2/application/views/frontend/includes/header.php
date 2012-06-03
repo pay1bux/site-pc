@@ -13,7 +13,7 @@
                 </ul>
             </li>
             <li class="i_mt"><a href="<?php echo site_url("devotional")?>">Devotional</a></li>
-            <li class="i_mt"><a href="#">Gaseste-ti locul</a></li>
+            <li class="i_mt"><a href="<?php echo site_url("gaseste")?>">Gaseste-ti locul</a></li>
             <li class="i_mt"><a href="<?php echo site_url("despre-noi")?>">Despre noi</a></li>
             <li class="i_mt"><a href="<?php echo site_url("default_controller")?>">Acasa</a></li>
         </ul>
