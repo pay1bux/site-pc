@@ -16,7 +16,7 @@ $clear='class="cleardefault"';
 <div id="continut" style="width: auto;">
     <div align="center" id="blcPlayer">
     </div>
-    <script type="text/javascript" src="http://embed.bisericilive.com/get?cid=poartaceruluiro&w=720&h=404"></script>
+    <script type="text/javascript" src="http://embed.bisericilive.com/get?cid=poartaceruluiro&w=940&h=528"></script>
 
 
 
