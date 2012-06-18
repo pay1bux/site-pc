@@ -1,4 +1,4 @@
-﻿    <div class="clearBoth" style="height:10px;"></div>
+    <div class="clearBoth" style="height:10px;"></div>
     <div id="PageContent">
     	<div id="jQueryGallery">
 			<div class="i_watermark"></div>
@@ -14,40 +14,9 @@
                     </div>
                 </div>
                 <div id="wrapper2">
-					<script type="text/javascript">
-                    // Collect query parameters in an object that we can
-                    // forward to SWFObject:
-                    var parameters = {
-                        src: "http://live.jahos.net/live/events/livepkgr/events/_definst_/poartaceruluiro.f4m",
-                        autoPlay: true,
-                        controlBarAutoHide: false,
-                        playButtonOverlay: true,
-                        controlBarAutoHide: true
-                    };
-
-                    // Embed the player SWF:
-                    swfobject.embedSWF(
-                        "http://live.jahos.net/player.swf"
-                        , "playerContent"
-                        , 720
-                        , 404
-                        , "10.1.0"
-                        , "http://live.jahos.net/expressInstall.swf"
-                        , parameters
-                        , {
-                            allowFullScreen: "true"
-                        }
-                        , {
-                            name: "playerContent"
-                        }
-                    );
-                    </script>
-                    <div id="playerContent">
-                        <a href="http://www.adobe.com/go/getflash">
-                            <img src="http://www.adobe.com/images/shared/download_buttons/get_flash_player.gif" alt="Get Adobe Flash player" />
-                            <span>Pentru a receptiona transmisia LIVE aveti nevoie de Flash Player versiunea 10.1.0 sau mai mare. Click pentru a-l obtine si instala.</span>
-                        </a>
+					<div align="center" id="blcPlayer">
                     </div>
+                    <script type="text/javascript" src="http://embed.bisericilive.com/get?cid=poartaceruluiro&w=720&h=404"></script>
                 </div>
             </div>
             <div class="i_right">
@@ -85,7 +54,7 @@
                 <a class="but_details" href="#"><strong>Vezi detalii</strong><span class="i_icon">&nbsp;</span></a>
             </div>
             <div class="BIR_T3">
-            	<div class="i_title">Urmatoarele Evenimente</div>
+            	<div class="i_title">URMATOARELE TRANSMISII</div>
                  <?php if ($evenimente != null): ?>
             <?php foreach($evenimente as $eveniment):  ?>
                 <div class="i_item">
@@ -98,7 +67,7 @@
                 </div>
                    <?php endforeach; ?>
                     <?php else: ?>
-              <div class="ii_text">Nu exista evenimente</div>
+              <div class="ii_text">Nu exista transmisii</div>
                   <?php endif; ?>
                 <a class="but_details" href="#"><strong>Vezi calendar</strong><span class="i_icon">&nbsp;</span></a>
             </div>
