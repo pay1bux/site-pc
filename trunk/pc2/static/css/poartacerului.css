@@ -897,16 +897,15 @@ ul#audio a:hover
 
 .durata {
     float:right;
-    padding-right:15px;
-    margin-left: 5px;
+    margin-left: 2px;
     padding-top: 5px;
-
 }
 
 .download {
     float:right;
     padding-right:15px;
-    padding-top:2px;
+    padding-left:2px;
+    padding-top:4px;
     margin-left: 5px;
 }
 

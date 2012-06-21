@@ -28,6 +28,12 @@
             ready:function () {
                 $("#jp_container .track-default").click();
             },
+            play:function (event) {
+                $(".track-default").addClass("playing");
+            },
+            pause:function (event) {
+                $(".track-default").removeClass("playing");
+            },
             ended:function (event) {
                 playNext();
             },
@@ -65,7 +71,9 @@
                 var item = $(this);
                 if (wanted != null) {
                     wanted.removeClass('playing');
+                    wanted.removeClass('track-default');
                     item.addClass('playing');
+                    item.addClass('track-default');
                     my_jPlayer.jPlayer("stop");
                     my_trackName.text(item.next("span").text());
                     my_jPlayer.jPlayer("setMedia", {
@@ -74,7 +82,7 @@
                     my_jPlayer.jPlayer("play");
                     return false;
                 }
-                if (item.attr('class').indexOf('playing') != -1) {
+                if (item.attr('class').indexOf('track-default') != -1) {
                     wanted = item;
                 }
             });
@@ -82,17 +90,27 @@
 
         // Create click handlers for the different tracks
         $("#jp_container .track").click(function (e) {
-            my_trackName.text($(this).next("span").text());
-            my_jPlayer.jPlayer("setMedia", {
-                mp3:$(this).attr("href")
-            });
-            $(".playing").removeClass("playing");
-            $(this).addClass("playing");
-            if ((opt_play_first && first_track) || (opt_auto_play && !first_track)) {
-                my_jPlayer.jPlayer("play");
+
+            if ($(this).hasClass("playing")) {
+                my_jPlayer.jPlayer("pause");
+                $(".playing").removeClass("playing");
+            } else {
+                my_trackName.text($(this).next("span").text());
+                my_jPlayer.jPlayer("setMedia", {
+                    mp3:$(this).attr("href")
+                });
+                $(".playing").removeClass("playing");
+                $(".track-default").removeClass("track-default");
+                if (!first_track) {
+                    $(this).addClass("playing");
+                }
+                $(this).addClass("track-default");
+                if ((opt_play_first && first_track) || (opt_auto_play && !first_track)) {
+                    my_jPlayer.jPlayer("play");
+                }
+                first_track = false;
+                $(this).blur();
             }
-            first_track = false;
-            $(this).blur();
             return false;
         });
 
@@ -158,9 +176,8 @@
                                                     <a href="<?php echo($playlistItem["url"]) ?>"
                                                        class="track<?php if ($i == 0) echo " track-default"?>">&nbsp;</a>
                                                     <span class="titlu"><?php echo(cropText($playlistItem["titlu"] . " - " . $playlistItem["nume_autor"], 50)) ?></span>
-                                                    <span class="download"><a href="<?php echo($playlistItem["url"]) ?>"><img src="<?php echo IMAGES_PATH;?>/player-audio/download.png" /></a></span>
+                                                    <span class="download"><a href="<?php echo($playlistItem["url"]) ?>" style="padding-left:2px; margin-left: 2px;"><img src="<?php echo IMAGES_PATH;?>/player-audio/download.png" /></a></span>
                                                     <span class="durata"> <?php echo(sec2hms($playlistItem["durata"])) ?></span>
-
                                                 </li>
                                             <?php endforeach; ?>
                                         <?php endif; ?>
