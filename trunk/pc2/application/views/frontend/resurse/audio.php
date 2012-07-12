@@ -191,38 +191,17 @@
             </div>
             <div id="audio_categories">
                 <ul id="audio">
-                    <li><a href="<?php echo site_url("arhiva-audio") ?>" tabindex="1" <?php if ($selected == 'celeMaiNoi') echo 'class="selected"'; ?>>Cele mai noi</a>
-
-                        <div class="audioline"></div>
-                    </li>
-                    <li><a href="<?php echo site_url("arhiva-audio/cele-mai-ascultate") ?>" tabindex="2" <?php if ($selected == 'celeMaiAscultate') echo 'class="selected"'; ?>>Cele mai ascultate</a>
-
-                        <div class="audioline"></div>
-                    </li>
-                    <li><a href="<?php echo site_url("arhiva-audio/predici") ?>" tabindex="3" <?php if ($selected == 'predici') echo 'class="selected"'; ?>>Predici</a>
-
-                        <div class="audioline"></div>
-                    </li>
-                    <li><a href="<?php echo site_url("arhiva-audio/studii") ?>" tabindex="4" <?php if ($selected == 'studii') echo 'class="selected"'; ?>>Studii</a>
-
-                        <div class="audioline"></div>
-                    </li>
-                    <li><a href="<?php echo site_url("arhiva-audio/muzica") ?>" tabindex="5" <?php if ($selected == 'muzica') echo 'class="selected"'; ?>>Muzica</a>
-
-                        <div class="audioline"></div>
-                    </li>
-                    <li><a href="<?php echo site_url("arhiva-audio/poezii") ?>" tabindex="6" <?php if ($selected == 'poezii') echo 'class="selected"'; ?>>Poezii</a>
-
-                        <div class="audioline"></div>
-                    </li>
-                    <li><a href="<?php echo site_url("arhiva-audio/marturii") ?>" tabindex="7" <?php if ($selected == 'marturii') echo 'class="selected"'; ?>>Marturii</a>
-
-                        <div class="audioline"></div>
-                    </li>
-                    <li><a href="<?php echo site_url("arhiva-audio/diverse") ?>" tabindex="8" <?php if ($selected == 'diverse') echo 'class="selected"'; ?>>Diverse</a>
-
-                        <div class="audioline"></div>
-                    </li>
+                    <?php $i = 0;?>
+                    <?php foreach($meniu as $key => $value): ?>
+                        <li><a href="<?php echo site_url("arhiva-audio/" . $key) ?>" tabindex="<?echo $i++; ?>" <?php if ($selected == $key) echo 'class="selected"'; ?>><?php echo $value["nume"] ?></a>
+                            <?php foreach ($submenus as $sub): ?>
+                                <?php if ($sub["cod"] == $value["cod"]): ?>
+                                    <div class="submenu1"><a href="<?php echo site_url("arhiva-audio/" . $key . "/" . $sub["cod_nume"]) ?>"><?php echo $sub["nume"] ?></a></div>
+                                <?php endif; ?>
+                            <?php endforeach; ?>
+                            <div class="audioline"></div>
+                        </li>
+                    <?php endforeach; ?>
                 </ul>
             </div>
         </div>

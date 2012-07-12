@@ -202,6 +202,9 @@ class Resurse_model extends CI_Model
         if (isset($filters["tip"])) {
             $sql .= " AND tr.cod = '" . $filters["tip"] . "'";
         }
+        if (isset($filters["autor"])) {
+            $sql .= " AND aut.nume = '" . $filters["autor"] . "'";
+        }
         if (isset($filters["order"])) {
             $sql .= " ORDER BY " . $filters["order"] . " ";
         }
@@ -214,6 +217,7 @@ class Resurse_model extends CI_Model
         }
         
         $q = $this->db->query($sql);
+//        var_dump($sql);
 
         if ($q->num_rows() > 0) {
             return $q->result_array();

@@ -54,7 +54,7 @@
                 <a class="but_details" href="#"><strong>Vezi detalii</strong><span class="i_icon">&nbsp;</span></a>
             </div>
             <div class="BIR_T3">
-            	<div class="i_title">URMATOARELE TRANSMISII</div>
+            	<div class="i_title">Urmatoarele transmisii live</div>
                  <?php if ($evenimente != null): ?>
             <?php foreach($evenimente as $eveniment):  ?>
                 <div class="i_item">
