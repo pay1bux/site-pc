@@ -446,7 +446,7 @@ body {
 .BoxInRow .BIR_T3 .i_title {
 	display:block; height:30px; line-height:25px;
 	border-bottom:1px solid #c4c4c4;
-	font-family:'Trajan Pro'; font-size:23px;
+	font-family:'Trajan Pro'; font-size:20px;
 	color:#6b6b6b;
 }
 .BoxInRow .BIR_T3 .i_item {
@@ -863,6 +863,13 @@ ul#audio a.selected
     background-position: 2px 5px;
     position: relative;
     z-index: 3;
+}
+ul#audio div.submenu1 {
+    padding-left: 20px;
+    line-height: 23px;
+    background-image:url(../images/player-audio/submenu_arrow.png);
+    background-repeat: no-repeat;
+    background-position: 2px 5px;
 }
 
 ul#audio a:hover
