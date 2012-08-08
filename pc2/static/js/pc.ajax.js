@@ -35,11 +35,16 @@ $(document).ready(
 
                 if($object.hasClass('ascuns'))
                 {
-                    $object.switchClass('ascuns','neascuns',1500,'easeOutBounce');
+                   $object.switchClass('ascuns','neascuns',0,'easeOutBounce');
+
+                   // $object.removeClass("ascuns", 500);
+
                 }
                 else
                 {
-                    $object.switchClass('neascuns','ascuns',1500,'easeOutBounce');
+                    $object.switchClass('neascuns','ascuns',1000,'easeOutBounce');
+                   // $object.removeClass("neascuns", 500);
+                   // $object.addClass("ascuns", 1000);
                 }
                 e.preventDefault(); //scoate actiunea lui a (ex: hreful)
 
