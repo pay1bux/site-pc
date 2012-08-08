@@ -17,24 +17,7 @@
 
              
 
-                  <p class="bold">COMITETUL</p>
-                <p>Russell and Sam Evans are the Senior Pastors of Planetshakers City Church in Melbourne, Australia. Their desire is to see each person empowered by the Holy Spirit to reach their God-given destiny.</p>
 
-<p>In 1997 they founded Planetshakers Ministries, launching Planetshakers Conference in Adelaide, South Australia, with 300 delegates. They have seen it grow to over 20,000 national delegates, and in 2008 they launched a fresh vision for Planetshakers Conference, extending the breath of the conference to include ministry for University aged, young adults through to mature aged believers.</p>
-
-                <p>In 2002 Russell and Sam felt God call them to relocate to Melbourne, Victoria, to establish a church in the heart of the city. On February 8, 2004 Planetshakers City Church was launched in Melbourne with a vision to impact and influence the communities throughout the state. God has blessed the ministry of Russell & Sam, through Planetshakers City Church as they see over 5,000 people come together on a Sunday.</p>
-                
-                <p>The core mandate from God that drives them continues to stand.. “To empower generations to win generations.”</p>
-
-                <p>Russell and Sam reside in Melbourne, Australia and have two children, Jonathan and Aimee.</p>
-
-                   <p class="bold">VIZIUNEA NOASTRA</p>
-                <p>Planetshakers City Church is a church for this generation. It is filled with vibrant, enthusiastic, passionate people with the focus to champion the cause of Christ.  
-Founded in 2004 by Ps Russell and Sam Evans, it has flourished under their leadership that has a firm foundation on the word of God, the Bible. Their desire is to see each person empowered by the Holy Spirit to reach their God-given destiny, and the kingdom of God established and therefore bring the positive influence of the gospel of Christ to their society through word and deed.</p>
-
-<p>The church is known for its love and acceptance, passionate praise and worship, its inspirational preaching of God’s word </p>
-
-             
             </div>
                 <div class="clearBoth"></div>
       </div>
