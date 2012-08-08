@@ -973,6 +973,30 @@ ul#audio a:hover
     text-align: center;
 }
 
+p.aliniat
+{
+    text-indent: 50px;
+}
+
+.rama {
+
+    display: block;
+    border:2px solid #FFF;
+    border-radius: 3px;
+    background-attachment:scroll;
+    background-clip:border-box;
+    background-color:#000;
+    /*background-image:url(../img/gallery.jpg);*/
+    background-origin:padding-box;
+    background-position:center top;
+    background-repeat:no-repeat;
+    background-size:auto;
+    -moz-box-shadow: 0 0 10px #999;
+    -webkit-box-shadow: 0 0 10px #999;
+    box-shadow: 0 0 10px #999;
+}
+
+
 
 #right {
       float: left;
@@ -1107,3 +1131,16 @@ font-size:12px;
 	color: #CC0090;
 }
 /* ******************************************************* PLAYER*/
+
+
+.ascuns
+{
+    max-height: 150px;
+    display: block;
+    overflow: hidden;
+}
+
+.neascuns
+{
+    height: auto;
+}

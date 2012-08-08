@@ -16,6 +16,8 @@
 <script type="text/javascript" src="<?php echo JS_PATH; ?>jquery.jplayer.min.js"></script>
 <script type="text/javascript" src="<?php echo JS_PATH; ?>jquery.tinyscrollbar.min.js"></script>
 <script type="text/javascript" src="http://live.jahos.net/swfobject.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
+
 
 <!---->
 <!---->

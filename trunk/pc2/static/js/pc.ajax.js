@@ -27,5 +27,30 @@ $(document).ready(
             });
             return false;
         });
+		//pentru hide la gaseste-ti locul
+		    $('.arataMaiMult').click(function(e) {
+          //      console.log(e);
+       var $object = $(this).prev().prev();
+              //  $object.removeClass('ascuns').addClass("neascuns");
+
+                if($object.hasClass('ascuns'))
+                {
+                    $object.switchClass('ascuns','neascuns',1500,'easeOutBounce');
+                }
+                else
+                {
+                    $object.switchClass('neascuns','ascuns',1500,'easeOutBounce');
+                }
+                e.preventDefault(); //scoate actiunea lui a (ex: hreful)
+
+                //return false();
+                e.stopPropagation();// opreste propagarea eventului  bubbling - div din interiorul unui div
+});
+
+
+
+
+
+
     }
 );
