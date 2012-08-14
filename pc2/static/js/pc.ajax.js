@@ -1,4 +1,5 @@
-var baseUrl = 'index.php/'; // De scos cand punem pe live
+//var baseUrl = 'index.php/'; // De scos cand punem pe live
+var baseUrl = ''; // De scos cand punem pe live
 $(document).ready(
 
     function () {
@@ -8,7 +9,7 @@ $(document).ready(
             var emailReg = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/
 
             if(!emailReg.test(email)) {
-                alert("Adresa de email nu este valida!");
+                alert("De facut textul ROSU");
                 return false;
             }
 
@@ -19,10 +20,8 @@ $(document).ready(
                     email: email
                 },
                 success: function(data){
-                    if (data == '')
-                        alert("Ati fost abonat si veti primi buletinul duminical in fiecare saptamana.");
-                    else
-                        alert(data);
+                    if (data == 'ok')
+                        alert("De facut textul VERDE");
                 }
             });
             return false;

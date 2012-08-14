@@ -22,7 +22,7 @@
             <div class="i_right">
             	<form class="i_search" method="post" action="">
                 	<fieldset>
-                    	<button class="i_icon" type="submit">&nbsp;</button>
+                    	<button class="i_icon" type="submit" id="buton_sub_buletin">&nbsp;</button>
            <!--codul nostru--><input id="subscribe" type="text" name="buletin" value="Aboneaza-te la buletinul duminical" class="cleardefault i_text" />
                        <!-- <input id="Newsletter" class="i_text" type="text" name="words" value="Aboneaza-te la buletinul duminical" onclick="input_default_text('Newsletter', 'Aboneaza-te la buletinul duminical');" onblur="input_default_text('Newsletter', 'Aboneaza-te la buletinul duminical');" />-->
                     </fieldset>
