@@ -55,6 +55,7 @@ $route['contact/send'] = "frontend/contact/send";
 $route['arhiva-audio'] = "frontend/audio";
 $route['arhiva-audio/(:any)'] = "frontend/audio/index/$1";
 $route['arhiva-audio/(:any)/(:any)'] = "frontend/audio/index/$1/$2";
+$route['arhiva-audio/(:any)/(:any)/(:any)'] = "frontend/audio/index/$1/$2/$3";
 
 $route['login'] = "admin/login";
 $route['verificare'] = "admin/verificare";

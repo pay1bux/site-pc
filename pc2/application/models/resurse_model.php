@@ -205,6 +205,20 @@ class Resurse_model extends CI_Model
         if (isset($filters["autor"])) {
             $sql .= " AND aut.nume = '" . $filters["autor"] . "'";
         }
+        if (isset($filters["meniu"])) {
+            $sql .= " AND r.meniu_id = '" . $filters["meniu"] . "'";
+        }
+        if (isset($filters["meniuri"])) {
+            $sql .= "AND (";
+            $i = 0;
+            foreach($filters["meniuri"] as $meniuId) {
+                if ($i > 0)
+                    $sql .= " OR ";
+                $sql .= "r.meniu_id = '" . $meniuId . "'";
+                $i++;
+            }
+            $sql .= ")";
+        }
         if (isset($filters["order"])) {
             $sql .= " ORDER BY " . $filters["order"] . " ";
         }

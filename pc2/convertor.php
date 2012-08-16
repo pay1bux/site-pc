@@ -4,10 +4,10 @@ require_once 'functii.php';
 connect();
 select_db($link);
 
-resolvePrograme();
-resolveTineret();
-resolveStudii();
-resolveEvenimente();
+//resolvePrograme();
+//resolveTineret();
+//resolveStudii();
+//resolveEvenimente();
 resolveAudio();
 
 function resolvePrograme(){
@@ -22,6 +22,7 @@ function resolvePrograme(){
         $title_parts = explode("-", $raw_title);
 
         $titlu = trim($title_parts[0]);
+//        TODO: Insert text date in title
 
         $data_eveniment = trim($title_parts[1]);
         $data_zi = substr($data_eveniment, 0, 2);
@@ -46,7 +47,7 @@ function resolvePrograme(){
             $autor_id = insertAutor($autor_poarta_cerului);
         }
 
-        $resurse_id = insertResursa($titlu, $autor_id, null, 1, null, $data, $data_adaugare, $row['views']);
+        $resurse_id = insertResursa($titlu, $autor_id, null, null, 1, null, $data, $data_adaugare, $row['views']);
 
         // evenimente: Binecuvantare copii Sarbatoarea Multumirii Sarbatoarea Roadelor Botez Nou Testamental Ordinare diaconi Cantata Nunta
         // unknown ***** Partea 2
@@ -148,7 +149,7 @@ function resolveTineret(){
             $autor_id = insertAutor($autor_poarta_cerului);
         }
 
-        $resurse_id = insertResursa($titlu . " " . $data_eveniment, $autor_id, null, 10, null, $data, $data_adaugare, $row['views']);
+        $resurse_id = insertResursa($titlu . " " . $data_eveniment, $autor_id, null, null, 10, null, $data, $data_adaugare, $row['views']);
 
         // evenimente: Masa Rotunda Marturii Echipa Teen Challange Conferinta Concert
         // unknown ***** Partea 2
@@ -231,7 +232,9 @@ function resolveStudii(){
             $categorie_id = insertCategorie($categorie);
         }
 
-        $resurse_id = insertResursa($titlu, $autor_id, $categorie_id, 2, null, $data, $data_adaugare, $row['views']);
+//        TODO: Insert meniu from nodes
+
+        $resurse_id = insertResursa($titlu, $autor_id, $categorie_id, null, 2, null, $data, $data_adaugare, $row['views']);
 
         $src = $row['source'];
         if ($row['description'] != '' && strpos($row['embed_code'], "href") === false) {
@@ -274,7 +277,9 @@ function resolveStudii(){
             $categorie_id = insertCategorie($categorie);
         }
 
-        $resurse_id = insertResursa($titlu, $autor_id, $categorie_id, 2, null, $data, $data_adaugare, $row['views']);
+//        TODO: Insert meniu from nodes
+
+        $resurse_id = insertResursa($titlu, $autor_id, $categorie_id, null, 2, null, $data, $data_adaugare, $row['views']);
 
         $src = $row['source'];
         if ($row['description'] != '' && strpos($row['embed_code'], "href") === false) {
@@ -307,7 +312,7 @@ function resolveEvenimente(){
             $autor_id = insertAutor($autor_poarta_cerului);
         }
 
-        $resurse_id = insertResursa($titlu, $autor_id, null, 1, null, $data, $data_adaugare, $row['views']);
+        $resurse_id = insertResursa($titlu, $autor_id, null, null, 1, null, $data, $data_adaugare, $row['views']);
 
         insertTag(7, $resurse_id, $titlu);
 
@@ -326,7 +331,7 @@ function resolveAudio(){
     echo "\nAudio\n";
 
     // Select evenimente
-    $q = "SELECT * FROM pec_audio_list order by id";
+    $q = "SELECT l.*, c.title as cat2_titlu FROM pec_audio_list l left join pec_audio_categories2 c on l.id_cat2 = c.id order by id";
     $r = mysql_query($q);
 
     while ($row = mysql_fetch_assoc($r)) {
@@ -344,12 +349,21 @@ function resolveAudio(){
         $titlu = trim(substr($rawTitle, $pos + 1, strlen($rawTitle) - $pos));
         var_dump($titlu);
 
+        $tip_id = $tipuri_resurse[$row["id_cat1"]];
+
         $autor_id = checkExistingAuthor($autor);
         if ($autor_id == -1) {
             $autor_id = insertAutor($autor);
         }
+        $id_meniu = 0;
+        if ($row['cat2_titlu']) {
+            $id_meniu = checkExistingMeniu($tip_id, $row['cat2_titlu']);
+            if ($id_meniu == -1) {
+                $id_meniu = insertMeniu($tip_id, $row['cat2_titlu']);
+            }
+        }
 
-        $resurse_id = insertResursa($titlu, $autor_id, null, $tipuri_resurse[$row["id_cat1"]], null, $data, $data_adaugare, $row['views']);
+        $resurse_id = insertResursa($titlu, $autor_id, null, $id_meniu, $tip_id, null, $data, $data_adaugare, $row['views']);
 
         insertAttachment($row['source'], null, 'mp3', $resurse_id, null, transformInSeconds($row['durata']), $row['marimea']);
     }

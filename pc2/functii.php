@@ -16,14 +16,14 @@ function select_db($link) {
 	mysql_select_db('pc-nou', $link) or die('Could not select database.');
 }
 
-function insertResursa($titlu, $autor_id, $categorie_id, $tip_id, $continut, $data, $data_adaugare, $views) {
+function insertResursa($titlu, $autor_id, $categorie_id, $meniu_id, $tip_id, $continut, $data, $data_adaugare, $views) {
     $titlu =  mysql_real_escape_string($titlu);
-    $q2 = "INSERT INTO resurse(titlu, autor_id, categorie_id, tip_id, continut, data, data_adaugare, views)
-	        VALUES('$titlu', '$autor_id', '$categorie_id',  '$tip_id', '$continut', '$data', '$data_adaugare', '$views');";
+    $q2 = "INSERT INTO resurse(titlu, autor_id, categorie_id, meniu_id, tip_id, continut, data, data_adaugare, views)
+	        VALUES('$titlu', '$autor_id', '$categorie_id', '$meniu_id',  '$tip_id', '$continut', '$data', '$data_adaugare', '$views');";
 	$r2 = mysql_query($q2);
-
+var_dump($q2);
 	if (!$r2)
-	die("Error insertion album: " . $titlu);
+	die("Error insertion resursa: " . $titlu);
 
 	return mysql_insert_id();
 }
@@ -79,6 +79,45 @@ function insertCategorie($categorie) {
 	die("Error insertion categorie: " . $categorie);
 
 	return mysql_insert_id();
+}
+
+function sluggify($str) {
+    $str =  mysql_real_escape_string($str);
+    $str = strtolower($str);
+    $str = str_replace(".", "", $str);
+    $str = str_replace(")", "", $str);
+    $str = str_replace("(", "", $str);
+    $str = str_replace("[", "", $str);
+    $str = str_replace("]", "", $str);
+    $str = str_replace(" ", "-", $str);
+
+	return $str;
+}
+
+function insertMeniu($tip_id, $nume, $parinte = 'Null') {
+    $nume =  mysql_real_escape_string($nume);
+    $nume = trim($nume);
+    $cod = sluggify($nume);
+
+    $q2 = "INSERT INTO meniu(tip_id, nume, cod, parinte) VALUES($tip_id, '$nume', '$cod', $parinte);";
+	$r2 = mysql_query($q2);
+
+    var_dump($q2);
+
+	if (!$r2)
+	die("Error insertion meniu: " . $nume);
+
+	return mysql_insert_id();
+}
+
+function checkExistingMeniu($tip_id, $nume) {
+    $q = "SELECT id FROM meniu WHERE nume = '$nume' and tip_id = $tip_id";
+    $r = mysql_query($q);
+
+    if (mysql_num_rows($r) == 0)
+        return -1;
+    $row = mysql_fetch_assoc($r);
+    return $row['id'];
 }
 
 function insertAttachment($url, $embed, $format, $resurse_id, $thumb, $durata = null, $marime = null) {

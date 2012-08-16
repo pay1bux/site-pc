@@ -196,7 +196,12 @@
                         <li><a href="<?php echo site_url("arhiva-audio/" . $key) ?>" tabindex="<?echo $i++; ?>" <?php if ($selected == $key) echo 'class="selected"'; ?>><?php echo $value["nume"] ?></a>
                             <?php foreach ($submenus as $sub): ?>
                                 <?php if ($sub["cod"] == $value["cod"]): ?>
-                                    <div class="submenu1"><a href="<?php echo site_url("arhiva-audio/" . $key . "/" . $sub["cod_nume"]) ?>"><?php echo $sub["nume"] ?></a></div>
+                                    <div class="submenu1"><a href="<?php echo site_url("arhiva-audio/" . $key . "/" . $sub["cod_nume"]) ?>" <?php if ($selected_submenus == $sub["cod_nume"]) echo 'class="selected"'; ?>><?php echo $sub["nume"] ?></a></div>
+                                    <?php foreach ($albume as $alb): ?>
+                                        <?php if ($sub["id"] == $alb["parinte"]): ?>
+                                            <div class="submenu2"><a href="<?php echo site_url("arhiva-audio/" . $key . "/" . $sub["cod_nume"] . "/" . $alb["cod_nume"]) ?>" <?php if ($selected_albume == $alb["cod_nume"]) echo 'class="selected"'; ?>><?php echo $alb["nume"] ?></a></div>
+                                        <?php endif; ?>
+                                    <?php endforeach; ?>
                                 <?php endif; ?>
                             <?php endforeach; ?>
                             <div class="audioline"></div>

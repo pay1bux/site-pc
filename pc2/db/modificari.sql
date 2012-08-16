@@ -10,3 +10,7 @@ TRUNCATE TABLE  `categorie_resurse`;
 INSERT INTO `categorie_resurse` (`id`, `nume`) VALUES (NULL, 'Fara categorie');
 
 ALTER TABLE  `resurse` CHANGE  `categorie_id`  `categorie_id` INT( 11 ) NOT NULL;
+
+ALTER TABLE  `resurse` ADD  `meniu_id` INT NULL AFTER  `categorie_id`;
+
+ALTER TABLE  `user` ADD  `public` BIT( 1 ) NOT NULL;
