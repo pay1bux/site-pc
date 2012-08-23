@@ -700,6 +700,14 @@ body {
     text-align: left;
     margin-top: 10px;
     margin-left: 10px;
+    float:left;
+}
+
+.right_text {
+    text-align: left;
+    margin-top: 10px;
+    margin-left: 10px;
+    float:right;
 }
 
 .p_text .i_title {
@@ -712,6 +720,24 @@ body {
     font-weight: normal;
     color: #787878;
     font-family: sans-serif, "Open Sans";
+}
+
+.right_text .i_title {
+    text-align: left;
+    margin-bottom: 10px;
+    display: block;
+    height: 30px;
+    line-height: 30px;
+    font-size: 24px;
+    font-weight: normal;
+    color: #787878;
+    font-family: sans-serif, "Open Sans";
+}
+
+.right_text .i_title .box_cautare {
+    font-size: 18px;
+    width: 180px;
+    padding: 3px;
 }
 
 .p_text .i_details {
@@ -1432,4 +1458,13 @@ p.aliniat
 .neascuns
 {
     height: auto;
+}
+
+.but_cautare {
+    width: 61px;
+    height: 24px;
+    background-image: url(../images/buttons/btsearch.jpg);
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    background-size: auto;
 }

@@ -26,14 +26,25 @@ class Audio extends CI_Controller {
         $data['selected_albume'] = $album;
         $data['meniu'] = $this->tipuri;
 
-        $im = new imagick('http://localhost/site-pc/pc2/static/test.pdf[0]');
-        var_dump($im);
-        die();
-        $im->setImageFormat( "jpg" );
-        header( "Content-Type: image/jpeg" );
-        echo $im;
+        $this->load->view('frontend/template', $data);
+    }
 
-//        $this->load->view('frontend/template', $data);
+    function cautare($cuvinte) {
+        $this->load->model('meniu_model');
+        $this->load->model('resurse_model');
+        $data['main_content'] = 'frontend/resurse/audio';
+        $data['page_title'] = 'Arhiva Audio - Biserica Penticostala Poarta Cerului, Timisoara';
+
+        $data['meniu'] = $this->tipuri;
+        $data['selected'] = 'cautare';
+        $data['submenus'] = array();
+        $cuvinte = urldecode($cuvinte);
+        $data['cuvinte'] = $cuvinte;
+        $cuvinte = explode(" ", $cuvinte);
+        $filters = array("domeniu" => "audio", "order" => "data_adaugare", "orderType" => "desc", "cuvinte" => $cuvinte);
+        $data['audio'] = $this->resurse_model->getResurseWithAtt($filters);
+
+        $this->load->view('frontend/template', $data);
     }
 
     function getResurseDupaTip($tip, $autor = null, $album = null) {

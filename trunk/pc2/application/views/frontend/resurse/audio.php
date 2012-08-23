@@ -128,9 +128,20 @@
 
             <div id="header_audio">
                 <div class="p_text">
-                    <div class="i_title" style="margin-top: 15px; margin-left: 10px;">Arhiva audio</div>
+                    <div class="i_title" style="margin-top: 5px;">Arhiva audio</div>
+                </div>
+                <div class="right_text">
+                    <div class="i_title" style="margin-top: 5px; margin-right: 10px;">
+                        <?php if ($selected == 'cautare'): ?>
+                            <input type="text" id="text_cautare" class="box_cautare" value="<?php echo $cuvinte?>"/>
+                        <?php else: ?>
+                            <input type="text" id="text_cautare" class="box_cautare" />
+                        <?php endif ?>
+                        <button type="button" id="buton_cautare" style="margin-bottom: 5px;">Cauta</button>
+                    </div>
                 </div>
             </div>
+            <div class="clear"></div>
             <div id="audio_playlist">
                 <div id="jquery_jplayer"></div>
 
@@ -192,6 +203,11 @@
             <div id="audio_categories">
                 <ul id="audio">
                     <?php $i = 0;?>
+                    <?php if ($selected == 'cautare'): ?>
+                        <li><a href="" class="selected"><?php echo count($audio)?> rezultate ale cautare</a>
+                            <div class="audioline"></div>
+                        </li>
+                    <?php endif ?>
                     <?php foreach($meniu as $key => $value): ?>
                         <li><a href="<?php echo site_url("arhiva-audio/" . $key) ?>" tabindex="<?echo $i++; ?>" <?php if ($selected == $key) echo 'class="selected"'; ?>><?php echo $value["nume"] ?></a>
                             <?php foreach ($submenus as $sub): ?>
@@ -212,7 +228,6 @@
         </div>
         <div class="clear"></div>
     </div>
-
 
 </div>
 

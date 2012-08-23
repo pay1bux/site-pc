@@ -3,7 +3,6 @@ var baseUrl = ''; // De scos cand punem pe live
 $(document).ready(
 
     function () {
-        /* handles resources flagging actions */
         $('#buton_sub_buletin').click(function() {
             var email =$('#subscribe').val();
             var emailReg = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/
