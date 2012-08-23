@@ -38,7 +38,7 @@
                 </div>
                 <div class="i_item3">
                 	<div class="ii_title"><span>&nbsp;Asculta arhiva audio&nbsp;<br />&nbsp;Poarta Cerului&nbsp;</span></div>
-                    <a class="but_play" href="#">&nbsp;</a>
+                    <a class="but_play" href="<?php echo site_url("arhiva-audio"); ?>">&nbsp;</a>
                 </div>
             </div>
         </div>
