@@ -195,7 +195,17 @@ class Resurse_model extends CI_Model
         if (isset($filters["categorie"])) {
             $sql .= " AND cr.id = '%" . $filters["categorie"] . "%'";
         }
-
+        if (isset($filters["cuvinte"])) {
+            $sql .= " AND (";
+            $i = 0;
+            foreach($filters['cuvinte'] as $cuvant) {
+                if ($i > 0)
+                    $sql .= " AND ";
+                $sql .= " CONCAT_WS(' ', r.titlu, aut.nume) LIKE '%" . $cuvant . "%'";
+                $i++;
+            }
+            $sql .= ") ";
+        }
         if (isset($filters["domeniu"])) {
             $sql .= " AND tr.cod LIKE '%" . $filters["domeniu"] . "%'";
         }

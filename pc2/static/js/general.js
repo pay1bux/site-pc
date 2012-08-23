@@ -41,3 +41,42 @@ function hide_show(hide_htmlid, show_htmlid)
 	
 	return false;
 }
+
+function getBaseUrl() {
+    var url = window.location.href;
+    var indexPos = url.indexOf("index.php");
+    var slashPos = 0;
+    if (indexPos != -1) {
+        slashPos = url.indexOf("/", indexPos);
+    } else {
+        slashPos = url.indexOf("/", 8);
+    }
+
+    var baseUrl = url.substring(0, slashPos);
+
+    return baseUrl + "/";
+}
+
+$(document).ready(
+
+    function () {
+        $('#text_cautare').keyup( function(e){
+            var code = (e.keyCode ? e.keyCode : e.which);
+            if(code == 13) { //Enter keycode
+                var cuvinte =$(this).val();
+                cuvinte = encodeURIComponent(trim(cuvinte));
+                var baseUrl = '/site-pc/pc2/index.php/'; // De scos cand punem pe live
+                var url = getBaseUrl() + 'arhiva-audio/cautare/' + cuvinte;
+                document.location = url;
+            }
+        });
+
+        $('#buton_cautare').click(function() {
+            var cuvinte =$('#text_cautare').val();
+            cuvinte = encodeURIComponent(trim(cuvinte));
+            var baseUrl = '/site-pc/pc2/index.php/'; // De scos cand punem pe live
+            var url = getBaseUrl() + 'arhiva-audio/cautare/' + cuvinte;
+            document.location = url;
+        });
+    }
+);
