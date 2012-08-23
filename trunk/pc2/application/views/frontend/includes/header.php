@@ -1,6 +1,6 @@
 <div id="GreenBar"></div>
 <div id="SiteContent">
-	<a id="Logo" href="index.php">&nbsp;</a>
+	<a id="Logo" href="<?php echo site_url("default_controller")?>">&nbsp;</a>
     <div id="TopMenu">
     	<ul>
         	<li class="i_mt"><a href="<?php echo site_url("live2")?>">Live</a></li>
