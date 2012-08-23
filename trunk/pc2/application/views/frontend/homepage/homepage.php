@@ -47,7 +47,7 @@
             	<div class="i_title">Devotional</div>
                 <div class="i_p1"> <?php echo $devotional["titlu"]; ?></div>
                 <div class="i_p2"> <?php echo myTruncate($devotional["continut"], 120, " "); ?></div>
-                <a class="but_details" href="<?php echo site_url("devotional/" . $devotional["id"])?>"><strong>Vezi detalii</strong><span class="i_icon">&nbsp;</span></a>
+                <a class="but_details" href="<?php echo linkDevotional($devotional["titlu"], $devotional["id"])?>"><strong>Vezi detalii</strong><span class="i_icon">&nbsp;</span></a>
             </div>
             <div class="BIR_T2">
             	<div class="altfel_de_click"><p class="i_p1">In fiecare <strong>vineri</strong><br /><strong>de la 21:30!</strong><br /><em>www.altfeldeclick.ro</em></p></div>
