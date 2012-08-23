@@ -153,7 +153,7 @@ class Resurse_model extends CI_Model
         if ($limit != 0) {
             $sql .= " LIMIT $limit";
         }
-
+        var_dump($sql);
         $q = $this->db->query($sql);
 
         if ($q->num_rows() > 0) {
@@ -183,13 +183,17 @@ class Resurse_model extends CI_Model
     function getResurseWithAtt($filters)
     {
         if (isset($filters["categorie"])) {
-            $sql = "SELECT r.*, r.id as r_id, a.*, tr.*, aut.nume as nume_autor, cr.*
-                        FROM $this->table r, attachment a, tip_resurse tr, autor aut, categorie_resurse cr
-                        WHERE r.tip_id=tr.id AND r.autor_id=aut.id AND r.categorie_id=cr.id AND a.resurse_id = r.id";
+            $sql = "SELECT r.*, r.id AS r_id, a.*, tr.*, aut.nume as nume_autor, cr.*
+                        FROM $this->table AS r
+                        LEFT JOIN attachment AS a ON r.id = a.resurse_id,
+                        tip_resurse AS tr, autor AS aut, categorie_resurse AS cr
+                        WHERE r.tip_id = tr.id AND r.autor_id = aut.id AND r.categorie_id = cr.id";
         } else {
-            $sql = "SELECT r.*, r.id as r_id, a.*, tr.*, aut.nume as nume_autor
-                        FROM $this->table r, attachment a, tip_resurse tr, autor aut
-                        WHERE r.tip_id=tr.id AND r.autor_id=aut.id AND a.resurse_id = r.id";
+            $sql = "SELECT r.*, r.id AS r_id, a.*, tr.*, aut.nume as nume_autor
+                        FROM $this->table AS r
+                        LEFT JOIN attachment AS a ON r.id = a.resurse_id,
+                        tip_resurse AS tr, autor AS aut
+                        WHERE r.tip_id = tr.id AND r.autor_id = aut.id";
         }
 
         if (isset($filters["categorie"])) {
