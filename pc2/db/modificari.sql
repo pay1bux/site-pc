@@ -14,3 +14,5 @@ ALTER TABLE  `resurse` CHANGE  `categorie_id`  `categorie_id` INT( 11 ) NOT NULL
 ALTER TABLE  `resurse` ADD  `meniu_id` INT NULL AFTER  `categorie_id`;
 
 ALTER TABLE  `user` ADD  `public` BIT( 1 ) NOT NULL;
+
+INSERT INTO  `pc-nou`.`drepturi` (`id` ,`nume` ,`cod`) VALUES (NULL ,  'Administrare resurse',  'administrare-resurse'), (NULL ,  'Buletin',  'buletin');

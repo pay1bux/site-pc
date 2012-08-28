@@ -1,29 +1,23 @@
 <?php
+
 class Administrator extends CI_Controller {
 
-	function index()
-	{
-	
-		$this->load->helper(array('form', 'url'));
+    function index() {
+        $this->load->library('session');
+        $this->load->model('user_model');
+        $logged_in = $this->session->userdata('logged_in');
+        if ($logged_in == FALSE) {
+            redirect('login', 'refresh');
+        }
 
-		$this->load->library('form_validation');
-		
-		$this->form_validation->set_rules('password', 'Password', 'required');
-		$this->form_validation->set_rules('username', 'Email', 'valid_email');
-		
-		
-		if ($this->form_validation->run() == FALSE)
-			{
-				$data['main_content'] = 'admin/login';
-			}
-		else
-			{
-				$data['main_content'] = 'admin/logat';
-			}
-			
-			
-			$this->load->view('frontend/template', $data);
-	
-		}
+        $data['main_content'] = 'admin/administrator';
+
+        $email = $this->session->userdata('email');
+        $data['administrareResurse'] = $this->user_model->checkDrept($email, 'administrare-resurse');
+        $data['buletin'] = $this->user_model->checkDrept($email, 'buletin');
+        $data['email'] = $email;
+        $this->load->view('frontend/template', $data);
+    }
 }
+
 ?>
