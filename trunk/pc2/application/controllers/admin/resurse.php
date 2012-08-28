@@ -1,20 +1,22 @@
 <?php
 
-class Resurse extends CI_Controller {
-	
-	function add() {
-        if (! strcmp($_SERVER['REQUEST_METHOD'],'POST')) {
+class Resurse extends CI_Controller
+{
+
+    function add()
+    {
+        if (!strcmp($_SERVER['REQUEST_METHOD'], 'POST')) {
             $this->load->helper(array('form', 'url'));
 
             $postdata = $this->input->post('resurse');
             $input = array(
-							'titlu' => $postdata['titlu'],
-							'autor_id' => $postdata['autor'],
-                            'tip_id' => $postdata['tip_id'],
-							'categorie_id' => $postdata['categorie'],
-							'continut' => $postdata['continut'],
-							'data' => $postdata['data']
-						);
+                'titlu' => $postdata['titlu'],
+                'autor_id' => $postdata['autor'],
+                'tip_id' => $postdata['tip_id'],
+                'categorie_id' => $postdata['categorie'],
+                'continut' => $postdata['continut'],
+                'data' => $postdata['data']
+            );
 
             $this->load->model('resurse_model');
             $this->resurse_model->create($input);
@@ -37,18 +39,19 @@ class Resurse extends CI_Controller {
         $this->load->view('frontend/template', $data);
     }
 
-    function edit($idResursa)  {
-        if (! strcmp($_SERVER['REQUEST_METHOD'],'POST')) {
+    function edit($idResursa)
+    {
+        if (!strcmp($_SERVER['REQUEST_METHOD'], 'POST')) {
             $this->load->helper(array('form', 'url'));
 
             $postdata = $this->input->post('resurse');
             $input = array(
-							'titlu' => $postdata['titlu'],
-							'autor_id' => $postdata['autor'],
-							'categorie_id' => $postdata['categorie'],
-							'continut' => $postdata['continut'],
-							'data' => $postdata['data']
-						);
+                'titlu' => $postdata['titlu'],
+                'autor_id' => $postdata['autor'],
+                'categorie_id' => $postdata['categorie'],
+                'continut' => $postdata['continut'],
+                'data' => $postdata['data']
+            );
 
             $this->load->model('resurse_model');
             $this->resurse_model->update($idResursa, $input);
@@ -73,28 +76,31 @@ class Resurse extends CI_Controller {
 //        die();
 
         $data['main_content'] = 'admin/resurse/edit';
-		$this->load->view('frontend/template', $data);
+        $this->load->view('frontend/template', $data);
     }
 
-    function adaptArray($arr) {
+    function adaptArray($arr)
+    {
         $arrayBun = array();
-        foreach($arr as $ar) {
+        foreach ($arr as $ar) {
             $arrayBun[$ar["id"]] = $ar["nume"];
         }
         return $arrayBun;
     }
 
-           function lista() {
+    function lista()
+    {
         $this->load->model('resurse_model');
-        $resurse = $this->resurse_model->getResurseWithAll();
+        $filtru = array();
+        $resurse = $this->resurse_model->getResurseWithAtt($filtru);
         $data['resurse'] = $resurse;
 
-       $this->load->model('atasament_model');
-       $nr_atasamente =  $this->atasament_model->getNumarAtasamente(2);
-       $data['nr_atasamente'] = $nr_atasamente;
+        $this->load->model('atasament_model');
+        $nr_atasamente = $this->atasament_model->getNumarAtasamente(2);
+        $data['nr_atasamente'] = $nr_atasamente;
 
         $data['main_content'] = 'admin/resurse/lista';
-		$this->load->view('frontend/template', $data);
+        $this->load->view('frontend/template', $data);
     }
 
 }

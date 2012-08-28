@@ -58,8 +58,9 @@ $route['arhiva-audio/(:any)'] = "frontend/audio/index/$1";
 $route['arhiva-audio/(:any)/(:any)'] = "frontend/audio/index/$1/$2";
 $route['arhiva-audio/(:any)/(:any)/(:any)'] = "frontend/audio/index/$1/$2/$3";
 
+$route['administrator'] = "admin/administrator";
 $route['login'] = "admin/login";
-$route['verificare'] = "admin/verificare";
+$route['login-form'] = "admin/login/verify";
 $route['admin/adauga-resursa'] = "admin/resurse/add";
 $route['admin/editeaza-resursa/(\d+)'] = "admin/resurse/edit/$1";
 $route['admin/lista-resurse'] = "admin/resurse/lista";

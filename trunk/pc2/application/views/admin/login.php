@@ -1,21 +1,20 @@
-<?php
-$this->load->helper('form');
+<div class="clearBoth"/>
+<div class="admin">
+    <?php
+        $this->load->helper('form');
+        echo validation_errors();
+        echo form_open('login-form');
+    ?>
 
+    <h1>ADMINISTRARE</h1>
 
-echo validation_errors(); 
-echo form_open('admin/administrator'); ?>
+    Email
+    <input type="text" name="email" value="<?php echo set_value('email'); ?>" size="50"/>
 
-<font size="2" color="maroon" > ADMINISTRARE</font><br />
+    Password
+    <input type="password" name="password" value="<?php echo set_value('password'); ?>" size="50"/>
 
-Email
-<input type="text" name="username" value="" size="50" />
+    <div><input type="submit" value="Login"/></div>
 
-Password
-<input type="password" name="password" value="" size="50" />
-
-<div><input type="submit" value="Login" /></div>
-
-</form>
-
-</body>
-</html>
+    </form>
+</div>
