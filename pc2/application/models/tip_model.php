@@ -49,4 +49,15 @@ class Tip_model extends CI_Model{
             return null;
         }
     }
+
+    function getTipByCod($cod){
+        $sql = "SELECT * FROM $this->table WHERE cod='$cod' LIMIT 1";
+        $q = $this->db->query($sql);
+
+        if($q->num_rows() > 0) {
+            return $q->result_array()[0];
+        } else {
+            return null;
+        }
+    }
 }

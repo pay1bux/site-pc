@@ -13,6 +13,8 @@ class Buletin extends CI_Controller {
 
             $this->load->library('upload', $config);
 
+            $this->load->model('tip_model');
+            $tip_buletin = $this->tip_model->getTipByCod("buletin-duminical");
             $postdata = $this->input->post('buletin');
             $input = array(
                 'titlu' => $postdata['titlu'],
@@ -22,7 +24,7 @@ class Buletin extends CI_Controller {
                 'continut' => "",
                 'views' => 0,
                 'download' => 0,
-                'tip_id' => 6 //TODO: De modificat?
+                'tip_id' => $tip_buletin
             );
 
             if ( ! $this->upload->do_upload()) {
