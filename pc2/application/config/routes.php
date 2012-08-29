@@ -83,6 +83,9 @@ $route['admin/lista-taguri-resursa/(\d+)'] = "admin/taguri/lista/$1";
 $route['admin/adauga-tag/(\d+)'] = "admin/taguri/add/$1";
 $route['admin/editeaza-tag/(\d+)/(\d+)'] = "admin/taguri/edit/$1/$2";
 
+$route['admin/adauga-buletin'] = "admin/buletin/add";
+$route['admin/editeaza-buletin/(\d+)'] = "admin/buletin/edit/$1";
+$route['admin/lista-buletine'] = "admin/buletin/lista";
 
 $route['404_override'] = '';
 
