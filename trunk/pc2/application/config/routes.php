@@ -59,6 +59,9 @@ $route['arhiva-audio/(:any)'] = "frontend/audio/index/$1";
 $route['arhiva-audio/(:any)/(:any)'] = "frontend/audio/index/$1/$2";
 $route['arhiva-audio/(:any)/(:any)/(:any)'] = "frontend/audio/index/$1/$2/$3";
 
+$route['buletin-duminical'] = "frontend/buletin";
+$route['buletin-duminical/(\d+)'] = "frontend/buletin/$1";
+
 $route['administrator'] = "admin/administrator";
 $route['login'] = "admin/login";
 $route['login-form'] = "admin/login/verify";

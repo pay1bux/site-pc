@@ -1,7 +1,17 @@
 <?php
 
-class Resurse extends CI_Controller
-{
+class Resurse extends CI_Controller {
+
+    function __construct() {
+        parent::__construct();
+        $this->load->library('session');
+        $this->load->model('user_model');
+        $logged_in = $this->session->userdata('logged_in');
+        $email = $this->session->userdata('email');
+        if ($logged_in == FALSE || !$this->user_model->checkDrept($email, 'administrare-resurse')) {
+            redirect('login', 'refresh');
+        }
+    }
 
     function add()
     {

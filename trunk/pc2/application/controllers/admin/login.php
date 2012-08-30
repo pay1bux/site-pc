@@ -1,17 +1,18 @@
 <?php
 
-class Login extends CI_Controller
-{
+class Login extends CI_Controller {
 
-    function index() {
+    function __construct() {
         parent::__construct();
         $this->load->library('session');
+    }
+
+    function index() {
         $data['main_content'] = 'admin/login';
         $this->load->view('frontend/template', $data);
     }
 
     function verify() {
-        $this->load->library('session');
         $this->load->model('user_model');
         $this->load->helper(array('form', 'url'));
         $this->load->library('form_validation');

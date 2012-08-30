@@ -2,14 +2,17 @@
 
 class Administrator extends CI_Controller {
 
-    function index() {
+    function __construct() {
+        parent::__construct();
         $this->load->library('session');
         $this->load->model('user_model');
         $logged_in = $this->session->userdata('logged_in');
         if ($logged_in == FALSE) {
             redirect('login', 'refresh');
         }
+    }
 
+    function index() {
         $data['main_content'] = 'admin/administrator';
 
         $email = $this->session->userdata('email');
