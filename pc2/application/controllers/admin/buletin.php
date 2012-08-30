@@ -2,6 +2,17 @@
 
 class Buletin extends CI_Controller {
 
+    function __construct() {
+        parent::__construct();
+        $this->load->library('session');
+        $this->load->model('user_model');
+        $logged_in = $this->session->userdata('logged_in');
+        $email = $this->session->userdata('email');
+        if ($logged_in == FALSE || !$this->user_model->checkDrept($email, 'buletin')) {
+            redirect('login', 'refresh');
+        }
+    }
+
     function add() {
         if (! strcmp($_SERVER['REQUEST_METHOD'],'POST')) {
             $this->load->helper(array('form', 'url'));
@@ -81,14 +92,6 @@ class Buletin extends CI_Controller {
 
         $data['main_content'] = 'admin/atasamente/edit';
         $this->load->view('frontend/template', $data);
-    }
-
-    function adaptArray($arr) {
-        $arrayBun = array();
-        foreach($arr as $ar) {
-            $arrayBun[$ar["id"]] = $ar["nume"];
-        }
-        return $arrayBun;
     }
 
     function lista() {
