@@ -46,7 +46,7 @@ class Resurse extends CI_Controller {
         $data['categorii'] = $this->adaptArray($categorii);
 
         $data['main_content'] = 'admin/resurse/edit';
-        $this->load->view('frontend/template', $data);
+        $this->load->view('admin/template', $data);
     }
 
     function edit($idResursa)
@@ -86,7 +86,7 @@ class Resurse extends CI_Controller {
 //        die();
 
         $data['main_content'] = 'admin/resurse/edit';
-        $this->load->view('frontend/template', $data);
+        $this->load->view('admin/template', $data);
     }
 
     function adaptArray($arr)
@@ -98,10 +98,27 @@ class Resurse extends CI_Controller {
         return $arrayBun;
     }
 
-    function lista()
+    function lista($page = 0)
     {
+        $this->load->library('pagination');
+
+        $config['base_url'] = site_url('admin/lista-resurse');
+        $config['total_rows'] = $this->db->count_all('resurse');
+        $config['per_page'] = 15;
+        $config['first_url'] = '0';
+        $config['num_links'] = 3;
+        $config['last_link'] = 'Ultima';
+        $config['first_link'] = 'Prima';
+        $this->pagination->initialize($config);
+
+        $data['paginare'] = $this->pagination->create_links();
+
+
+
         $this->load->model('resurse_model');
         $filtru = array();
+        $filtru['limit']= $page;
+        $filtru['number']=$config['per_page'];
         $resurse = $this->resurse_model->getResurseWithAtt($filtru);
         $data['resurse'] = $resurse;
 
@@ -110,8 +127,25 @@ class Resurse extends CI_Controller {
         $data['nr_atasamente'] = $nr_atasamente;
 
         $data['main_content'] = 'admin/resurse/lista';
-        $this->load->view('frontend/template', $data);
+        $this->load->view('admin/template', $data);
     }
+
+    function cautare($cuvinte) {
+        $this->load->model('meniu_model');
+        $this->load->model('resurse_model');
+        $data['main_content'] = 'admin/resurse/lista';
+        $data['page_title'] = 'Arhiva Audio - Biserica Penticostala Poarta Cerului, Timisoara';
+
+        $cuvinte = urldecode($cuvinte);
+        $data['cuvinte'] = $cuvinte;
+        $cuvinte = explode(" ", $cuvinte);
+        $filters = array("order" => "data_adaugare", "orderType" => "desc", "cuvinte" => $cuvinte);
+        $data['resurse'] = $this->resurse_model->getResurseWithAtt($filters);
+
+        $this->load->view('admin/template', $data);
+    }
+
+
 
 }
 

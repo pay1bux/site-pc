@@ -55,7 +55,7 @@ class Tip_model extends CI_Model{
         $q = $this->db->query($sql);
 
         if($q->num_rows() > 0) {
-            return $q->result_array()[0];
+            return $q->row();
         } else {
             return null;
         }

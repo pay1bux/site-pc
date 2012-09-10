@@ -10,7 +10,7 @@
             <img src="<?php echo base_url(); ?>static/images/icons/resursa_add.png" border="0">
         </a>
         &nbsp;&nbsp;
-        <a href="<?php echo site_url('admin/lista-resurse'); ?>">
+        <a href="<?php echo site_url('admin/lista-resurse/0'); ?>">
             <img src="<?php echo base_url(); ?>static/images/icons/resursa_edit.png" border="0">
         </a>
         &nbsp;&nbsp;

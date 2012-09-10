@@ -1,0 +1,36 @@
+<?php
+
+class Cereri extends CI_Controller {
+
+
+	function index($page = 0) {
+
+        $this->load->model('cerere_model');
+
+        $numar = $this->cerere_model->countCereri();
+        $this->load->library('pagination');
+        $config['base_url'] = site_url('cereri-rugaciune');
+        $config['total_rows'] = $numar['COUNT(id)'];
+        $config['per_page'] = 8;
+        $config['first_url'] = '0';
+        $config['num_links'] = 3;
+        $config['last_link'] = 'Ultima';
+        $config['first_link'] = 'Prima';
+        $config['uri_segment'] = 2;
+        $this->pagination->initialize($config);
+
+        $data['paginare'] = $this->pagination->create_links();
+
+        $filtru['limit']= $page;
+        $filtru['number']=$config['per_page'];
+
+        $data['cereri'] = $this->cerere_model->getCereri($filtru);
+
+
+        $data['main_content'] = 'frontend/cereri/cereri';
+        $data['page_title'] = ' Cereri de rugaciune - Biserica Penticostala Poarta Cerului, Timisoara';
+
+        $this->load->view('frontend/template', $data);
+    }
+
+}

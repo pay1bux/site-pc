@@ -32,7 +32,7 @@ class Autori extends CI_Controller {
 
 
         $data['main_content'] = 'admin/autori/edit';
-        $this->load->view('frontend/template', $data);
+        $this->load->view('admin/template', $data);
     }
 
     function edit($idAutor) {
@@ -61,7 +61,7 @@ class Autori extends CI_Controller {
 
 
         $data['main_content'] = 'admin/autori/edit';
-		$this->load->view('frontend/template', $data);
+		$this->load->view('admin/template', $data);
     }
 
     function adaptArray($arr) {
@@ -79,7 +79,7 @@ class Autori extends CI_Controller {
         $autori = $this->autor_model->getAutori();
         $data['autori'] = $autori;
         $data['main_content'] = 'admin/autori/lista';
-		$this->load->view('frontend/template', $data);
+		$this->load->view('admin/template', $data);
     }
 }
 

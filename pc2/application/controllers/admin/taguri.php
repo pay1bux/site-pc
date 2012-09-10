@@ -35,7 +35,7 @@ class Taguri extends CI_Controller {
         $data['tipuri_tag'] = $this->adaptArray($tipuri_tag);
 
         $data['main_content'] = 'admin/taguri/edit';
-        $this->load->view('frontend/template', $data);
+        $this->load->view('admin/template', $data);
     }
 
     function edit($idResursa, $idTag) {
@@ -65,7 +65,7 @@ class Taguri extends CI_Controller {
         $data['form_values'] = $this->taguri_model->getTagById($idTag);
 
         $data['main_content'] = 'admin/taguri/edit';
-		$this->load->view('frontend/template', $data);
+		$this->load->view('admin/template', $data);
     }
 
     function adaptArray($arr) {
@@ -87,7 +87,7 @@ class Taguri extends CI_Controller {
         $data['resursa'] = $resursa;
 
         $data['main_content'] = 'admin/taguri/lista';
-		$this->load->view('frontend/template', $data);
+		$this->load->view('admin/template', $data);
     }
 }
 

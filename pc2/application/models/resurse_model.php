@@ -243,6 +243,10 @@ class Resurse_model extends CI_Model
         if (isset($filters["limit"])) {
             $sql .= " LIMIT " . $filters["limit"];
         }
+
+        if (isset($filters["number"])) {
+            $sql .= " , " . $filters["number"];
+        }
         
         $q = $this->db->query($sql);
 //        var_dump($sql);

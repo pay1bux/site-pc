@@ -26,6 +26,7 @@ class Buletin extends CI_Controller {
 
             $this->load->model('tip_model');
             $tip_buletin = $this->tip_model->getTipByCod("buletin-duminical");
+            var_dump($tip_buletin);
             $postdata = $this->input->post('buletin');
             $input = array(
                 'titlu' => $postdata['titlu'],

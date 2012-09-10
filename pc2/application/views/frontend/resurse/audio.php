@@ -132,13 +132,15 @@
                 </div>
                 <div class="right_text">
                     <div class="i_title" style="margin-top: 5px; margin-right: 10px;">
+                        <a id="buton_cautare_audio" class="but_details"  style="float:right; " href="javascript: void(0);"><strong>Caută</strong><span class="i_icon">&nbsp;</span></a>
+                        <!-- <button type="button" id="buton_cautare" style="margin-bottom: 5px;">Cauta</button>-->
+
                         <?php if ($selected == 'cautare'): ?>
-                            <input type="text" id="text_cautare" class="box_cautare" value="<?php echo $cuvinte?>"/>
+                            <input type="text" id="text_cautare_audio" class="box_cautare" value="<?php echo $cuvinte?>"/>
                         <?php else: ?>
-                            <input type="text" id="text_cautare" class="box_cautare" />
+                            <input type="text" id="text_cautare_audio" class="box_cautare" style="float: right; margin-right: 5px;" />
                         <?php endif ?>
-                        <button type="button" id="buton_cautare" style="margin-bottom: 5px;">Cauta</button>
-                    </div>
+                       </div>
                 </div>
             </div>
             <div class="clear"></div>
