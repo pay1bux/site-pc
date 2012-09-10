@@ -84,7 +84,7 @@ class Atasamente extends CI_Controller {
         $data['resursa'] = $resursa;
                 
         $data['main_content'] = 'admin/atasamente/lista';
-		$this->load->view('frontend/template', $data);
+		$this->load->view('admin/template', $data);
     }
 }
 

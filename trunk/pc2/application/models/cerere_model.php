@@ -38,4 +38,40 @@ class Cerere_model extends CI_Model{
 
         return FALSE;
     }
-}
+
+    function getCereri($filters)
+    {
+        $sql = "SELECT  nume, localitate, continut, id, public FROM cereri WHERE public = 1 ORDER BY id DESC";
+
+        if (isset($filters["limit"])) {
+            $sql .= " LIMIT " . $filters["limit"];
+        }
+
+        if (isset($filters["number"])) {
+            $sql .= " , " . $filters["number"];
+        }
+
+        $q = $this->db->query($sql);
+
+        if ($q->num_rows() > 0) {
+            return $q->result_array();
+        } else {
+            return null;
+        }
+    }
+    function countCereri()
+    {
+        $sql = "SELECT COUNT(id) FROM cereri WHERE public = 1";
+        $q = $this->db->query($sql);
+
+        if ($q->num_rows() > 0) {
+            return $q->row_array();
+        } else {
+            return null;
+        }
+    }
+
+
+
+
+    }

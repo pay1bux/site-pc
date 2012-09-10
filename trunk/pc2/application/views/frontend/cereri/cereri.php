@@ -1,0 +1,41 @@
+<div class="clearBoth" style="height:10px;"></div>
+<div id="PageContent">
+    <div id="header" style="background-image: url(<?php echo IMAGES_PATH; ?>banner/despre.png)">
+
+    </div>
+
+    <div id="continut">
+
+        <div class="p_text">
+            <div class="i_title">Cereri de rugaciune</div>
+            <div class="i_details">
+                 <?php  foreach ($cereri as $cerere): ?>
+                <p style="margin-bottom: 5px;margin-top: 10px;"><b><?php echo $cerere['nume'];?></b><?php echo ' - '.$cerere['localitate'];?></p>
+                <p><?php echo $cerere['continut'];?></p>
+
+                <?php endforeach;?>
+            </div>
+            <?php
+            if( isset($paginare))
+            { echo $paginare;}
+
+            ?>
+            <div class="clearBoth"></div>
+        </div>
+
+        <div class="clearBoth"></div>
+
+
+    </div>
+</div>
+
+
+<div id="right">
+    <div class="item" style="background-image: url(<?php echo IMAGES_PATH; ?>right/1.png)"></div>
+    <div class="item" style="background-image: url(<?php echo IMAGES_PATH; ?>right/2.png)"></div>
+    <div class="item" style="background-image: url(<?php echo IMAGES_PATH; ?>right/3.png)"></div>
+</div>
+
+
+<div class="clearBoth"></div>
+

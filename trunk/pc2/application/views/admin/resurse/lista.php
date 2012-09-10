@@ -2,7 +2,11 @@
 <div class="admin">
     <h2>Lista Resurselor</h2>
     <br/>
-
+    Cauta:
+    <input type="text" id="text_cautare_admin" class="box_cautare" style="float: right; margin-right: 5px;" />
+    </br>
+    <a class="but_details" id="buton_cautare_admin" style="float:right; " href="#"><strong>Caută</strong><span class="i_icon">&nbsp;</span></a>
+    </br>
     <p><a href="<?php echo BASE_URL();?>index.php/admin/adauga-resursa/">(+) Adauga Resursa</a></p>
     <br/>
 
@@ -98,4 +102,13 @@
 
             <?php }?>
     </table>
+    <br />
+   <center><?php
+
+       if( isset($paginare))
+       { echo $paginare;}
+
+
+     ?></center>
+    <br />
 </div>

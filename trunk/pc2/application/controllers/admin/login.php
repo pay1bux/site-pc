@@ -9,7 +9,7 @@ class Login extends CI_Controller {
 
     function index() {
         $data['main_content'] = 'admin/login';
-        $this->load->view('frontend/template', $data);
+        $this->load->view('admin/template', $data);
     }
 
     function verify() {
@@ -39,7 +39,7 @@ class Login extends CI_Controller {
             }
         } else {
             $data['main_content'] = 'admin/login';
-            $this->load->view('frontend/template', $data);
+            $this->load->view('admin/template', $data);
         }
     }
 

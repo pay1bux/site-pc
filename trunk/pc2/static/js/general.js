@@ -60,23 +60,36 @@ function getBaseUrl() {
 $(document).ready(
 
     function () {
-        $('#text_cautare').keyup( function(e){
-            var code = (e.keyCode ? e.keyCode : e.which);
-            if(code == 13) { //Enter keycode
-                var cuvinte =$(this).val();
-                cuvinte = encodeURIComponent(trim(cuvinte));
-                var baseUrl = '/site-pc/pc2/index.php/'; // De scos cand punem pe live
-                var url = getBaseUrl() + 'arhiva-audio/cautare/' + cuvinte;
-                document.location = url;
-            }
+        $('#text_cautare_audio').keyup( function(e){
+            key($(this), e, 'arhiva-audio/cautare/');
+        });
+        $('#text_cautare_admin').keyup( function(e){
+            key($(this), e, 'admin/lista-resurse/cautare/');
         });
 
-        $('#buton_cautare').click(function() {
-            var cuvinte =$('#text_cautare').val();
+        $('#buton_cautare_audio').click(function() {
+            var cuvinte =$('#text_cautare_audio').val();
             cuvinte = encodeURIComponent(trim(cuvinte));
-            var baseUrl = '/site-pc/pc2/index.php/'; // De scos cand punem pe live
             var url = getBaseUrl() + 'arhiva-audio/cautare/' + cuvinte;
             document.location = url;
         });
+
+        $('#buton_cautare_admin').click(function() {
+            var cuvinte =$('#text_cautare_admin').val();
+            cuvinte = encodeURIComponent(trim(cuvinte));
+            var url = getBaseUrl() + 'admin/lista-resurse/cautare/' + cuvinte;
+            document.location = url;
+        });
+
     }
 );
+
+function key(object, e, url) {
+    var code = (e.keyCode ? e.keyCode : e.which);
+    if(code == 13) { //Enter keycode
+        var cuvinte = object.val();
+        cuvinte = encodeURIComponent(trim(cuvinte));
+        var url = getBaseUrl() + url + cuvinte;
+        document.location = url;
+    }
+}

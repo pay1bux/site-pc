@@ -12,4 +12,19 @@ class Ajax extends CI_Controller {
             echo "ok";
         }
     }
+
+    function adaugaCerere()
+    {
+        $data = array(
+            'nume' => $_POST['nume'],
+            'localitate' => $_POST['localitate'],
+            'continut' => $_POST['mesaj'],
+            'public' => intval($_POST['public'])
+        );
+
+        $this->load->model('cerere_model');
+        $this->cerere_model->create($data);
+    }
+
+
 }

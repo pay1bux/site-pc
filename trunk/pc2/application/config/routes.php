@@ -50,6 +50,8 @@ $route['despre-noi'] = "frontend/despre/index";
 
 $route['gaseste'] = "frontend/gaseste/index";
 
+$route['adauga-cerere'] = "frontend/ajax/adaugaCerere";
+
 $route['contact'] = "frontend/contact";
 $route['contact/send'] = "frontend/contact/send";
 
@@ -62,12 +64,18 @@ $route['arhiva-audio/(:any)/(:any)/(:any)'] = "frontend/audio/index/$1/$2/$3";
 $route['buletin-duminical'] = "frontend/buletin";
 $route['buletin-duminical/(\d+)'] = "frontend/buletin/$1";
 
+$route['cereri-rugaciune'] = "frontend/cereri/index";
+$route['cereri-rugaciune/(\d+)'] = "frontend/cereri/index/$1";
+
 $route['administrator'] = "admin/administrator";
 $route['login'] = "admin/login";
 $route['login-form'] = "admin/login/verify";
 $route['admin/adauga-resursa'] = "admin/resurse/add";
 $route['admin/editeaza-resursa/(\d+)'] = "admin/resurse/edit/$1";
 $route['admin/lista-resurse'] = "admin/resurse/lista";
+$route['admin/lista-resurse/(\d+)'] = "admin/resurse/lista/$1";
+$route['admin/lista-resurse/cautare/(:any)'] = "admin/resurse/cautare/$1";
+$route['admin/lista-resurse/cautare/(:any)/(:\d+)'] = "admin/resurse/cautare/$1/$2";
 $route['ajax/abonare-buletin'] = "frontend/ajax/abonareBuletin";
 
 $route['admin/adauga-autori'] = "admin/autori/add";

@@ -19,7 +19,7 @@ class Administrator extends CI_Controller {
         $data['administrareResurse'] = $this->user_model->checkDrept($email, 'administrare-resurse');
         $data['buletin'] = $this->user_model->checkDrept($email, 'buletin');
         $data['email'] = $email;
-        $this->load->view('frontend/template', $data);
+        $this->load->view('admin/template', $data);
     }
 }
 

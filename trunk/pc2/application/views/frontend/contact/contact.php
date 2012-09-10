@@ -62,7 +62,7 @@ $buton='class="submit"';
 
 
          <div style="float:left; margin-top: 10px;">
-             <div class="p_text">
+             <div class="p_text" style="float: none;">
                  <div class="i_title">Biserica Penticostala Poarta Cerului</div>
                  <div class="i_details">
                      <p class="mic ">Str.Banul Maracine nr.25</p>
