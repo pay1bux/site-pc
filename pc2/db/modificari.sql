@@ -18,3 +18,9 @@ ALTER TABLE  `user` ADD  `public` BIT( 1 ) NOT NULL;
 INSERT INTO  `pc-nou`.`drepturi` (`id` ,`nume` ,`cod`) VALUES (NULL ,  'Administrare resurse',  'administrare-resurse'), (NULL ,  'Buletin',  'buletin');
 
 ALTER TABLE  `attachment` CHANGE  `marime`  `marime` DECIMAL( 10, 2 ) NOT NULL;
+
+ALTER TABLE  `resurse` CHANGE  `autor_id`  `autor_id` INT( 11 ) NULL DEFAULT NULL ,
+CHANGE  `categorie_id`  `categorie_id` INT( 11 ) NULL DEFAULT NULL;
+
+INSERT INTO `pc-nou`.`drepturi` (`id`, `nume`, `cod`) VALUES (NULL, 'Eveniment', 'eveniment');
+

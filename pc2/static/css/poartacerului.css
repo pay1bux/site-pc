@@ -260,6 +260,24 @@ body {
     border-bottom: none !important;
 }
 
+#buletinGallery {
+    width: 935px;
+    height: 664px;
+    border: 2px solid #FFF;
+    margin-top: 0px;
+    background-attachment: scroll;
+    background-clip: border-box;
+    background-color: #000;
+    /*background-image:url(../img/gallery.jpg);*/
+    background-origin: padding-box;
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: auto;
+    -moz-box-shadow: 0 0 10px #999;
+    -webkit-box-shadow: 0 0 10px #999;
+    box-shadow: 0 0 10px #999;
+}
+
 #jQueryGallery {
     width: 935px;
     height: 406px;

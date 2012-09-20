@@ -98,6 +98,11 @@ $route['admin/adauga-buletin'] = "admin/buletin/add";
 $route['admin/editeaza-buletin/(\d+)'] = "admin/buletin/edit/$1";
 $route['admin/lista-buletine'] = "admin/buletin/lista";
 
+$route['admin/adauga-eveniment'] = "admin/eveniment/add";
+$route['admin/editeaza-eveniment/(\d+)'] = "admin/eveniment/add/$1";
+$route['admin/lista-evenimente'] = "admin/eveniment/lista";
+$route['admin/sterge-eveniment/(\d+)'] = "admin/eveniment/delete/$1";
+
 $route['404_override'] = '';
 
 /* End of file routes.php */
