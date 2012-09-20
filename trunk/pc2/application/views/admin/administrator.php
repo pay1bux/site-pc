@@ -21,8 +21,15 @@
 
     <?php if ($buletin): ?>
         <div>
-            <div><a href="<?php echo site_url('admin/buletin/add'); ?>">Adaugare buletin</a></div>
+            <div><a href="<?php echo site_url('admin/adauga-buletin'); ?>">Adaugare buletin</a></div>
             <div><a href="<?php echo site_url('admin/lista-buletine'); ?>">Lista buletine</a></div>
+        </div>
+    <?php endif; ?>
+
+    <?php if ($eveniment): ?>
+        <div>
+            <div><a href="<?php echo site_url('admin/adauga-eveniment'); ?>">Adaugare eveniment</a></div>
+            <div><a href="<?php echo site_url('admin/lista-evenimente'); ?>">Lista evenimente</a></div>
         </div>
     <?php endif; ?>
 </div>

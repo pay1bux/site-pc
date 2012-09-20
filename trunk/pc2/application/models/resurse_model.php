@@ -189,11 +189,24 @@ class Resurse_model extends CI_Model
                         tip_resurse AS tr, autor AS aut, categorie_resurse AS cr
                         WHERE r.tip_id = tr.id AND r.autor_id = aut.id AND r.categorie_id = cr.id";
         } else {
-            $sql = "SELECT r.*, r.id AS r_id, a.*, tr.*, tr.nume as nume_tip, aut.nume as nume_autor
-                        FROM $this->table AS r
+            $sql = "SELECT r.*, r.id AS r_id, a.*, tr.*, tr.nume as nume_tip, aut.nume as nume_autor ";
+            if ($filters["tip"] == 'evenimente') {
+                $sql .= ", de.* ";
+            }
+            $sql .= "FROM $this->table AS r
                         LEFT JOIN attachment AS a ON r.id = a.resurse_id,
-                        tip_resurse AS tr, autor AS aut
-                        WHERE r.tip_id = tr.id AND r.autor_id = aut.id";
+                        tip_resurse AS tr, autor AS aut";
+            if ($filters["tip"] == 'evenimente') {
+                $sql .= ", detalii_eveniment AS de ";
+            }
+            $sql .= "WHERE r.tip_id = tr.id AND r.autor_id = aut.id";
+            if ($filters["tip"] == 'evenimente') {
+                $sql .= " AND de.resurse_id = r.id";
+            }
+        }
+
+        if (isset($filters["id"])) {
+            $sql .= " AND r.id = " . $filters["id"];
         }
 
         if (isset($filters["categorie"])) {

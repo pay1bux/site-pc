@@ -19,7 +19,7 @@
         </tr>
         <tr>
             <td><?php echo form_label('Data', 'buletin[data]');?> </td>
-            <td><?php echo form_input('buletin[data]', (isset($form_values['titlu']) ? $form_values['data'] : '')); ?></td>
+            <td><?php echo form_input('buletin[data]', (isset($form_values['data']) ? $form_values['data'] : '')); ?></td>
         </tr>
         <tr>
             <td><?php echo form_label('Fisier', 'buletin[fisier]');?> </td>
