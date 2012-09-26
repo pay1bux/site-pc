@@ -66,6 +66,9 @@ $route['buletin-duminical/(\d+)'] = "frontend/buletin/$1";
 
 $route['cereri-rugaciune'] = "frontend/cereri/index";
 $route['cereri-rugaciune/(\d+)'] = "frontend/cereri/index/$1";
+$route['ajax/abonare-buletin'] = "frontend/ajax/abonareBuletin";
+$route['lista-evenimente'] = "frontend/eveniment/lista";
+$route['lista-evenimente/(\d+-\d+-\d+)'] = "frontend/eveniment/lista/$1";
 
 $route['administrator'] = "admin/administrator";
 $route['login'] = "admin/login";
@@ -76,7 +79,6 @@ $route['admin/lista-resurse'] = "admin/resurse/lista";
 $route['admin/lista-resurse/(\d+)'] = "admin/resurse/lista/$1";
 $route['admin/lista-resurse/cautare/(:any)'] = "admin/resurse/cautare/$1";
 $route['admin/lista-resurse/cautare/(:any)/(:\d+)'] = "admin/resurse/cautare/$1/$2";
-$route['ajax/abonare-buletin'] = "frontend/ajax/abonareBuletin";
 
 $route['admin/adauga-autori'] = "admin/autori/add";
 $route['admin/editeaza-autori/(\d+)'] = "admin/autori/edit/$1";
