@@ -68,7 +68,7 @@
                     <div class="i_item">
                         <div class="i_date"><?php echo prepareDate($eveniment["data"]); ?></div>
                         <div class="i_details">
-                            <div class="ii_title"><a href="#"><?php echo $eveniment["titlu"]; ?></a></div>
+                            <div class="ii_title"><?php echo $eveniment["titlu"]; ?></div>
                             <div class="ii_text"><?php echo $eveniment["continut"]; ?></div>
                         </div>
                         <div class="clearLeft"></div>
@@ -77,7 +77,7 @@
                 <?php else: ?>
                 <div class="ii_text">Nu exista transmisii</div>
                 <?php endif; ?>
-                <a class="but_details" href="#"><strong>Vezi calendar</strong><span class="i_icon">&nbsp;</span></a>
+                <a class="but_details" href="<?php echo site_url("lista-evenimente") ?>"><strong>Vezi calendar</strong><span class="i_icon">&nbsp;</span></a>
             </div>
         </div>
         <div class="BoxInRow2">

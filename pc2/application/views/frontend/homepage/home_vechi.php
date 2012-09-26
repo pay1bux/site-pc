@@ -37,7 +37,7 @@
     <div class="promo">
         <div class="chenar" id="devotional">
             <p class="devotional">
-                <?php echo myTruncate($devotional["continut"], 120, " "); ?>
+                <?php echo myTruncate($eveniment["continut"], 120, " "); ?>
             </p>
 
             <a id="buton_devotional" href=""></a>

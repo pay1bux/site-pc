@@ -7,11 +7,24 @@ class Homepage extends CI_Controller {
         $this->load->model('resurse_model');
         $data['devotional'] = $this->resurse_model->getUltimulDevotional();
 
-        $this->load->model('resurse_model');
         $data['buletin'] = $this->resurse_model->getUltimulBuletin();
 
-        $this->load->model('resurse_model');
-        $data['evenimente'] = $this->resurse_model->getUltimeleEvenimente();
+        $evenimenteFinal = array();
+        for ($i = 0; $i < 30; $i++) {
+            $date  = mktime(0, 0, 0, date("m")  , date("d")+$i, date("Y"));
+            $date = date("Y-m-d", $date);
+            $evenimente = $this->resurse_model->getEvenimenteByDay($date);
+            if ($evenimente != null) {
+                foreach($evenimente as $eveniment) {
+                    $eveniment['data'] = $date;
+                    $evenimenteFinal[] = $eveniment;
+                }
+            }
+            if (count($evenimenteFinal) >= 6)
+                break;
+        }
+
+        $data['evenimente'] = $evenimenteFinal;
 
         $data['main_content'] = 'frontend/homepage/homepage';
         // Asa setam titlurile paginilor!

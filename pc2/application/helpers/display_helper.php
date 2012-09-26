@@ -19,11 +19,11 @@ function  myTruncate($string, $limit, $break = ".", $pad = "...") {
 }
 
 function prepareDate($data) {
-    $luni = array(1 => "IAN", 2 => "FEB", 3 => "MAR", 4 => "APR", 5 => "MAI", 6 => "IUN", 7 => "IUL", 8 => "AUG", 9 => "SEP"
+    $luniScurt = array(1 => "IAN", 2 => "FEB", 3 => "MAR", 4 => "APR", 5 => "MAI", 6 => "IUN", 7 => "IUL", 8 => "AUG", 9 => "SEP"
     , 10 => "OCT", 11 => "NOI", 12 => "DEC",);
 
     $time = strtotime($data);
-    $luna = $luni[date('n', $time)];
+    $luna = $luniScurt[date('n', $time)];
 
     return date('d', $time) . " " . $luna;
 }
@@ -37,6 +37,11 @@ function prepareDateWithYear($data) {
     $an = date('Y', $time);
 
     return date('d', $time) . " " . $luna . " " . $an;
+}
+
+function getDayName($ziuaSaptamanii) {
+    $zile = array("0" => "Duminica", "1" => "Luni", "2" => "Marti", "3" => "Miercuri", "4" => "Joi", "5" => "Vineri", "6" => "Sambata" );
+    return $zile[$ziuaSaptamanii];
 }
 
 function sec2hms($sec, $padHours = false) {
