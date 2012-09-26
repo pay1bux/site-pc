@@ -17,6 +17,17 @@ class Cereri extends CI_Controller {
         $config['last_link'] = 'Ultima';
         $config['first_link'] = 'Prima';
         $config['uri_segment'] = 2;
+        $config['num_tag_open']='<div class="pagina_s">';
+        $config['num_tag_close'] = '</div>';
+        $config['cur_tag_open'] = '<div class="pagina_a">';
+        $config['cur_tag_close'] = '</div>';
+
+        $config['prev_tag_open'] = '<div class="pagina_b">';
+        $config['prev_tag_close'] = '</div>';
+        $config['next_tag_open'] = '<div class="pagina_b">';
+        $config['next_tag_close'] = '</div>';
+
+
         $this->pagination->initialize($config);
 
         $data['paginare'] = $this->pagination->create_links();

@@ -88,7 +88,7 @@
             <a class="BIR2_T3" href="<?php echo $buletin["url"]; ?>"><img src="<?php echo IMAGES_PATH;?>BIR2_T3.jpg"
                                                                           width="135" height="100"
                                                                           alt="buletinul duminical" title=""/></a>
-            <a class="BIR2_T4" href="#"><img src="<?php echo IMAGES_PATH;?>BIR2_T4.jpg" width="135" height="100"
+            <a class="BIR2_T4" href="cereri-rugaciune"><img src="<?php echo IMAGES_PATH;?>BIR2_T4.jpg" width="135" height="100"
                                              alt="cerere de rugaciune" title=""/></a>
         </div>
         <div class="p_text">

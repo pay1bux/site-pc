@@ -10,7 +10,8 @@
                 <p class="mic"><?php echo prepareDateWithYear($devotionale['data']);?></p>
                 <br/>
 
-                <p><?php echo $devotionale['continut'];?> </p>
+                <p style="text-align: justify;"><?php echo $devotionale['continut'];?> </p>
+
 
                 <?php if ($prev != 0): ?>
                 <p align="left">

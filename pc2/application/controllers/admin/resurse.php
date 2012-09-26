@@ -122,6 +122,7 @@ class Resurse extends CI_Controller {
         $resurse = $this->resurse_model->getResurseWithAtt($filtru);
         $data['resurse'] = $resurse;
 
+
         $this->load->model('atasament_model');
         $nr_atasamente = $this->atasament_model->getNumarAtasamente(2);
         $data['nr_atasamente'] = $nr_atasamente;
@@ -144,6 +145,30 @@ class Resurse extends CI_Controller {
 
         $this->load->view('admin/template', $data);
     }
+
+
+    function delete($idResursa = null) {
+        if (isset($idResursa)) {
+            $this->load->model('resurse_model');
+
+            $this->load->model('atasament_model');
+            $atasamente = $this->atasament_model->getAtasamenteById($idResursa);
+
+            // Daca exista atasament vechi stergem pozele si atasamentul
+            foreach($atasamente as $atasament) {
+                $err = unlink($atasament['url']);
+                $err = unlink($atasament['thumb']);
+                $this->atasament_model->destroy($atasament['id']);
+            }
+
+            $this->resurse_model->destroy($idResursa);
+
+        }
+        redirect('admin/lista-resurse');
+    }
+
+
+
 
 
 

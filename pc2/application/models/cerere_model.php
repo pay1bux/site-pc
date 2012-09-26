@@ -41,7 +41,7 @@ class Cerere_model extends CI_Model{
 
     function getCereri($filters)
     {
-        $sql = "SELECT  nume, localitate, continut, id, public FROM cereri WHERE public = 1 ORDER BY id DESC";
+        $sql = "SELECT  nume, localitate, continut, id, data, public FROM cereri WHERE public = 1 ORDER BY id DESC";
 
         if (isset($filters["limit"])) {
             $sql .= " LIMIT " . $filters["limit"];

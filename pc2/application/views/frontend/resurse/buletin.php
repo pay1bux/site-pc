@@ -13,14 +13,21 @@
     </div>
     <div id="continut">
         <?php foreach ($buletine as $buletin): ?>
-        <div>
-            <a href="<?php echo BASE_URL . $buletin['url']; ?>">
-                <img src="<?php echo BASE_URL . $buletin['thumb']; ?>" width="200" height="142"
-                    alt="<?php echo $buletin['thumb']; ?>"/>
+        <div class="buletin">
+
+        <a href="<?php echo BASE_URL . $buletin['url']; ?>">
+
+        <img src="<?php echo BASE_URL . $buletin['thumb']; ?>" class="thumb_buletin"
+             alt="<?php echo $buletin['thumb']; ?>"/>
             </a>
-            <span><?php echo $buletin['titlu']; ?></span>
-            <span><a href="<?php echo BASE_URL . $buletin['url']; ?>">Descarca</a></span>
+            <p><?php echo $buletin['titlu']; ?></p>
+            <p class="data"><?php echo prepareDateWithYear($buletin['data']); ?></p>
+           <a href="<?php echo BASE_URL . $buletin['url']; ?>" style="position: absolute; bottom: 10px; margin-left: 95px; "><img src="<?php echo IMAGES_PATH;?>/player-audio/download.png" /></a>
+
+
         </div>
+
+
         <?php endforeach; ?>
     </div>
 
