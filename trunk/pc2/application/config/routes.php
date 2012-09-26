@@ -75,6 +75,7 @@ $route['login'] = "admin/login";
 $route['login-form'] = "admin/login/verify";
 $route['admin/adauga-resursa'] = "admin/resurse/add";
 $route['admin/editeaza-resursa/(\d+)'] = "admin/resurse/edit/$1";
+$route['admin/sterge-resursa/(\d+)'] = "admin/resurse/delete/$1";
 $route['admin/lista-resurse'] = "admin/resurse/lista";
 $route['admin/lista-resurse/(\d+)'] = "admin/resurse/lista/$1";
 $route['admin/lista-resurse/cautare/(:any)'] = "admin/resurse/cautare/$1";
@@ -104,6 +105,7 @@ $route['admin/adauga-eveniment'] = "admin/eveniment/add";
 $route['admin/editeaza-eveniment/(\d+)'] = "admin/eveniment/add/$1";
 $route['admin/lista-evenimente'] = "admin/eveniment/lista";
 $route['admin/sterge-eveniment/(\d+)'] = "admin/eveniment/delete/$1";
+
 
 $route['404_override'] = '';
 

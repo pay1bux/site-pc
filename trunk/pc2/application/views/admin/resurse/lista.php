@@ -75,10 +75,10 @@
                 <td class="lista">
                     <?php echo $resursa['data']; ?> <br/></td>
                 <td class="lista">
-                    <center><a href="<?php echo site_url('admin/adauga-atasament/' . $resursa['id']); ?>"/>+</center>
+                    <center><a href="<?php echo site_url('admin/adauga-atasament/' . $resursa['r_id']); ?>"/>+</center>
                 </td>
                 <td class="lista">
-                    <center><a href="<?php echo site_url('admin/lista-atasamente-resursa/' . $resursa['id']); ?>"/>▤
+                    <center><a href="<?php echo site_url('admin/lista-atasamente-resursa/' . $resursa['r_id']); ?>"/>▤
                     </center>
                 </td>
 
@@ -86,17 +86,18 @@
                 <!--                         --><?php // var_dump($nr_atasamente); ?>
                 <!--                       </td>-->
                 <td class="lista">
-                    <center><a href="<?php echo site_url('admin/adauga-tag/' . $resursa['id']); ?>"/>+</center>
+                    <center><a href="<?php echo site_url('admin/adauga-tag/' . $resursa['r_id']); ?>"/>+</center>
                 </td>
                 <td class="lista">
-                    <center><a href="<?php echo site_url('admin/lista-taguri-resursa/' . $resursa['id']); ?>"/>▤
+                    <center><a href="<?php echo site_url('admin/lista-taguri-resursa/' . $resursa['r_id']); ?>"/>▤
                     </center>
                 </td>
                 <td class="lista">
-                    <center><a href="<?php echo site_url('admin/editeaza-resursa/' . $resursa['id']); ?>"/>EDIT</center>
+                    <center><a href="<?php echo site_url('admin/editeaza-resursa/' . $resursa['r_id']); ?>"/>EDIT</center>
                 </td>
                 <td class="lista">
-                    <center>DELETE</center>
+                    <center>
+                    <a href="sterge-resursa/<?php echo $resursa['r_id'];?>" class="sterge" >DELETE</a></center>
                 </td>
             </tr>
 

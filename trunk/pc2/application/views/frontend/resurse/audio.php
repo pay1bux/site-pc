@@ -144,64 +144,79 @@
                 </div>
             </div>
             <div class="clear"></div>
-            <div id="audio_playlist">
-                <div id="jquery_jplayer"></div>
+            <?php if ( count($audio) > 0): ?>
+                <div id="audio_playlist">
+                    <div id="jquery_jplayer"></div>
 
 
-                <div id="jp_container">
+                    <div id="jp_container">
 
-                    <div class="jp-playlist-player">
-                        <div class="jp-interface">
-                            <ul class="jp-controls">
-                                <li><a href="#" id="jplayer_play" class="jp-play" tabindex="1">play</a></li>
-                                <li><a href="#" id="jplayer_pause" class="jp-pause" tabindex="1">pause</a></li>
-                                <!--                            <li><a href="#" id="jplayer_stop" class="jp-stop" tabindex="1">stop</a></li>-->
-                                <li><a href="#" id="jp-mute" class="jp-mute" tabindex="1">min volume</a></li>
-                                <li><a href="#" id="jp-unmute" class="jp-unmute" tabindex="1">min volume</a></li>
-                                <!--                            <li><a href="#" id="jplayer_volume_max" class="jp-volume-max" tabindex="1">max volume</a></li-->
+                        <div class="jp-playlist-player">
+                            <div class="jp-interface">
+                                <ul class="jp-controls">
+                                    <li><a href="#" id="jplayer_play" class="jp-play" tabindex="1">play</a></li>
+                                    <li><a href="#" id="jplayer_pause" class="jp-pause" tabindex="1">pause</a></li>
+                                    <!--                            <li><a href="#" id="jplayer_stop" class="jp-stop" tabindex="1">stop</a></li>-->
+                                    <li><a href="#" id="jp-mute" class="jp-mute" tabindex="1">min volume</a></li>
+                                    <li><a href="#" id="jp-unmute" class="jp-unmute" tabindex="1">min volume</a></li>
+                                    <!--                            <li><a href="#" id="jplayer_volume_max" class="jp-volume-max" tabindex="1">max volume</a></li-->
 
-                                <!--                            <li><a href="#" id="jplayer_previous" class="jp-previous" tabindex="1">previous</a></li>-->
-                                <!--                            <li><a href="#" id="jplayer_next" class="jp-next" tabindex="1">next</a></li>-->
-                            </ul>
-                            <div class="jp-track-name"></div>
-                            <div class="jp-progress">
-                                <div id="jplayer_seek_bar" class="jp-seek-bar">
-                                    <div id="jplayer_play_bar" class="jp-play-bar"></div>
+                                    <!--                            <li><a href="#" id="jplayer_previous" class="jp-previous" tabindex="1">previous</a></li>-->
+                                    <!--                            <li><a href="#" id="jplayer_next" class="jp-next" tabindex="1">next</a></li>-->
+                                </ul>
+                                <div class="jp-track-name"></div>
+                                <div class="jp-progress">
+                                    <div id="jplayer_seek_bar" class="jp-seek-bar">
+                                        <div id="jplayer_play_bar" class="jp-play-bar"></div>
+                                    </div>
                                 </div>
+                                <div id="jplayer_volume_bar" class="jp-volume-bar">
+                                    <div id="jplayer_volume_bar_value" class="jp-volume-bar-value"></div>
+                                </div>
+                                <div id="jplayer_play_time" class="jp-current-time"></div>
+                                <div id="jplayer_time_separator" class="jp-time-separator"> / </div>
+                                <div id="jplayer_total_time" class="jp-duration"></div>
                             </div>
-                            <div id="jplayer_volume_bar" class="jp-volume-bar">
-                                <div id="jplayer_volume_bar_value" class="jp-volume-bar-value"></div>
-                            </div>
-                            <div id="jplayer_play_time" class="jp-current-time"></div>
-                            <div id="jplayer_time_separator" class="jp-time-separator"> / </div>
-                            <div id="jplayer_total_time" class="jp-duration"></div>
-                        </div>
-                        <div id="scrollbar1">
-                            <div class="scrollbar"><div class="tracking"><div class="thumb"><div class="end"></div></div></div></div>
-                            <div class="viewport">
-                                <div class="overview">
-                                    <div id="jplayer_playlist" class="jp-playlist">
-                                        <ul>
-                                        <?php if ($audio != null): ?>
-                                            <?php foreach ($audio as $i => $playlistItem): ?>
-                                                <li>
-                                                    <div class="audioline_playlist"></div>
-                                                    <a href="<?php echo($playlistItem["url"]) ?>"
-                                                       class="track<?php if ($i == 0) echo " track-default"?>">&nbsp;</a>
-                                                    <span class="titlu"><?php echo(cropText($playlistItem["titlu"] . " - " . $playlistItem["nume_autor"], 50)) ?></span>
-                                                    <span class="download"><a href="<?php echo($playlistItem["url"]) ?>" style="padding-left:2px; margin-left: 2px;"><img src="<?php echo IMAGES_PATH;?>/player-audio/download.png" /></a></span>
-                                                    <span class="durata"> <?php echo(sec2hms($playlistItem["durata"])) ?></span>
-                                                </li>
-                                            <?php endforeach; ?>
-                                        <?php endif; ?>
-                                        </ul>
+                            <div id="scrollbar1">
+                                <div class="scrollbar"><div class="tracking"><div class="thumb"><div class="end"></div></div></div></div>
+                                <div class="viewport">
+                                    <div class="overview">
+                                        <div id="jplayer_playlist" class="jp-playlist">
+                                            <ul>
+                                            <?php if ($audio != null): ?>
+                                                <?php foreach ($audio as $i => $playlistItem): ?>
+                                                    <li>
+                                                        <div class="audioline_playlist"></div>
+                                                        <a href="<?php echo($playlistItem["url"]) ?>"
+                                                           class="track<?php if ($i == 0) echo " track-default"?>">&nbsp;</a>
+                                                        <span class="titlu"><?php echo(cropText($playlistItem["titlu"] . " - " . $playlistItem["nume_autor"], 50)) ?></span>
+                                                        <span class="download"><a href="<?php echo($playlistItem["url"]) ?>" style="padding-left:2px; margin-left: 2px;"><img src="<?php echo IMAGES_PATH;?>/player-audio/download.png" /></a></span>
+                                                        <span class="durata"> <?php echo(sec2hms($playlistItem["durata"])) ?></span>
+                                                    </li>
+                                                <?php endforeach; ?>
+                                            <?php endif; ?>
+                                            </ul>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
+            <?php else: ?>
+            <div id="audio_playlist">
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <div id="jp_container">
+                    Nici un rezultat gasit.
+                </div>
             </div>
+            <?php endif; ?>
             <div id="audio_categories">
                 <ul id="audio">
                     <?php $i = 0;?>

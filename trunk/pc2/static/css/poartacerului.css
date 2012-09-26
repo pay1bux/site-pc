@@ -1553,14 +1553,3 @@ p.aliniat
     /*background-repeat: no-repeat;*/
     /*background-size: auto;*/
 /*}*/
-
-table.calendar-table {
-    width: 200px;
-    height: 150px;
-}
-table.calendar-table td {
-    text-align: center;
-}
-table.calendar-table th {
-    text-align: center;
-}

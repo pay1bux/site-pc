@@ -91,6 +91,7 @@ $(document).ready(
 //                        campValid($('#subscribe'));
                         // ASTA E   alert($('#publica').is(':checked'));
                         $object.switchClass('invisibil', 'neascuns', 0, 'easeOutBounce');
+
                     }
                 });
             }

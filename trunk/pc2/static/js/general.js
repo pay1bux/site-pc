@@ -1,3 +1,5 @@
+
+
 function trim(stringToTrim) {
 	return stringToTrim.replace(/^\s+|\s+$/g,"");
 }
@@ -81,7 +83,14 @@ $(document).ready(
             document.location = url;
         });
 
-    }
+        $('.sterge').click(function(){
+                if(!confirm('Esti sigur(a) ca doresti sa stergi aceasta resursa?'))
+                    return false;
+            });
+        }
+
+
+
 );
 
 function key(object, e, url) {
@@ -93,3 +102,4 @@ function key(object, e, url) {
         document.location = url;
     }
 }
+

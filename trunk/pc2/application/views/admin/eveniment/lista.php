@@ -42,7 +42,7 @@
             </td>
             <td class="lista">
                 <center>
-                    <a href="<?php echo site_url('admin/sterge-eveniment/' . $resursa['r_id']); ?>">DELETE</a>
+                    <a href="sterge-eveniment/<?php echo $resursa['r_id'];?>"  class="sterge" >DELETE</a>
                 </center>
             </td>
         </tr>
