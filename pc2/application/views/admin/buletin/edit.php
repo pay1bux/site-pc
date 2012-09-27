@@ -1,3 +1,8 @@
+<script>
+    $(function() {
+        $( "#datepicker" ).datepicker( {dateFormat: "yy-mm-dd",  showOn: "both" });
+    });
+</script>
 <div class="clearBoth"/>
 <div class="admin">
     <?php
@@ -19,8 +24,18 @@
         </tr>
         <tr>
             <td><?php echo form_label('Data', 'buletin[data]');?> </td>
-            <td><?php echo form_input('buletin[data]', (isset($form_values['data']) ? $form_values['data'] : '')); ?></td>
+            <?php $data = array(
+            'name'        => 'buletin[data]',
+            'value'       => isset($form_values['data']) ? $form_values['data'] : '',
+            'id'     => "datepicker");
+            ?>
+            <td><?php echo form_input($data); ?></td>
         </tr>
+        <?php if (isset($form_values['thumb']) && $form_values['thumb'] != ''): ?>
+        <tr>
+            <td colspan="2"><img src="<?php echo BASE_URL . "/" . $form_values['thumb']; ?>" /> </td>
+        </tr>
+        <?php endif; ?>
         <tr>
             <td><?php echo form_label('Fisier', 'buletin[fisier]');?> </td>
             <td><input type="file" name="userfile" size="20" /></td>

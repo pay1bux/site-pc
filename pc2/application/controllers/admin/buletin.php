@@ -13,16 +13,14 @@ class Buletin extends CI_Controller {
         }
     }
 
-    function add() {
+    function add($idBuletin = null) {
         if (! strcmp($_SERVER['REQUEST_METHOD'],'POST')) {
             $this->load->helper(array('form', 'url'));
 
-            $config['upload_path'] = 'uploads/buletine/';
+            $config['upload_path'] = FOLDER_BULETINE;
             $config['allowed_types'] = 'pdf';
             $config['max_size']	= '0';
             $config['overwrite']  = 'true';
-
-            $this->load->library('upload', $config);
 
             $this->load->model('tip_model');
             $tip_buletin = $this->tip_model->getTipByCod("buletin-duminical");
@@ -32,71 +30,163 @@ class Buletin extends CI_Controller {
                 'data' => $postdata['data'],
                 'autor_id' => 1,
                 'categorie_id' => 1,
-                'continut' => "",
-                'views' => 0,
-                'download' => 0,
-                'tip_id' => $tip_buletin
+                'tip_id' => $tip_buletin->id
             );
 
-            if ( ! $this->upload->do_upload()) {
-                $data['error'] = $this->upload->display_errors();
-                $data['form_values'] = $postdata;
+            $this->load->model('resurse_model');
+            if (isset($idBuletin)) {
+                $this->resurse_model->update($idBuletin, $input);
+                $buletinId = $idBuletin;
+            } else {
+                $buletinId = $this->resurse_model->create($input);
             }
-            else {
+
+            $this->load->library('upload', $config);
+
+            if ($this->upload->do_upload()) {
                 $uploadData = $this->upload->data();
 
-                $this->load->model('resurse_model');
-                $buletinId = $this->resurse_model->create($input);
-                $size = $uploadData['file_size'] / 1024;
+                $this->load->model('atasament_model');
+                // Daca e editare, se sterge poza si thumbnail-ul vechi
+                if (isset($idBuletin)) {
+                    $existentAttachment = $this->atasament_model->getAtasamenteById($idBuletin);
+                    // Daca exista atasament vechi stergem pozele si atasamentul
+                    if ($existentAttachment != null) {
+                        $err = unlink($existentAttachment[0]['url']);
+                        $err = unlink($existentAttachment[0]['thumb']);
+                        // Delete files not in attachments, but added by convention on the file system
+                        $err = unlink(FOLDER_IMAGINI_BULETINE . basename($existentAttachment[0]['url'], '.pdf') . "-pag1.png");
+                        $err = unlink(FOLDER_IMAGINI_BULETINE . basename($existentAttachment[0]['url'], '.pdf') . "-pag2.png");
+                        $err = unlink(FOLDER_IMAGINI_BULETINE . basename($existentAttachment[0]['url'], '.pdf') . "-pag3.png");
+                        $err = unlink(FOLDER_IMAGINI_BULETINE . basename($existentAttachment[0]['url'], '.pdf') . "-pag4.png");
+                        $this->atasament_model->destroy($existentAttachment[0]['id']);
+                    }
+                }
 
-                // TODO: De facut thumbnails
+                $size = $uploadData['file_size'] / 1024;
+                $file = $uploadData['file_name'];
+                // Se face thumbnail
+                $caleThumbPdf = $this->salveazaImaginePdf($uploadData['full_path']);
 
                 $attachInput = array(
-                    'url' => "uploads/buletine/" . $uploadData['file_name'],
+                    'url' => FOLDER_BULETINE . $file,
                     'embed' => "",
                     'marime' => $size,
                     'durata' => 0,
-                    'format' => "pdf",
+                    'format' => $uploadData['file_ext'],
                     'resurse_id' => $buletinId,
-                    'thumb' => ""
+                    'thumb' => $caleThumbPdf
                 );
 
-                $this->load->model('atasament_model');
                 $this->atasament_model->create($attachInput);
-                redirect('admin/lista-buletine');
             }
+            redirect('admin/lista-buletine');
+        }
+        if (isset($idBuletin)) {
+            $this->load->model('resurse_model');
+            $filtru = array('tip' => 'buletin-duminical', 'id' => $idBuletin, 'limit' => 1);
+            $buletin = $this->resurse_model->getResurseWithAtt($filtru);
+            $buletin = $buletin[0];
+            $data['form_values'] = $buletin;
+        } else {
+            $data['form_values'] = array();
         }
         $data['main_content'] = 'admin/buletin/edit';
         $this->load->view('frontend/template', $data);
     }
 
-    function edit($idBuletin) {
-        if (! strcmp($_SERVER['REQUEST_METHOD'],'POST')) {
-            $this->load->helper(array('form', 'url'));
-//            $this->load->library('form_validation');
+    function salveazaImaginePdf($caleFisier) {
+        // Fa thumbnail
+        $im = new Imagick();
+        $im->setResolution(43, 43);
+        $im->readImage($caleFisier . "[0]");
+        $im->setImageResolution(100,100);
+        $im->resampleImage(30,30,imagick::FILTER_UNDEFINED,1);
+        $im->setImageFormat("png");
+        $d = $im->getImageGeometry();
+        $w = $d['width'];
+        $h = $d['height'];
+        $im->cropImage($w / 2, $h, $w / 2, 0);
+        $caleImaginePdf = FOLDER_IMAGINI_BULETINE . basename($caleFisier, '.pdf') . "-thumb.png";
+        $im->writeImage($caleImaginePdf);
 
-            $postdata = $this->input->post('atasamente');
-            $input = array(
-                'url' => $postdata['url'],
-                'embed' => $postdata['embed'],
-                'marime' => $postdata['marime'],
-                'format' => $postdata['format']
-            );
+        // Pagina 1
+        $im = new Imagick();
+        $im->setResolution(300, 300);
+        $im->readImage($caleFisier . "[0]");
+        $im->setImageResolution(100,100);
+        $im->resampleImage(30,30,imagick::FILTER_UNDEFINED,1);
+        $im->setImageFormat("png");
+        $d = $im->getImageGeometry();
+        $w = $d['width'];
+        $h = $d['height'];
+        $im->cropImage($w / 2, $h, $w / 2, 0);
+        $im->writeImage(FOLDER_IMAGINI_BULETINE . basename($caleFisier, '.pdf') . "-pag1.png");
+        $im->destroy();
+
+        // Pagina 4
+        $im = new Imagick();
+        $im->setResolution(300, 300);
+        $im->readImage($caleFisier . "[0]");
+        $im->setImageResolution(100,100);
+        $im->resampleImage(30,30,imagick::FILTER_UNDEFINED,1);
+        $im->setImageFormat("png");
+        $im->cropImage($w / 2, $h, 0, 0);
+        $im->writeImage(FOLDER_IMAGINI_BULETINE . basename($caleFisier, '.pdf') . "-pag4.png");
+        $im->destroy();
+
+        // Pagina 3
+        $im = new Imagick();
+        $im->setResolution(300, 300);
+        $im->readImage($caleFisier . "[1]");
+        $im->setImageResolution(100,100);
+        $im->resampleImage(30,30,imagick::FILTER_UNDEFINED,1);
+        $im->setImageFormat("png");
+        $im->cropImage($w / 2, $h, $w / 2, 0);
+        $im->writeImage(FOLDER_IMAGINI_BULETINE . basename($caleFisier, '.pdf') . "-pag3.png");
+        $im->destroy();
+
+        // Pagina 2
+        $im = new Imagick();
+        $im->setResolution(300, 300);
+        $im->readImage($caleFisier . "[1]");
+        $im->setImageResolution(100,100);
+        $im->resampleImage(30,30,imagick::FILTER_UNDEFINED,1);
+        $im->setImageFormat("png");
+        $im->cropImage($w / 2, $h, 0, 0);
+        $im->writeImage(FOLDER_IMAGINI_BULETINE . basename($caleFisier, '.pdf') . "-pag2.png");
+        $im->destroy();
+
+        return $caleImaginePdf;
+    }
+
+    function delete($idBuletin = null) {
+        if (isset($idBuletin)) {
+            $this->load->model('resurse_model');
+
+            $this->load->model('atasament_model');
+            $atasamente = $this->atasament_model->getAtasamenteById($idBuletin);
+            // Daca exista atasament vechi stergem pozele si atasamentul
+            foreach($atasamente as $atasament) {
+                $err = unlink($atasament['url']);
+                $err = unlink($atasament['thumb']);
+                // Delete files not in attachments, but added by convention on the file system
+                $err = unlink(FOLDER_IMAGINI_BULETINE . basename($atasament['url'], '.pdf') . "-pag1.png");
+                $err = unlink(FOLDER_IMAGINI_BULETINE . basename($atasament['url'], '.pdf') . "-pag2.png");
+                $err = unlink(FOLDER_IMAGINI_BULETINE . basename($atasament['url'], '.pdf') . "-pag3.png");
+                $err = unlink(FOLDER_IMAGINI_BULETINE . basename($atasament['url'], '.pdf') . "-pag4.png");
+                $this->atasament_model->destroy($atasament['id']);
+            }
+
+            $this->resurse_model->destroy($idBuletin);
 
         }
-        $this->load->helper(array('form', 'url'));
-        $this->load->library('form_validation');
-
-        $this->load->model('atasament_model');
-        $data['form_values'] = $this->atasament_model->getAtasament($idBuletin);
-
-        $data['main_content'] = 'admin/atasamente/edit';
-        $this->load->view('frontend/template', $data);
+        redirect('admin/lista-buletine');
     }
 
     function lista() {
         $this->load->model('resurse_model');
-        $filtru = array('tip' => 'buletin-duminical');
+        $filtru = array('tip' => 'buletin-duminical', 'order' => 'r_id', 'orderType' => 'DESC');
         $resurse = $this->resurse_model->getResurseWithAtt($filtru);
         $data['resurse'] = $resurse;
 
