@@ -195,7 +195,7 @@ class Resurse_model extends CI_Model
             }
             $sql .= "FROM $this->table AS r
                         LEFT JOIN attachment AS a ON r.id = a.resurse_id,
-                        tip_resurse AS tr, autor AS aut";
+                        tip_resurse AS tr, autor AS aut ";
             if ($filters["tip"] == 'evenimente') {
                 $sql .= ", detalii_eveniment AS de ";
             }
@@ -263,6 +263,26 @@ class Resurse_model extends CI_Model
         
         $q = $this->db->query($sql);
 //        var_dump($sql);
+
+        if ($q->num_rows() > 0) {
+            return $q->result_array();
+        } else {
+            return null;
+        }
+    }
+
+    function getEvenimenteByDay($date) {
+
+        $sql = "SELECT rde.*, a.* FROM
+                    (SELECT r.id AS r_id, r.titlu, r.autor_id, r.tip_id, r.continut, r.data, de.resurse_id, de.ora_inceput, de.ora_sfarsit, de.repeta, de.eveniment, de.invitat_predica, de.invitat_lauda, de.organizator, de.site_organizator, de.newsletter, de.live
+                    FROM detalii_eveniment AS de, resurse r
+                    WHERE r.tip_id = 7 AND r.id = de.resurse_id
+                    AND ((r.data =  '$date') OR (de.repeta = 'saptamanal' AND DAYOFWEEK(r.data) = DAYOFWEEK('$date'))) ORDER BY repeta)
+                AS rde LEFT JOIN attachment AS a ON rde.r_id = a.resurse_id GROUP BY ora_inceput ORDER BY ora_inceput";
+
+//        var_dump($sql);
+//        die();
+        $q = $this->db->query($sql);
 
         if ($q->num_rows() > 0) {
             return $q->result_array();

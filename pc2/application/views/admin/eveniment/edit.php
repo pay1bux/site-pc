@@ -1,3 +1,8 @@
+<script>
+    $(function() {
+        $( "#datepicker" ).datepicker( {dateFormat: "yy-mm-dd",  showOn: "both" });
+    });
+</script>
 <div class="clearBoth"/>
 <div class="admin">
     <?php
@@ -23,15 +28,25 @@
         </tr>
         <tr>
             <td><?php echo form_label('Data', 'eveniment[data]');?> </td>
-            <td><?php echo form_input('eveniment[data]', (isset($form_values['data']) ? $form_values['data'] : '')); ?></td>
+            <?php $data = array(
+                    'name'        => 'eveniment[data]',
+                    'value'       => isset($form_values['data']) ? $form_values['data'] : '',
+                    'id'     => "datepicker");
+            ?>
+            <td><?php echo form_input($data); ?></td>
         </tr>
         <tr>
             <td><?php echo form_label('Ora inceput', 'eveniment[ora_inceput]');?> </td>
-            <td><?php echo form_input('eveniment[ora_inceput]', (isset($form_values['ora_inceput']) ? $form_values['ora_inceput'] : '')); ?></td>
+            <?php
+                $ore = array();
+                for($i = 0; $i < 24; $i++)
+                    $ore[$i] = $i;
+            ?>
+            <td><?php echo form_dropdown('eveniment[ora_inceput]', $ore, (isset($form_values['ora_inceput']) ? $form_values['ora_inceput'] : '')); ?></td>
         </tr>
         <tr>
             <td><?php echo form_label('Ora sfarsit', 'eveniment[ora_sfarsit]');?> </td>
-            <td><?php echo form_input('eveniment[ora_sfarsit]', (isset($form_values['ora_sfarsit']) ? $form_values['ora_sfarsit'] : '')); ?></td>
+            <td><?php echo form_dropdown('eveniment[ora_sfarsit]', $ore, (isset($form_values['ora_sfarsit']) ? $form_values['ora_sfarsit'] : '')); ?></td>
         </tr>
         <tr>
             <td><?php echo form_label('Repeta', 'eveniment[repeta]');?> </td>
