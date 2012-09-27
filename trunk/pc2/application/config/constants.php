@@ -49,6 +49,10 @@ define('IMAGES_PATH',		STATIC_PATH.'images/');
 define('CSS_PATH',			STATIC_PATH.'css/');
 define('JS_PATH',			STATIC_PATH.'js/');
 
+# Foldere buletine
+define("FOLDER_BULETINE", "uploads/buletine/");
+define("FOLDER_IMAGINI_BULETINE", "uploads/imagini-buletine/");
+
 define('TIP_DEVOTIONAL', "articole");
 define('TIP_PREDICA_AUDIO', "predica-audio");
 define('TIP_STUDIU_AUDIO', "studiu-audio");

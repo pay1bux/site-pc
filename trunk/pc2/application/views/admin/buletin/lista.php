@@ -47,7 +47,9 @@
                 </center>
             </td>
             <td class="lista">
-                <center>DELETE</center>
+                <center>
+                    <a href="sterge-buletin/<?php echo $resursa['r_id'];?>"  class="sterge" >DELETE</a>
+                </center>
             </td>
         </tr>
 

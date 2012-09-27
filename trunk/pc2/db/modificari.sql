@@ -25,3 +25,5 @@ CHANGE  `categorie_id`  `categorie_id` INT( 11 ) NULL DEFAULT NULL;
 INSERT INTO `pc-nou`.`drepturi` (`id`, `nume`, `cod`) VALUES (NULL, 'Eveniment', 'eveniment');
 
 ALTER TABLE  `cereri` ADD  `public` INT( 1 ) NOT NULL;
+
+ALTER TABLE  `cereri` ADD  `data` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP;
