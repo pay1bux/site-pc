@@ -20,9 +20,9 @@
         <img src="<?php echo BASE_URL . $buletin['thumb']; ?>" class="thumb_buletin"
              alt="<?php echo $buletin['thumb']; ?>"/>
             </a>
-            <p><?php echo $buletin['titlu']; ?></p>
+           <a href="<?php echo BASE_URL . $buletin['url']; ?>" ><p><?php echo $buletin['titlu']; ?></p></a>
             <p class="data"><?php echo prepareDateWithYear($buletin['data']); ?></p>
-           <a href="<?php echo BASE_URL . $buletin['url']; ?>" style="position: absolute; bottom: 10px; margin-left: 95px; "><img src="<?php echo IMAGES_PATH;?>/player-audio/download.png" /></a>
+           <a href="<?php echo BASE_URL . $buletin['url']; ?>" style="position: absolute; bottom: 10px;  "><img src="<?php echo IMAGES_PATH;?>/player-audio/download.png" /></a>
 
 
         </div>

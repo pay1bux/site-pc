@@ -1,4 +1,5 @@
 //var baseUrl = 'index.php/'; // De scos cand punem pe live
+//var baseUrl = 'index.php/'; // De scos cand punem pe live
 var baseUrl = ''; // De scos cand punem pe live
 
 function campValid(object) {
