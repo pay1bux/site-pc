@@ -278,6 +278,51 @@ body {
     box-shadow: 0 0 10px #999;
 }
 
+img.thumb_buletin
+{
+    width: 72px;
+    height: 100px;
+    border: 1px solid #d8d8d8;
+    margin: 10px;
+    float: left;
+}
+
+.buletin
+{
+    background-color: #f9f9f9;
+    width: 325px;
+    height: 120px;
+    float: left;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.buletin p
+{
+    display: block;
+    margin-top: 10px;
+
+    font-family: sans-serif, "Open Sans";
+    font-size: 16px;
+    color: #666;
+    line-height: 20px;
+    font-weight: bold;
+}
+
+.buletin p.data
+{
+    color: #b0b16b;
+    font-size: 13px;
+    font-weight: normal;
+    position: absolute;
+    margin-left: 95px;
+   /*bottom: 35px;*/
+}
+
+
+
+
 #jQueryGallery {
     width: 935px;
     height: 406px;
@@ -721,6 +766,10 @@ body {
     float: left;
 }
 
+p.intins
+{
+    text-align: justify;
+}
 .right_text {
     text-align: left;
     margin-top: 10px;
@@ -943,6 +992,7 @@ p.mediu {
 
 .but_details {
     float: left;
+    text-align: center;
     padding: 0 8px 0 10px;
     line-height: 26px;
     color: #000;
@@ -1553,3 +1603,54 @@ p.aliniat
     /*background-repeat: no-repeat;*/
     /*background-size: auto;*/
 /*}*/
+
+.pagina_s
+{
+    float:left;
+    width: 28px;
+    height: 28px;
+    background-image: url(../images/pagination/pagina_s.png);
+    text-align: center;
+    line-height: 28px;
+    color: #717171;
+    font-family: "Segoe UI", "Arial";
+    font-size: 13px;
+}
+
+.pagina_a
+{
+    float:left;
+    width: 28px;
+    height: 28px;
+    background-image: url(../images/pagination/pagina_a.png);
+    text-align: center;
+    line-height: 28px;
+    color: #fff;
+    font-family: "Segoe UI", "Arial";
+    font-size: 13px;
+}
+.pagina_b
+{
+
+    float:left;
+    width: 28px;
+    height: 28px;
+    background-image: url(../images/pagination/pagina_s.png);
+    text-align: center;
+    line-height: 28px;
+    color: #717171;
+    font-family: "Segoe UI", "Arial";
+    font-size: 13px;
+}
+
+
+
+.pagina_a a{
+    color: #fff;
+}
+.pagina_s a{
+    color: #717171;
+}
+.pagina_b a{
+    color: #717171;
+}

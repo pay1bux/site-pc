@@ -70,7 +70,7 @@ pe site-ul bisericii Poarta cerului in cadrul listei de rugaciune</p></td>
        //javascript:void(0)?>
        <div class="p_text">
        <div class="i_title">
-<a href="#" id="buton_cerere"  class="but_details submit" style="float: right;">Trimite</a>
+<a href="#" id="buton_cerere"  class="but_details submit" style="float: right; width: 47px;">Trimite</a>
        </div>
            </div>
 
