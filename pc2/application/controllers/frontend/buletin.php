@@ -27,9 +27,9 @@ class Buletin extends CI_Controller
         $config['total_rows'] = $numar;
 
         $config['first_url'] = '0';
-        $config['num_links'] = 3;
-        $config['last_link'] = 'Ultima';
-        $config['first_link'] = 'Prima';
+        $config['num_links'] = 1;
+        $config['last_link'] = '';
+        $config['first_link'] = '';
         $config['uri_segment'] = 2;
         $config['num_tag_open'] = '<div class="pagina_s">';
         $config['num_tag_close'] = '</div>';
