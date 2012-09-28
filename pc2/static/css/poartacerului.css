@@ -1654,3 +1654,11 @@ p.aliniat
 .pagina_b a{
     color: #717171;
 }
+
+.paginare
+{
+    margin: 0px auto;
+    width: 175px;
+    margin-bottom:100px;
+    margin-top: 30px;
+}

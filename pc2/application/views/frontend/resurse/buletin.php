@@ -12,24 +12,59 @@
         </div>
     </div>
     <div id="continut">
+        <ul class="gallery clearfix">
         <?php foreach ($buletine as $buletin): ?>
         <div class="buletin">
+<?php
+
+            $fisier = end(explode('/', $buletin['url']));
+            $numele= explode('.', $fisier);
+
+            $dir = base_url()."uploads/imagini-buletine/".$numele[0]."-p";
+
+            $images = glob($dir . "*.png");
+
+
+            ?>
 
         <a href="<?php echo BASE_URL . $buletin['url']; ?>">
 
         <img src="<?php echo BASE_URL . $buletin['thumb']; ?>" class="thumb_buletin"
              alt="<?php echo $buletin['thumb']; ?>"/>
             </a>
-           <a href="<?php echo BASE_URL . $buletin['url']; ?>" ><p><?php echo $buletin['titlu']; ?></p></a>
+            <?php
+
+            foreach($images as $image)
+            {
+                ?>
+                <li><a href="<?php echo $image;?>" rel="prettyPhoto[gallery2]">IMAGINEA</a></li>
+
+                <?php
+            }
+?>
+
+
             <p class="data"><?php echo prepareDateWithYear($buletin['data']); ?></p>
            <a href="<?php echo BASE_URL . $buletin['url']; ?>" style="position: absolute; bottom: 10px;  "><img src="<?php echo IMAGES_PATH;?>/player-audio/download.png" /></a>
 
 
+
+
         </div>
-
-
         <?php endforeach; ?>
+        </ul>
+
+
+        <div class="paginare" style="  margin-top: 550px;">
+            <?php
+            if (isset($paginare)) {
+                echo $paginare;
+            }
+            ?>
+        </div>
     </div>
+
+
 
     <div id="right">
         <div class="item" style="background-image: url(<?php echo IMAGES_PATH; ?>right/1.png)"></div>

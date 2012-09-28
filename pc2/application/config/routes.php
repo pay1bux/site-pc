@@ -61,8 +61,8 @@ $route['arhiva-audio/(:any)'] = "frontend/audio/index/$1";
 $route['arhiva-audio/(:any)/(:any)'] = "frontend/audio/index/$1/$2";
 $route['arhiva-audio/(:any)/(:any)/(:any)'] = "frontend/audio/index/$1/$2/$3";
 
-$route['buletin-duminical'] = "frontend/buletin";
-$route['buletin-duminical/(\d+)'] = "frontend/buletin/$1";
+$route['buletin-duminical'] = "frontend/buletin/index";
+$route['buletin-duminical/(\d+)'] = "frontend/buletin/index/$1";
 
 $route['cereri-rugaciune'] = "frontend/cereri/index";
 $route['cereri-rugaciune/(\d+)'] = "frontend/cereri/index/$1";
