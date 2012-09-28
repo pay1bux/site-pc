@@ -209,6 +209,7 @@ class Resurse_model extends CI_Model
             $sql .= " AND r.id = " . $filters["id"];
         }
 
+
         if (isset($filters["categorie"])) {
             $sql .= " AND cr.id = '%" . $filters["categorie"] . "%'";
         }
@@ -301,6 +302,7 @@ class Resurse_model extends CI_Model
         return $q->num_rows();
 
         }
+
 
 
     function getResurseByIdAndTip($codTip, $idResursa)

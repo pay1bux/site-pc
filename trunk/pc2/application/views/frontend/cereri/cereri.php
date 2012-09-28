@@ -29,7 +29,7 @@ $mesaj = 'id="mesaj"';
 
                 <?php endforeach;?>
             </div>
-             <div style="margin: 0px auto; width: 155px; margin-bottom: 100px; margin-top: 30px;">
+             <div class="paginare">
                 <?php
                 if (isset($paginare)) {
                     echo $paginare;
