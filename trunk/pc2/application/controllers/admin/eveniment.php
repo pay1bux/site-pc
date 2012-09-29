@@ -134,7 +134,7 @@ class Eveniment extends CI_Controller {
                 $this->atasament_model->create($attachInput);
             }
 
-            redirect('admin/lista-evenimente');
+            redirect('admin/lista-devotionale');
         }
         if (isset($idEveniment)) {
             $this->load->model('resurse_model');
@@ -171,19 +171,16 @@ class Eveniment extends CI_Controller {
         } else {
             $data['form_values'] = array();
         }
-        $data['main_content'] = 'admin/eveniment/edit';
+        $data['main_content'] = 'admin/devotional/edit';
         $this->load->view('frontend/template', $data);
     }
 
-    function delete($idEveniment = null) {
-        if (isset($idEveniment)) {
+    function delete($idDevotional = null) {
+        if (isset($idDevotional)) {
             $this->load->model('resurse_model');
 
-            $this->load->model('detalii_eveniment_model');
-            $detaliiEvenimentCurent = $this->detalii_eveniment_model->getByResursaId($idEveniment);
-
             $this->load->model('atasament_model');
-            $atasamente = $this->atasament_model->getAtasamenteById($idEveniment);
+            $atasamente = $this->atasament_model->getAtasamenteById($idDevotional);
             // Daca exista atasament vechi stergem pozele si atasamentul
             foreach($atasamente as $atasament) {
                 $err = unlink($atasament['url']);
@@ -191,11 +188,11 @@ class Eveniment extends CI_Controller {
                 $this->atasament_model->destroy($atasament['id']);
             }
 
-            $this->detalii_eveniment_model->destroy($detaliiEvenimentCurent['id']);
-            $this->resurse_model->destroy($idEveniment);
+
+            $this->resurse_model->destroy($idDevotional);
 
         }
-        redirect('admin/lista-evenimente');
+        redirect('admin/lista-devotional');
     }
 
     function lista() {
