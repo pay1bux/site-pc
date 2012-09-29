@@ -183,13 +183,21 @@ class Resurse_model extends CI_Model
     function getResurseWithAtt($filters)
     {
         if (isset($filters["categorie"])) {
-            $sql = "SELECT r.*, r.id AS r_id, a.*, tr.*, tr.nume as nume_tip, aut.nume as nume_autor, cr.*
-                        FROM $this->table AS r
+            if (isset($filters['count_rows'])) {
+                $sql = "SELECT COUNT(*)";
+            } else {
+                $sql = "SELECT r.*, r.id AS r_id, a.*, tr.*, tr.nume as nume_tip, aut.nume as nume_autor, cr.*";
+            }
+            $sql .= "FROM $this->table AS r
                         LEFT JOIN attachment AS a ON r.id = a.resurse_id,
                         tip_resurse AS tr, autor AS aut, categorie_resurse AS cr
                         WHERE r.tip_id = tr.id AND r.autor_id = aut.id AND r.categorie_id = cr.id";
         } else {
-            $sql = "SELECT r.*, r.id AS r_id, a.*, tr.*, tr.nume as nume_tip, aut.nume as nume_autor ";
+            if (isset($filters['count_rows'])) {
+                $sql = "SELECT COUNT(*)";
+            } else {
+                $sql = "SELECT r.*, r.id AS r_id, a.*, tr.*, tr.nume as nume_tip, aut.nume as nume_autor ";
+            }
             if (isset($filters["tip"]) && $filters["tip"] == 'evenimente') {
                 $sql .= ", de.* ";
             }
@@ -256,10 +264,10 @@ class Resurse_model extends CI_Model
 
         if (isset($filters["limit"])) {
             $sql .= " LIMIT " . $filters["limit"];
-        }
 
-        if (isset($filters["number"])) {
-            $sql .= " , " . $filters["number"];
+            if (isset($filters["number"])) {
+                $sql .= " , " . $filters["number"];
+            }
         }
         
         $q = $this->db->query($sql);
