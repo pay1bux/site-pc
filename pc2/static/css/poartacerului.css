@@ -788,7 +788,18 @@ p.intins
     font-family: sans-serif, "Open Sans";
 }
 
-
+.titluri
+{
+    text-align: left;
+    margin-top: 5px;
+    display: block;
+    height: 15px;
+    line-height: 15px;
+    font-size: 15px;
+    font-weight: normal;
+    color: #787878;
+    font-family: sans-serif, "Open Sans";
+}
 
 .p_text .i_title {
     text-align: left;

@@ -1,4 +1,4 @@
-<div class="clearBoth" style="height:10px;"></div>
+<div class="clearBoth" style="height:10px;" xmlns="http://www.w3.org/1999/html"></div>
 <div id="PageContent">
     <div id="header" style="background-image: url(<?php echo IMAGES_PATH; ?>banner/devotional.png)"></div>
 
@@ -39,6 +39,19 @@
             <p class="mediu">Postari recente</p>
 
             <div class="ModuleLine"></div>
+<?php
+    foreach($recente as $recent):?>
+
+
+        <a href="<?php echo linkDevotional($recent["titlu"], $recent['r_id']); ?>"/>   <p class="titluri" ><?php echo $recent['titlu'];?></p></a>
+
+
+                <br/>
+
+
+<?php
+endforeach;
+        ?>
         </div>
     </div>
     <div class="clearBoth"></div>
