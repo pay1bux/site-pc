@@ -6,28 +6,30 @@ class Buletin extends CI_Controller
     function index($page = 0)
     {
 
-
         $this->load->model('resurse_model');
-        $filtru = array('tip' => 'buletin-duminical', 'order' => 'data', 'orderType' => 'DESC');
+        $filtru = array('tip' => 'buletin-duminical', 'count_rows' => 'true');
 
         $counter = $this->resurse_model->getResurseWithAtt($filtru);
-        $numar = count($counter);
+        $numar = $counter[0]['COUNT(*)'];
 
         $this->load->library('pagination');
         $config['per_page'] = 8;
-        $filtru['limit'] = $page;
-        $filtru['number'] = $config['per_page'];
-
-
-
+        $filtru = array('tip' => 'buletin-duminical', 'order' => 'r_id', 'orderType' => 'DESC', 'limit' => $page, 'number' => $config['per_page']);
         $buletine = $this->resurse_model->getResurseWithAtt($filtru);
         $data['buletine'] = $buletine;
+//*selectarea buletinului curent, on top of page.
+        $filtru = array();
+        $filtru['limit'] = 1;
+        $filtru['order'] = 'r_id';
+        $filtru['orderType'] = 'DESC';
+        $bcurent = $this->resurse_model->getResurseWithAtt($filtru);
+        $data['bcurent'] = $bcurent;
 
         $config['base_url'] = site_url('buletin-duminical');
         $config['total_rows'] = $numar;
 
         $config['first_url'] = '0';
-        $config['num_links'] = 1;
+        $config['num_links'] = 3;
         $config['last_link'] = '';
         $config['first_link'] = '';
         $config['uri_segment'] = 2;
