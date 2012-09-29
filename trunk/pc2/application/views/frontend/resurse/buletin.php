@@ -1,8 +1,8 @@
 <script type="text/javascript" charset="utf-8">
     $(document).ready(function(){
         $("area[rel^='prettyPhoto']").prettyPhoto();
-
-        $(".gallery:first a[rel^='prettyPhoto']").prettyPhoto({animation_speed:'normal',theme:'light_square',slideshow:50, autoplay_slideshow: false});
+fetele pot sa
+        $(".gallery:first a[rel^='prettyPhoto']").prettyPhoto({animation_speed:'normal',theme:'light_square',slideshow:50, autoplay_slideshow: false, allow_resize: false});
         $(".gallery:gt(0) a[rel^='prettyPhoto']").prettyPhoto({animation_speed:'fast',slideshow:50, hideflash: true});
 
         $("#custom_content a[rel^='prettyPhoto']:first").prettyPhoto({
