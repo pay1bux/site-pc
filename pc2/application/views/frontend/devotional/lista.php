@@ -1,8 +1,7 @@
 <?php
 $this->load->helper('form');
 
-echo validation_errors();
-echo form_open(current_url());
+
 $dropdown = 'class="dropdown"';
 $clear = 'class="cleardefault"';
 $buton = 'class="submit"';
@@ -14,16 +13,16 @@ $buton = 'class="submit"';
     <div id="continut">
         <?php  foreach ($devotionale as $devotional): ?>
         <div class="articol">
-            <a href="<?php echo linkDevotional($devotional["titlu"], $devotional["r_id"]);  ?>">
-                <img class="imgdev" src="<?php echo IMAGES_PATH . $devotional['thumb'];?>"/>
-            </a>
-            <div class="p_text" style="margin-top: 0px;">
+
+                <img  src="<?php echo BASE_URL . $devotional['thumb'];?>" class="imgdev" >
+
+            <div class="p_text" style="margin-top: 0px; float:left; width: 487px;">
                 <a href="<?php echo linkDevotional($devotional["titlu"], $devotional["r_id"]);  ?>">
                     <div class="i_title" style="margin-bottom: 0;"><?php echo $devotional['titlu'];?></div>
                 </a>
                 <div class="i_details">
                     <p class="mic"><?php echo  prepareDateWithYear($devotional['data']); ?></p> <br/>
-                    <p class="mic"><?php echo  myTruncate($devotional['continut'], 230, " "); ?></p>
+                    <p class="mic intins"><?php echo  myTruncate($devotional['continut'], 250, " "); ?></p>
                     <a href="<?php echo linkDevotional($devotional["titlu"], $devotional["r_id"]);  ?>">
                         <p class="mic" style="text-align: right; text-decoration: underline;">Citeste articolul</p>
                     </a>
@@ -32,6 +31,15 @@ $buton = 'class="submit"';
         </div>
         <div class="clearBoth"></div>
         <?php endforeach;?>
+
+        <div class="paginare" style="  margin-top: 25px;">
+            <?php
+            if (isset($paginare)) {
+                echo $paginare;
+            }
+            ?>
+        </div>
+
     </div>
 
     <div id="right">
