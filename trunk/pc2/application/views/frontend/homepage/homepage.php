@@ -7,6 +7,7 @@
                     <div class="slider-wrapper theme-default">
                         <div class="ribbon"></div>
                         <div id="slider" class="nivoSlider">
+                            <img src="<?php echo IMAGES_PATH;?>eveniment_13oct12.jpg" width="722" height="406" alt="gallery1"/>
                             <img src="<?php echo IMAGES_PATH;?>gallery3.jpg" width="722" height="406" alt="gallery1"/>
                             <img src="<?php echo IMAGES_PATH;?>gallery1.png" width="722" height="406" alt="gallery2"/>
                             <img src="<?php echo IMAGES_PATH;?>gallery2.png" width="722" height="406" alt="gallery3"/>
