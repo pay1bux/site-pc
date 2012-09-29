@@ -315,8 +315,7 @@ img.thumb_buletin
     color: #b0b16b;
     font-size: 13px;
     font-weight: normal;
-    position: absolute;
-    margin-left: 95px;
+
    /*bottom: 35px;*/
 }
 
@@ -1657,8 +1656,16 @@ p.aliniat
 
 .paginare
 {
-    margin: 0px auto;
-    width: 175px;
+
     margin-bottom:100px;
     margin-top: 30px;
+    margin-left: 10px;
+}
+
+.buletin_curent{
+    width: 200px;
+    height: auto;
+    float: left;
+    margin: 10px 16px 10px 16px;
+    border: 1px solid #d8d8d8;
 }
