@@ -880,16 +880,20 @@ p.mediu {
 }
 
 .articol {
-    float: left;
+
     margin-right: 10px;
     margin-left: 10px;
-    margin-bottom: 15px;
+    margin-bottom: 25px;
     margin-top: 10px;
+
+
 }
 
 .imgdev {
     float: left;
     margin-right: 10px;
+   width: 142px;
+    height: 107px;
 }
 
 .ModuleLine {

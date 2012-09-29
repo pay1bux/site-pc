@@ -42,6 +42,7 @@ $route['default_controller'] = "frontend/homepage";
 $route['acasa'] = "frontend/homepage";
 
 $route['devotional'] = "frontend/devotional/lista";
+$route['devotional/(\d+)'] = "frontend/devotional/lista/$1";
 $route['devotional/(:any)/(\d+)'] = "frontend/devotional/index/$1/$2";
 
 $route['live2'] = "frontend/live/live";

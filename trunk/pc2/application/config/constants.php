@@ -52,6 +52,7 @@ define('JS_PATH',			STATIC_PATH.'js/');
 # Foldere buletine
 define("FOLDER_BULETINE", "uploads/buletine/");
 define("FOLDER_IMAGINI_BULETINE", "uploads/imagini-buletine/");
+define("FOLDER_IMAGINI_DEVOTIONAL", "uploads/imagini-devotional/");
 
 define('TIP_DEVOTIONAL', "articole");
 define('TIP_PREDICA_AUDIO', "predica-audio");
