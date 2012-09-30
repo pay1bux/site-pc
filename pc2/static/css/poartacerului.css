@@ -1620,7 +1620,7 @@ p.aliniat
 
 .pagina_s
 {
-    float:left;
+    float: left;
     width: 28px;
     height: 28px;
     background-image: url(../images/pagination/pagina_s.png);
@@ -1633,7 +1633,7 @@ p.aliniat
 
 .pagina_a
 {
-    float:left;
+    float: left;
     width: 28px;
     height: 28px;
     background-image: url(../images/pagination/pagina_a.png);
@@ -1646,7 +1646,7 @@ p.aliniat
 .pagina_b
 {
 
-    float:left;
+    float: left;
     width: 28px;
     height: 28px;
     background-image: url(../images/pagination/pagina_s.png);

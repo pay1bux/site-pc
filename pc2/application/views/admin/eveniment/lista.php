@@ -49,4 +49,13 @@
 
         <?php endforeach; ?>
     </table>
+
+    <div class="paginare" style="  margin-top: 20px;">
+        <?php
+        if (isset($paginare)) {
+            echo $paginare;
+        }
+        ?>
+    </div>
+
 </div>

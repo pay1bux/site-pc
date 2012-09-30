@@ -135,11 +135,46 @@ class Devotional extends CI_Controller {
         redirect('admin/lista-devotionale');
     }
 
-    function lista() {
+    function lista($page = 0) {
         $this->load->model('resurse_model');
-        $filtru = array('tip' => 'articole');
+
+        $filtru = array('tip' => 'articole', 'count_rows' => 'true');
+
+        $counter = $this->resurse_model->getResurseWithAtt($filtru);
+        $numar = $counter[0]['COUNT(*)'];
+
+        $this->load->library('pagination');
+        $config['per_page'] = 10;
+
+
+        $filtru = array('tip' => 'articole', 'order' => 'r_id', 'orderType' => 'DESC', 'limit' => $page, 'number' => $config['per_page']);
         $resurse = $this->resurse_model->getResurseWithAtt($filtru);
         $data['resurse'] = $resurse;
+
+
+        $config['base_url'] = site_url('admin/lista-devotionale');
+        $config['total_rows'] = $numar;
+
+        $config['first_url'] = '0';
+        $config['num_links'] = 3;
+        $config['last_link'] = '';
+        $config['first_link'] = '';
+        $config['uri_segment'] = 3;
+        $config['num_tag_open'] = '<div class="pagina_s">';
+        $config['num_tag_close'] = '</div>';
+        $config['cur_tag_open'] = '<div class="pagina_a">';
+        $config['cur_tag_close'] = '</div>';
+
+        $config['prev_tag_open'] = '<div class="pagina_b">';
+        $config['prev_tag_close'] = '</div>';
+        $config['next_tag_open'] = '<div class="pagina_b">';
+        $config['next_tag_close'] = '</div>';
+
+
+        $this->pagination->initialize($config);
+
+        $data['paginare'] = $this->pagination->create_links();
+
 
         $data['main_content'] = 'admin/devotional/lista';
         $this->load->view('frontend/template', $data);

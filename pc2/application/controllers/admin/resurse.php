@@ -101,24 +101,42 @@ class Resurse extends CI_Controller {
     function lista($page = 0)
     {
         $this->load->library('pagination');
+        $this->load->model('resurse_model');
+        $filtru = array( 'count_rows' => 'true');
+
+        $counter = $this->resurse_model->getResurseWithAtt($filtru);
+        $numar = $counter[0]['COUNT(*)'];
+
+        $this->load->library('pagination');
+        $config['per_page'] = 10;
+
 
         $config['base_url'] = site_url('admin/lista-resurse');
         $config['total_rows'] = $this->db->count_all('resurse');
         $config['per_page'] = 15;
         $config['first_url'] = '0';
         $config['num_links'] = 3;
-        $config['last_link'] = 'Ultima';
-        $config['first_link'] = 'Prima';
+        $config['last_link'] = '';
+        $config['first_link'] = '';
+        $config['num_tag_open'] = '<div class="pagina_s">';
+        $config['num_tag_close'] = '</div>';
+        $config['cur_tag_open'] = '<div class="pagina_a">';
+        $config['cur_tag_close'] = '</div>';
+
+        $config['prev_tag_open'] = '<div class="pagina_b">';
+        $config['prev_tag_close'] = '</div>';
+        $config['next_tag_open'] = '<div class="pagina_b">';
+        $config['next_tag_close'] = '</div>';
         $this->pagination->initialize($config);
 
         $data['paginare'] = $this->pagination->create_links();
 
 
 
-        $this->load->model('resurse_model');
-        $filtru = array();
-        $filtru['limit']= $page;
-        $filtru['number']=$config['per_page'];
+
+
+        $filtru = array('order' => 'r_id', 'orderType' => 'DESC', 'limit' => $page, 'number' => $config['per_page']);
+
         $resurse = $this->resurse_model->getResurseWithAtt($filtru);
         $data['resurse'] = $resurse;
 
