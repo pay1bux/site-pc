@@ -213,7 +213,7 @@
                 <br />
                 <br />
                 <div id="jp_container">
-                    Nici un rezultat gasit.
+             <p style="font-size: 15px; text-align: center;"> Nici un rezultat gasit.</p>
                 </div>
             </div>
             <?php endif; ?>
