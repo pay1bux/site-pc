@@ -134,7 +134,7 @@ class Eveniment extends CI_Controller {
                 $this->atasament_model->create($attachInput);
             }
 
-            redirect('admin/lista-devotionale');
+            redirect('admin/lista-evenimente');
         }
         if (isset($idEveniment)) {
             $this->load->model('resurse_model');
@@ -171,16 +171,16 @@ class Eveniment extends CI_Controller {
         } else {
             $data['form_values'] = array();
         }
-        $data['main_content'] = 'admin/devotional/edit';
+        $data['main_content'] = 'admin/eveniment/edit';
         $this->load->view('frontend/template', $data);
     }
 
-    function delete($idDevotional = null) {
-        if (isset($idDevotional)) {
+    function delete($idEveniment = null) {
+        if (isset($idEveniment)) {
             $this->load->model('resurse_model');
 
             $this->load->model('atasament_model');
-            $atasamente = $this->atasament_model->getAtasamenteById($idDevotional);
+            $atasamente = $this->atasament_model->getAtasamenteById($idEveniment);
             // Daca exista atasament vechi stergem pozele si atasamentul
             foreach($atasamente as $atasament) {
                 $err = unlink($atasament['url']);
@@ -189,17 +189,51 @@ class Eveniment extends CI_Controller {
             }
 
 
-            $this->resurse_model->destroy($idDevotional);
+            $this->resurse_model->destroy($idEveniment);
 
         }
-        redirect('admin/lista-devotional');
+        redirect('admin/lista-evenimente');
     }
 
-    function lista() {
+    function lista($page = 0 ) {
         $this->load->model('resurse_model');
-        $filtru = array('tip' => 'evenimente');
+
+
+        $filtru = array('tip' => 'evenimente', 'count_rows' => 'true');
+
+        $counter = $this->resurse_model->getResurseWithAtt($filtru);
+        $numar = $counter[0]['COUNT(*)'];
+
+        $this->load->library('pagination');
+        $config['per_page'] = 10;
+
+        $filtru = array('tip' => 'evenimente', 'order' => 'r_id', 'orderType' => 'DESC', 'limit' => $page, 'number' => $config['per_page']);
         $resurse = $this->resurse_model->getResurseWithAtt($filtru);
         $data['resurse'] = $resurse;
+
+        $config['base_url'] = site_url('admin/lista-evenimente');
+        $config['total_rows'] = $numar;
+
+        $config['first_url'] = '0';
+        $config['num_links'] = 3;
+        $config['last_link'] = '';
+        $config['first_link'] = '';
+        $config['uri_segment'] = 3;
+        $config['num_tag_open'] = '<div class="pagina_s">';
+        $config['num_tag_close'] = '</div>';
+        $config['cur_tag_open'] = '<div class="pagina_a">';
+        $config['cur_tag_close'] = '</div>';
+
+        $config['prev_tag_open'] = '<div class="pagina_b">';
+        $config['prev_tag_close'] = '</div>';
+        $config['next_tag_open'] = '<div class="pagina_b">';
+        $config['next_tag_close'] = '</div>';
+
+
+        $this->pagination->initialize($config);
+
+        $data['paginare'] = $this->pagination->create_links();
+
 
         $data['main_content'] = 'admin/eveniment/lista';
         $this->load->view('frontend/template', $data);

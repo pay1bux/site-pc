@@ -101,16 +101,19 @@ $route['admin/editeaza-tag/(\d+)/(\d+)'] = "admin/taguri/edit/$1/$2";
 $route['admin/adauga-buletin'] = "admin/buletin/add";
 $route['admin/editeaza-buletin/(\d+)'] = "admin/buletin/add/$1";
 $route['admin/lista-buletine'] = "admin/buletin/lista";
+$route['admin/lista-buletine/(\d+)'] = "admin/buletin/lista/$1";
 $route['admin/sterge-buletin/(\d+)'] = "admin/buletin/delete/$1";
 
 $route['admin/adauga-eveniment'] = "admin/eveniment/add";
 $route['admin/editeaza-eveniment/(\d+)'] = "admin/eveniment/add/$1";
 $route['admin/lista-evenimente'] = "admin/eveniment/lista";
+$route['admin/lista-evenimente/(\d+)'] = "admin/eveniment/lista/$1";
 $route['admin/sterge-eveniment/(\d+)'] = "admin/eveniment/delete/$1";
 
 $route['admin/adauga-devotional'] = "admin/devotional/add";
 $route['admin/editeaza-devotional/(\d+)'] = "admin/devotional/add/$1";
 $route['admin/lista-devotionale'] = "admin/devotional/lista";
+$route['admin/lista-devotionale/(\d+)'] = "admin/devotional/lista/$1";
 $route['admin/sterge-devotional/(\d+)'] = "admin/devotional/delete/$1";
 
 
