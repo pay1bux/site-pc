@@ -22,7 +22,7 @@ $buton='class="submit"';
          <div class="i_title">Contact</div>
          <div class="i_details">
              <p class="mic ">Daca aveti intrebari, idei sau sugestii, scrieti-ne un mesaj</p>
-            <?php echo $this->session->flashdata('contact'); ?> <br/>
+         <p id="flashdata">   <?php echo $this->session->flashdata('contact'); ?> <br/></p>
              <div id="form">
     <table>
             <tr>

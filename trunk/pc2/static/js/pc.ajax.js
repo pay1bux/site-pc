@@ -100,6 +100,48 @@ $(document).ready(
             e.preventDefault();
         });
 
+/* ### VERIFICARE CAMPURI CONTACT #### */
+
+        $('#buton_cerere').click(function (e) {
+            var nume = $('#nume').val();
+            var localitate = $('#localitate').val();
+            var mesaj = $('#mesaj').val();
+            var publica = 0;
+            if ($('#publica').is(':checked') == true) {
+                var publica = 1;
+            }
+            var $object = $('#flashdata');
+            if (nume == '' || nume == 'Numele si prenumele*') {
+                campInvalid($('#nume'));
+                return false;
+            }
+            else if (mesaj == '') {
+                campInvalid($('#mesaj'));
+                return false;
+            }
+            else {
+                $.ajax({
+                    type:"POST",
+                    url:baseUrl + "adauga-cerere",
+                    data:{
+                        nume:nume,
+                        localitate:localitate,
+                        mesaj:mesaj,
+                        public:publica
+                    },
+                    success:function (data) {
+//                    if (data == 'ok')
+//                        campValid($('#subscribe'));
+                        // ASTA E   alert($('#publica').is(':checked'));
+                        $object.switchClass('invisibil', 'neascuns', 0, 'easeOutBounce');
+
+                    }
+                });
+            }
+            //  return false;
+            e.preventDefault();
+        });
+
 
     }
 );
