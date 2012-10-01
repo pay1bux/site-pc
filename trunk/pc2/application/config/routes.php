@@ -116,6 +116,7 @@ $route['admin/lista-devotionale'] = "admin/devotional/lista";
 $route['admin/lista-devotionale/(\d+)'] = "admin/devotional/lista/$1";
 $route['admin/sterge-devotional/(\d+)'] = "admin/devotional/delete/$1";
 
+$route['admin/adauga-audio'] = "admin/adaugaaudio/add";
 
 $route['404_override'] = '';
 

@@ -31,7 +31,7 @@ function resolveBuletine(){
             $buletinNumar = substr($file, -7, -4);
             $fileSize = filesize(FOLDER_BULETINE_VECHI . $file) / 1024 / 1024;
             $fileDate = date ("Y-m-d", filemtime(FOLDER_BULETINE_VECHI . $file));
-            $idRes = insertResursa("Buletin " . $buletinNumar, 1, 1, null, 6, "", $fileDate, "CURRENT_TIMESTAMP()", 0);
+            $idRes = insertResursa("Buletin " . $buletinNumar, 0, 0, null, 6, "", $fileDate, "CURRENT_TIMESTAMP()", 0);
 
             $caleThumbPdf = salveazaImaginePdf($file);
             insertAttachment(FOLDER_BULETINE . $file, "", 'pdf', $idRes, $caleThumbPdf, null, $fileSize);
