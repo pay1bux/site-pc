@@ -20,6 +20,7 @@ class Administrator extends CI_Controller {
         $data['buletin'] = $this->user_model->checkDrept($email, 'buletin');
         $data['eveniment'] = $this->user_model->checkDrept($email, 'eveniment');
         $data['devotional'] = $this->user_model->checkDrept($email, 'devotional');
+        $data['adaugareAudio'] = $this->user_model->checkDrept($email, 'adaugare-audio');
         $data['email'] = $email;
         $this->load->view('admin/template', $data);
     }

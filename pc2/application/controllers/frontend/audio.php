@@ -57,13 +57,13 @@ class Audio extends CI_Controller {
         $this->load->model('resurse_model');
         $filters = array();
         if ($this->tipuri[$tip]["cod"] == "") {
-            if ($tip == "celeMaiNoi") {
+            if ($tip == "cele-mai-noi") {
                 $filters = array("domeniu" => "audio", "order" => "data_adaugare", "orderType" => "desc");
             } else {
                 $filters = array("domeniu" => "audio", "order" => "views", "orderType" => "desc");
             }
         } else {
-            $filters = array("tip" => $this->tipuri[$tip]["cod"], "order" => "views", "orderType" => "desc");
+            $filters = array("tip" => $this->tipuri[$tip]["cod"], "order" => "data_adaugare", "orderType" => "desc");
             if (isset($album)) {
                 $filters["meniu"] = $meniuAlbum[0]["id"];
             } else {

@@ -39,4 +39,10 @@
             <div><a href="<?php echo site_url('admin/lista-devotionale'); ?>">Lista devotionale</a></div>
         </div>
     <?php endif; ?>
+
+    <?php if ($adaugareAudio): ?>
+        <div>
+            <div><a href="<?php echo site_url('admin/adauga-audio'); ?>">Adaugare audio</a></div>
+        </div>
+    <?php endif; ?>
 </div>

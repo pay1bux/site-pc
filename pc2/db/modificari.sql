@@ -27,3 +27,8 @@ INSERT INTO `pc-nou`.`drepturi` (`id`, `nume`, `cod`) VALUES (NULL, 'Eveniment',
 ALTER TABLE  `cereri` ADD  `public` INT( 1 ) NOT NULL;
 
 ALTER TABLE  `cereri` ADD  `data` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP;
+
+INSERT INTO `tip_resurse` (`id`, `nume`, `cod`) VALUES (NULL, 'Studiu audio', 'studiu-audio');
+
+INSERT INTO `drepturi` (`id` ,`nume` ,`cod`) VALUES (NULL ,  'Adaugare audio',  'adaugare-audio');
+INSERT INTO `drepturi` (`id`, `nume`, `cod`) VALUES (NULL, 'Devotional', 'devotional');
