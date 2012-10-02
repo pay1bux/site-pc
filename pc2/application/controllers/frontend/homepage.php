@@ -20,7 +20,7 @@ class Homepage extends CI_Controller {
                     $evenimenteFinal[] = $eveniment;
                 }
             }
-            if (count($evenimenteFinal) >= 6)
+            if (count($evenimenteFinal) >= 4)
                 break;
         }
 

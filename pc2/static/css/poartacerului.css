@@ -315,6 +315,7 @@ img.thumb_buletin
     color: #b0b16b;
     font-size: 13px;
     font-weight: normal;
+    font-family: courier, "Arial";
 
    /*bottom: 35px;*/
 }
@@ -1684,3 +1685,33 @@ p.aliniat
     margin: 10px 16px 10px 16px;
     border: 1px solid #d8d8d8;
 }
+
+.badge-data
+{
+    width: 62px;
+    height: 83px;
+    background-image: url(../images/calendar/badge-data.png);
+}
+
+div.badge-data p.ziua
+{
+   font-size: 2.5em;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    text-shadow: 1px 1px #a5aa2f;
+    text-align: center;
+    padding-top: 20px;
+}
+
+
+div.badge-data p
+{
+    font-size: 1em;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    text-shadow: 1px 1px #a5aa2f;
+    text-align: center;
+
+
+}
+

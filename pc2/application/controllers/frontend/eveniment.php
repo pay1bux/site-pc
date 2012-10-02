@@ -89,6 +89,27 @@ class Eveniment extends CI_Controller {
         $data['ziuaSaptamanii'] = $ziuaSaptamanii;
         $data['data'] = $an . "-" . $luna . "-". $zi;
 
+
+        //* evenimentele urmatoare *//
+        $urm_evenimenteFinal = array();
+        for ($i = 0; $i < 30; $i++) {
+            $date2  = mktime(0, 0, 0, date("m")  , date("d")+$i, date("Y"));
+            $date2 = date("Y-m-d", $date2);
+            $urm_evenimente = $this->resurse_model->getEvenimenteByDay($date2);
+
+            if ($urm_evenimente != null) {
+                foreach($urm_evenimente as $urm_eveniment) {
+                    $urm_eveniment['data'] = $date2;
+                    $urm_evenimenteFinal[] = $urm_eveniment;
+                }
+            }
+            if (count($urm_evenimenteFinal) >= 3)
+                break;
+        }
+
+        $data['urmatoare'] = $urm_evenimenteFinal;
+        //* end of evenimentele urmatoare *//
+
         $data['main_content'] = 'frontend/eveniment/lista';
         $this->load->view('frontend/template', $data);
     }
