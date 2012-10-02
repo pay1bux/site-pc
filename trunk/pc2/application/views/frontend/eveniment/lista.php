@@ -42,7 +42,45 @@ $buton = 'class="submit"';
             <div class="clearBoth"></div>
             <?php endforeach;?>
         <?php else: ?>
-            <h1>Nu exista evenimente pentru astazi. Alegeti din calendarul din dreapta o alta zi.</h1>
+
+        <?php
+
+        if ($urmatoare != null): ?>
+            <div class="p_text">
+                <div class="i_title">
+                    Urmatoarele evenimente
+                </div>
+            </div>     <div class="clearBoth"></div>
+
+        <table>
+            <?php foreach ($urmatoare as $urm): ?>
+                <?php list($y, $m, $d) = explode('-', $urm["data"]);?>
+
+                    <tr>
+<td>
+
+                 <div class="badge-data">
+                  <p class="ziua"><?php echo $d;?></p>
+                  <p  style="margin-top: 15px;"><?php echo prepareLunaName($m);?></p>
+                  <p ><?php echo $y;?></p>
+
+                 </div>
+</td>
+                    <td>
+                    <div class="i_details">
+                        <div class="ii_title"><?php echo $urm["titlu"]; ?></div>
+                        <div class="ii_text"><?php echo $urm["continut"]; ?></div>
+                    </div>
+                    <div class="clearLeft"></div>
+                </div>
+                </td>
+                    </tr>
+
+                <?php endforeach; ?>
+            </table>
+            <?php else: ?>
+            <div class="ii_text">Nu exista evenimente urmatoare</div>
+            <?php endif; ?>
         <?php endif; ?>
         <div class="clearBoth"></div>
     </div>
