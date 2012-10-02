@@ -31,7 +31,7 @@ function prepareDate($data) {
 function prepareLunaName($m){
     $luniScurt = array(1 => "IAN", 2 => "FEB", 3 => "MAR", 4 => "APR", 5 => "MAI", 6 => "IUN", 7 => "IUL", 8 => "AUG", 9 => "SEP"
     , 10 => "OCT", 11 => "NOI", 12 => "DEC",);
-    $luna = $luniScurt[$m];
+    $luna = $luniScurt[intval($m)];
     return $luna;
 }
 

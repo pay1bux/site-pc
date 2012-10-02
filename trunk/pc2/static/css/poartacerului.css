@@ -1691,6 +1691,8 @@ p.aliniat
     width: 62px;
     height: 83px;
     background-image: url(../images/calendar/badge-data.png);
+    display: block;
+    float: left;
 }
 
 div.badge-data p.ziua
@@ -1715,3 +1717,72 @@ div.badge-data p
 
 }
 
+.e_titlu
+{
+    font-size: 1.8em;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #757575;
+
+padding-top: 2px;
+   padding-bottom: 15px;
+
+
+}
+
+.e_text{
+
+    font-size: 1.2em;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #757575;
+    padding: 5px 0 5px 0;
+
+
+
+
+}
+
+
+.calendar-table
+{
+    width: 215px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: black;
+
+    font-size: 1.3em;
+    background-color: #ffffff;
+
+
+}
+
+
+.t_calendar{
+
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    text-shadow: 1px 1px #969696;
+    font-size: 1.3em;
+
+
+}
+
+td.calendar_c
+{
+    background-color: white;
+   color: #b3b3b3;
+  height: 30px;
+    width: 30px;
+text-align: center;
+    border: 1px solid #e6e6e6;
+vertical-align: middle;
+
+}
+
+.exista_eveniment{
+    width: 30px;
+    height: 30px;
+    display: block;
+    background-color: red;
+    text-shadow: 1px 1px #969696;
+    color: white;
+    vertical-align: middle;
+    background-image: url(../images/calendar/exista.png);}
