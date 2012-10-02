@@ -94,16 +94,16 @@
         </div>
         <div class="p_text">
             <div class="i_title">Biserica Poarta Cerului</div>
-            <div class="i_details"><p>Biserica "Poarta Cerului" din Timisoara a luat fiinta prin voia lui Dumnezeu, ca
+            <div class="i_details"><p class="intins">Biserica "Poarta Cerului" din Timisoara a luat fiinta prin voia lui Dumnezeu, ca
                 urmare a viziunii pe care El a dat-o pastorului
                 Nelu Filip în anul 2005.</p>
 
-                <p>Împreuna cu un grup de 28 de credinciosi au început sa se adune la partasii de rugaciune timp de
+                <p class="intins">Împreuna cu un grup de 28 de credinciosi au început sa se adune la partasii de rugaciune timp de
                     câteva luni, perioada în care aceasta viziune s-a cristalizat , iar în 11 decembrie ale aceluiasi an
                     Poarta Cerului si-a deschis portile pentru oameni doritori sa intre pe dorita poarta a cerului, a
                     fericirii vesnice cu Isus Cristos.</p>
 
-                <p>Biserica Poarta Cerului este o biserica tânara, formata din familii tinere care si-au pus la
+                <p class="intins">Biserica Poarta Cerului este o biserica tânara, formata din familii tinere care si-au pus la
                     dispozitia lui Dumnezeu talentele lor, puterea lor, timpul lor si viata lor.</p></div>
         </div>
     </div>

@@ -4,14 +4,17 @@ class Devotional extends CI_Controller {
 	
 	function index($slugTitlu, $id) {
         $this->load->model('resurse_model');
-        $data['devotionale'] = $this->resurse_model->getResurseByIdAndTip('articole', $id);
+        $filtru = array('tip' => 'articole', 'id' => $id);
+        $data['devotionale'] = $this->resurse_model->getResurseWithAtt($filtru);
+
+     //   $data['devotionale'] = $this->resurse_model->getResurseByIdAndTip('articole', $id);
     //    $data['recente'] = $this->resurse_model->getResurseByIdAndTip('articole', $id);
         $filtru = array('tip' => 'articole', 'order' => 'r_id', 'orderType' => 'DESC', 'limit' => 4);
         $data['recente'] = $this->resurse_model->getResurseWithAtt($filtru);
 
 
         $data['main_content'] = 'frontend/devotional/devotional';
-        $data['page_title'] = $data['devotionale']['titlu'] . ' - Biserica Penticostala Poarta Cerului, Timisoara';
+        $data['page_title'] = $data['devotionale'][0]['titlu'] . ' - Biserica Penticostala Poarta Cerului, Timisoara';
 
         $this->load->model('resurse_model');
         $data['next']=$this->resurse_model->nextResursaByIdAndTip('articole', $id);
