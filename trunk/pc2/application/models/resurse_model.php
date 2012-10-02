@@ -186,7 +186,7 @@ class Resurse_model extends CI_Model
             if (isset($filters['count_rows'])) {
                 $sql = "SELECT COUNT(*)";
             } else {
-                $sql = "SELECT r.*, r.id AS r_id, a.*, tr.*, tr.nume as nume_tip, aut.nume as nume_autor, cr.*";
+                $sql = "SELECT r.*, r.id AS r_id, a.*, a.id as atasament_id, tr.*, tr.nume as nume_tip, aut.nume as nume_autor, cr.*";
             }
             $sql .= "FROM $this->table AS r
                         LEFT JOIN attachment AS a ON r.id = a.resurse_id,
@@ -196,7 +196,7 @@ class Resurse_model extends CI_Model
             if (isset($filters['count_rows'])) {
                 $sql = "SELECT COUNT(*)";
             } else {
-                $sql = "SELECT r.*, r.id AS r_id, a.*, tr.*, tr.nume as nume_tip, aut.nume as nume_autor ";
+                $sql = "SELECT r.*, r.id AS r_id, a.*, a.id as atasament_id, tr.*, tr.nume as nume_tip, aut.nume as nume_autor ";
             }
             if (isset($filters["tip"]) && $filters["tip"] == 'evenimente') {
                 $sql .= ", de.* ";
@@ -353,6 +353,12 @@ class Resurse_model extends CI_Model
         } else {
             return null;
         }
+    }
+
+    function incrementDownload($idResursa) {
+        $sql = "UPDATE $this->table r SET download = download + 1
+                    WHERE id = $idResursa";
+        $this->db->query($sql);
     }
     
 
