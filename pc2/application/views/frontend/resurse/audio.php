@@ -187,10 +187,10 @@
                                                 <?php foreach ($audio as $i => $playlistItem): ?>
                                                     <li>
                                                         <div class="audioline_playlist"></div>
-                                                        <a href="<?php echo($playlistItem["url"]) ?>"
+                                                        <a href="<?php echo site_url("download/" . $playlistItem["atasament_id"]) ?>"
                                                            class="track<?php if ($i == 0) echo " track-default"?>">&nbsp;</a>
                                                         <span class="titlu"><?php echo(cropText($playlistItem["titlu"] . " - " . $playlistItem["nume_autor"], 50)) ?></span>
-                                                        <span class="download"><a href="<?php echo($playlistItem["url"]) ?>" style="padding-left:2px; margin-left: 2px;"><img src="<?php echo IMAGES_PATH;?>/player-audio/download.png" /></a></span>
+                                                        <span class="download"><a href="<?php echo site_url("download/" . $playlistItem["atasament_id"]) ?>" style="padding-left:2px; margin-left: 2px;"><img src="<?php echo IMAGES_PATH;?>/player-audio/download.png" /></a></span>
                                                         <span class="durata"> <?php echo(sec2hms($playlistItem["durata"])) ?></span>
                                                     </li>
                                                 <?php endforeach; ?>
