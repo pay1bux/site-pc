@@ -5,12 +5,12 @@
     <div id="continut">
 
         <div class="p_text">
-            <div class="i_title" style="margin-bottom: 0px;"><?php echo $devotionale['titlu'];?></div>
+            <div class="i_title" style="margin-bottom: 0px;"><?php echo $devotionale[0]['titlu'];?></div>
             <div class="i_details">
-                <p class="mic"><?php echo prepareDateWithYear($devotionale['data']);?></p>
+                <p class="mic"><?php echo prepareDateWithYear($devotionale[0]['data']);?></p>
                 <br/>
-
-                <p style="text-align: justify;"><?php echo nl2br($devotionale['continut']);?> </p>
+<img src="<?php echo BASE_URL.$devotionale[0]['url'];?>" width= 250px; align="left" style="padding: 0 10px 10px 0;">
+                <p style="text-align: justify;"><?php echo nl2br($devotionale[0]['continut']);?> </p>
 
 
                 <?php if ($prev != 0): ?>

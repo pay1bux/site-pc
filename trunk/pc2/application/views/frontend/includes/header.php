@@ -10,7 +10,7 @@
                 	<li class="i_smt"><a href="<?php echo site_url("arhiva-audio")?>">Resurse audio</a></li>
                     <li class="i_smt"><a href="#">Resurse video</a></li>
                     <li class="i_smt"><a href="<?php echo site_url("buletin-duminical")?>">Buletin duminical</a></li>
-                    <li class="i_smt last"><a href="#">Alte resurse</a></li>
+                    <li class="i_smt last"><a href="<?php echo site_url("cereri-rugaciune")?>">Cereri de ragaciune</a></li>
                 </ul>
             </li>
             <li class="i_mt"><a href="<?php echo site_url("devotional")?>">Devotional</a></li>

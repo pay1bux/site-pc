@@ -12,6 +12,7 @@
 <link rel="stylesheet" charset="utf-8" type="text/css" href="<?php echo CSS_PATH; ?>jplayer.blue.monday.css" />
 <link rel="stylesheet" charset="utf-8" type="text/css" href="<?php echo CSS_PATH; ?>nivo-slider/nivo-slider.css" />
 <link rel="stylesheet" charset="utf-8" type="text/css" href="<?php echo CSS_PATH; ?>jplayer.blue.monday.css" />
+
 <link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="<?php echo JS_PATH; ?>nivo-slider/jquery-1.6.1.min.js"></script>
 <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
@@ -22,7 +23,7 @@
 <script type="text/javascript" src="<?php echo JS_PATH; ?>general.js"></script>
 
 
-<!---->
+<!--#AAAAAAAAAAAAADMIIIIIINIIISTRRAAAREEE-->
 <!---->
 <!--		<link href="--><?php //echo CSS_PATH; ?><!--poartacerului.css" rel="stylesheet" type="text/css" media="screen" />-->
 <!---->

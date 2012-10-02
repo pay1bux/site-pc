@@ -92,7 +92,7 @@ class Buletin extends CI_Controller {
             $data['form_values'] = array();
         }
         $data['main_content'] = 'admin/buletin/edit';
-        $this->load->view('frontend/template', $data);
+        $this->load->view('admin/template', $data);
     }
 
     function salveazaImaginePdf($caleFisier) {
@@ -225,7 +225,7 @@ class Buletin extends CI_Controller {
 
 
         $data['main_content'] = 'admin/buletin/lista';
-        $this->load->view('frontend/template', $data);
+        $this->load->view('admin/template', $data);
     }
 }
 

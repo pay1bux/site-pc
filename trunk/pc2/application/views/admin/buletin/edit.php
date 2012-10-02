@@ -3,9 +3,13 @@
         $( "#datepicker" ).datepicker( {dateFormat: "yy-mm-dd",  showOn: "both" });
     });
 </script>
+
+
 <div class="clearBoth"/>
 <div class="admin">
     <?php
+
+
     $this->load->helper('form');
 
     echo form_fieldset('Adauga / Editeaza buletin');
@@ -14,13 +18,16 @@
         echo $error;
     }
     $textlung = 'class="textlung" ';
+    $campul = 'class="camp_general"  ';
 
     echo form_open_multipart(current_url());
     ?>
     <table>
         <tr>
             <td><?php echo form_label('Titlu', 'buletin[titlu]');?> </td>
-            <td><?php echo form_input('buletin[titlu]', (isset($form_values['titlu']) ? $form_values['titlu'] : ''), $textlung); ?></td>
+
+                <td><?php echo form_input('buletin[titlu]', (isset($form_values['titlu']) ? $form_values['titlu'] : 'dsa'), $campul); ?></td>
+
         </tr>
         <tr>
             <td><?php echo form_label('Data', 'buletin[data]');?> </td>
@@ -29,7 +36,7 @@
             'value'       => isset($form_values['data']) ? $form_values['data'] : '',
             'id'     => "datepicker");
             ?>
-            <td><?php echo form_input($data); ?></td>
+            <td><?php echo form_input($data,'',  $campul); ?></td>
         </tr>
         <?php if (isset($form_values['thumb']) && $form_values['thumb'] != ''): ?>
         <tr>
