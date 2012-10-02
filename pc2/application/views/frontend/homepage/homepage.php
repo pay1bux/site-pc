@@ -60,7 +60,7 @@
             <div class="BIR_T2">
                 <div class="altfel_de_click"><p class="i_p1">In fiecare <strong>vineri</strong><br/><strong>de la
                     21:30!</strong><br/><em>www.altfeldeclick.ro</em></p></div>
-                <a class="but_details" href="#"><strong>Vezi detalii</strong><span class="i_icon">&nbsp;</span></a>
+                <a class="but_details" href="http://www.altfeldeclick.ro" target="_blank"><strong>Vezi detalii</strong><span class="i_icon">&nbsp;</span></a>
             </div>
             <div class="BIR_T3">
                 <div class="i_title">Urmatoarele transmisii live</div>
@@ -82,14 +82,14 @@
             </div>
         </div>
         <div class="BoxInRow2">
-            <a class="BIR2_T1" href="#"><img src="<?php echo IMAGES_PATH;?>BIR2_T1.jpg" width="135" height="100"
+            <a class="BIR2_T1" href="http://scoalacrestinademuzica.ro/" target="_blank"><img src="<?php echo IMAGES_PATH;?>BIR2_T1.jpg" width="135" height="100"
                                              alt="scoala de muzica" title=""/></a>
             <a class="BIR2_T2" href="#"><img src="<?php echo IMAGES_PATH;?>BIR2_T2.jpg" width="135" height="100"
                                              alt="scoala biblica" title=""/></a>
-            <a class="BIR2_T3" href="<?php echo $buletin["url"]; ?>"><img src="<?php echo IMAGES_PATH;?>BIR2_T3.jpg"
+            <a class="BIR2_T3" href="<?php echo site_url("buletin-duminical"); ?>"><img src="<?php echo IMAGES_PATH;?>BIR2_T3.jpg"
                                                                           width="135" height="100"
                                                                           alt="buletinul duminical" title=""/></a>
-            <a class="BIR2_T4" href="cereri-rugaciune"><img src="<?php echo IMAGES_PATH;?>BIR2_T4.jpg" width="135" height="100"
+            <a class="BIR2_T4" href="<?php echo site_url("cereri-rugaciune"); ?>"><img src="<?php echo IMAGES_PATH;?>BIR2_T4.jpg" width="135" height="100"
                                              alt="cerere de rugaciune" title=""/></a>
         </div>
         <div class="p_text">
