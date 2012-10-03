@@ -53,6 +53,8 @@ define('JS_PATH',			STATIC_PATH.'js/');
 define("FOLDER_BULETINE", "uploads/buletine/");
 define("FOLDER_IMAGINI_BULETINE", "uploads/imagini-buletine/");
 define("FOLDER_IMAGINI_DEVOTIONAL", "uploads/imagini-devotional/");
+define("FOLDER_IMAGINI_EVENIMENT", "uploads/imagini-evenimente/");
+define("FOLDER_IMAGINI_PROMO", "uploads/imagini-promo/");
 
 define('TIP_DEVOTIONAL', "articole");
 define('TIP_PREDICA_AUDIO', "predica-audio");
@@ -62,5 +64,10 @@ define('TIP_POEZIE_AUDIO', "poezie-audio");
 define('TIP_MARTURIE_AUDIO', "marturie-audio");
 define('TIP_DIVERSE_AUDIO', "diverse-audio");
 
+define('EVENIMENT_THUMBNAIL_WIDTH', 304);
+define('EVENIMENT_THUMBNAIL_HEIGHT', 171);
+
+define('PROMO_IMAGE_WIDTH', 722);
+define('PROMO_IMAGE_HEIGHT', 406);
 /* End of file constants.php */
 /* Location: ./application/config/constants.php */

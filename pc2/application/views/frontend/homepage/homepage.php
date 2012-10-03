@@ -7,10 +7,12 @@
                     <div class="slider-wrapper theme-default">
                         <div class="ribbon"></div>
                         <div id="slider" class="nivoSlider">
-                            <img src="<?php echo IMAGES_PATH;?>eveniment_13oct12.jpg" width="722" height="406" alt="gallery1"/>
-                            <img src="<?php echo IMAGES_PATH;?>gallery3.jpg" width="722" height="406" alt="gallery1"/>
-                            <img src="<?php echo IMAGES_PATH;?>gallery1.png" width="722" height="406" alt="gallery2"/>
-                            <img src="<?php echo IMAGES_PATH;?>gallery2.png" width="722" height="406" alt="gallery3"/>
+                            <?php foreach ($imaginiEvenimente as $key => $ie): ?>
+                                <img src="<?php echo BASE_URL . $ie['url'] ?>" width="722" height="406" alt="evenimente<?php echo $key; ?>"/>
+                            <?php endforeach; ?>
+                            <?php foreach ($imaginiPromo as $key => $ip): ?>
+                                <img src="<?php echo BASE_URL . $ip['url'] ?>" width="722" height="406" alt="promo<?php echo $key; ?>"/>
+                            <?php endforeach; ?>
                         </div>
                     </div>
                 </div>

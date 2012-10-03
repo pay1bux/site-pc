@@ -120,6 +120,11 @@ $route['admin/sterge-devotional/(\d+)'] = "admin/devotional/delete/$1";
 
 $route['admin/adauga-audio'] = "admin/adaugaaudio/add";
 
+$route['admin/adauga-imagine-promo'] = "admin/imaginepromo/add";
+$route['admin/editeaza-imagine-promo/(\d+)'] = "admin/imaginepromo/add/$1";
+$route['admin/lista-imagini-promo'] = "admin/imaginepromo/lista";
+$route['admin/sterge-imagine-promo/(\d+)'] = "admin/imaginepromo/delete/$1";
+
 $route['404_override'] = '';
 
 /* End of file routes.php */

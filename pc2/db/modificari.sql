@@ -15,14 +15,14 @@ ALTER TABLE  `resurse` ADD  `meniu_id` INT NULL AFTER  `categorie_id`;
 
 ALTER TABLE  `user` ADD  `public` BIT( 1 ) NOT NULL;
 
-INSERT INTO  `pc-nou`.`drepturi` (`id` ,`nume` ,`cod`) VALUES (NULL ,  'Administrare resurse',  'administrare-resurse'), (NULL ,  'Buletin',  'buletin');
+INSERT INTO  `drepturi` (`id` ,`nume` ,`cod`) VALUES (NULL ,  'Administrare resurse',  'administrare-resurse'), (NULL ,  'Buletin',  'buletin');
 
 ALTER TABLE  `attachment` CHANGE  `marime`  `marime` DECIMAL( 10, 2 ) NOT NULL;
 
 ALTER TABLE  `resurse` CHANGE  `autor_id`  `autor_id` INT( 11 ) NULL DEFAULT NULL ,
 CHANGE  `categorie_id`  `categorie_id` INT( 11 ) NULL DEFAULT NULL;
 
-INSERT INTO `pc-nou`.`drepturi` (`id`, `nume`, `cod`) VALUES (NULL, 'Eveniment', 'eveniment');
+INSERT INTO `drepturi` (`id`, `nume`, `cod`) VALUES (NULL, 'Eveniment', 'eveniment');
 
 ALTER TABLE  `cereri` ADD  `public` INT( 1 ) NOT NULL;
 
@@ -32,3 +32,5 @@ INSERT INTO `tip_resurse` (`id`, `nume`, `cod`) VALUES (NULL, 'Studiu audio', 's
 
 INSERT INTO `drepturi` (`id` ,`nume` ,`cod`) VALUES (NULL ,  'Adaugare audio',  'adaugare-audio');
 INSERT INTO `drepturi` (`id`, `nume`, `cod`) VALUES (NULL, 'Devotional', 'devotional');
+INSERT INTO `tip_resurse` (`id`, `nume`, `cod`) VALUES (NULL, 'Imagine promo', 'imagine-promo');
+INSERT INTO `drepturi` (`id`, `nume`, `cod`) VALUES (NULL, 'Imagine promo', 'imagine-promo');

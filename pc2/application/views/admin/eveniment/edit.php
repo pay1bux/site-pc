@@ -13,6 +13,7 @@
     if (isset($error)) {
         echo $error;
     }
+    echo $this->session->flashdata('error');
     $textlung = 'class="textlung" ';
 
     echo form_open_multipart(current_url());
