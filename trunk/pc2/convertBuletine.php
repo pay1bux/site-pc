@@ -18,7 +18,6 @@ function resolveBuletine(){
     echo "\Buletine\n";
 
     if ($handle = opendir(FOLDER_BULETINE_VECHI)) {
-        $i = 0;
         $dirFiles = array();
         while (false !== ($file = readdir($handle))) {
             if ($file != "." && $file != "..") {
@@ -26,12 +25,17 @@ function resolveBuletine(){
             }
         }
         sort($dirFiles);
+
+//        Start date = '2006-08-27';
+        $i = 0;
         foreach($dirFiles as $file) {
             echo "$file\n";
-            $buletinNumar = substr($file, -7, -4);
+            $buletinNumar = intval(substr($file, -7, -4));
             $fileSize = filesize(FOLDER_BULETINE_VECHI . $file) / 1024 / 1024;
-            $fileDate = date ("Y-m-d", filemtime(FOLDER_BULETINE_VECHI . $file));
-            $idRes = insertResursa("Buletin " . $buletinNumar, 0, 0, null, 6, "", $fileDate, "CURRENT_TIMESTAMP()", 0);
+            $calculatedTime  = mktime(0, 0, 0, 8, 27 + ($i * 7), 2006);
+            $fileDate = date("Y-m-d", $calculatedTime);
+
+            $idRes = insertResursa("Buletin " . $buletinNumar, 1, 0, null, 6, "", $fileDate, "CURRENT_TIMESTAMP()", 0);
 
             $caleThumbPdf = salveazaImaginePdf($file);
             insertAttachment(FOLDER_BULETINE . $file, "", 'pdf', $idRes, $caleThumbPdf, null, $fileSize);
