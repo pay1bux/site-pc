@@ -25,24 +25,31 @@
             <div><a href="<?php echo site_url('admin/lista-buletine'); ?>">Lista buletine</a></div>
         </div>
     <?php endif; ?>
-
+    <br />
     <?php if ($eveniment): ?>
         <div>
             <div><a href="<?php echo site_url('admin/adauga-eveniment'); ?>">Adaugare eveniment</a></div>
             <div><a href="<?php echo site_url('admin/lista-evenimente'); ?>">Lista evenimente</a></div>
         </div>
     <?php endif; ?>
-
+    <br />
     <?php if ($devotional): ?>
         <div>
             <div><a href="<?php echo site_url('admin/adauga-devotional'); ?>">Adaugare devotional</a></div>
             <div><a href="<?php echo site_url('admin/lista-devotionale'); ?>">Lista devotionale</a></div>
         </div>
     <?php endif; ?>
-
+    <br />
     <?php if ($adaugareAudio): ?>
         <div>
             <div><a href="<?php echo site_url('admin/adauga-audio'); ?>">Adaugare audio</a></div>
+        </div>
+    <?php endif; ?>
+    <br />
+    <?php if ($imaginePromo): ?>
+        <div>
+            <div><a href="<?php echo site_url('admin/lista-imagini-promo'); ?>">Lista imagini promo</a></div>
+            <div><a href="<?php echo site_url('admin/adauga-imagine-promo'); ?>">Adauga imagine promo</a></div>
         </div>
     <?php endif; ?>
 </div>

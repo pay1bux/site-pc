@@ -17,7 +17,7 @@ class Eveniment extends CI_Controller {
         if (! strcmp($_SERVER['REQUEST_METHOD'],'POST')) {
             $this->load->helper(array('form', 'url'));
 
-            $config['upload_path'] = 'uploads/imagini-evenimente/';
+            $config['upload_path'] = FOLDER_IMAGINI_EVENIMENT;
             $config['allowed_types'] = 'gif|jpg|png';
             $config['max_size']	= '0';
 
@@ -92,6 +92,9 @@ class Eveniment extends CI_Controller {
             if ($this->upload->do_upload()) {
                 $uploadData = $this->upload->data();
 
+                // Verifica dimensiunile pozei
+                if ($uploadData[image_width]  == PROMO_IMAGE_WIDTH && $uploadData[image_height] == PROMO_IMAGE_HEIGHT) {
+
                 $this->load->model('atasament_model');
                 // Daca e editare, se sterge poza si thumbnail-ul vechi
                 if (isset($idEveniment)) {
@@ -112,8 +115,8 @@ class Eveniment extends CI_Controller {
                 $config['create_thumb'] = TRUE;
                 $config['thumb_marker'] = "_thumb";
                 $config['maintain_ratio'] = TRUE;
-                $config['width'] = 215;
-                $config['height'] = 304;
+                $config['width'] = EVENIMENT_THUMBNAIL_WIDTH;
+                $config['height'] = EVENIMENT_THUMBNAIL_HEIGHT;
                 $this->load->library('image_lib', $config);
                 $thumbnailFilename = $uploadData['raw_name'] . $config['thumb_marker'] . $uploadData['file_ext'];
 
@@ -122,16 +125,21 @@ class Eveniment extends CI_Controller {
                 }
 
                 $attachInput = array(
-                    'url' => "uploads/imagini-evenimente/" . $uploadData['file_name'],
+                    'url' => FOLDER_IMAGINI_EVENIMENT . $uploadData['file_name'],
                     'embed' => "",
                     'marime' => $size,
                     'durata' => 0,
                     'format' => $uploadData['file_ext'],
                     'resurse_id' => $evenimentId,
-                    'thumb' => "uploads/imagini-evenimente/" . $thumbnailFilename
+                    'thumb' => FOLDER_IMAGINI_EVENIMENT . $thumbnailFilename
                 );
 
                 $this->atasament_model->create($attachInput);
+                }
+                else {
+                    $this->session->set_flashdata('error', '<h1>Imaginea trebuie sa aiba dimensiunile ' . PROMO_IMAGE_WIDTH . " x " . PROMO_IMAGE_HEIGHT . "</h1>");
+                    redirect('admin/editeaza-eveniment/' . $evenimentId);
+                }
             }
 
             redirect('admin/lista-evenimente');
@@ -179,6 +187,9 @@ class Eveniment extends CI_Controller {
         if (isset($idEveniment)) {
             $this->load->model('resurse_model');
 
+            $this->load->model('detalii_eveniment_model');
+            $detaliiEvenimentCurent = $this->detalii_eveniment_model->getByResursaId($idEveniment);
+
             $this->load->model('atasament_model');
             $atasamente = $this->atasament_model->getAtasamenteById($idEveniment);
             // Daca exista atasament vechi stergem pozele si atasamentul
@@ -188,7 +199,7 @@ class Eveniment extends CI_Controller {
                 $this->atasament_model->destroy($atasament['id']);
             }
 
-
+            $this->detalii_eveniment_model->destroy($detaliiEvenimentCurent['id']);
             $this->resurse_model->destroy($idEveniment);
 
         }

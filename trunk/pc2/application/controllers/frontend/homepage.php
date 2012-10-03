@@ -26,6 +26,12 @@ class Homepage extends CI_Controller {
 
         $data['evenimente'] = $evenimenteFinal;
 
+        $data['imaginiEvenimente'] = $this->resurse_model->getUrmatoareleEvenimente(5);
+
+        $filtru = array('tip' => 'imagine-promo', 'vizibil' => 1, 'order' => 'r_id', 'orderType' => 'DESC');
+        $imaginiPromo = $this->resurse_model->getResurseWithAtt($filtru);
+        $data['imaginiPromo'] = $imaginiPromo;
+
         $data['main_content'] = 'frontend/homepage/homepage';
         // Asa setam titlurile paginilor!
         $data['page_title'] = 'Biserica Penticostala Poarta Cerului, Timisoara';
