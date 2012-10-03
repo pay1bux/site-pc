@@ -1103,7 +1103,7 @@ div:hover.buton_details {
     display: block;
 }
 
-#header_audio {
+#header_arhiva {
     width: 935px;
     height: 55px;
     border: 1px solid #FFF;
@@ -1125,7 +1125,7 @@ div:hover.buton_details {
     z-index: 3;
 }
 
-#wrapper_audio {
+#wrapper_arhiva {
     width: 935px;
     height: 500px;
 
@@ -1138,7 +1138,7 @@ div:hover.buton_details {
 
 }
 
-#audio_playlist {
+#arhiva_playlist {
     width: 675px;
     height: 500px;
     border: 1px solid #d2d1d1;
@@ -1156,6 +1156,8 @@ div:hover.buton_details {
     z-index: 2;
     border-right-color: #919191;
 }
+
+
 
 #audio_categories {
     width: 270px;
@@ -1781,8 +1783,12 @@ vertical-align: middle;
     width: 30px;
     height: 30px;
     display: block;
-    background-color: red;
     text-shadow: 1px 1px #969696;
     color: white;
     vertical-align: middle;
     background-image: url(../images/calendar/exista.png);}
+
+.exista_eveniment a:active
+{
+    background-color: green;
+}

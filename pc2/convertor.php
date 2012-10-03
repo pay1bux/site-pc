@@ -8,7 +8,7 @@ select_db($link);
 //resolveTineret();
 //resolveStudii();
 //resolveEvenimente();
-resolveAudio();
+resolvePrograme();
 
 function resolvePrograme(){
     echo "\nArhiva\n";
@@ -41,10 +41,10 @@ function resolvePrograme(){
         }
         var_dump($autor);
 
-        $autor_poarta_cerului = "Poarta Cerului";
-        $autor_id = checkExistingAuthor($autor_poarta_cerului);
+        //$autor_poarta_cerului = "Poarta Cerului";
+        $autor_id = checkExistingAuthor($autor);
         if ($autor_id == -1) {
-            $autor_id = insertAutor($autor_poarta_cerului);
+            $autor_id = insertAutor($autor);
         }
 
         $resurse_id = insertResursa($titlu, $autor_id, null, null, 1, null, $data, $data_adaugare, $row['views']);

@@ -34,3 +34,6 @@ INSERT INTO `drepturi` (`id` ,`nume` ,`cod`) VALUES (NULL ,  'Adaugare audio',  
 INSERT INTO `drepturi` (`id`, `nume`, `cod`) VALUES (NULL, 'Devotional', 'devotional');
 INSERT INTO `tip_resurse` (`id`, `nume`, `cod`) VALUES (NULL, 'Imagine promo', 'imagine-promo');
 INSERT INTO `drepturi` (`id`, `nume`, `cod`) VALUES (NULL, 'Imagine promo', 'imagine-promo');
+
+INSERT INTO  `pc-nou`.`tip_resurse` (`id` ,`nume` ,`cod`) VALUES (NULL ,  'Arhiva video evenimente',  'arhiva-video-evenimente');
+INSERT INTO  `pc-nou`.`meniu` (`id` ,`tip_id` ,`nume` ,`cod` ,`parinte`) VALUES (NULL ,  '2',  'Nelu Filip',  'nelu-filip', NULL);

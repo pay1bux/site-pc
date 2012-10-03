@@ -62,6 +62,15 @@ $route['arhiva-audio/(:any)'] = "frontend/audio/index/$1";
 $route['arhiva-audio/(:any)/(:any)'] = "frontend/audio/index/$1/$2";
 $route['arhiva-audio/(:any)/(:any)/(:any)'] = "frontend/audio/index/$1/$2/$3";
 
+$route['arhiva-video'] = "frontend/video";
+$route['arhiva-video/cautare/(:any)'] = "frontend/video/cautare/$1";
+$route['arhiva-video/(:any)'] = "frontend/video/index/$1";
+$route['arhiva-video/(:any)/(:any)'] = "frontend/video/index/$1/$2";
+$route['arhiva-video/(:any)/(\d+)'] = "frontend/video/index/$1/$2";
+$route['arhiva-video/(:any)/(:any)/(:any)'] = "frontend/video/index/$1/$2/$3";
+$route['arhiva-video/(:any)/(:any)/(\d+)'] = "frontend/video/index/$1/$2/$3";
+$route['arhiva-video/(:any)/(:any)/(:any)/(\d+)'] = "frontend/video/index/$1/$2/$3/$4";
+
 $route['buletin-duminical'] = "frontend/buletin/index";
 $route['buletin-duminical/(\d+)'] = "frontend/buletin/index/$1";
 

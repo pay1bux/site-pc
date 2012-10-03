@@ -63,6 +63,11 @@ define('TIP_CANTEC_AUDIO', "cantec-audio");
 define('TIP_POEZIE_AUDIO', "poezie-audio");
 define('TIP_MARTURIE_AUDIO', "marturie-audio");
 define('TIP_DIVERSE_AUDIO', "diverse-audio");
+define('TIP_ARHIVA_VIDEO', "arhiva-video-programe");
+define('TIP_ARHIVA_VIDEO_TINERET', "arhiva-video-tineret");
+define('TIP_ARHIVA_VIDEO_EVENIMENTE', "arhiva-video-evenimente");
+define('TIP_STUDIU_VIDEO', "studiu-video");
+
 
 define('EVENIMENT_THUMBNAIL_WIDTH', 304);
 define('EVENIMENT_THUMBNAIL_HEIGHT', 171);

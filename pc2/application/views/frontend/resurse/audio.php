@@ -124,9 +124,9 @@
 
     <div id="continut">
 
-        <div id="wrapper_audio">
+        <div id="wrapper_arhiva">
 
-            <div id="header_audio">
+            <div id="header_arhiva">
                 <div class="p_text">
                     <div class="i_title" style="margin-top: 5px;">Arhiva audio</div>
                 </div>
@@ -145,7 +145,7 @@
             </div>
             <div class="clear"></div>
             <?php if ( count($audio) > 0): ?>
-                <div id="audio_playlist">
+                <div id="arhiva_playlist">
                     <div id="jquery_jplayer"></div>
 
 
@@ -204,7 +204,7 @@
                     </div>
                 </div>
             <?php else: ?>
-            <div id="audio_playlist">
+            <div id="arhiva_playlist">
                 <br />
                 <br />
                 <br />
