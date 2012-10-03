@@ -28,7 +28,7 @@ class Buletin extends CI_Controller {
             $input = array(
                 'titlu' => $postdata['titlu'],
                 'data' => $postdata['data'],
-                'autor_id' => 0,
+                'autor_id' => 1,
                 'categorie_id' => 0,
                 'tip_id' => $tip_buletin->id
             );
