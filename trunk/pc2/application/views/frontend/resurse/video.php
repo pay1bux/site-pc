@@ -104,7 +104,7 @@
                 <ul id="video">
                     <?php $i = 0;?>
                     <?php if ($selected == 'cautare'): ?>
-                        <li><a href="" class="selected"><?php echo count($video)?> rezultate ale cautare</a>
+                        <li><a href="" class="selected"><?php echo $cautare_total?> rezultate ale cautare</a>
                             <div class="audioline"></div>
                         </li>
                     <?php endif ?>
