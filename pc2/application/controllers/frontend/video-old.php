@@ -14,6 +14,7 @@ class Video extends CI_Controller {
         $data['main_content'] = 'frontend/resurse/video';
         $data['page_title'] = 'Arhiva Video - Biserica Penticostala Poarta Cerului, Timisoara';
 
+
         if(is_numeric($autor))
         {
             $page=$autor;
@@ -24,7 +25,6 @@ class Video extends CI_Controller {
             $page=$album;
             $album=null;
         }
-
         $result = $this->getResurseDupaTip($tip, $autor, $album, $page);
 
         $data['video'] = $result['video'];
@@ -39,7 +39,7 @@ class Video extends CI_Controller {
         $this->load->view('frontend/template', $data);
     }
 
-    function cautare($cuvinte, $page= 0 ) {
+    function cautare($cuvinte) {
         $this->load->model('meniu_model');
         $this->load->model('resurse_model');
         $data['main_content'] = 'frontend/resurse/video';
@@ -49,43 +49,9 @@ class Video extends CI_Controller {
         $data['selected'] = 'cautare';
         $data['submenus'] = array();
         $cuvinte = urldecode($cuvinte);
-        $cautare = $cuvinte;
         $data['cuvinte'] = $cuvinte;
         $cuvinte = explode(" ", $cuvinte);
-
-
-        $filtru = array("domeniu" => "video", "order" => "data_adaugare", "orderType" => "desc", "cuvinte" => $cuvinte, 'count_rows' => 'true');
-
-        $counter = $this->resurse_model->getResurseWithAtt($filtru);
-        $numar = $counter[0]['COUNT(*)'];
-
-        $this->load->library('pagination');
-        $config['per_page'] = 8;
-        $config['base_url'] = site_url('arhiva-video/cautare/'.$cautare);
-        $config['total_rows'] = $numar;
-
-        $config['first_url'] = '0';
-        $config['num_links'] = 3;
-        $config['last_link'] = '';
-        $config['first_link'] = '';
-        $config['uri_segment'] = 2;
-        $config['num_tag_open'] = '<div class="pagina_s">';
-        $config['num_tag_close'] = '</div>';
-        $config['cur_tag_open'] = '<div class="pagina_a">';
-        $config['cur_tag_close'] = '</div>';
-
-        $config['prev_tag_open'] = '<div class="pagina_b">';
-        $config['prev_tag_close'] = '</div>';
-        $config['next_tag_open'] = '<div class="pagina_b">';
-        $config['next_tag_close'] = '</div>';
-
-
-        $this->pagination->initialize($config);
-
-        $data['paginare'] = $this->pagination->create_links();
-
-
-        $filters = array("domeniu" => "video", "order" => "data_adaugare", "orderType" => "desc", "cuvinte" => $cuvinte, 'limit' => $page, 'number' => $config['per_page']);
+        $filters = array("domeniu" => "video", "order" => "data_adaugare", "orderType" => "desc", "cuvinte" => $cuvinte);
         $data['video'] = $this->resurse_model->getResurseWithAtt($filters);
 
         $this->load->view('frontend/template', $data);
@@ -99,56 +65,75 @@ class Video extends CI_Controller {
             $meniuAlbum = $this->meniu_model->getSubmeniuAnume($this->tipuri[$tip]["cod"], $album);
 
         $this->load->model('resurse_model');
-        $config['per_page'] = 12; // limita pe pagina * trebuie aici sus.
+
+        $config['per_page'] = 2; // limita pe pagina * trebuie aici sus.
+
         $filters = array();
-        $filtersCount = array();
+
+
+
         if ($this->tipuri[$tip]["cod"] == "") {
             if ($tip == "cele-mai-noi") {
-                $config['per_page'] = 9;
                 $filters = array("domeniu" => "video", "order" => "data_adaugare", "orderType" => "desc", "limit" => $page, "number" => $config['per_page']);
                 $filtersCount = array("domeniu" => "video", 'count_rows' => 'true');
             } else {
-                $filters = array("domeniu" => "video", "order" => "views", "orderType" => "desc", "limit" => $page, "number" => $config['per_page']);
+                $filters = array("domeniu" => "video", "order" => "views", "orderType" => "desc");
                 $filtersCount = array("domeniu" => "video", 'count_rows' => 'true');
+
             }
+
         } else {
-            $filters = array("tip" => $this->tipuri[$tip]["cod"], "order" => "data_adaugare", "orderType" => "desc", "limit" => $page, "number" => $config['per_page']);
+            $filters = array("tip" => $this->tipuri[$tip]["cod"], "order" => "data_adaugare", "orderType" => "desc",  "limit" => $page, "number" => $config['per_page']);
             $filtersCount = array("tip" => $this->tipuri[$tip]["cod"], 'count_rows' => 'true');
+
             if (isset($album)) {
+                $filtersCount = array("tip" => $this->tipuri[$tip]["cod"], 'meniu' => $meniuAlbum[0]["id"], 'count_rows' => 'true');
                 $filters["meniu"] = $meniuAlbum[0]["id"];
-                $filtersCount["meniu"] = $meniuAlbum[0]["id"];
             } else {
                 if (isset($autor)) {
+                    //aici undeva cred ca-i problema - nu stiu filterCountu asta ce trebui
+                    $filtersCount = array("tip" => $this->tipuri[$tip]["cod"], 'meniu' => $meniu[0]["id"], 'count_rows' => 'true');
                     $iduri = $this->meniu_model->getIduri($this->tipuri[$tip]["cod"], $meniu[0]["id"]);
                     $iduriBune = array();
                     foreach ($iduri as $id)
                         $iduriBune[] = $id["id"];
                     $filters["meniuri"] = $iduriBune;
-                    $filtersCount["meniuri"] = $iduriBune;
+
                 }
+
             }
         }
 
+
+
         //* PAGINAREA
 
-        $counter = $this->resurse_model->getResurseWithAtt($filtersCount);
 
+
+        $counter = $this->resurse_model->getResurseWithAtt($filtersCount);
+        var_dump($filtersCount);
         $numar = $counter[0]['COUNT(*)'];
 
-
+        var_dump($numar['COUNT(id)']);
         $this->load->library('pagination');
         $config['base_url'] = site_url('arhiva-video/'.$tip.'/'.$autor.'/'.$album);
-        $config['total_rows'] = $numar;
+        $config['total_rows'] = $numar['COUNT(id)'];
 
         $config['first_url'] = '0';
         $config['num_links'] = 2;
         $config['last_link'] = '';
         $config['first_link'] = '';
 
-        if(isset($autor)) {
-            $config['uri_segment'] = 4; }
-        if(isset($album)) {
-            $config['uri_segment'] = 5; }
+
+        if(isset($autor))
+        {
+            $config['uri_segment'] = 4;
+        }
+        if(isset($album))
+        {
+            $config['uri_segment'] = 5;
+        }
+
 
         $config['num_tag_open']='<div class="pagina_s">';
         $config['num_tag_close'] = '</div>';
@@ -160,8 +145,15 @@ class Video extends CI_Controller {
         $config['next_tag_open'] = '<div class="pagina_b">';
         $config['next_tag_close'] = '</div>';
 
+
         $this->pagination->initialize($config);
+
+
+
         //* END OF PAGINAREA
+
+
+
 
         $result = array();
         $result['video'] = $this->resurse_model->getResurseWithAtt($filters);
@@ -173,6 +165,12 @@ class Video extends CI_Controller {
         } else {
             $result['albume'] = array();
         }
+
+
+
+
+
+
 
         return $result;
     }

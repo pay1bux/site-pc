@@ -55,6 +55,7 @@ define("FOLDER_IMAGINI_BULETINE", "uploads/imagini-buletine/");
 define("FOLDER_IMAGINI_DEVOTIONAL", "uploads/imagini-devotional/");
 define("FOLDER_IMAGINI_EVENIMENT", "uploads/imagini-evenimente/");
 define("FOLDER_IMAGINI_PROMO", "uploads/imagini-promo/");
+define("FOLDER_THUMB_VIDEO", "http://www.poartacerului.ro/");
 
 define('TIP_DEVOTIONAL', "articole");
 define('TIP_PREDICA_AUDIO', "predica-audio");

@@ -65,6 +65,11 @@ $(document).ready(
         $('#text_cautare_audio').keyup( function(e){
             key($(this), e, 'arhiva-audio/cautare/');
         });
+
+        $('#text_cautare_video').keyup( function(e){
+            key($(this), e, 'arhiva-video/cautare/');
+        });
+
         $('#text_cautare_admin').keyup( function(e){
             key($(this), e, 'admin/lista-resurse/cautare/');
         });
@@ -73,6 +78,13 @@ $(document).ready(
             var cuvinte =$('#text_cautare_audio').val();
             cuvinte = encodeURIComponent(trim(cuvinte));
             var url = getBaseUrl() + 'arhiva-audio/cautare/' + cuvinte;
+            document.location = url;
+        });
+
+        $('#buton_cautare_video').click(function() {
+            var cuvinte =$('#text_cautare_video').val();
+            cuvinte = encodeURIComponent(trim(cuvinte));
+            var url = getBaseUrl() + 'arhiva-video/cautare/' + cuvinte;
             document.location = url;
         });
 
