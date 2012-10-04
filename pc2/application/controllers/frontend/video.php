@@ -58,9 +58,9 @@ class Video extends CI_Controller {
 
         $counter = $this->resurse_model->getResurseWithAtt($filtru);
         $numar = $counter[0]['COUNT(*)'];
-
+$data['cautare_total']= $numar;
         $this->load->library('pagination');
-        $config['per_page'] = 8;
+        $config['per_page'] = 9;
         $config['base_url'] = site_url('arhiva-video/cautare/'.$cautare);
         $config['total_rows'] = $numar;
 
@@ -68,7 +68,7 @@ class Video extends CI_Controller {
         $config['num_links'] = 3;
         $config['last_link'] = '';
         $config['first_link'] = '';
-        $config['uri_segment'] = 2;
+        $config['uri_segment'] = 4;
         $config['num_tag_open'] = '<div class="pagina_s">';
         $config['num_tag_close'] = '</div>';
         $config['cur_tag_open'] = '<div class="pagina_a">';
