@@ -6,7 +6,7 @@
 
     <div id="continut">
 
-        <div id="wrapper_arhiva" ">
+        <div id="wrapper_video" ">
 
             <div id="header_arhiva">
                 <div class="p_text">
@@ -14,20 +14,20 @@
                 </div>
                 <div class="right_text">
                     <div class="i_title" style="margin-top: 5px; margin-right: 10px;">
-                        <a id="buton_cautare_audio" class="but_details"  style="float:right; " href="javascript: void(0);"><strong>Caută</strong><span class="i_icon">&nbsp;</span></a>
+                        <a id="buton_cautare_video" class="but_details"  style="float:right; " href="javascript: void(0);"><strong>Caută</strong><span class="i_icon">&nbsp;</span></a>
                         <!-- <button type="button" id="buton_cautare" style="margin-bottom: 5px;">Cauta</button>-->
 
                         <?php if ($selected == 'cautare'): ?>
-                            <input type="text" id="text_cautare_audio" class="box_cautare" value="<?php echo $cuvinte?>"/>
+                            <input type="text" id="text_cautare_video" class="box_cautare" value="<?php echo $cuvinte?>"/>
                         <?php else: ?>
-                            <input type="text" id="text_cautare_audio" class="box_cautare" style="float: right; margin-right: 5px;" />
+                            <input type="text" id="text_cautare_video" class="box_cautare" style="float: right; margin-right: 5px;" />
                         <?php endif ?>
                        </div>
                 </div>
             </div>
             <div class="clear"></div>
             <?php if ( count($video) > 0): ?>
-                <div id="arhiva_playlist">
+                <div id="video_playlist" >
 
 
 
@@ -38,29 +38,56 @@
 <br/>
 <br/>
 <br/>
+<br/> <?php if ($selected == 'cele-mai-noi'): ?>
 <br/>
-<br/>
+
+                    <div class="p_text" style="margin-top: -20px;">
+                        <div class="i_title" >Ultima inregistrare</div>
+                    </div>
+                    <div style=" margin-left: 25px;  "  >
+                        <div align="center" id="blcPlayer">
+                </div>
+                        <script type="text/javascript" src="http://embed.bisericilive.com/get?cid=poartaceruluiro&w=625&h=351"></script>
+
+                    </div>
+                    <div class="audioline_playlist" style="margin: 15px 0 15px 15px;"></div>
+
+                    <?php endif;?>
                                             <ul>
+
+
+
                                             <?php if ($video != null): ?>
                                                 <?php foreach ($video as $i => $playlistItem): ?>
+
                                                     <li>
-                                                        <div class="audioline_playlist"></div>
-                                                        <a href="<?php echo site_url("download/" . $playlistItem["atasament_id"]) ?>"
-                                                           class="track<?php if ($i == 0) echo " track-default"?>">&nbsp;</a>
-                                                        <span class="titlu"><?php echo(cropText($playlistItem["titlu"] . " - " . $playlistItem["nume_autor"], 50)) ?></span>
-                                                        <span class="download"><a href="<?php echo site_url("download/" . $playlistItem["atasament_id"]) ?>" style="padding-left:2px; margin-left: 2px;"><img src="<?php echo IMAGES_PATH;?>/player-audio/download.png" /></a></span>
-                                                        <span class="durata"> <?php echo(sec2hms($playlistItem["durata"])) ?></span>
+                                                        <div class="videoclip">
+                                                        <img src="<?php echo FOLDER_THUMB_VIDEO.$playlistItem['thumb'];?>" />
+                                                            <div class="videoclip_text">
+                                                        <p class="titlu"><span style="font-size: 14px;"><?php echo $playlistItem["data"] ?></span> </p>
+                                                        <p class="titlu"><?php echo cropText( "Predica ". $playlistItem["nume_autor"], 30 )?></p>
+                                                        <p class="titlu"><?php echo  $playlistItem["titlu"] ?></p>
+                                                        </div>
+                                                        </div>
                                                     </li>
                                                 <?php endforeach; ?>
                                             <?php endif; ?>
+
                                             </ul>
+                    <div class="clearBoth"></div>
 
-
+                    <div class="paginare" style="  margin-top: 25px;">
+                        <?php
+                        if (isset($paginare)) {
+                            echo $paginare;
+                        }
+                        ?>
+                    </div>
 
 
                 </div>
             <?php else: ?>
-            <div id="audio_playlist">
+            <div id="video_playlist">
                 <br />
                 <br />
                 <br />
@@ -73,8 +100,8 @@
                 </div>
             </div>
             <?php endif; ?>
-            <div id="audio_categories">
-                <ul id="audio">
+            <div id="video_categories">
+                <ul id="video">
                     <?php $i = 0;?>
                     <?php if ($selected == 'cautare'): ?>
                         <li><a href="" class="selected"><?php echo count($video)?> rezultate ale cautare</a>
@@ -97,20 +124,12 @@
                         </li>
                     <?php endforeach; ?>
                 </ul>
-                <div class="paginare" style="  margin-top: 25px;">
-                    <?php
-                    if (isset($paginare)) {
-                        echo $paginare;
-                    }
-                    else
-                    {
-                        echo 'nu exista paginare';
-                    }
-                    ?>
-                </div>
+
             </div>
-        </div>
+
         <div class="clear"></div>
+
+    </div>
     </div>
 
 </div>
