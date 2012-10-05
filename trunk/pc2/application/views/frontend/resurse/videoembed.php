@@ -1,1 +1,1 @@
-<?php echo $atasament['embed']; ?>
+<center><?php echo $atasament['embed']; ?></center>

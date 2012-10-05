@@ -86,8 +86,8 @@
         <div class="BoxInRow2">
             <a class="BIR2_T1" href="http://scoalacrestinademuzica.ro/" target="_blank"><img src="<?php echo IMAGES_PATH;?>BIR2_T1.jpg" width="135" height="100"
                                              alt="scoala de muzica" title=""/></a>
-            <a class="BIR2_T2" href="#"><img src="<?php echo IMAGES_PATH;?>BIR2_T2.jpg" width="135" height="100"
-                                             alt="scoala biblica" title=""/></a>
+            <a class="BIR2_T2" href="<?php echo site_url("scoala-biblica")?>"><img src="<?php echo IMAGES_PATH;?>BIR2_T2.jpg" width="135" height="100"
+                                             alt="scoala biblica" title="Scoala Biblica Timisoara"/></a>
             <a class="BIR2_T3" href="<?php echo site_url("buletin-duminical"); ?>"><img src="<?php echo IMAGES_PATH;?>BIR2_T3.jpg"
                                                                           width="135" height="100"
                                                                           alt="buletinul duminical" title=""/></a>

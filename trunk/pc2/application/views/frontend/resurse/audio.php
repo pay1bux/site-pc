@@ -206,19 +206,14 @@
             <?php else: ?>
             <div id="audio_playlist">
                 <br />
-                <br />
-                <br />
-                <br />
-                <br />
-                <br />
-                <br />
-                <div id="jp_container">
+                <div id="jp_container" style="margin-top: 60px;">
+
              <p style="font-size: 15px; text-align: center;"> Nici un rezultat gasit.</p>
                 </div>
             </div>
             <?php endif; ?>
             <div id="audio_categories">
-                <ul id="audio">
+                <ul id="arhiva">
                     <?php $i = 0;?>
                     <?php if ($selected == 'cautare'): ?>
                         <li><a href="" class="selected"><?php echo count($audio)?> rezultate ale cautare</a>

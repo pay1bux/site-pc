@@ -51,6 +51,8 @@ $route['despre-noi'] = "frontend/despre/index";
 
 $route['gaseste'] = "frontend/gaseste/index";
 
+$route['scoala-biblica'] = "frontend/scoalabiblica/index";
+
 $route['adauga-cerere'] = "frontend/ajax/adaugaCerere";
 
 $route['contact'] = "frontend/contact";
