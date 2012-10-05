@@ -4,17 +4,22 @@ require_once 'functii.php';
 connect();
 select_db($link);
 
-//resolvePrograme();
-//resolveTineret();
-//resolveStudii();
-//resolveEvenimente();
 resolvePrograme();
+resolveTineret();
+resolveStudii();
+resolveEvenimente();
+resolveAudio();
 
 function resolvePrograme(){
     echo "\nArhiva\n";
 
     // Select programe
-    $q = "SELECT * FROM pec_videos_list WHERE category_id = 7 order by id";
+//    $q = "SELECT * FROM pec_videos_list WHERE category_id = 7 order by id";
+    $q = "SELECT l.*, c.title as cat2_titlu , n.title as node_titlu FROM pec_videos_list l
+            left join pec_videos_categories2 c on l.id_cat2 = c.id
+            left join pec_videos_nodes n on l.id_node = n.id
+            WHERE category_id = 7 order by id";
+
     $r = mysql_query($q);
 
     while ($row = mysql_fetch_assoc($r)) {
@@ -22,9 +27,12 @@ function resolvePrograme(){
         $title_parts = explode("-", $raw_title);
 
         $titlu = trim($title_parts[0]);
-//        TODO: Insert text date in title
 
         $data_eveniment = trim($title_parts[1]);
+
+//        TODO: Insert text date in title
+        $titlu .= " - " . $data_eveniment;
+
         $data_zi = substr($data_eveniment, 0, 2);
         $data_luna = substr($data_eveniment, 3, 2);
         $data_an = substr($data_eveniment, 6, 2);
@@ -47,7 +55,26 @@ function resolvePrograme(){
             $autor_id = insertAutor($autor);
         }
 
-        $resurse_id = insertResursa($titlu, $autor_id, null, null, 1, null, $data, $data_adaugare, $row['views']);
+        $tip_id = 1;
+
+        $id_meniu = 0;
+        if ($row['cat2_titlu']) {
+            $id_meniu = checkExistingMeniu($tip_id, $row['cat2_titlu']);
+            if ($id_meniu == -1) {
+                $id_meniu = insertMeniu($tip_id, $row['cat2_titlu']);
+            }
+        }
+        $id_meniu2 = 0;
+        if ($row['node_titlu']) {
+            $id_meniu2 = checkExistingMeniu($tip_id, $row['node_titlu']);
+            if ($id_meniu2 == -1) {
+                $id_meniu2 = insertMeniu($tip_id, $row['node_titlu'], $id_meniu);
+            }
+        }
+        if ($id_meniu2 != 0)
+            $id_meniu = $id_meniu2;
+
+        $resurse_id = insertResursa($titlu, $autor_id, null, $id_meniu, $tip_id, null, $data, $data_adaugare, $row['views']);
 
         // evenimente: Binecuvantare copii Sarbatoarea Multumirii Sarbatoarea Roadelor Botez Nou Testamental Ordinare diaconi Cantata Nunta
         // unknown ***** Partea 2
@@ -99,6 +126,9 @@ function resolvePrograme(){
             }
         }
 
+        if ($row['description'] != '')
+            insertTag(3, $resurse_id, $row['description']);
+
         $src = $row['source'];
         if ($row['description'] != '' && strpos($row['embed_code'], "href") === false) {
             $src = str_replace('Pentru a descarca programul <a href="', '', $row['description']);
@@ -126,6 +156,10 @@ function resolveTineret(){
         var_dump($titlu);
 
         $data_eveniment = trim($title_parts[1]);
+
+//        TODO: Insert text date in title
+        $titlu .= " - " . $data_eveniment;
+
         $data_zi = substr($data_eveniment, 0, 2);
         $data_luna = substr($data_eveniment, 3, 2);
         $data_an = substr($data_eveniment, 6, 2);
@@ -192,6 +226,9 @@ function resolveTineret(){
             }
         }
 
+        if ($row['description'] != '')
+            insertTag(3, $resurse_id, $row['description']);
+
         $src = $row['source'];
         if ($row['description'] != '' && strpos($row['embed_code'], "href") === false) {
             $src = str_replace('Pentru a descarca programul <a href="', '', $row['description']);
@@ -213,7 +250,7 @@ function resolveStudii(){
     $r = mysql_query($q);
 
     while ($row = mysql_fetch_assoc($r)) {
-        $data = null;
+        $data = $row['datainsert'];
         $data_adaugare = $row['datainsert'];
 
         $titlu = trim($row['title']);
@@ -227,14 +264,36 @@ function resolveStudii(){
 
         $categorie = $row['categorie'];
         $categorie = str_replace('Titlu Studiu: ', '', $categorie);
+
+        $tip_id = 2;
+
+        $id_meniu = 0;
+        if ($row['autor']) {
+            $id_meniu = checkExistingMeniu($tip_id, $row['autor']);
+            if ($id_meniu == -1) {
+                $id_meniu = insertMeniu($tip_id, $row['autor']);
+            }
+        }
+        $id_meniu2 = 0;
+        if ($row['categorie']) {
+            $id_meniu2 = checkExistingMeniu($tip_id, $categorie);
+            if ($id_meniu2 == -1) {
+                $id_meniu2 = insertMeniu($tip_id, $categorie, $id_meniu);
+            }
+        }
+        if ($id_meniu2 != 0)
+            $id_meniu = $id_meniu2;
+
+
         $categorie_id = checkExistingCategorie($categorie);
         if ($categorie_id == -1) {
             $categorie_id = insertCategorie($categorie);
         }
 
-//        TODO: Insert meniu from nodes
+        $resurse_id = insertResursa($titlu, $autor_id, $categorie_id, $id_meniu, $tip_id, null, $data, $data_adaugare, $row['views']);
 
-        $resurse_id = insertResursa($titlu, $autor_id, $categorie_id, null, 2, null, $data, $data_adaugare, $row['views']);
+        if ($row['description'] != '')
+            insertTag(3, $resurse_id, $row['description']);
 
         $src = $row['source'];
         if ($row['description'] != '' && strpos($row['embed_code'], "href") === false) {
@@ -253,7 +312,10 @@ function resolveStudii(){
     $r = mysql_query($q);
 
     while ($row = mysql_fetch_assoc($r)) {
-        $data = null;
+        $raw_title = $row['title'];
+        $title_parts = explode("-", $raw_title);
+
+        $data = trim($title_parts[1]);
         $data_adaugare = $row['datainsert'];
 
         $titlu = trim($row['title']);
@@ -281,6 +343,9 @@ function resolveStudii(){
 
         $resurse_id = insertResursa($titlu, $autor_id, $categorie_id, null, 2, null, $data, $data_adaugare, $row['views']);
 
+        if ($row['description'] != '')
+            insertTag(3, $resurse_id, $row['description']);
+
         $src = $row['source'];
         if ($row['description'] != '' && strpos($row['embed_code'], "href") === false) {
             $src = str_replace('Pentru a descarca programul <a href="', '', $row['description']);
@@ -300,7 +365,7 @@ function resolveEvenimente(){
     $r = mysql_query($q);
 
     while ($row = mysql_fetch_assoc($r)) {
-        $data = null;
+        $data = $row['datainsert'];
         $data_adaugare = $row['datainsert'];
 
         $titlu = trim($row['title']);
@@ -312,9 +377,12 @@ function resolveEvenimente(){
             $autor_id = insertAutor($autor_poarta_cerului);
         }
 
-        $resurse_id = insertResursa($titlu, $autor_id, null, null, 1, null, $data, $data_adaugare, $row['views']);
+        $resurse_id = insertResursa($titlu, $autor_id, null, null, 14, null, $data, $data_adaugare, $row['views']);
 
         insertTag(7, $resurse_id, $titlu);
+
+        if ($row['description'] != '')
+            insertTag(3, $resurse_id, $row['description']);
 
         $src = $row['source'];
         if ($row['description'] != '' && strpos($row['embed_code'], "href") === false) {

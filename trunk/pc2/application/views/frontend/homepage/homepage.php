@@ -41,7 +41,7 @@
                 <div class="i_item2">
                     <div class="ii_title"><span>&nbsp;Vezi arhiva video&nbsp;<br/>&nbsp;Poarta Cerului&nbsp;</span>
                     </div>
-                    <a class="but_play" href="#">&nbsp;</a>
+                    <a class="but_play" href="<?php echo site_url("arhiva-video")?>">&nbsp;</a>
                 </div>
                 <div class="i_item3">
                     <div class="ii_title"><span>&nbsp;Asculta arhiva audio&nbsp;<br/>&nbsp;Poarta Cerului&nbsp;</span>

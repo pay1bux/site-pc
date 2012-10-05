@@ -8,7 +8,7 @@
             <li class="nod"><a href="#"><strong>Resurse</strong><span class="i_icon">&nbsp;</span></a>
             	<ul class="submenu_">
                 	<li class="i_smt"><a href="<?php echo site_url("arhiva-audio")?>">Resurse audio</a></li>
-                    <li class="i_smt"><a href="#">Resurse video</a></li>
+                    <li class="i_smt"><a href="<?php echo site_url("arhiva-video")?>">Resurse video</a></li>
                     <li class="i_smt"><a href="<?php echo site_url("buletin-duminical")?>">Buletin duminical</a></li>
                     <li class="i_smt last"><a href="<?php echo site_url("cereri-rugaciune")?>">Cereri de ragaciune</a></li>
                 </ul>
