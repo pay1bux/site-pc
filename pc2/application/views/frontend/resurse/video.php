@@ -1,11 +1,32 @@
+<script type="text/javascript" charset="utf-8">
+    $(document).ready(function () {
+        $("area[rel^='prettyPhoto']").prettyPhoto();
+
+        $(".gallery:first a[rel^='prettyPhoto']").prettyPhoto({animation_speed:'normal', theme:'light_square', slideshow:50, autoplay_slideshow:false, allow_resize:false, default_width: 500, default_height: 320});
+        $(".gallery:gt(0) a[rel^='prettyPhoto']").prettyPhoto({animation_speed:'fast',theme:'light_square', slideshow:50, hideflash:true, allow_resize: false});
+
+        $("#custom_content a[rel^='prettyPhoto']:first").prettyPhoto({
+            custom_markup:'<div id="map_canvas" style="width:260px; height:265px"></div>',
+            changepicturecallback:function () {
+                initialize();
+            }
+        });
+
+        $("#custom_content a[rel^='prettyPhoto']:last").prettyPhoto({
+            custom_markup:'<div id="bsap_1259344" class="bsarocks bsap_d49a0984d0f377271ccbf01a33f2b6d6"></div><div id="bsap_1237859" class="bsarocks bsap_d49a0984d0f377271ccbf01a33f2b6d6" style="height:260px"></div><div id="bsap_1251710" class="bsarocks bsap_d49a0984d0f377271ccbf01a33f2b6d6"></div>',
+            changepicturecallback:function () {
+                _bsap.exec();
+            }
+        });
+    });
+</script>
 <div class="clearBoth" style="height:10px;"></div>
 <div id="PageContent">
 
 
     <div id="continut">
 
-        <div id="wrapper_video"
-        ">
+        <div id="wrapper_video"  ">
 
         <div id="header_arhiva">
             <div class="p_text">
@@ -31,15 +52,14 @@
         <div id="video_playlist">
 
 
-            <br/>
-            <br/>
-            <br/>
-            <br/>
-            <br/>
-            <br/> <?php if ($selected == 'cele-mai-noi'): ?>
+
+            <br/> <?php
+
+    if (isset($ultimul)): ?>
+
             <br/>
 
-            <div class="p_text" style="margin-top: -20px;">
+            <div class="p_text" style="margin-top: 40px;">
                 <div class="i_title">Ultima inregistrare</div>
             </div>
             <div style=" margin-left: 25px;  ">
@@ -52,16 +72,23 @@
             <div class="audioline_playlist" style="margin: 15px 0 15px 15px;"></div>
 
             <?php endif;?>
-            <ul>
 
+    <?php if ($selected == 'cele-mai-noi'): ?>
+        <ul class="gallery clearfix" >
+        <?php else: ?>
+            <ul class="gallery clearfix" style="margin-top: 60px;">
+                <?php endif;?>
 
                 <?php if ($video != null): ?>
                 <?php foreach ($video as $i => $playlistItem): ?>
 
                     <li>
-                        <div class="videoclip">
-                            <img src="<?php echo FOLDER_THUMB_VIDEO . $playlistItem['thumb'];?>"/>
-
+                        <a href="<?php echo site_url("embed/" . $playlistItem['atasament_id']).'?iframe=true';?>"
+                           rel="prettyPhoto[<?php echo 'video-'.$playlistItem['atasament_id']?>]">
+                            <div class="videoclip">
+                                <div class="videoclip_img">
+                            <img src="<?php echo FOLDER_THUMB_VIDEO . $playlistItem['thumb'];?>" />
+                                </div>
                             <div class="videoclip_text">
                                 <p class="titlu"><span
                                         style="font-size: 14px;"><?php echo $playlistItem["data"] ?></span></p>
@@ -71,11 +98,13 @@
                                 <p class="titlu"><?php echo  $playlistItem["titlu"] ?></p>
                             </div>
                         </div>
+                            </a>
                     </li>
+
                     <?php endforeach; ?>
                 <?php endif; ?>
+        </ul>
 
-            </ul>
             <div class="clearBoth"></div>
 
             <div class="paginare" style="  margin-top: 25px;">
@@ -90,21 +119,14 @@
         </div>
         <?php else: ?>
         <div id="video_playlist">
-            <br/>
-            <br/>
-            <br/>
-            <br/>
-            <br/>
-            <br/>
-            <br/>
-
-            <div id="jp_container">
+<br/>
+            <div id="jp_container" style="margin-top: 60px;">
                 <p style="font-size: 15px; text-align: center;"> Nici un rezultat gasit.</p>
             </div>
         </div>
         <?php endif; ?>
         <div id="video_categories">
-            <ul id="video">
+            <ul id="arhiva">
                 <?php $i = 0;?>
                 <?php if ($selected == 'cautare'): ?>
                 <li><a href="" class="selected"><?php echo $cautare_total?> rezultate ale cautare</a>

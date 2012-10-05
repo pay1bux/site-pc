@@ -25,6 +25,8 @@ class Video extends CI_Controller {
             $album=null;
         }
 
+
+
         $result = $this->getResurseDupaTip($tip, $autor, $album, $page);
 
         $data['video'] = $result['video'];
@@ -99,12 +101,15 @@ $data['cautare_total']= $numar;
             $meniuAlbum = $this->meniu_model->getSubmeniuAnume($this->tipuri[$tip]["cod"], $album);
 
         $this->load->model('resurse_model');
-        $config['per_page'] = 12; // limita pe pagina * trebuie aici sus.
+        $config['per_page'] = 9; // limita pe pagina * trebuie aici sus.
         $filters = array();
         $filtersCount = array();
         if ($this->tipuri[$tip]["cod"] == "") {
             if ($tip == "cele-mai-noi") {
-                $config['per_page'] = 9;
+if(intval($page)==0 || $page==null)
+{
+    $config['per_page'] = 3;
+}
                 $filters = array("domeniu" => "video", "order" => "data_adaugare", "orderType" => "desc", "limit" => $page, "number" => $config['per_page']);
                 $filtersCount = array("domeniu" => "video", 'count_rows' => 'true');
             } else {
