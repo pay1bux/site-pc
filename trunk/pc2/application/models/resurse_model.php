@@ -197,10 +197,12 @@ class Resurse_model extends CI_Model
                 $sql = "SELECT COUNT(*)";
             } else {
                 $sql = "SELECT r.*, r.id AS r_id, a.*, a.id as atasament_id, tr.*, tr.nume as nume_tip, aut.nume as nume_autor ";
+
+                if (isset($filters["tip"]) && $filters["tip"] == 'evenimente') {
+                    $sql .= ", de.* ";
+                }
             }
-            if (isset($filters["tip"]) && $filters["tip"] == 'evenimente') {
-                $sql .= ", de.* ";
-            }
+
             $sql .= "FROM $this->table AS r
                         LEFT JOIN attachment AS a ON r.id = a.resurse_id,
                         tip_resurse AS tr, autor AS aut ";

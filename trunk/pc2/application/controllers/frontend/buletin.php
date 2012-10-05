@@ -18,10 +18,7 @@ class Buletin extends CI_Controller
         $buletine = $this->resurse_model->getResurseWithAtt($filtru);
         $data['buletine'] = $buletine;
 //*selectarea buletinului curent, on top of page.
-        $filtru = array();
-        $filtru['limit'] = 1;
-        $filtru['order'] = 'r_id';
-        $filtru['orderType'] = 'DESC';
+        $filtru = array('tip' => 'buletin-duminical', 'order' => 'r_id', 'orderType' => 'DESC', 'limit' => 1);
         $bcurent = $this->resurse_model->getResurseWithAtt($filtru);
         $data['bcurent'] = $bcurent;
 
