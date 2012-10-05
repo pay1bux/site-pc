@@ -384,6 +384,12 @@ class Resurse_model extends CI_Model
                     WHERE id = $idResursa";
         $this->db->query($sql);
     }
+
+    function incrementPlay($idResursa) {
+        $sql = "UPDATE $this->table r SET play = play + 1
+                    WHERE id = $idResursa";
+        $this->db->query($sql);
+    }
     
 
 }
