@@ -17,7 +17,7 @@ class Devotional extends CI_Controller {
         if (! strcmp($_SERVER['REQUEST_METHOD'],'POST')) {
             $this->load->helper(array('form', 'url'));
 
-            $config['upload_path'] = 'uploads/imagini-devotional/';
+            $config['upload_path'] = FOLDER_IMAGINI_DEVOTIONAL;
             $config['allowed_types'] = 'gif|jpg|png';
             $config['max_size']	= '0';
 
@@ -81,13 +81,13 @@ class Devotional extends CI_Controller {
                 }
 
                 $attachInput = array(
-                    'url' => "uploads/imagini-devotional/" . $uploadData['file_name'],
+                    'url' => FOLDER_IMAGINI_DEVOTIONAL . $uploadData['file_name'],
                     'embed' => "",
                     'marime' => $size,
                     'durata' => 0,
                     'format' => $uploadData['file_ext'],
                     'resurse_id' => $devotionalId,
-                    'thumb' => "uploads/imagini-devotional/" . $thumbnailFilename
+                    'thumb' => FOLDER_IMAGINI_DEVOTIONAL . $thumbnailFilename
                 );
 
                 $this->atasament_model->create($attachInput);
