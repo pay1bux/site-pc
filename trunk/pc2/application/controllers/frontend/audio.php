@@ -5,7 +5,6 @@ class Audio extends CI_Controller {
     var $tipuri = array("cele-mai-noi" => array("nume" => "Cele mai noi", "cod" => "")
                         , "cele-mai-ascultate" => array("nume" => "Cele mai ascultate", "cod" => "")
                         , "predici" => array("nume" => "Predici", "cod" => TIP_PREDICA_AUDIO)
-                        , "studii" => array("nume" => "Studii", "cod" => TIP_STUDIU_AUDIO)
                         , "muzica" => array("nume" => "Muzica", "cod" => TIP_CANTEC_AUDIO)
                         , "poezii" => array("nume" => "Poezii", "cod" => TIP_POEZIE_AUDIO)
                         , "marturii" => array("nume" => "Marturii", "cod" => TIP_MARTURIE_AUDIO)
