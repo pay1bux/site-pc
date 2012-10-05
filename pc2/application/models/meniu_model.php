@@ -77,7 +77,7 @@ class Meniu_model extends CI_Model
 
     function getSubmeniu($tip, $id_parinte) {
         $sql = "SELECT a.parinte as parinte, a.nume as nume, a.cod as cod_nume, t.cod as cod FROM $this->table a, tip_resurse t
-                WHERE a.tip_id = t.id AND t.cod = '$tip' AND a.parinte = '$id_parinte' LIMIT 1";
+                WHERE a.tip_id = t.id AND t.cod = '$tip' AND a.parinte = '$id_parinte'";
         $q = $this->db->query($sql);
 
         if ($q->num_rows() >= 0) {
