@@ -132,6 +132,7 @@ $route['admin/lista-devotionale/(\d+)'] = "admin/devotional/lista/$1";
 $route['admin/sterge-devotional/(\d+)'] = "admin/devotional/delete/$1";
 
 $route['admin/adauga-audio'] = "admin/adaugaaudio/add";
+$route['admin/adauga-video'] = "admin/adaugavideo/add";
 
 $route['admin/adauga-imagine-promo'] = "admin/imaginepromo/add";
 $route['admin/editeaza-imagine-promo/(\d+)'] = "admin/imaginepromo/add/$1";
