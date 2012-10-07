@@ -47,6 +47,15 @@ function prepareDateWithYear($data) {
     return date('d', $time) . " " . $luna . " " . $an;
 }
 
+function prepareDateDMY($data) {
+
+    $time = strtotime($data);
+    $luna = date('n', $time);
+    $an = date('Y', $time);
+
+    return date('d', $time) . "-" . $luna . "-" . $an;
+}
+
 function getDayName($ziuaSaptamanii) {
     $zile = array("0" => "Duminica", "1" => "Luni", "2" => "Marti", "3" => "Miercuri", "4" => "Joi", "5" => "Vineri", "6" => "Sambata" );
     return $zile[$ziuaSaptamanii];

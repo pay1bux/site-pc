@@ -20,17 +20,17 @@ $buton = 'class="submit"';
                 Calendar evenimente
             </div>
         </div>     <div class="clearBoth"></div>
-        <?php foreach ($evenimente as $event): ?>
-            <?php list($y, $m, $d) = explode('-', $event["data"]);?>
+        <?php foreach ($evenimente as $i => $event): ?>
+
 
 
 
 
             <div class="badge-data">
-                <p class="ziua"><?php echo $d;?></p>
+                <p class="ziua"><?php echo $zi;?></p>
 
-                <p  style="margin-top: 15px;"><?php echo prepareLunaName($m);?></p>
-                <p ><?php echo $y;?></p>
+                <p  style="margin-top: 15px;"><?php echo prepareLunaName($luna);?></p>
+                <p ><?php echo $an;?></p>
             </div>
 
 
@@ -60,7 +60,9 @@ $buton = 'class="submit"';
 
             <div class="clearLeft"></div>
 
-            <div class="FooterLine" style="margin: 20px 0 20px 0;"></div>
+            <?php if(count($evenimente) != $i+1):?>
+                <div class="FooterLine" style="margin: 20px 0 20px 0;"></div>
+                <?php endif;?>
             <?php endforeach; ?>
         <?php else: ?>
 
@@ -74,10 +76,8 @@ $buton = 'class="submit"';
             </div>     <div class="clearBoth"></div>
 
 
-            <?php foreach ($urmatoare as $urm): ?>
+            <?php foreach ($urmatoare as $i => $urm): ?>
                 <?php list($y, $m, $d) = explode('-', $urm["data"]);?>
-
-
 
 
                  <div class="badge-data">
@@ -112,8 +112,9 @@ $buton = 'class="submit"';
                     </div>
 
                 <div class="clearLeft"></div>
-
-                <div class="FooterLine" style="margin: 20px 0 20px 0;"></div>
+                <?php if(count($urmatoare) != $i+1):?>
+                    <div class="FooterLine" style="margin: 20px 0 20px 0;"></div>
+               <?php endif;?>
                 <?php endforeach; ?>
 
             <?php else: ?>

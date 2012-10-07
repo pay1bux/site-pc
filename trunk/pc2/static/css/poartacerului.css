@@ -1143,7 +1143,7 @@ div:hover.buton_details {
 
 #wrapper_audio {
     width: 935px;
-    height: 500px;
+    height: 505px;
 
     /*border:1px solid #FFF; margin-top:0px;*/
     background-attachment: scroll;
@@ -1206,7 +1206,7 @@ div:hover.buton_details {
 
 #audio_categories {
     width: 270px;
-    height: 500px;
+    height: 505px;
     border: 1px solid #d2d1d1;
     background-attachment: scroll;
     background-clip: border-box;
