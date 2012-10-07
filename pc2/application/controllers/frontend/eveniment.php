@@ -88,6 +88,9 @@ class Eveniment extends CI_Controller {
         $data['calendar'] = $this->calendar->generate($an, $luna, $evenimenteLuna);
         $data['ziuaSaptamanii'] = $ziuaSaptamanii;
         $data['data'] = $an . "-" . $luna . "-". $zi;
+        $data['zi'] = $zi;
+        $data['luna'] = $luna;
+        $data['an'] = $an;
 
 
         //* evenimentele urmatoare *//
@@ -103,7 +106,7 @@ class Eveniment extends CI_Controller {
                     $urm_evenimenteFinal[] = $urm_eveniment;
                 }
             }
-            if (count($urm_evenimenteFinal) >= 3)
+            if (count($urm_evenimenteFinal) >= 7)
                 break;
         }
 

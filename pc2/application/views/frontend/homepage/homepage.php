@@ -72,7 +72,7 @@
                     <div class="i_item">
                         <div class="i_date"><?php echo prepareDate($eveniment["data"]); ?></div>
                         <div class="i_details">
-                           <a href="<?php echo site_url('lista-evenimente').'/'.$eveniment['data'];?>" > <div class="ii_title"><?php echo $eveniment["titlu"]; ?></div></a>
+                           <a href="<?php echo site_url('lista-evenimente').'/'.prepareDateDMY($eveniment['data']);?>" > <div class="ii_title"><?php echo $eveniment["titlu"]; ?></div></a>
                             <div class="ii_text"><?php echo myTruncate($eveniment["continut"], 100, " "),' '; ?></div>
                         </div>
                         <div class="clearLeft"></div>
