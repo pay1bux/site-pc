@@ -21,6 +21,7 @@ class Administrator extends CI_Controller {
         $data['eveniment'] = $this->user_model->checkDrept($email, 'eveniment');
         $data['devotional'] = $this->user_model->checkDrept($email, 'devotional');
         $data['adaugareAudio'] = $this->user_model->checkDrept($email, 'adaugare-audio');
+        $data['adaugareVideo'] = $this->user_model->checkDrept($email, 'adaugare-video');
         $data['imaginePromo'] = $this->user_model->checkDrept($email, 'imagine-promo');
         $data['email'] = $email;
         $this->load->view('admin/template', $data);

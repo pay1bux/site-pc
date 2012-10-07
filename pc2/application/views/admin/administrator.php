@@ -46,6 +46,12 @@
         </div>
     <?php endif; ?>
     <br />
+    <?php if ($adaugareAudio): ?>
+        <div>
+            <div><a href="<?php echo site_url('admin/adauga-video'); ?>">Adaugare video</a></div>
+        </div>
+    <?php endif; ?>
+    <br />
     <?php if ($imaginePromo): ?>
         <div>
             <div><a href="<?php echo site_url('admin/lista-imagini-promo'); ?>">Lista imagini promo</a></div>
