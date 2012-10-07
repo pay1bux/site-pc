@@ -68,11 +68,12 @@
                 <div class="i_title">Urmatoarele transmisii live</div>
                 <?php if ($evenimente != null): ?>
                 <?php foreach ($evenimente as $eveniment): ?>
+
                     <div class="i_item">
                         <div class="i_date"><?php echo prepareDate($eveniment["data"]); ?></div>
                         <div class="i_details">
-                            <div class="ii_title"><?php echo $eveniment["titlu"]; ?></div>
-                            <div class="ii_text"><?php echo $eveniment["continut"]; ?></div>
+                           <a href="<?php echo site_url('lista-evenimente').'/'.$eveniment['data'];?>" > <div class="ii_title"><?php echo $eveniment["titlu"]; ?></div></a>
+                            <div class="ii_text"><?php echo myTruncate($eveniment["continut"], 100, " "),' '; ?></div>
                         </div>
                         <div class="clearLeft"></div>
                     </div>

@@ -65,7 +65,7 @@ class Contact extends CI_Controller
         $this->load->library('email', $config);
         $this->email->set_newline("\r\n");
 
-        $this->email->from($email['email'], 'Mihai');
+        $this->email->from($email['email'], $email['nume']);
         $this->email->to($email['destinatar']);
         $this->email->subject('Poarta Cerului - Contact');
         $this->email->message($email['mesaj']);
