@@ -87,7 +87,7 @@
                            rel="prettyPhoto[<?php echo 'video-'.$playlistItem['atasament_id']?>]">
                             <div class="videoclip">
                                 <div class="videoclip_img">
-                            <img src="<?php echo FOLDER_THUMB_VIDEO . $playlistItem['thumb'];?>" />
+                                    <img src="<?php echo FOLDER_THUMB_VIDEO . $playlistItem['thumb'];?>" height="112"/>
                                 </div>
                             <div class="videoclip_text">
                                 <p class="titlu"><span

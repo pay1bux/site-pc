@@ -24,9 +24,6 @@ class Video extends CI_Controller {
             $page=$album;
             $album=null;
         }
-
-
-
         $result = $this->getResurseDupaTip($tip, $autor, $album, $page);
 
         $data['video'] = $result['video'];
@@ -37,6 +34,9 @@ class Video extends CI_Controller {
         $data['selected_albume'] = $album;
         $data['meniu'] = $this->tipuri;
         $data['paginare'] =  $result['paginare'];
+        if ($page == 0 && $tip == "cele-mai-noi") {
+            $data['ultimul'] = true;
+        }
 
         $this->load->view('frontend/template', $data);
     }
@@ -55,12 +55,11 @@ class Video extends CI_Controller {
         $data['cuvinte'] = $cuvinte;
         $cuvinte = explode(" ", $cuvinte);
 
-
         $filtru = array("domeniu" => "video", "order" => "data_adaugare", "orderType" => "desc", "cuvinte" => $cuvinte, 'count_rows' => 'true');
 
         $counter = $this->resurse_model->getResurseWithAtt($filtru);
         $numar = $counter[0]['COUNT(*)'];
-$data['cautare_total']= $numar;
+        $data['cautare_total']= $numar;
         $this->load->library('pagination');
         $config['per_page'] = 9;
         $config['base_url'] = site_url('arhiva-video/cautare/'.$cautare);
@@ -81,11 +80,9 @@ $data['cautare_total']= $numar;
         $config['next_tag_open'] = '<div class="pagina_b">';
         $config['next_tag_close'] = '</div>';
 
-
         $this->pagination->initialize($config);
 
         $data['paginare'] = $this->pagination->create_links();
-
 
         $filters = array("domeniu" => "video", "order" => "data_adaugare", "orderType" => "desc", "cuvinte" => $cuvinte, 'limit' => $page, 'number' => $config['per_page']);
         $data['video'] = $this->resurse_model->getResurseWithAtt($filters);
@@ -106,10 +103,9 @@ $data['cautare_total']= $numar;
         $filtersCount = array();
         if ($this->tipuri[$tip]["cod"] == "") {
             if ($tip == "cele-mai-noi") {
-if(intval($page)==0 || $page==null)
-{
-    $config['per_page'] = 3;
-}
+//                if(intval($page)==0 || $page==null) {
+//                    $config['per_page'] = 3;
+//                }
                 $filters = array("domeniu" => "video", "order" => "data_adaugare", "orderType" => "desc", "limit" => $page, "number" => $config['per_page']);
                 $filtersCount = array("domeniu" => "video", 'count_rows' => 'true');
             } else {
