@@ -1,4 +1,3 @@
-
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
    <?php if(isset($page_title)){ ?>
 <title><?php echo $page_title; }   ?></title>

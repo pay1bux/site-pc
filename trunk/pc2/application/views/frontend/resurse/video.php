@@ -2,8 +2,8 @@
     $(document).ready(function () {
         $("area[rel^='prettyPhoto']").prettyPhoto();
 
-        $(".gallery:first a[rel^='prettyPhoto']").prettyPhoto({animation_speed:'normal', theme:'light_square', slideshow:50, autoplay_slideshow:false, allow_resize:false, default_width: 500, default_height: 320});
-        $(".gallery:gt(0) a[rel^='prettyPhoto']").prettyPhoto({animation_speed:'fast',theme:'light_square', slideshow:50, hideflash:true, allow_resize: false});
+        $(".gallery:first a[rel^='prettyPhoto']").prettyPhoto({animation_speed:'normal', theme:'light_square', slideshow:50, autoplay_slideshow:false, allow_resize:false, default_width: 720, default_height: 404});
+        $(".gallery:gt(0) a[rel^='prettyPhoto']").prettyPhoto({animation_speed:'fast',theme:'light_square', slideshow:50, hideflash:true, allow_resize: false, default_width: 750, default_height: 470});
 
         $("#custom_content a[rel^='prettyPhoto']:first").prettyPhoto({
             custom_markup:'<div id="map_canvas" style="width:260px; height:265px"></div>',
@@ -49,7 +49,11 @@
         </div>
         <div class="clear"></div>
         <?php if (count($video) > 0): ?>
+        <?php     if (isset($ultimul)): ?>
+        <div id="video_playlist" style="height: 1160px;">
+            <?php else: ;?>
         <div id="video_playlist">
+            <?php endif;?>
 
 
 
@@ -73,12 +77,14 @@
 
             <?php endif;?>
 
-    <?php if ($selected == 'cele-mai-noi'): ?>
-        <ul class="gallery clearfix" >
-        <?php else: ?>
-            <ul class="gallery clearfix" style="margin-top: 60px;">
-                <?php endif;?>
+<?php if(isset($ultimul)): ?>
+            <ul class="gallery clearfix" >
+                <?php else: ?>
+                        <ul class="gallery clearfix">
+                                        <ul class="gallery clearfix" style="margin-top: 60px;">
 
+
+        <?php endif;?>
                 <?php if ($video != null): ?>
                 <?php foreach ($video as $i => $playlistItem): ?>
 
@@ -91,7 +97,7 @@
                                 </div>
                             <div class="videoclip_text">
                                 <p class="titlu"><span
-                                        style="font-size: 14px;"><?php echo $playlistItem["data"] ?></span></p>
+                                        style="font-size: 14px;"><?php echo prepareDateWithYear($playlistItem["data"]) ?></span></p>
 
                                 <p class="titlu"><?php echo cropText("Predica " . $playlistItem["nume_autor"], 30)?></p>
 
@@ -125,7 +131,11 @@
             </div>
         </div>
         <?php endif; ?>
-        <div id="video_categories">
+          <?php     if (isset($ultimul)): ?>
+        <div id="video_categories" style="height: 1165px;">
+            <?php else: ;?>
+          <div id="video_categories">
+    <?php endif;?>
             <ul id="arhiva">
                 <?php $i = 0;?>
                 <?php if ($selected == 'cautare'): ?>

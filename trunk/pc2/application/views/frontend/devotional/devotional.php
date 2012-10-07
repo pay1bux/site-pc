@@ -3,11 +3,10 @@
     <div id="header" style="background-image: url(<?php echo IMAGES_PATH; ?>banner/devotional.png)"></div>
 
     <div id="continut">
-
         <div class="p_text">
             <div class="i_title" style="margin-bottom: 0px;"><?php echo $devotionale[0]['titlu'];?></div>
             <div class="i_details">
-                <p class="mic"><?php echo prepareDateWithYear($devotionale[0]['data']);?></p>
+                <p class="mic"><?php echo prepareDateWithYear($devotionale[0]['data']).' - '.$devotionale[0]['nume_autor'];?></p>
                 <br/>
 <img src="<?php echo BASE_URL.$devotionale[0]['url'];?>" width= 250px; align="left" style="padding: 0 10px 10px 0;">
                 <p style="text-align: justify;"><?php echo nl2br($devotionale[0]['continut']);?> </p>
