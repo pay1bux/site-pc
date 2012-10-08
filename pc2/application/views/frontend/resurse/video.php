@@ -66,9 +66,8 @@
             <div style=" margin-left: 25px;  ">
                 <div align="center" id="blcPlayer">
                 </div>
-                <script type="text/javascript">
-                    <?php echo $videoEmbed; ?>
-                </script>
+                <script type="text/javascript"
+                        src="http://embed.bisericilive.com/get?cid=poartaceruluiro&w=625&h=351&autoplay=false"></script>
 
             </div>
             <div class="audioline_playlist" style="margin: 15px 0 15px 15px;"></div>
