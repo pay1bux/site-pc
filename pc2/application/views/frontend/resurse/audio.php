@@ -121,7 +121,6 @@
 <div class="clearBoth" style="height:10px;"></div>
 <div id="PageContent">
 
-
     <div id="continut">
 
         <div id="wrapper_audio">
@@ -208,7 +207,7 @@
                 <br />
                 <div id="jp_container" style="margin-top: 60px;">
 
-             <p style="font-size: 15px; text-align: center;"> Nici un rezultat gasit.</p>
+             <p style="font-size: 15px; text-align: center;">Niciun rezultat găsit.</p>
                 </div>
             </div>
             <?php endif; ?>
@@ -216,7 +215,7 @@
                 <ul id="arhiva">
                     <?php $i = 0;?>
                     <?php if ($selected == 'cautare'): ?>
-                        <li><a href="" class="selected"><?php echo count($audio)?> rezultate ale cautare</a>
+                        <li><a href="" class="selected"><?php echo count($audio)?> rezultate ale căutării</a>
                             <div class="audioline"></div>
                         </li>
                     <?php endif ?>
@@ -242,6 +241,5 @@
     </div>
 
 </div>
-
 
 <div class="clearBoth"></div>

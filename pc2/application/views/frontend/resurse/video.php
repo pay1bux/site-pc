@@ -54,9 +54,6 @@
             <?php else: ;?>
         <div id="video_playlist">
             <?php endif;?>
-
-
-
             <br/> <?php
 
     if (isset($ultimul)): ?>
@@ -64,13 +61,14 @@
             <br/>
 
             <div class="p_text" style="margin-top: 40px;">
-                <div class="i_title">Ultima inregistrare</div>
+                <div class="i_title">Ultima înregistrare</div>
             </div>
             <div style=" margin-left: 25px;  ">
                 <div align="center" id="blcPlayer">
                 </div>
-                <script type="text/javascript"
-                        src="http://embed.bisericilive.com/get?cid=poartaceruluiro&w=625&h=351"></script>
+                <script type="text/javascript">
+                    <?php echo $videoEmbed; ?>
+                </script>
 
             </div>
             <div class="audioline_playlist" style="margin: 15px 0 15px 15px;"></div>
@@ -120,14 +118,12 @@
                 }
                 ?>
             </div>
-
-
         </div>
         <?php else: ?>
         <div id="video_playlist">
 <br/>
             <div id="jp_container" style="margin-top: 60px;">
-                <p style="font-size: 15px; text-align: center;"> Nici un rezultat gasit.</p>
+                <p style="font-size: 15px; text-align: center;"> Niciun rezultat gasit.</p>
             </div>
         </div>
         <?php endif; ?>
@@ -139,7 +135,7 @@
             <ul id="arhiva">
                 <?php $i = 0;?>
                 <?php if ($selected == 'cautare'): ?>
-                <li><a href="" class="selected"><?php echo $cautare_total?> rezultate ale cautare</a>
+                <li><a href="" class="selected"><?php echo $cautare_total?> rezultate ale căutării</a>
 
                     <div class="audioline"></div>
                 </li>
@@ -165,15 +161,11 @@
                 </li>
                 <?php endforeach; ?>
             </ul>
-
         </div>
-
         <div class="clear"></div>
-
     </div>
 </div>
 
 </div>
-
 
 <div class="clearBoth"></div>

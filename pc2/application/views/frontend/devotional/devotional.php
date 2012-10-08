@@ -6,11 +6,12 @@
         <div class="p_text">
             <div class="i_title" style="margin-bottom: 0px;"><?php echo $devotionale[0]['titlu'];?></div>
             <div class="i_details">
-                <p class="mic"><?php echo prepareDateWithYear($devotionale[0]['data']).' - '.$devotionale[0]['nume_autor'];?></p>
+                <p class="mic"><?php echo prepareDateWithYear($devotionale[0]['data']) . ' - ' . $devotionale[0]['nume_autor'];?></p>
                 <br/>
-<img src="<?php echo BASE_URL.$devotionale[0]['url'];?>" width= 250px; align="left" style="padding: 0 10px 10px 0;">
-                <p style="text-align: justify;"><?php echo nl2br($devotionale[0]['continut']);?> </p>
+                <img src="<?php echo BASE_URL . $devotionale[0]['url'];?>" width=250px; align="left"
+                     style="padding: 0 10px 10px 0;">
 
+                <p style="text-align: justify;"><?php echo nl2br($devotionale[0]['continut']);?> </p>
 
                 <?php if ($prev != 0): ?>
                 <p align="left">
@@ -35,22 +36,17 @@
         <div class="item" style="background-image: url(<?php echo IMAGES_PATH; ?>right/2.png)"></div>
         <div class="item" style="background-image: url(<?php echo IMAGES_PATH; ?>right/3.png)"></div>
         <div>
-            <p class="mediu">Postari recente</p>
+            <p class="mediu">Postări recente</p>
 
             <div class="ModuleLine"></div>
-<?php
-    foreach($recente as $recent):?>
-
-
-        <a href="<?php echo linkDevotional($recent["titlu"], $recent['r_id']); ?>"/>   <p class="titluri" ><?php echo $recent['titlu'];?></p></a>
-
-
+            <?php
+            foreach ($recente as $recent):?>
+                <a href="<?php echo linkDevotional($recent["titlu"], $recent['r_id']); ?>"/>   <p
+                        class="titluri"><?php echo $recent['titlu'];?></p></a>
                 <br/>
-
-
-<?php
-endforeach;
-        ?>
+                <?php
+            endforeach;
+            ?>
         </div>
     </div>
     <div class="clearBoth"></div>

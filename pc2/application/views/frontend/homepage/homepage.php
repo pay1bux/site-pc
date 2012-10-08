@@ -28,14 +28,14 @@
                     <fieldset>
                         <button class="i_icon" type="submit" id="buton_sub_buletin">&nbsp;</button>
                         <!--codul nostru--><input id="subscribe" type="text" name="buletin"
-                                                  value="Aboneaza-te la buletinul duminical"
+                                                  value="Abonează-te la buletinul duminical"
                                                   class="cleardefault i_text"/>
                         <!-- <input id="Newsletter" class="i_text" type="text" name="words" value="Aboneaza-te la buletinul duminical" onclick="input_default_text('Newsletter', 'Aboneaza-te la buletinul duminical');" onblur="input_default_text('Newsletter', 'Aboneaza-te la buletinul duminical');" />-->
                     </fieldset>
                 </form>
                 <div class="i_item1">
                     <div class="ii_title">Transmisie LIVE Poarta Cerului</div>
-                    <div class="ii_title2">Inchinare</div>
+                    <div class="ii_title2">Închinare</div>
                     <span class="but_live" onclick="return hide_show('wrapper1', 'wrapper2');">&nbsp;</span>
                 </div>
                 <div class="i_item2">
@@ -44,7 +44,7 @@
                     <a class="but_play" href="<?php echo site_url("arhiva-video")?>">&nbsp;</a>
                 </div>
                 <div class="i_item3">
-                    <div class="ii_title"><span>&nbsp;Asculta arhiva audio&nbsp;<br/>&nbsp;Poarta Cerului&nbsp;</span>
+                    <div class="ii_title"><span>&nbsp;Ascultă arhiva audio&nbsp;<br/>&nbsp;Poarta Cerului&nbsp;</span>
                     </div>
                     <a class="but_play" href="<?php echo site_url("arhiva-audio"); ?>">&nbsp;</a>
                 </div>
@@ -52,7 +52,7 @@
         </div>
         <div class="BoxInRow">
             <div class="BIR_T1">
-                <div class="i_title">Devotional</div>
+                <div class="i_title">Devoțional</div>
                 <div class="i_p1"> <?php echo $devotional["titlu"]; ?></div>
                 <div class="i_p2"> <?php echo myTruncate($devotional["continut"], 120, " "); ?></div>
                 <a class="but_details"
@@ -60,12 +60,12 @@
                     detalii</strong><span class="i_icon">&nbsp;</span></a>
             </div>
             <div class="BIR_T2">
-                <div class="altfel_de_click"><p class="i_p1">In fiecare <strong>vineri</strong><br/><strong>de la
+                <div class="altfel_de_click"><p class="i_p1">În fiecare <strong>vineri</strong><br/><strong>de la
                     21:30!</strong><br/><em>www.altfeldeclick.ro</em></p></div>
                 <a class="but_details" href="http://www.altfeldeclick.ro" target="_blank"><strong>Vezi detalii</strong><span class="i_icon">&nbsp;</span></a>
             </div>
             <div class="BIR_T3">
-                <div class="i_title">Urmatoarele transmisii live</div>
+                <div class="i_title">Următoarele transmisii live</div>
                 <?php if ($evenimente != null): ?>
                 <?php foreach ($evenimente as $eveniment): ?>
 
@@ -79,7 +79,7 @@
                     </div>
                     <?php endforeach; ?>
                 <?php else: ?>
-                <div class="ii_text">Nu exista transmisii</div>
+                <div class="ii_text">Nu există transmisii</div>
                 <?php endif; ?>
                 <a class="but_details" href="<?php echo site_url("lista-evenimente") ?>"><strong>Vezi calendar</strong><span class="i_icon">&nbsp;</span></a>
             </div>
@@ -97,17 +97,17 @@
         </div>
         <div class="p_text">
             <div class="i_title">Biserica Poarta Cerului</div>
-            <div class="i_details"><p class="intins">Biserica "Poarta Cerului" din Timisoara a luat fiinta prin voia lui Dumnezeu, ca
-                urmare a viziunii pe care El a dat-o pastorului
+            <div class="i_details"><p class="intins">Biserica "Poarta Cerului" din Timișoara a luat ființă prin voia lui Dumnezeu, ca
+                urmare a viziunii pe care El a dat-o păstorului
                 Nelu Filip în anul 2005.</p>
 
-                <p class="intins">Împreuna cu un grup de 28 de credinciosi au început sa se adune la partasii de rugaciune timp de
-                    câteva luni, perioada în care aceasta viziune s-a cristalizat , iar în 11 decembrie ale aceluiasi an
-                    Poarta Cerului si-a deschis portile pentru oameni doritori sa intre pe dorita poarta a cerului, a
-                    fericirii vesnice cu Isus Cristos.</p>
+                <p class="intins">Împreună cu un grup de 28 de credincioși au început să se adune la părtășii de rugaciune timp de
+                    câteva luni, perioadă în care această viziune s-a cristalizat, iar în 11 decembrie ale aceluiași an
+                    Poarta Cerului și-a deschis porțile pentru oameni doritori să intre pe dorita poarta a cerului, a
+                    fericirii veșnice cu Isus Cristos.</p>
 
-                <p class="intins">Biserica Poarta Cerului este o biserica tânara, formata din familii tinere care si-au pus la
-                    dispozitia lui Dumnezeu talentele lor, puterea lor, timpul lor si viata lor.</p></div>
+                <p class="intins">Biserica Poarta Cerului este o biserica tânără, formată din familii tinere care și-au pus la
+                    dispoziția lui Dumnezeu talentele lor, puterea lor, timpul lor și viața lor.</p></div>
         </div>
     </div>
 <div class="clearBoth"/>
