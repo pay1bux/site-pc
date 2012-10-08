@@ -33,7 +33,6 @@ $buton = 'class="submit"';
                 <p ><?php echo $an;?></p>
             </div>
 
-
             <div style="float:left; width:590px; margin-left: 15px;">
                 <div class="e_titlu"><?php echo $event["titlu"]; ?></div>
                 <div class="e_text"><?php echo $event["continut"]; ?></div>
@@ -42,7 +41,7 @@ $buton = 'class="submit"';
                 <div class="e_text"><span style="font-weight: bold;">Vorbitor: </span><?php echo $event['invitat_predica']; ?></div>
                 <?php endif;?>
                 <?php if(isset($event['invitat_lauda'])):?>
-                <div class="e_text"><span style="font-weight: bold;">Lauda si inchinare: </span><?php echo $event['invitat_lauda']; ?></div>
+                <div class="e_text"><span style="font-weight: bold;">Laudă și închinare: </span><?php echo $event['invitat_lauda']; ?></div>
                 <?php endif;?>
                 <?php if(isset($event['organizator'])):?>
                 <?php if(isset($event['site_organizator'])):?>
@@ -53,9 +52,6 @@ $buton = 'class="submit"';
                     <div class="e_text"><?php echo $event['organizator']; ?></div>
                     <?php endif;?>
                 <?php endif;?>
-
-
-
             </div>
 
             <div class="clearLeft"></div>
@@ -65,15 +61,14 @@ $buton = 'class="submit"';
                 <?php endif;?>
             <?php endforeach; ?>
         <?php else: ?>
-
         <?php
-
         if ($urmatoare != null): ?>
             <div class="p_text" style="margin-bottom: 20px;">
                 <div class="i_title">
-                    Urmatoarele evenimente
+                    Următoarele evenimente
                 </div>
-            </div>     <div class="clearBoth"></div>
+            </div>
+            <div class="clearBoth"></div>
 
 
             <?php foreach ($urmatoare as $i => $urm): ?>
@@ -106,19 +101,14 @@ $buton = 'class="submit"';
                            <div class="e_text"><?php echo $urm['organizator']; ?></div>
                        <?php endif;?>
                        <?php endif;?>
-
-
-
                     </div>
-
                 <div class="clearLeft"></div>
                 <?php if(count($urmatoare) != $i+1):?>
                     <div class="FooterLine" style="margin: 20px 0 20px 0;"></div>
                <?php endif;?>
                 <?php endforeach; ?>
-
             <?php else: ?>
-            <div class="ii_text">Nu exista evenimente urmatoare</div>
+            <div class="ii_text">Nu există evenimente următoare</div>
             <?php endif; ?>
         <?php endif; ?>
         <div class="clearBoth"></div>

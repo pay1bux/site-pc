@@ -38,6 +38,14 @@ class Video extends CI_Controller {
             $data['ultimul'] = true;
         }
 
+        $urlPlayer = "http://embed.bisericilive.com/get?cid=poartaceruluiro&w=625&h=351";
+        $htmlPlayer = file_get_contents($urlPlayer);
+        print_r($htmlPlayer);
+        str_replace('autoPlay:"true"', 'autoPlay:"false"', $htmlPlayer);
+//        print_r($htmlPlayer);
+        die();
+        $data['videoEmbed'] = $htmlPlayer;
+
         $this->load->view('frontend/template', $data);
     }
 

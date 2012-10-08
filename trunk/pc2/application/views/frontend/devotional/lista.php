@@ -1,7 +1,6 @@
 <?php
 $this->load->helper('form');
 
-
 $dropdown = 'class="dropdown"';
 $clear = 'class="cleardefault"';
 $buton = 'class="submit"';
@@ -14,17 +13,19 @@ $buton = 'class="submit"';
         <?php  foreach ($devotionale as $devotional): ?>
         <div class="articol">
 
-                <img  src="<?php echo BASE_URL . $devotional['thumb'];?>" class="imgdev" >
+            <img src="<?php echo BASE_URL . $devotional['thumb'];?>" class="imgdev">
 
             <div class="p_text" style="margin-top: 0px; float:left; width: 487px;">
                 <a href="<?php echo linkDevotional($devotional["titlu"], $devotional["r_id"]);  ?>">
                     <div class="i_title" style="margin-bottom: 0;"><?php echo $devotional['titlu'];?></div>
                 </a>
+
                 <div class="i_details">
                     <p class="mic"><?php echo  prepareDateWithYear($devotional['data']); ?></p> <br/>
+
                     <p class="mic intins"><?php echo  myTruncate($devotional['continut'], 250, " "); ?></p>
                     <a href="<?php echo linkDevotional($devotional["titlu"], $devotional["r_id"]);  ?>">
-                        <p class="mic" style="text-align: right; text-decoration: underline;">Citeste articolul</p>
+                        <p class="mic" style="text-align: right; text-decoration: underline;">Citește articolul</p>
                     </a>
                 </div>
             </div>
