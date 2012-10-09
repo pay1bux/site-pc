@@ -7,12 +7,16 @@
                     <div class="slider-wrapper theme-default">
                         <div class="ribbon"></div>
                         <div id="slider" class="nivoSlider">
-                            <?php foreach ($imaginiEvenimente as $key => $ie): ?>
-                                <img src="<?php echo BASE_URL . $ie['url'] ?>" width="722" height="406" alt="evenimente<?php echo $key; ?>"/>
-                            <?php endforeach; ?>
-                            <?php foreach ($imaginiPromo as $key => $ip): ?>
-                                <img src="<?php echo BASE_URL . $ip['url'] ?>" width="722" height="406" alt="promo<?php echo $key; ?>"/>
-                            <?php endforeach; ?>
+                            <?php if ($imaginiEvenimente != null): ?>
+                                <?php foreach ($imaginiEvenimente as $key => $ie): ?>
+                                    <img src="<?php echo BASE_URL . $ie['url'] ?>" width="722" height="406" alt="evenimente<?php echo $key; ?>"/>
+                                <?php endforeach; ?>
+                            <?php endif; ?>
+                            <?php if ($imaginiPromo != null): ?>
+                                <?php foreach ($imaginiPromo as $key => $ip): ?>
+                                    <img src="<?php echo BASE_URL . $ip['url'] ?>" width="722" height="406" alt="promo<?php echo $key; ?>"/>
+                                <?php endforeach; ?>
+                            <?php endif; ?>
                         </div>
                     </div>
                 </div>

@@ -19,7 +19,7 @@
                     acolo. Te vei simți împlinit!</p>
 
                 <div class="ascuns">
-                    <p class="bold">Muzica</p>
+                    <p class="bold">Muzică</p>
 
                     <p class="intins">“Neprihăniţilor, bucuraţi-vă în Domnul! Oamenilor fără prihană le şade bine
                         cântarea de laudă. Lăudaţi pe Domnul cu arfa, lăudaţi-L cu alăuta cu zece coarde. Cântaţi-I o
