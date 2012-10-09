@@ -1,7 +1,10 @@
 <div class="clearBoth"/>
 <div class="admin">
-    <h2>Resursa</h2>
-    <br/>
+    <br />
+    <h3><a href="<?php echo site_url("administrator"); ?>">Intoarcere la Administrare</a></h3>
+    <br />
+    <h1>Lista taguri</h1>
+    <br />
     <table>
         <tr>
             <td>Titlu:</td>

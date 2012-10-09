@@ -1,7 +1,10 @@
 <div class="clearBoth"/>
 <div class="admin">
-    <h2>Lista evenimente</h2>
-    <br/>
+    <br />
+    <h3><a href="<?php echo site_url("administrator"); ?>">Intoarcere la Administrare</a></h3>
+    <br />
+    <h1>Lista evenimente</h1>
+    <br />
 
     <p><a href="<?php echo site_url('admin/adauga-eveniment'); ?>">(+) Adauga eveniment</a>
     </p>

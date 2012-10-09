@@ -58,4 +58,5 @@
             <div><a href="<?php echo site_url('admin/adauga-imagine-promo'); ?>">Adauga imagine promo</a></div>
         </div>
     <?php endif; ?>
+    <div><a href="<?php echo site_url('admin/logout'); ?>">Logout</a></div>
 </div>

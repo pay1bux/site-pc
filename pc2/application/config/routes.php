@@ -89,6 +89,7 @@ $route['embed/(\d+)'] = "frontend/embed/getembed/$1";
 $route['administrator'] = "admin/administrator";
 $route['login'] = "admin/login";
 $route['login-form'] = "admin/login/verify";
+$route['logout'] = "admin/logout";
 $route['admin/adauga-resursa'] = "admin/resurse/add";
 $route['admin/editeaza-resursa/(\d+)'] = "admin/resurse/edit/$1";
 $route['admin/sterge-resursa/(\d+)'] = "admin/resurse/delete/$1";

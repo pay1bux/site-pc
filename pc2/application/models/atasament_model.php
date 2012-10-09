@@ -79,6 +79,16 @@ class Atasament_model extends CI_Model
         //            return $numaratoare;
     }
 
+    function getAtasamentArhivaByUrl($url)
+    {
+        $sql = "SELECT * FROM $this->table a WHERE a.url = '$url'";
+        $q = $this->db->query($sql);
 
+        if ($q->num_rows() > 0) {
+            return true;
+        } else {
+            return false;
+        }
+    }
 
 }

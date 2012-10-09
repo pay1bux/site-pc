@@ -1,7 +1,10 @@
 <div class="clearBoth"/>
 <div class="admin">
-    <h2>Lista Categoriilor</h2>
-    <br/>
+    <br />
+    <h3><a href="<?php echo site_url("administrator"); ?>">Intoarcere la Administrare</a></h3>
+    <br />
+    <h1>Lista Categoriilor</h1>
+    <br />
 
     <p><a href="<?php echo BASE_URL();?>index.php/admin/adauga-categorii/">(+) Adauga categorie</a></p>
     <br/>
