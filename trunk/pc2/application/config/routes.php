@@ -86,7 +86,7 @@ $route['download/(\d+)'] = "frontend/download/down/$1";
 $route['playonline/(\d+)'] = "frontend/playonline/play/$1";
 $route['embed/(\d+)'] = "frontend/embed/getembed/$1";
 
-$route['administrator'] = "admin/administrator";
+$route['pcadmin'] = "admin/administrator";
 $route['login'] = "admin/login";
 $route['login-form'] = "admin/login/verify";
 $route['logout'] = "admin/logout";
