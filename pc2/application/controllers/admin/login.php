@@ -35,7 +35,7 @@ class Login extends CI_Controller {
             if (isset($redirectUrl) && $redirectUrl != '') {
                 redirect($redirectUrl, 'refresh');
             } else {
-                redirect('administrator', 'refresh');
+                redirect('pcadmin', 'refresh');
             }
         } else {
             $data['main_content'] = 'admin/login';

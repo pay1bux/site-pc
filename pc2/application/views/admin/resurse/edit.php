@@ -1,7 +1,12 @@
+<script>
+    $(function() {
+        $( "#datepicker" ).datepicker( {dateFormat: "yy-mm-dd",  showOn: "both" });
+    });
+</script>
 <div class="clearBoth"/>
 <div class="admin">
     <br />
-    <h3><a href="<?php echo site_url("administrator"); ?>">Intoarcere la Administrare</a></h3>
+    <h3><a href="<?php echo site_url("pcadmin"); ?>">Intoarcere la Administrare</a></h3>
     <br />
     <h1>Adauga / Editeaza resursa</h1>
     <br />
@@ -42,7 +47,12 @@
 
         <tr>
             <td><?php echo form_label('Data', 'resurse[data]'); ?></td>
-            <td><?php echo form_input('resurse[data]', (isset($form_values['data']) ? $form_values['data'] : '')); ?> </td>
+            <?php $data = array(
+            'name'        => 'resurse[data]',
+            'value'       => isset($form_values['data']) ? $form_values['data'] : '',
+            'id'     => "datepicker");
+            ?>
+            <td><?php echo form_input($data); ?></td>
         </tr>
 
         <tr>
