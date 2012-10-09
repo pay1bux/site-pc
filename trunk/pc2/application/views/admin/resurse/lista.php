@@ -1,7 +1,10 @@
 <div class="clearBoth"/>
 <div class="admin">
-    <h2>Lista Resurselor</h2>
-    <br/>
+    <br />
+    <h3><a href="<?php echo site_url("administrator"); ?>">Intoarcere la Administrare</a></h3>
+    <br />
+    <h1>Lista Resurselor</h1>
+    <br />
     Cauta:
     <input type="text" id="text_cautare_admin" class="box_cautare" style="float: right; margin-right: 5px;" />
     </br>

@@ -1,5 +1,10 @@
 <div class="clearBoth"/>
 <div class="admin">
+    <br />
+    <h3><a href="<?php echo site_url("administrator"); ?>">Intoarcere la Administrare</a></h3>
+    <br />
+    <h1>Adauga / Editeaza resursa</h1>
+    <br />
     <?php
     $this->load->helper('form');
 
