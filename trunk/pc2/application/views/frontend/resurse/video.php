@@ -67,7 +67,7 @@
                 <div align="center" id="blcPlayer">
                 </div>
                 <script type="text/javascript"
-                        src="http://embed.bisericilive.com/get?cid=poartaceruluiro&w=625&h=351&autoplay=false"></script>
+                        src="http://embed.bisericilive.com/get?cid=poartaceruluiro&w=625&h=351&autoPlay=false"></script>
 
             </div>
             <div class="audioline_playlist" style="margin: 15px 0 15px 15px;"></div>
