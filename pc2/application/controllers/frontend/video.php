@@ -3,7 +3,7 @@
 class Video extends CI_Controller {
 
     var $tipuri = array("cele-mai-noi" => array("nume" => "Cele mai noi", "cod" => "")
-    , "cele-mai-ascultate" => array("nume" => "Cele mai ascultate", "cod" => "")
+    , "cele-mai-vizionate" => array("nume" => "Cele mai vizionate", "cod" => "")
     , "arhiva-video-tineret" => array("nume" => "Tineret", "cod" => TIP_ARHIVA_VIDEO_TINERET)
     , "studiu-video" => array("nume" => "Studii", "cod" => TIP_STUDIU_VIDEO)
     , "arhiva-video-evenimente" => array("nume" => "Evenimente", "cod" => TIP_ARHIVA_VIDEO_EVENIMENTE)
