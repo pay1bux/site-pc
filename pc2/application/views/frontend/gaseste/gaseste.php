@@ -9,10 +9,10 @@
             <div class="i_details">
                 <p class="intins">Noi credem ca Dumnezeu ne-a dat la fiecare anumite aptitudini speciale si ne-a transmis sa avem grija sa le folosim in ajutorarea noastra reciproca, transmitand mai departe numeroasele feluri de binecuvantari ale Lui. Tu stii care este acel dar si locul unde Dumnezeu vrea sa-l folosesti? Asteptam sa-ti gasesti locul in biserica, intr-unul din departamentele prezentate mai jos.</p>
 
-                <p class="mic intins" style="margin-bottom: 30px;">Atunci cand vei gasi locul inimii tale, al intelectului tau, al sufletului si spiritului tau, te vei afla la locul potrivit. In acel moment, oriunde ai fi, oricare ar fi situatia ta materiala si sociala, vei simti ca locul tau se gaseste acolo. Te vei simti implinit!</p>
+                <p class="mic intins" style="margin-bottom: 30px;"><i>Atunci cand vei gasi locul inimii tale, al intelectului tau, al sufletului si spiritului tau, te vei afla la locul potrivit. In acel moment, oriunde ai fi, oricare ar fi situatia ta materiala si sociala, vei simti ca locul tau se gaseste acolo. Te vei simti implinit!</i></p>
 
                 <div class="ascuns">
-                    <p class="bold">COR - Poarta Cerului</p>
+                    <p class="bold">Muzică</p>
 
                     <p class="intins">“Neprihăniţilor, bucuraţi-vă în Domnul! Oamenilor fără prihană le şade bine cântarea de laudă. Lăudaţi pe Domnul cu arfa, lăudaţi-L cu alăuta cu zece coarde. Cântaţi-I o cântare nouă! Faceţi să răsune coardele şi glasurile voastre.” Psalmul 33:1-3 </p>
 
@@ -42,7 +42,7 @@
                 </a>
 
                 <div class="ascuns">
-                    <p class="bold">Şcoala Duminicală a bisericii “Poarta Cerului”</p>
+                    <p class="bold">Școala duminicală</p>
 
                     <p class="intins">“Învaţă pe copil calea pe care trebuie să o urmeze şi când va îmbătrâni, nu se va abate de la ea.” Proverbe 22:6 </p>
                     <p class="intins">Copiii de azi vor forma familiile şi Biserica de mâine, de aceea împreună cu părinţii dorim să contribuim la clădirea şi consolidarea unor caractere frumoase care să devină o binecuvântare atât pentru oameni, cât şi pentru Dumnezeu.</p>
