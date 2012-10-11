@@ -16,8 +16,10 @@ class Homepage extends CI_Controller {
             $evenimente = $this->resurse_model->getEvenimenteByDay($date);
             if ($evenimente != null) {
                 foreach($evenimente as $eveniment) {
-                    $eveniment['data'] = $date;
-                    $evenimenteFinal[] = $eveniment;
+                    if ($eveniment['live'] == 1) {
+                        $eveniment['data'] = $date;
+                        $evenimenteFinal[] = $eveniment;
+                    }
                 }
             }
             if (count($evenimenteFinal) >= 4)
