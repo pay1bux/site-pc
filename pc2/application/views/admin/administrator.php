@@ -59,5 +59,12 @@
         </div>
     <?php endif; ?>
     <br />
+    <?php if ($administrareUseri): ?>
+        <div>
+            <div><a href="<?php echo site_url('admin/lista-useri'); ?>">Lista useri</a></div>
+            <div><a href="<?php echo site_url('admin/adauga-user'); ?>">Adauga user</a></div>
+        </div>
+    <?php endif; ?>
+    <br />
     <div><a href="<?php echo site_url('admin/logout'); ?>">Logout</a></div>
 </div>

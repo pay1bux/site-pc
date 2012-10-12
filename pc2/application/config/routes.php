@@ -140,6 +140,11 @@ $route['admin/editeaza-imagine-promo/(\d+)'] = "admin/imaginepromo/add/$1";
 $route['admin/lista-imagini-promo'] = "admin/imaginepromo/lista";
 $route['admin/sterge-imagine-promo/(\d+)'] = "admin/imaginepromo/delete/$1";
 
+$route['admin/adauga-user'] = "admin/user/add";
+$route['admin/editeaza-user/(\d+)'] = "admin/user/add/$1";
+$route['admin/lista-useri'] = "admin/user/lista";
+$route['admin/sterge-user/(\d+)'] = "admin/user/delete/$1";
+
 $route['404_override'] = '';
 
 /* End of file routes.php */
