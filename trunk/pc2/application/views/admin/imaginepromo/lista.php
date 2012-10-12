@@ -25,6 +25,7 @@
         <tr>
             <td class="lista">
                 <?php echo $resursa['titlu']; ?>
+            </td>
             <td class="lista">
                 <center>
                     <a href="<?php echo site_url('admin/editeaza-imagine-promo/' . $resursa['r_id']); ?>">EDIT</a>

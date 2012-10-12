@@ -3,6 +3,7 @@
 class User_model extends CI_Model{
 
     var $table = 'user';
+    var $primary_key = 'id';
 
     function create($data) {
         $this->db->insert($this->table, $data);
@@ -64,6 +65,28 @@ class User_model extends CI_Model{
             return true;
         } else {
             return false;
+        }
+    }
+
+    function getUseri(){
+        $sql = "SELECT * FROM $this->table ORDER BY ID DESC";
+        $q = $this->db->query($sql);
+
+        if($q->num_rows() > 0) {
+            return $q->result_array();
+        } else {
+            return null;
+        }
+    }
+
+    function getUserById($idUser){
+        $sql = "SELECT * FROM $this->table u WHERE u.id = $idUser LIMIT 1";
+        $q = $this->db->query($sql);
+
+        if($q->num_rows() > 0) {
+            return $q->row_array();
+        } else {
+            return null;
         }
     }
 }

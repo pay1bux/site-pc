@@ -23,6 +23,7 @@ class Administrator extends CI_Controller {
         $data['adaugareAudio'] = $this->user_model->checkDrept($email, 'adaugare-audio');
         $data['adaugareVideo'] = $this->user_model->checkDrept($email, 'adaugare-video');
         $data['imaginePromo'] = $this->user_model->checkDrept($email, 'imagine-promo');
+        $data['administrareUseri'] = $this->user_model->checkDrept($email, 'administrare-useri');
         $data['email'] = $email;
         $this->load->view('admin/template', $data);
     }

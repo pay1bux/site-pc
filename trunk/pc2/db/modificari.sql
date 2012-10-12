@@ -41,3 +41,5 @@ INSERT INTO  `pc-nou`.`meniu` (`id` ,`tip_id` ,`nume` ,`cod` ,`parinte`) VALUES 
 ALTER TABLE  `resurse` ADD  `play` INT NOT NULL AFTER  `download`;
 
 INSERT INTO `drepturi` (`id`, `nume`, `cod`) VALUES (NULL, 'Adaugare video', 'adaugare-video');
+
+INSERT INTO `drepturi` (`id`, `nume`, `cod`) VALUES (NULL, 'Administrare useri', 'administrare-useri');

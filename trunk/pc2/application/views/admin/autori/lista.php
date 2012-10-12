@@ -30,8 +30,8 @@
 
             <tr>
                 <td class="lista">
-                    <?php echo $autor['nume']; ?> <br/><?php
-                    ?></td>
+                    <?php echo $autor['nume']; ?>
+                </td>
                 <td class="lista">
                     <center><a href="<?php echo site_url('admin/editeaza-autori');?>/<?php echo $autor['id']; ?>"/>EDIT
                     </center>
