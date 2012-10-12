@@ -12,8 +12,11 @@ class Contact extends CI_Controller
     function index()
     {
 
-        $this->load->model('email_model');
-        $destinatarii = $this->email_model->getDestinatari();
+        $this->load->model('user_model');
+        $destinatarii = $this->user_model->getDestinatari();
+        foreach ($destinatarii as $dest)
+            $destinatarii2[$dest['id']] = $dest['email'];
+
 
         $email['destinatar'] = NULL;
         if (!strcmp($_SERVER['REQUEST_METHOD'], 'POST')) {
@@ -24,10 +27,11 @@ class Contact extends CI_Controller
             $email = array(
                 'nume' => $postdata['nume'],
                 'email' => $postdata['email'],
-                'destinatar' => $destinatarii[$postdata['destinatar'] - 1]['email'],
+                'destinatar' => $destinatarii2[$postdata['destinatar']],
                 'mesaj' => $postdata['mesaj']
             );
         }
+
 
         $destinatari = array(0 => "Alege destinatar");
         foreach ($destinatarii as $dest)
@@ -36,6 +40,7 @@ class Contact extends CI_Controller
 
 
         if ($email['destinatar'] != NULL) {
+
             $this->send($email);
             $this->session->set_flashdata('contact', 'Mesajul dumneavoastra a fost trimis!');
             redirect('contact');
@@ -68,7 +73,7 @@ class Contact extends CI_Controller
         $this->email->from($email['email'], $email['nume']);
         $this->email->to($email['destinatar']);
         $this->email->subject('Poarta Cerului - Contact');
-        $this->email->message($email['mesaj']);
+        $this->email->message("Mesaj de la: ".$email['email'].' --- '.$email['mesaj']);
         $this->email->send();
 
     }

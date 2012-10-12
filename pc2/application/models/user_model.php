@@ -89,4 +89,19 @@ class User_model extends CI_Model{
             return null;
         }
     }
+
+
+
+
+    function getDestinatari(){
+        $sql = "SELECT id,email,nume FROM user u WHERE u.public='1' ";
+        $q = $this->db->query($sql);
+
+        if($q->num_rows() > 0) {
+            return $q->result_array();
+        } else {
+            return null;
+        }
+    }
+
 }

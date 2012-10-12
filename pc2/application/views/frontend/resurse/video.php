@@ -2,8 +2,8 @@
     $(document).ready(function () {
         $("area[rel^='prettyPhoto']").prettyPhoto();
 
-        $(".gallery:first a[rel^='prettyPhoto']").prettyPhoto({animation_speed:'normal', theme:'light_square', slideshow:50, autoplay_slideshow:false, allow_resize:false, default_width: 720, default_height: 404});
-        $(".gallery:gt(0) a[rel^='prettyPhoto']").prettyPhoto({animation_speed:'fast',theme:'light_square', slideshow:50, hideflash:true, allow_resize: false, default_width: 750, default_height: 470});
+        $(".gallery:first a[rel^='prettyPhoto']").prettyPhoto({animation_speed:'normal', theme:'dark_rounded', slideshow:50, autoplay_slideshow:false, allow_resize:false, default_width: 750, default_height: 480});
+        $(".gallery:gt(0) a[rel^='prettyPhoto']").prettyPhoto({animation_speed:'fast',theme:'dark_rounded', slideshow:50, hideflash:true, allow_resize: false, default_width: 750, default_height: 480});
 
         $("#custom_content a[rel^='prettyPhoto']:first").prettyPhoto({
             custom_markup:'<div id="map_canvas" style="width:260px; height:265px"></div>',
@@ -20,6 +20,10 @@
         });
     });
 </script>
+
+
+
+
 <div class="clearBoth" style="height:10px;"></div>
 <div id="PageContent">
 
@@ -66,8 +70,11 @@
             <div style=" margin-left: 25px;  ">
                 <div align="center" id="blcPlayer">
                 </div>
+                <?php
+                    $thumbmare = str_replace("240", "720", $video[0]['thumb']);
+                ?>
                 <script type="text/javascript"
-                        src="http://embed.bisericilive.com/get?cid=poartaceruluiro&w=625&h=351&autoPlay=false"></script>
+                        src="http://embed.bisericilive.com/get?cid=poartaceruluiro&w=625&h=351&autoPlay=false&stoppedImage=<?php echo $thumbmare ?>"></script>
 
             </div>
             <div class="audioline_playlist" style="margin: 15px 0 15px 15px;"></div>
@@ -96,14 +103,12 @@
                                         <img src="<?php echo $playlistItem['thumb'];?>" height="112"/>
                                     <?php endif; ?>
                                 </div>
-                            <div class="videoclip_text">
-                                <p class="titlu"><span
-                                        style="font-size: 14px;"><?php echo prepareDateWithYear($playlistItem["data"]) ?></span></p>
-
-                                <p class="titlu"><?php echo cropText("Predica " . $playlistItem["nume_autor"], 30)?></p>
-
-                                <p class="titlu"><?php echo  $playlistItem["titlu"] ?></p>
-                            </div>
+                                <div class="videoclip_text">
+                                    <p class="titlu"><span
+                                    style="font-size: 14px;"><?php echo prepareDateWithYear($playlistItem["data"]) ?></span></p>
+                                    <p class="titlu"><?php echo  $playlistItem["titlu"] ?></p>
+                                    <p class="titlu"><?php echo cropText("Predica " . $playlistItem["nume_autor"], 70)?></p>
+                                </div>
                         </div>
                             </a>
                     </li>
@@ -114,7 +119,7 @@
 
             <div class="clearBoth"></div>
 
-            <div class="paginare" style="  margin-top: 25px;">
+            <div class="paginare" style="  margin-top: 10px;">
                 <?php
                 if (isset($paginare)) {
                     echo $paginare;

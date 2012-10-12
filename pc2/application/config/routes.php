@@ -45,7 +45,7 @@ $route['devotional'] = "frontend/devotional/lista";
 $route['devotional/(\d+)'] = "frontend/devotional/lista/$1";
 $route['devotional/(:any)/(\d+)'] = "frontend/devotional/index/$1/$2";
 
-$route['live2'] = "frontend/live/live";
+$route['live'] = "frontend/live/live";
 
 $route['despre-noi'] = "frontend/despre/index";
 
@@ -95,8 +95,8 @@ $route['admin/editeaza-resursa/(\d+)'] = "admin/resurse/edit/$1";
 $route['admin/sterge-resursa/(\d+)'] = "admin/resurse/delete/$1";
 $route['admin/lista-resurse'] = "admin/resurse/lista";
 $route['admin/lista-resurse/(\d+)'] = "admin/resurse/lista/$1";
-$route['admin/lista-resurse/cautare/(:any)'] = "admin/resurse/cautare/$1";
-$route['admin/lista-resurse/cautare/(:any)/(:\d+)'] = "admin/resurse/cautare/$1/$2";
+$route['admin/lista-resurse/(:any)'] = "admin/resurse/lista/$1";
+$route['admin/lista-resurse/cauta/(:any)/(:\d+)'] = "admin/resurse/lista/$1/$2";
 
 $route['admin/adauga-autori'] = "admin/autori/add";
 $route['admin/editeaza-autori/(\d+)'] = "admin/autori/edit/$1";
