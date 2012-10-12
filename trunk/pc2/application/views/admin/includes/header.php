@@ -3,7 +3,7 @@
     <a id="Logo" href="<?php echo site_url("acasa")?>">&nbsp;</a>
     <div id="TopMenu">
         <ul>
-            <li class="i_mt"><a href="<?php echo site_url("live2")?>">Live</a></li>
+            <li class="i_mt"><a href="<?php echo site_url("live")?>">Live</a></li>
             <li class="i_mt"><a href="<?php echo site_url("contact")?>">Contact</a></li>
             <li class="nod"><a href="#"><strong>Resurse</strong><span class="i_icon">&nbsp;</span></a>
                 <ul class="submenu_">

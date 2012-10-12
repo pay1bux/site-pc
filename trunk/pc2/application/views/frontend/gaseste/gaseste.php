@@ -111,7 +111,7 @@
                     <p class="intins">Pentru că în prezent mass-media şi internetul sunt la îndemâna tinerilor mai mult decât oricând, noi ştim că acest lucru poate avea atât un impact pozitiv cât şi unul negativ asupra lor. Ei pot alege ce să citească, să vizioneze sau să asculte atâta timp cât au de ales.</p>
                     <p class="intins">Departamentul multimedia din biserica Poarta Cerului doreşte să formeze o echipă de oameni care să contribuie la transmiterea mesajului creştin prin toate mijloacele mass media, pentru ca acest mesaj să fie aproape de oameni şi să facă parte din alegerile lor.</p>
 
-                    <p class="intins">Dacă doreşti să faci parte din echipa media, asteptăm să completezi formularul de mai jos sau să iei legătura cu Daniel Ciupac. Pune-ţi ideile în practică!</p>
+                    <p class="intins">Dacă doreşti să faci parte din echipa media, asteptăm să ne contactezi accesând formularul de contact sau să iei legătura cu Daniel Ciupac. Pune-ţi ideile în practică!</p>
                 </div>
                 <div class="FooterLine"></div>
 
@@ -128,9 +128,9 @@
     </div>
 
     <div id="right">
-        <div class="item" style="background-image: url(<?php echo IMAGES_PATH; ?>right/1.png)"></div>
-        <div class="item" style="background-image: url(<?php echo IMAGES_PATH; ?>right/2.png)"></div>
         <div class="item" style="background-image: url(<?php echo IMAGES_PATH; ?>right/3.png)"></div>
+        <div class="item" style="background-image: url(<?php echo IMAGES_PATH; ?>right/2.png)"></div>
+        <div class="item" style="background-image: url(<?php echo IMAGES_PATH; ?>right/1.png)"></div>
     </div>
 
     <div class="clearBoth"></div>

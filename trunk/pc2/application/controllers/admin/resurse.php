@@ -2,6 +2,8 @@
 
 class Resurse extends CI_Controller {
 
+  public $search = false;
+
     function __construct() {
         parent::__construct();
         $this->load->library('session');
@@ -98,21 +100,50 @@ class Resurse extends CI_Controller {
         return $arrayBun;
     }
 
-    function lista($page = 0)
+    function lista($tip = null, $cuvinte = null, $page = 0)
     {
         $this->load->library('pagination');
         $this->load->model('resurse_model');
-        $filtru = array( 'count_rows' => 'true');
+        $config['per_page'] = 10;
+        if(is_numeric($cuvinte))
+        {
+            $page=$cuvinte;
+            $cuvinte= null;
+        }
 
-        $counter = $this->resurse_model->getResurseWithAtt($filtru);
-        $numar = $counter[0]['COUNT(*)'];
+        if($cuvinte != null)
+        {
+            $cuvinte = urldecode($cuvinte);
+            $data['cuvinte'] = $cuvinte;
+            $cuvinte = explode(" ", $cuvinte);
+
+            //*pentru paginare pe cautare
+            $filters = array( 'count_rows' => 'true', 'cuvinte' => $cuvinte );
+            $counter = $this->resurse_model->getResurseWithAtt($filters);
+            $numar = $counter[0]['COUNT(*)'];
+
+            //*cautare dupa cuvinte cheie
+            $filters = array('order' => 'data_adaugare', 'orderType' => 'DESC', 'limit' => $page, 'number' => $config['per_page'], "cuvinte" => $cuvinte);
+        }
+        else{
+            //*pentru paginarea tuturor resurselor
+            $filters = array( 'count_rows' => 'true');
+            $counter = $this->resurse_model->getResurseWithAtt($filters);
+            $numar = $counter[0]['COUNT(*)'];
+
+
+            $filters = array('order' => 'data_adaugare', 'orderType' => 'DESC', 'limit' => $page, 'number' => $config['per_page'], "cuvinte" => $cuvinte);
+
+        }
+
+
 
         $this->load->library('pagination');
-        $config['per_page'] = 10;
+
 
 
         $config['base_url'] = site_url('admin/lista-resurse');
-        $config['total_rows'] = $this->db->count_all('resurse');
+        $config['total_rows'] = $numar;
         $config['per_page'] = 15;
         $config['first_url'] = '0';
         $config['num_links'] = 3;
@@ -132,12 +163,7 @@ class Resurse extends CI_Controller {
         $data['paginare'] = $this->pagination->create_links();
 
 
-
-
-
-        $filtru = array('order' => 'r_id', 'orderType' => 'DESC', 'limit' => $page, 'number' => $config['per_page']);
-
-        $resurse = $this->resurse_model->getResurseWithAtt($filtru);
+        $resurse = $this->resurse_model->getResurseWithAtt($filters);
         $data['resurse'] = $resurse;
 
 
@@ -162,6 +188,9 @@ class Resurse extends CI_Controller {
         $data['resurse'] = $this->resurse_model->getResurseWithAtt($filters);
 
         $this->load->view('admin/template', $data);
+
+
+        lista($cuvinte,)
     }
 
 

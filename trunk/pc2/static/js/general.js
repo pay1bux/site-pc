@@ -71,7 +71,7 @@ $(document).ready(
         });
 
         $('#text_cautare_admin').keyup( function(e){
-            key($(this), e, 'admin/lista-resurse/cautare/');
+            key($(this), e, 'admin/lista-resurse/');
         });
 
         $('#buton_cautare_audio').click(function() {
@@ -91,7 +91,7 @@ $(document).ready(
         $('#buton_cautare_admin').click(function() {
             var cuvinte =$('#text_cautare_admin').val();
             cuvinte = encodeURIComponent(trim(cuvinte));
-            var url = getBaseUrl() + 'admin/lista-resurse/cautare/' + cuvinte;
+            var url = getBaseUrl() + 'admin/lista-resurse/' + cuvinte;
             document.location = url;
         });
 

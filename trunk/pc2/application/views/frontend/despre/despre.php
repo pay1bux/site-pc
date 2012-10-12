@@ -77,9 +77,9 @@
 </div>
 
 <div id="right">
-    <div class="item" style="background-image: url(<?php echo IMAGES_PATH; ?>right/1.png)"></div>
-    <div class="item" style="background-image: url(<?php echo IMAGES_PATH; ?>right/2.png)"></div>
     <div class="item" style="background-image: url(<?php echo IMAGES_PATH; ?>right/3.png)"></div>
+    <div class="item" style="background-image: url(<?php echo IMAGES_PATH; ?>right/2.png)"></div>
+    <div class="item" style="background-image: url(<?php echo IMAGES_PATH; ?>right/1.png)"></div>
 </div>
 
 <div class="clearBoth"></div>

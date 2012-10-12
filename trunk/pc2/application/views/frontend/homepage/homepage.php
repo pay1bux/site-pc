@@ -63,11 +63,10 @@
                    href="<?php echo linkDevotional($devotional["titlu"], $devotional["id"])?>"><strong>Vezi
                     detalii</strong><span class="i_icon">&nbsp;</span></a>
             </div>
-            <div class="BIR_T2">
-                <div class="altfel_de_click"><p class="i_p1">În fiecare <strong>vineri</strong><br/><strong>de la
-                    21:30!</strong><br/><em>www.altfeldeclick.ro</em></p></div>
-                <a class="but_details" href="http://www.altfeldeclick.ro" target="_blank"><strong>Vezi detalii</strong><span class="i_icon">&nbsp;</span></a>
-            </div>
+           <a href="http://www.youtube.com/poartacerului" target="_blank" title="Canalul Youtube Poarta Cerului"><div class="BIR_T2">
+
+
+            </div></a>
             <div class="BIR_T3">
                 <div class="i_title">Următoarele transmisii live</div>
                 <?php if ($evenimente != null): ?>
@@ -76,7 +75,7 @@
                     <div class="i_item">
                         <div class="i_date"><?php echo prepareDate($eveniment["data"]); ?></div>
                         <div class="i_details">
-                           <a href="<?php echo site_url('lista-evenimente').'/'.prepareDateDMY($eveniment['data']);?>" > <div class="ii_title"><?php echo $eveniment["titlu"]; ?></div></a>
+                           <a href="<?php echo site_url('lista-evenimente').'/'.prepareDateDMY($eveniment['data']);?>" > <div class="ii_title"><?php echo $eveniment["titlu"]; ?><span style="color: gray;"><?php echo '  '.$eveniment["ora_inceput"].' - '.$eveniment["ora_sfarsit"];?></span> </div></a>
                             <div class="ii_text"><?php echo myTruncate($eveniment["continut"], 100, " "),' '; ?></div>
                         </div>
                         <div class="clearLeft"></div>
