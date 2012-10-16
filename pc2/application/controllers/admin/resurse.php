@@ -60,6 +60,7 @@ class Resurse extends CI_Controller {
             $input = array(
                 'titlu' => $postdata['titlu'],
                 'autor_id' => $postdata['autor'],
+                'tip_id'=> $postdata['tip_id'],
                 'categorie_id' => $postdata['categorie'],
                 'continut' => $postdata['continut'],
                 'data' => $postdata['data']
@@ -188,9 +189,6 @@ class Resurse extends CI_Controller {
         $data['resurse'] = $this->resurse_model->getResurseWithAtt($filters);
 
         $this->load->view('admin/template', $data);
-
-
-        lista($cuvinte,)
     }
 
 
