@@ -6,7 +6,7 @@
 <div class="clearBoth"/>
 <div class="admin">
     <br />
-    <h3><a href="<?php echo site_url("pcadmin"); ?>">Intoarcere la Administrare</a></h3>
+    <a href="<?php echo site_url("pcadmin"); ?>"> <div id="backadmin">Administrare</div></a>
     <br />
     <h1>Adauga audio multiple</h1>
     <br />

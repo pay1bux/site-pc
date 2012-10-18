@@ -96,7 +96,7 @@ class User extends CI_Controller {
         $drepturi = $this->drepturi_model->getDrepturi();
         $data['drepturi'] = $drepturi;
         $data['main_content'] = 'admin/user/edit';
-        $this->load->view('frontend/template', $data);
+        $this->load->view('admin/template', $data);
     }
 
     function delete($idUser = null) {
@@ -114,7 +114,7 @@ class User extends CI_Controller {
         $data['useri'] = $useri;
 
         $data['main_content'] = 'admin/user/lista';
-        $this->load->view('frontend/template', $data);
+        $this->load->view('admin/template', $data);
     }
 }
 

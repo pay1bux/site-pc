@@ -33,7 +33,7 @@ class Atasamente extends CI_Controller {
         }
         
         $data['main_content'] = 'admin/atasamente/edit';
-        $this->load->view('frontend/template', $data);
+        $this->load->view('admin/template', $data);
     }
 
     function edit($idResursa, $idAtasament) {
@@ -61,7 +61,7 @@ class Atasamente extends CI_Controller {
         $data['form_values'] = $this->atasament_model->getAtasament($idAtasament);
 
         $data['main_content'] = 'admin/atasamente/edit';
-		$this->load->view('frontend/template', $data);
+		$this->load->view('admin/template', $data);
     }
 
     function adaptArray($arr) {

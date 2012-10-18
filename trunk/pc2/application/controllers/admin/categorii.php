@@ -31,7 +31,7 @@ class Categorii extends CI_Controller {
 
 
         $data['main_content'] = 'admin/categorii/edit';
-        $this->load->view('frontend/template', $data);
+        $this->load->view('admin/template', $data);
     }
 
     function edit($idCategorie) {
@@ -60,7 +60,7 @@ class Categorii extends CI_Controller {
 //        die();
 
         $data['main_content'] = 'admin/categorii/edit';
-		$this->load->view('frontend/template', $data);
+		$this->load->view('admin/template', $data);
     }
 
     function adaptArray($arr) {
@@ -76,7 +76,7 @@ class Categorii extends CI_Controller {
         $categorii = $this->categorie_model->getCategorii();
         $data['categorii'] = $categorii;
         $data['main_content'] = 'admin/categorii/lista';
-		$this->load->view('frontend/template', $data);
+		$this->load->view('admin/template', $data);
     }
 
 

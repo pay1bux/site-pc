@@ -111,7 +111,7 @@ class Devotional extends CI_Controller {
             $data['form_values'] = array();
         }
         $data['main_content'] = 'admin/devotional/edit';
-        $this->load->view('frontend/template', $data);
+        $this->load->view('admin/template', $data);
     }
 
     function delete($idDevotional = null) {
@@ -177,7 +177,7 @@ class Devotional extends CI_Controller {
 
 
         $data['main_content'] = 'admin/devotional/lista';
-        $this->load->view('frontend/template', $data);
+        $this->load->view('admin/template', $data);
     }
 
     function adaptArray($arr)

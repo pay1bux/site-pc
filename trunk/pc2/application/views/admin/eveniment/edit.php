@@ -6,14 +6,13 @@
 <div class="clearBoth"/>
 <div class="admin">
     <br />
-    <h3><a href="<?php echo site_url("pcadmin"); ?>">Intoarcere la Administrare</a></h3>
+    <a href="<?php echo site_url("pcadmin"); ?>" class="backadmin"> <div id="backadmin">Administrare</div></a>
     <br />
     <h1>Adauga / Editeaza eveniment</h1>
     <br />
     <?php
     $this->load->helper('form');
 
-    echo form_fieldset('Adauga / Editeaza eveniment');
 
     if (isset($error)) {
         echo $error;

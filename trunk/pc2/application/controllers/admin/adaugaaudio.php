@@ -125,7 +125,7 @@ class Adaugaaudio extends CI_Controller {
         $data['data_adaugarii'] = date("Y-m-d");
 
         $data['main_content'] = 'admin/adaugaaudio';
-        $this->load->view('frontend/template', $data);
+        $this->load->view('admin/template', $data);
     }
 }
 
