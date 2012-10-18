@@ -272,7 +272,7 @@ a, a:hover, a:visited, a:active {
 }
 
 .camp_general {
-    border: 5px solid white;
+    border: 3px solid white;
     -webkit-box-shadow:
         inset 0 0 8px  rgba(0,0,0,0.1),
         0 0 16px rgba(0,0,0,0.1);
@@ -282,7 +282,91 @@ a, a:hover, a:visited, a:active {
     box-shadow:
         inset 0 0 8px  rgba(0,0,0,0.1),
         0 0 16px rgba(0,0,0,0.1);
-    padding: 15px;
-    background-color: red;
+    padding: 5px;
+    background-color: #e1e58f;
     margin: 0 0 10px 0;
+    margin-top: 8px;
 }
+
+.label_general
+{
+    font-size: 15px;
+
+padding: 5px;
+
+}
+
+#administrator td
+{
+    height: 30px;
+    vertical-align: middle;
+}
+
+#administrator tr
+{
+    vertical-align: middle;
+}
+#administrator
+{
+    margin-top: 15px;
+}
+
+
+.salveaza
+{
+
+    -webkit-box-shadow:rgba(0,0,0,0.2) 0 1px 0 0;
+    -moz-box-shadow:rgba(0,0,0,0.2) 0 1px 0 0;
+    box-shadow:rgba(0,0,0,0.2) 0 1px 0 0;
+    border-bottom-color:#333;
+    border:1px solid #acb139;
+    background-color:#e1e58f;
+    border-radius:5px;
+    -moz-border-radius:5px;
+    -webkit-border-radius:5px;
+    color:#333;
+    font-family:'Verdana',Arial,sans-serif;
+    font-size:12px;
+    text-shadow: #fff 0 1px 0;
+    padding:5px
+}
+.input_file
+{
+
+    border: 3px solid white;
+    -webkit-box-shadow:
+        inset 0 0 8px  rgba(0,0,0,0.1),
+        0 0 16px rgba(0,0,0,0.1);
+    -moz-box-shadow:
+        inset 0 0 8px  rgba(0,0,0,0.1),
+        0 0 16px rgba(0,0,0,0.1);
+    box-shadow:
+        inset 0 0 8px  rgba(0,0,0,0.1),
+        0 0 16px rgba(0,0,0,0.1);
+    padding: 5px;
+    background-color: #e1e58f;
+    margin: 0 0 10px 0;
+    margin-top: 8px;
+    color: #000;
+}
+
+#backadmin
+ {
+     background: url(../images/icons/backadmin.png) no-repeat;
+     padding-left: 25px;
+     height: 20px;
+    line-height: 20px;
+     vertical-align: middle;
+ }
+
+#backadmin a
+{
+    width: 250px;
+}
+
+a.backadmin
+{
+    width: 150px;
+    display: block;
+}
+

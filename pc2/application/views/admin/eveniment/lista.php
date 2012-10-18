@@ -1,7 +1,7 @@
 <div class="clearBoth"/>
 <div class="admin">
     <br />
-    <h3><a href="<?php echo site_url("pcadmin"); ?>">Intoarcere la Administrare</a></h3>
+    <a href="<?php echo site_url("pcadmin"); ?>" class="backadmin"> <div id="backadmin">Administrare</div></a>
     <br />
     <h1>Lista evenimente</h1>
     <br />

@@ -76,7 +76,7 @@ class Adaugavideo extends CI_Controller {
         $data['deAfisat'] = $deAfisat;
 
         $data['main_content'] = 'admin/adaugavideo';
-        $this->load->view('frontend/template', $data);
+        $this->load->view('admin/template', $data);
     }
 }
 
