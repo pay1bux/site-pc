@@ -46,7 +46,7 @@
         </div>
     <?php endif; ?>
     <br />
-    <?php if ($adaugareAudio): ?>
+    <?php if ($adaugareVideo): ?>
         <div>
             <div><a href="<?php echo site_url('admin/adauga-video'); ?>">Adaugare video</a></div>
         </div>
