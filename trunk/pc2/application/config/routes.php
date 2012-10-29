@@ -144,6 +144,7 @@ $route['admin/adauga-user'] = "admin/user/add";
 $route['admin/editeaza-user/(\d+)'] = "admin/user/add/$1";
 $route['admin/lista-useri'] = "admin/user/lista";
 $route['admin/sterge-user/(\d+)'] = "admin/user/delete/$1";
+$route['admin/schimba-parola'] = "admin/password/schimbaparola";
 
 $route['404_override'] = '';
 

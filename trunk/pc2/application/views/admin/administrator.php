@@ -66,5 +66,7 @@
         </div>
     <?php endif; ?>
     <br />
+    <div><a href="<?php echo site_url('admin/schimba-parola'); ?>">Schimba parola</a></div>
+    <br />
     <div><a href="<?php echo site_url('admin/logout'); ?>">Logout</a></div>
 </div>
