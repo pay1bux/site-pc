@@ -106,14 +106,20 @@ class Resurse extends CI_Controller {
         $this->load->library('pagination');
         $this->load->model('resurse_model');
         $config['per_page'] = 10;
-        if(is_numeric($cuvinte))
+
+        if($tip == null)
         {
-            $page=$cuvinte;
-            $cuvinte= null;
+            $tip=$cuvinte;
+
         }
 
         if($cuvinte != null)
         {
+        $search=true;
+        }
+
+            if($search == true)
+            {
             $cuvinte = urldecode($cuvinte);
             $data['cuvinte'] = $cuvinte;
             $cuvinte = explode(" ", $cuvinte);

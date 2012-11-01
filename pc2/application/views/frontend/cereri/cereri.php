@@ -45,6 +45,8 @@ $mesaj = 'id="mesaj"';
                 </p>
                 <div id="flashdata" class="invisibil"> Cererea dumneavoastră a fost trimisă! Biserica se va ruga...! </div>
                 <div id="form">
+
+                  <?php  echo form_open('adauga-cerere'); ?>
                     <?php echo form_input('cerere[nume]', 'Numele și prenumele*', $nume); ?>
                     <br />
 
@@ -59,6 +61,7 @@ $mesaj = 'id="mesaj"';
                         pe site-ul bisericii Poarta cerului în cadrul listei de rugăciune</p></td>
 
                     <br />
+                    <div style="display: none;" ><input type="reset" id="form_cereri"></div>
 
                     <?php
                     echo form_fieldset_close();
