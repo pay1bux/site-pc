@@ -5,7 +5,7 @@
 
 
 <!-- Se includ fisierele css si javascript -->
-<link rel="shortcut icon" href="img/browsericon.png" />
+<link rel="icon" type="image/ico" href="<?php echo IMAGES_PATH; ?>favicon-mare.ico">
 
 <link rel="stylesheet" charset="utf-8" type="text/css" href="<?php echo CSS_PATH; ?>poartacerului.css" />
 <link rel="stylesheet" charset="utf-8" type="text/css" href="<?php echo CSS_PATH; ?>css_vechi.css" />
