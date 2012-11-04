@@ -54,7 +54,8 @@
                 currentTime:'.jp-current-time',
                 duration:'.jp-duration'
             },
-            wmode:"window"
+            wmode:"window",
+            preload:"none"
         });
 
         $("#jplayer_previous").click(function () {
