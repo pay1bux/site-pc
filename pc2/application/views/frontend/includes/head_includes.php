@@ -41,6 +41,6 @@
       		var path_web_root = '<?php echo base_url(); ?>';
       	</script>
 
-        <script type="text/javascript" src="<?php echo JS_PATH; ?>pc.ajax.js"></script>
+        <script type="text/javascript" src="<?php echo JS_PATH; ?>pc_ajax.js"></script>
         <script type="text/javascript" src="<?php echo JS_PATH; ?>util-functions.js"></script>
         <script type="text/javascript" src="<?php echo JS_PATH; ?>clear-default-text.js"></script>

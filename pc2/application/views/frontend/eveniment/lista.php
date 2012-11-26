@@ -25,7 +25,6 @@ $buton = 'class="submit"';
 
 
 
-
             <div class="badge-data">
                 <p class="ziua"><?php echo $zi;?></p>
 
@@ -37,10 +36,10 @@ $buton = 'class="submit"';
                 <div class="e_titlu"><?php echo $event["titlu"]; ?></div>
                 <div class="e_text"><?php echo $event["continut"]; ?></div>
                 <div class="e_text"><span style="font-weight: bold;">Ora: </span><?php echo $event['ora_inceput'].' - '.$event['ora_sfarsit']; ?></div>
-                <?php if(isset($event['invitat_predica'])):?>
+                <?php if(isset($event['invitat_predica']) && $event['invitat_predica']!=''):?>
                 <div class="e_text"><span style="font-weight: bold;">Vorbitor: </span><?php echo $event['invitat_predica']; ?></div>
                 <?php endif;?>
-                <?php if(isset($event['invitat_lauda'])):?>
+                <?php if(isset($event['invitat_lauda']) && $event['invitat_lauda']!= ""):?>
                 <div class="e_text"><span style="font-weight: bold;">Laudă și închinare: </span><?php echo $event['invitat_lauda']; ?></div>
                 <?php endif;?>
                 <?php if(isset($event['organizator'])):?>
