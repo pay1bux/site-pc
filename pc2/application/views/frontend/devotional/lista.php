@@ -17,7 +17,7 @@ $buton = 'class="submit"';
 
             <div class="p_text" style="margin-top: 0px; float:left; width: 487px;">
                 <a href="<?php echo linkDevotional($devotional["titlu"], $devotional["r_id"]);  ?>">
-                    <div class="i_title" style="margin-bottom: 0;"><?php echo $devotional['titlu'];?></div>
+                    <div class="i_title" style="margin-bottom: 0;"><?php echo myTruncate($devotional['titlu'], 39, " ");?></div>
                 </a>
 
                 <div class="i_details">
