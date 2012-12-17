@@ -19,5 +19,5 @@
             <li class="i_mt"><a href="<?php echo site_url("acasa")?>">Acasă</a></li>
 
         </ul>
-           <div class="FooterLine" style="width: 600px; margin-top : 35px; margin-left: 63px;"></div>
+           <div class="FooterLine" style="width: 592px; margin-top : 35px; margin-left: 72px;"></div>
     </div>
