@@ -17,6 +17,9 @@ class Homepage extends CI_Controller {
             if ($evenimente != null) {
                 foreach($evenimente as $eveniment) {
                     if ($eveniment['live'] == 1) {
+                        if ($i == 0 && $eveniment['ora_sfarsit'] < (date("G") + 1)) {
+                            continue;
+                        }
                         $eveniment['data'] = $date;
                         $evenimenteFinal[] = $eveniment;
                     }
