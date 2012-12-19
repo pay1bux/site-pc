@@ -102,6 +102,8 @@ class Eveniment extends CI_Controller {
 
             if ($urm_evenimente != null) {
                 foreach($urm_evenimente as $urm_eveniment) {
+                    if ($i == 0 && $urm_eveniment['ora_sfarsit'] < (date("G") + 1))
+                        continue;
                     $urm_eveniment['data'] = $date2;
                     $urm_evenimenteFinal[] = $urm_eveniment;
                 }
