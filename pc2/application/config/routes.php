@@ -43,6 +43,8 @@ $route['acasa'] = "frontend/homepage";
 
 $route['devotional'] = "frontend/devotional/lista";
 $route['devotional/(\d+)'] = "frontend/devotional/lista/$1";
+$route['devotional/autor/(:any)'] = "frontend/devotional/listaAutor/$1";
+$route['devotional/autor/(:any)/(\d+)'] = "frontend/devotional/listaAutor/$1/$2";
 $route['devotional/(:any)/(\d+)'] = "frontend/devotional/index/$1/$2";
 
 $route['live'] = "frontend/live/live";

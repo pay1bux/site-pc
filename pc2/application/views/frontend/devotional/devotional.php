@@ -6,7 +6,9 @@
         <div class="p_text">
             <div class="i_title" style="margin-bottom: 0px;"><?php echo $devotionale[0]['titlu'];?></div>
             <div class="i_details">
-                <p class="mic"><?php echo prepareDateWithYear($devotionale[0]['data']) . ' - ' . $devotionale[0]['nume_autor'];?></p>
+                <p class="mic"><?php echo prepareDateWithYear($devotionale[0]['data']) ?> -
+                    <a href="<?php echo site_url("devotional/autor/" . $devotionale[0]['nume_autor']);?>" style="text-decoration: underline; display: inline; font-size: 12px;"><?php echo $devotionale[0]['nume_autor'];?></a>
+                </p>
                 <br/>
                 <img src="<?php echo BASE_URL . $devotionale[0]['url'];?>" width=250px; align="left"
                      style="padding: 0 10px 10px 0;">
