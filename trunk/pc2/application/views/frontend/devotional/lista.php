@@ -21,7 +21,9 @@ $buton = 'class="submit"';
                 </a>
 
                 <div class="i_details">
-                    <p class="mic"><?php echo  prepareDateWithYear($devotional['data']).' - '.$devotional['nume_autor']; ?></p> <br/>
+                    <p class="mic"><?php echo  prepareDateWithYear($devotional['data'])?> -
+                        <a href="<?php echo site_url("devotional/autor/" . $devotional['nume_autor']);?>" style="text-decoration: underline; display: inline; font-size: 12px;"><?php echo $devotional['nume_autor'];?></a>
+                    </p> <br/>
 
                     <p class="mic intins"><?php echo  myTruncate($devotional['continut'], 250, " "); ?></p>
                     <a href="<?php echo linkDevotional($devotional["titlu"], $devotional["r_id"]);  ?>">
