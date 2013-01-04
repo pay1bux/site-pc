@@ -1,7 +1,7 @@
 <div class="clearBoth" style="height:10px;"></div>
     <div id="PageContent">
         <div id="jQueryGallery">
-            <div class="i_watermark"></div>
+<!--            <div class="i_watermark"></div>-->
             <div class="i_left">
                 <div id="wrapper1">
                     <div class="slider-wrapper theme-default">
@@ -21,6 +21,7 @@
                     </div>
                 </div>
                 <div id="wrapper2">
+                    <div class="i_watermark"></div>
                     <div align="center" id="blcPlayer">
                     </div>
                     <script type="text/javascript"
