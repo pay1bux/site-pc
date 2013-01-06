@@ -1907,3 +1907,54 @@ td.calendar_c
 {
     background-color: green;
 }
+
+#adminpanel{
+    font-family: "Segoe UI", "Arial";
+    font-size: 13px;
+}
+
+.adminItem{
+width: 135px;
+height: 85px;
+background-color: white;
+float: left;
+margin-right: 40px;
+margin-bottom: 40px;
+}
+
+.adminItemTitle{
+width: 135px;
+height: 25px;
+color: white;
+font-size: 18px; 	
+text-align: center;
+vertical-align: middle;
+line-height: 22px;
+background-color: #bdc169;
+}
+
+.adminButtAdd{
+background-image: url(../images/admin/adminbuttadd.png);
+width: 40px;
+height: 42px;
+margin-top: 9px;
+float: left;
+margin-left: 15px;
+
+}
+
+.adminButtList{
+background-image: url(../images/admin/adminbuttlist.png);
+width: 28px;
+height: 42px;
+margin-top: 9px;
+float: left;
+margin-left: 32px;
+}
+
+#adminAcc
+{
+float: right;
+text-align: right;
+color: #000000;
+}
