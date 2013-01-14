@@ -44,7 +44,7 @@ $buton = 'class="submit"';
                                     <?php
                                     echo form_fieldset_close();
 
-                                    echo form_submit('sumbit', 'Trimite', $buton);
+                                    echo form_submit('submit', 'Trimite', $buton);
 
                                     echo form_close(); ?>
                                 </td>

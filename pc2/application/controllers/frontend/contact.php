@@ -24,18 +24,22 @@ class Contact extends CI_Controller
 
             $postdata = $this->input->post('contact');
 
+            if(intval($postdata['destinatar']) != 0){
+
             $email = array(
                 'nume' => $postdata['nume'],
                 'email' => $postdata['email'],
                 'destinatar' => $destinatarii2[$postdata['destinatar']],
                 'mesaj' => $postdata['mesaj']
             );
+                }
         }
 
 
         $destinatari = array(0 => "Alege destinatar");
         foreach ($destinatarii as $dest)
             $destinatari[$dest['id']] = $dest['nume'];
+
 
 
 
