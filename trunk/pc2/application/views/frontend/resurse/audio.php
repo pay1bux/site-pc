@@ -7,7 +7,8 @@
 
         // Local copy of jQuery selectors, for performance.
         var my_jPlayer = $("#jquery_jplayer"),
-                my_trackName = $(".jp-track-name");
+                my_trackName = $(".jp-track-name-scroll");
+                //my_trackName = $(".jp-track-name");
 
         // Some options
         var opt_play_first = false, // If true, will attempt to auto-play the default track on page loads. No effect on mobile devices, like iOS.
@@ -76,7 +77,7 @@
                     item.addClass('playing');
                     item.addClass('track-default');
                     my_jPlayer.jPlayer("stop");
-                    my_trackName.text(item.next("span").text());
+                    my_trackName.text(item.next("span").attr('title'));
                     my_jPlayer.jPlayer("setMedia", {
                         mp3:item.attr("href")
                     });
@@ -96,7 +97,7 @@
                 my_jPlayer.jPlayer("pause");
                 $(".playing").removeClass("playing");
             } else {
-                my_trackName.text($(this).next("span").text());
+                my_trackName.text($(this).next("span").attr('title'));
                 my_jPlayer.jPlayer("setMedia", {
                     mp3:$(this).attr("href")
                 });
@@ -164,7 +165,11 @@
                                     <!--                            <li><a href="#" id="jplayer_previous" class="jp-previous" tabindex="1">previous</a></li>-->
                                     <!--                            <li><a href="#" id="jplayer_next" class="jp-next" tabindex="1">next</a></li>-->
                                 </ul>
-                                <div class="jp-track-name"></div>
+                                <ul id="trackName">
+
+<li class="jp-track-name-scroll"></li>
+                                     </ul>
+
                                 <div class="jp-progress">
                                     <div id="jplayer_seek_bar" class="jp-seek-bar">
                                         <div id="jplayer_play_bar" class="jp-play-bar"></div>
@@ -189,9 +194,13 @@
                                                         <div class="audioline_playlist"></div>
                                                         <a href="<?php echo site_url("playonline/" . $playlistItem["atasament_id"]) ?>"
                                                            class="track<?php if ($i == 0) echo " track-default"?>">&nbsp;</a>
-                                                        <span class="titlu"><?php echo(cropText($playlistItem["titlu"] . " - " . $playlistItem["nume_autor"], 50)) ?></span>
+                                                        <span title="<?php echo $playlistItem["titlu"] . " - " . $playlistItem["nume_autor"];?>" class="titlu"><?php echo(cropText($playlistItem["titlu"] . " - " . $playlistItem["nume_autor"], 44)) ?></span>
                                                         <span class="download"><a href="<?php echo site_url("download/" . $playlistItem["atasament_id"]) ?>" style="padding-left:2px; margin-left: 2px;"><img src="<?php echo IMAGES_PATH;?>/player-audio/download.png" /></a></span>
                                                         <span class="durata"> <?php echo(sec2hms($playlistItem["durata"])) ?></span>
+                                                       <?php if($playlistItem["data"] != 0000-00-00):?>
+                                                        <span class="audio_date" > <?php echo prepareDateDMY($playlistItem["data"]); ?></span>
+                                                        <?php endif;?>
+
                                                     </li>
                                                 <?php endforeach; ?>
                                             <?php endif; ?>
