@@ -1,4 +1,4 @@
-﻿﻿﻿html, body, div, span, applet, object, iframe,
+﻿html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
 del, dfn, em, font, img, ins, kbd, q, s, samp,
@@ -309,6 +309,8 @@ img.thumb_buletin
     line-height: 20px;
     font-weight: bold;
 }
+
+
 
 .buletin p.data
 {
@@ -1385,6 +1387,14 @@ ul#arhiva a:hover {
     margin-left: 5px;
 }
 
+.audio_date{
+    float: right;
+    margin-left: 2px;
+    margin-right: 5px;
+    padding-top: 5px;
+    font-size: 11px;
+}
+
 .videoclip
 {
     width: 202px;
@@ -1694,6 +1704,7 @@ p.aliniat
 
 .demo-container p span.track-name {
     color: #CC0090;
+
 }
 
 /* ******************************************************* PLAYER*/
@@ -1957,4 +1968,55 @@ margin-left: 32px;
 float: right;
 text-align: right;
 color: #000000;
+}
+
+/* scroller AUDIO */
+
+
+
+.simply-scroll-container { /* Container DIV - automatically generated */
+    position: relative;
+}
+
+.simply-scroll-clip { /* Clip DIV - automatically generated */
+    position: relative;
+    overflow: hidden;
+}
+
+.simply-scroll-list { /* UL/OL/DIV - the element that simplyScroll is inited on */
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.simply-scroll-list li {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    font-size:16px;
+}
+
+
+
+
+.simply-scroll { /* Customisable base class for style override DIV */
+    width: 360px;
+
+    margin-bottom: 1em;
+margin-left: 68px;
+    top: 29px;
+}
+
+.simply-scroll .simply-scroll-clip {
+    width: 360px;
+    height: 28px;
+}
+
+.simply-scroll .simply-scroll-list {}
+
+.simply-scroll .simply-scroll-list li {
+    float: left;
+    width: 500px;
+    height: 28px;
 }
