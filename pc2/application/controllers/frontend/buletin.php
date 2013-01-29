@@ -14,11 +14,11 @@ class Buletin extends CI_Controller
 
         $this->load->library('pagination');
         $config['per_page'] = 8;
-        $filtru = array('tip' => 'buletin-duminical', 'order' => 'r_id', 'orderType' => 'DESC', 'limit' => $page, 'number' => $config['per_page']);
+        $filtru = array('tip' => 'buletin-duminical', 'order' => 'data', 'orderType' => 'DESC', 'limit' => $page, 'number' => $config['per_page']);
         $buletine = $this->resurse_model->getResurseWithAtt($filtru);
         $data['buletine'] = $buletine;
 //*selectarea buletinului curent, on top of page.
-        $filtru = array('tip' => 'buletin-duminical', 'order' => 'r_id', 'orderType' => 'DESC', 'limit' => 1);
+        $filtru = array('tip' => 'buletin-duminical', 'order' => 'data', 'orderType' => 'DESC', 'limit' => 1);
         $bcurent = $this->resurse_model->getResurseWithAtt($filtru);
         $data['bcurent'] = $bcurent;
 
