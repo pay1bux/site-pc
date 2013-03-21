@@ -58,7 +58,7 @@ pe site-ul bisericii Poarta cerului in cadrul listei de rugaciune</p></td>
 
 <br />
 
-
+       <div style="display: none;" ><input type="reset" id="form_cereri"></div>
                
         <?php
             echo form_fieldset_close();
