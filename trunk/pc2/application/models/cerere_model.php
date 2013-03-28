@@ -3,6 +3,7 @@
 class Cerere_model extends CI_Model{
 
     var $table = 'cereri';
+    var $primary_key = 'id';
 
     function create($data) {
         $this->db->insert($this->table, $data);
@@ -66,6 +67,41 @@ class Cerere_model extends CI_Model{
 
         if ($q->num_rows() > 0) {
             return $q->row_array();
+        } else {
+            return null;
+        }
+    }
+
+    function getCereriAll($filters) {
+        if (isset($filters['count_rows'])) {
+            $sql = "SELECT COUNT(*)";
+        } else {
+            $sql = "SELECT  nume, localitate, continut, id, data, public";
+        }
+        $sql .= " FROM cereri";
+
+        if (isset($filters["fromDate"])) {
+            $sql .= " WHERE DATE(data) >= '" . $filters["fromDate"] ."'";
+        }
+
+        if (isset($filters["toDate"])) {
+            $sql .= " AND DATE(data) <= '" . $filters["toDate"] ."'";
+        }
+
+        $sql .= " ORDER BY id DESC";
+
+        if (isset($filters["limit"])) {
+            $sql .= " LIMIT " . $filters["limit"];
+        }
+
+        if (isset($filters["number"])) {
+            $sql .= " , " . $filters["number"];
+        }
+
+        $q = $this->db->query($sql);
+
+        if ($q->num_rows() > 0) {
+            return $q->result_array();
         } else {
             return null;
         }
