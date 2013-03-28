@@ -99,6 +99,16 @@
 </div>
 <?php endif; ?>
 
+
+  <?php if ($administrareCereri): ?>
+<div class="adminItem">
+<div class="adminItemTitle">Cereri
+</div>
+<a href="#"><div class="adminButtAdd"></div></a>
+<a href="<?php echo site_url('admin/lista-cereri'); ?>"><div class="adminButtList"></div></a>
+</div>
+<?php endif; ?>
+
 <div class="clearBoth"/>
 
  
