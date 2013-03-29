@@ -149,7 +149,6 @@ $route['admin/sterge-user/(\d+)'] = "admin/user/delete/$1";
 $route['admin/schimba-parola'] = "admin/password/schimbaparola";
 
 $route['admin/lista-cereri'] = "admin/cereri/lista";
-$route['admin/tiparire-cereri/(:any)/(:any)'] = "admin/cereri/tiparire/$1/$2";
 $route['admin/lista-cereri/(\d+)'] = "admin/cereri/lista/$1";
 $route['admin/sterge-cerere/(\d+)'] = "admin/cereri/delete/$1";
 

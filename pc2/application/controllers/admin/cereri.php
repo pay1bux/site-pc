@@ -52,6 +52,15 @@ class Cereri extends CI_Controller {
     }
 
     function lista($page = 0) {
+        if (! strcmp($_SERVER['REQUEST_METHOD'],'POST')) {
+            $this->load->helper(array('form', 'url'));
+
+            $postdata = $this->input->post('cerere');
+            $fromDate = $postdata['fromDate'];
+            $toDate = $postdata['toDate'];
+            $this->tiparire($fromDate, $toDate);
+        }
+
         $this->load->model('cerere_model');
 
         $filtru = array('count_rows' => 'true');
