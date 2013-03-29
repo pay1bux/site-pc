@@ -70,7 +70,7 @@
                 </td>
                 <td class="lista">
                     <center>
-                        <a href="sterge-cerere/<?php echo $cerere['id'];?>"  class="sterge" >DELETE</a>
+                        <a href="<?php echo site_url("admin/sterge-cerere/" . $cerere['id']);?>"  class="sterge" >DELETE</a>
                     </center>
                 </td>
             </tr>
