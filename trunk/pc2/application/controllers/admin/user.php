@@ -25,8 +25,7 @@ class User extends CI_Controller {
                 'email' => $postdata['email'],
                 'parola' => $postdata['parola'],
                 'parola2' => $postdata['parola2'],
-                'telefon' => $postdata['telefon'],
-                'public' => $postdata['public']
+                'telefon' => $postdata['telefon']
             );
 
             if ($input['parola'] != $input['parola2']) {

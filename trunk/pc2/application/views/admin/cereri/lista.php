@@ -12,17 +12,21 @@
     <br />
     <h1>Lista cereri</h1>
     <br />
-
+    <?php echo form_open(current_url()); ?>
     <p>
-        <?php $fromDate = array('name' => 'fromDate', 'value' => '', 'id' => "fromDate"); ?>
+        <?php $fromDate = array('name' => 'cerere[fromDate]', 'value' => '', 'id' => "fromDate"); ?>
         Din data de<?php echo form_input($fromDate,''); ?>
     </p>
 
     <p>
-        <?php $fromDate = array('name' => 'toDate', 'value' => '', 'id' => "toDate"); ?>
-        In data de<?php echo form_input($fromDate,''); ?>
+        <?php $toDate = array('name' => 'cerere[toDate]', 'value' => '', 'id' => "toDate"); ?>
+        In data de<?php echo form_input($toDate,''); ?>
     </p>
-    <a href="#" onclick="javascript: location.href = 'tiparire-cereri/' + document.getElementById('fromDate').value + '/' + document.getElementById('toDate').value">Tipareste</a>
+    <?php
+        $submit = Array ("name" => "submit", "value" => "Tipareste", "class" => "salveaza");
+        echo form_submit($submit);
+        echo form_close();
+    ?>
     <br/>
     <br/>
     <table class="lista">
