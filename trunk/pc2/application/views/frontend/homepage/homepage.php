@@ -25,7 +25,7 @@
                     <div align="center" id="blcPlayer">
                     </div>
                     <script type="text/javascript"
-                            src="http://embed.bisericilive.com/get?cid=poartaceruluiro&w=720&h=404"></script>
+                            src="http://embed.bisericilive.com/get?cid=poartaceruluiro&w=720&h=404&sc=false"></script>
                 </div>
             </div>
             <div class="i_right">
