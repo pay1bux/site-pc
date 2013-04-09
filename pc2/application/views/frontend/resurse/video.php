@@ -54,7 +54,7 @@
         <div class="clear"></div>
         <?php if (count($video) > 0): ?>
         <?php     if (isset($ultimul)): ?>
-        <div id="video_playlist" style="height: 1160px;">
+        <div id="video_playlist" style="height: 1195px;">
             <?php else: ;?>
         <div id="video_playlist">
             <?php endif;?>
@@ -67,15 +67,14 @@
             <div class="p_text" style="margin-top: 40px;">
                 <div class="i_title">Ultima înregistrare</div>
             </div>
-            <div style=" margin-left: 25px;  ">
-                <div align="center" id="blcPlayer">
-                </div>
+            <div>
+                <div align="center" id="blcPlayer"></div>
                 <?php
                     $thumbmare = str_replace("240", "720", $video[0]['thumb']);
                 ?>
                 <script type="text/javascript"
-                        src="http://embed.bisericilive.com/get?cid=poartaceruluiro&w=625&h=351&autoPlay=false&stoppedImage=<?php echo $thumbmare ?>"></script>
-
+                        src="http://embed.bisericilive.com/get?cid=poartaceruluiro&w=625&h=351&autoPlay=false&stoppedImage=<?php echo $thumbmare ?>">
+				</script>
             </div>
             <div class="audioline_playlist" style="margin: 15px 0 15px 15px;"></div>
 
@@ -136,7 +135,7 @@
         </div>
         <?php endif; ?>
           <?php     if (isset($ultimul)): ?>
-        <div id="video_categories" style="height: 1165px;">
+        <div id="video_categories" style="height: 1200px;">
             <?php else: ;?>
           <div id="video_categories">
     <?php endif;?>
