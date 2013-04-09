@@ -21,7 +21,7 @@
                     </div>
                 </div>
                 <div id="wrapper2">
-                    <div class="i_watermark"></div>
+<!--                    <div class="i_watermark"></div>-->
                     <div align="center" id="blcPlayer">
                     </div>
                     <script type="text/javascript"

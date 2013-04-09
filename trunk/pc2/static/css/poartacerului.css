@@ -1189,7 +1189,7 @@ div:hover.buton_details {
 
 #video_playlist {
     width: 675px;
-    height: 765px;
+    height: 800px;
     border: 1px solid #d2d1d1;
     margin-top: 5px;
     background-attachment: scroll;
@@ -1227,7 +1227,7 @@ div:hover.buton_details {
 
 #video_categories {
     width: 270px;
-    height: 770px;
+    height: 805px;
     border: 1px solid #d2d1d1;
     background-attachment: scroll;
     background-clip: border-box;
