@@ -92,7 +92,7 @@
                 <?php foreach ($video as $i => $playlistItem): ?>
 
                     <li>
-                        <a href="<?php echo site_url("embed/" . $playlistItem['atasament_id']).'?iframe=true';?>"
+                        <a href="<?php echo site_url("embed/" . $playlistItem['atasament_id']).'?iframe=true&width=750&height=508';?>"
                            rel="prettyPhoto[<?php echo 'video-'.$playlistItem['atasament_id']?>]">
                             <div class="videoclip">
                                 <div class="videoclip_img">
