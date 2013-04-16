@@ -1,5 +1,3 @@
-//var baseUrl = 'index.php/'; // De scos cand punem pe live
-//var baseUrl = 'index.php/'; // De scos cand punem pe live
 var baseUrl = ''; // De scos cand punem pe live
 
 function campValid(object) {
@@ -58,6 +56,13 @@ $(document).ready(
             e.stopPropagation();// opreste propagarea eventului  bubbling - div din interiorul unui div
         });
 
+//### INCARCAREA PLAYER LIVE PE HOMEPAGE #### //ri
+
+        $('.but_live').click(function (e){
+            hide_show('wrapper1', 'wrapper2');
+            $('#wrapper2').html('<div align="center" id="blcPlayer"></div><script type="text/javascript" src="http://embed.bisericilive.com/get?cid=poartaceruluiro&w=720&h=404&sc=false"></script>');
+        });
+
 //### SUBMITUL DE CERERI RUGACIUNE AJAX #### //ri
 
         $('#buton_cerere').click(function (e) {
@@ -101,6 +106,51 @@ $(document).ready(
             e.preventDefault();
         });
 
+
+        $('#buton_contact').click(function (e) {
+
+            var nume = $('#contact_nume').val();
+            var email = $('#contact_email').val();
+            var dest = $('#contact_dest').val();
+            var mesaj = $('#contact_msg').val();
+
+            var $object = $('#flashdata');
+
+            if (nume == '' || nume == 'Numele si Prenumele*') {
+                campInvalid($('#contact_nume'));
+                return false;
+            }
+            else if (dest == 0) {
+                campInvalid($('#contact_dest'));
+                return false;
+        }
+            else if (mesaj == '') {
+                campInvalid($('#contact_msg'));
+                return false;
+            }
+            else {
+                $.ajax({
+                    type:"POST",
+                    url:baseUrl + "trimite-email",
+                    data:{
+                        nume:nume,
+                        email:email,
+                        mesaj:mesaj,
+                        dest:dest
+                    },
+                    success:function (data) {
+
+                        $object.switchClass('invisibil', 'neascuns', 0, 'easeOutBounce');
+
+
+                    }
+
+                });
+
+            }
+
+            e.preventDefault();
+        });
 
 
 
