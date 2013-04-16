@@ -141,6 +141,7 @@ $(document).ready(
                     success:function (data) {
 
                         $object.switchClass('invisibil', 'neascuns', 0, 'easeOutBounce');
+                        $('#form_contact').click();
 
 
                     }

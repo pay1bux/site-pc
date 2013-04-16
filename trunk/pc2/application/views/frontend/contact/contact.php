@@ -45,13 +45,14 @@ $buton = 'class="submit"';
 
                             <tr>
                                 <td colspan="2">
+
                                     <?php
                                     echo form_fieldset_close();
 
                                   //  echo form_submit('submit', 'Trimite', $buton);
 
                                     echo form_close(); ?>
-
+                                    <div style="display: none;" ><input type="reset" id="form_contact"></div>
                                             <a href="#" id="buton_contact"  class="but_details submit" style="float: right; width: 47px;">Trimite</a>
 
                                 </td>
