@@ -57,6 +57,8 @@ $route['scoala-biblica'] = "frontend/scoalabiblica/index";
 
 $route['adauga-cerere'] = "frontend/ajax/adaugaCerere";
 
+$route['trimite-email'] = "frontend/ajax/trimiteEmail";
+
 $route['contact'] = "frontend/contact";
 $route['contact/send'] = "frontend/contact/send";
 

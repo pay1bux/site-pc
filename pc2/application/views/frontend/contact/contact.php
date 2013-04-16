@@ -3,7 +3,10 @@ $this->load->helper('form');
 
 echo validation_errors();
 echo form_open(current_url());
-$dropdown = 'class="dropdown"';
+$dest = 'id="contact_dest" class="dropdown"';
+$nume = 'id="contact_nume" class="cleardefault"';
+$email = 'id="contact_email" class="cleardefault"';
+$mesaj = 'id="contact_msg" class="cleardefault"';
 $clear = 'class="cleardefault"';
 $buton = 'class="submit"';
 
@@ -21,21 +24,22 @@ $buton = 'class="submit"';
                 <div class="i_details">
                     <p class="mic ">Dacă aveți întrebări, idei sau sugestii, scrieți-ne un mesaj</p>
 
-                    <p id="flashdata">   <?php echo $this->session->flashdata('contact'); ?> <br/></p>
+                    <div id="flashdata" class="invisibil"> Mesajul a fost trimis! </div>
+
 
                     <div id="form">
                         <table>
                             <tr>
-                                <td><?php echo form_input('contact[nume]', 'Numele și Prenumele*', $clear); ?></td>
+                                <td><?php echo form_input('contact[nume]', 'Numele si Prenumele*', $nume); ?></td>
                             </tr>
                             <tr>
-                                <td><?php echo form_input('contact[email]', 'Email (nu va fi publicat)', $clear); ?></td>
+                                <td><?php echo form_input('contact[email]', 'Email (nu va fi publicat)', $email); ?></td>
                             </tr>
                             <tr>
-                                <td><?php echo form_dropdown('contact[destinatar]', $destinatari, '', $dropdown); ?></td>
+                                <td><?php echo form_dropdown('contact[destinatar]', $destinatari, '', $dest); ?></td>
                             </tr>
                             <tr>
-                                <td><?php echo form_textarea('contact[mesaj]', ''); ?> </td>
+                                <td><?php echo form_textarea('contact[mesaj]', '', $mesaj); ?> </td>
                             </tr>
 
 
@@ -44,9 +48,12 @@ $buton = 'class="submit"';
                                     <?php
                                     echo form_fieldset_close();
 
-                                    echo form_submit('submit', 'Trimite', $buton);
+                                  //  echo form_submit('submit', 'Trimite', $buton);
 
                                     echo form_close(); ?>
+
+                                            <a href="#" id="buton_contact"  class="but_details submit" style="float: right; width: 47px;">Trimite</a>
+
                                 </td>
                             </tr>
 

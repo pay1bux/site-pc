@@ -22,10 +22,7 @@
                 </div>
                 <div id="wrapper2">
 <!--                    <div class="i_watermark"></div>-->
-                    <div align="center" id="blcPlayer">
-                    </div>
-                    <script type="text/javascript"
-                            src="http://embed.bisericilive.com/get?cid=poartaceruluiro&w=720&h=404&sc=false"></script>
+
                 </div>
             </div>
             <div class="i_right">
@@ -41,7 +38,7 @@
                 <div class="i_item1">
                     <div class="ii_title">Transmisie LIVE Poarta Cerului</div>
                     <div class="ii_title2">Închinare</div>
-                    <span class="but_live" onclick="return hide_show('wrapper1', 'wrapper2');">&nbsp;</span>
+                    <span class="but_live">&nbsp;</span>
                 </div>
                 <div class="i_item2">
                     <div class="ii_title"><span>&nbsp;Vezi arhiva video&nbsp;<br/>&nbsp;Poarta Cerului&nbsp;</span>

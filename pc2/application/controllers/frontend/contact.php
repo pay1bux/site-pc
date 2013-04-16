@@ -19,21 +19,21 @@ class Contact extends CI_Controller
 
 
         $email['destinatar'] = NULL;
-        if (!strcmp($_SERVER['REQUEST_METHOD'], 'POST')) {
-            $this->load->helper(array('form', 'url'));
-
-            $postdata = $this->input->post('contact');
-
-            if(intval($postdata['destinatar']) != 0){
-
-            $email = array(
-                'nume' => $postdata['nume'],
-                'email' => $postdata['email'],
-                'destinatar' => $destinatarii2[$postdata['destinatar']],
-                'mesaj' => $postdata['mesaj']
-            );
-                }
-        }
+//        if (!strcmp($_SERVER['REQUEST_METHOD'], 'POST')) {
+//            $this->load->helper(array('form', 'url'));
+//
+//            $postdata = $this->input->post('contact');
+//
+//            if(intval($postdata['destinatar']) != 0){
+//
+//            $email = array(
+//                'nume' => $postdata['nume'],
+//                'email' => $postdata['email'],
+//                'destinatar' => $destinatarii2[$postdata['destinatar']],
+//                'mesaj' => $postdata['mesaj']
+//            );
+//                }
+//        }
 
 
         $destinatari = array(0 => "Alege destinatar");
@@ -42,13 +42,23 @@ class Contact extends CI_Controller
 
 
 
+//
+//        if ($email['destinatar'] != NULL) {
+//            if($email['nume'] ==  NULL ){
+//
+//                if( $email['mesaj'] == NULL){
+//                    $this->send($email);
+//                    $this->session->set_flashdata('contact', 'Mesajul dumneavoastra a fost trimis!');
+//                    redirect('contact');
+//
+//                }
+//            }
+//            else{
+//
+//            }
+//
+//        }
 
-        if ($email['destinatar'] != NULL) {
-
-            $this->send($email);
-            $this->session->set_flashdata('contact', 'Mesajul dumneavoastra a fost trimis!');
-            redirect('contact');
-        }
 
 
 
@@ -61,24 +71,5 @@ class Contact extends CI_Controller
 
 
 
-    function send($email)
-    {
-        $config = array(
-            'protocol' => 'smtp',
-            'smtp_host' => 'ssl://smtp.googlemail.com',
-            'smtp_port' => 465,
-            'smtp_user' => 'poartacerului@gmail.com',
-            'smtp_pass' => 'aceruluipoarta'
-        );
 
-        $this->load->library('email', $config);
-        $this->email->set_newline("\r\n");
-
-        $this->email->from($email['email'], $email['nume']);
-        $this->email->to($email['destinatar']);
-        $this->email->subject('Poarta Cerului - Contact');
-        $this->email->message("Mesaj de la: ".$email['email'].' --- '.$email['mesaj']);
-        $this->email->send();
-
-    }
 }
