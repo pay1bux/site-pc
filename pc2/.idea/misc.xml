@@ -10,7 +10,7 @@
         <entry key="$PROJECT_DIR$">
           <value>
             <SvnBranchConfiguration>
-              <option name="trunkUrl" value="https://site-pc.googlecode.com/svn/trunk/pc2" />
+              <option name="trunkUrl" value="" />
             </SvnBranchConfiguration>
           </value>
         </entry>

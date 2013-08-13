@@ -1,5 +1,5 @@
 <div id="GreenBar"></div>
-<div id="SiteContent">
+<div class="SiteContent">
 	<a id="Logo" href="<?php echo site_url("acasa")?>">&nbsp;</a>
     <div id="TopMenu">
     	<ul>
