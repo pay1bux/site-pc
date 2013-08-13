@@ -86,29 +86,33 @@
             </div>
         </div>
         <div class="BoxInRow2">
-            <a class="BIR2_T1" href="http://scoalacrestinademuzica.ro/" target="_blank"><img src="<?php echo IMAGES_PATH;?>BIR2_T1.jpg" width="135" height="100"
+            <a class="BIR2_T1" href="http://scoalacrestinademuzica.ro/" target="_blank"><img src="<?php echo IMAGES_PATH;?>BIR2_T1.png" width="135" height="100"
                                              alt="scoala de muzica" title=""/></a>
-            <a class="BIR2_T2" href="<?php echo site_url("scoala-biblica")?>"><img src="<?php echo IMAGES_PATH;?>BIR2_T2.jpg" width="135" height="100"
+            <a class="BIR2_T2" href="<?php echo site_url("scoala-biblica")?>"><img src="<?php echo IMAGES_PATH;?>BIR2_T2.png" width="135" height="100"
                                              alt="scoala biblica" title="Scoala Biblica Timisoara"/></a>
-            <a class="BIR2_T3" href="<?php echo site_url("buletin-duminical"); ?>"><img src="<?php echo IMAGES_PATH;?>BIR2_T3.jpg"
+            <a class="BIR2_T3" href="<?php echo site_url("buletin-duminical"); ?>"><img src="<?php echo IMAGES_PATH;?>BIR2_T3.png"
                                                                           width="135" height="100"
                                                                           alt="buletinul duminical" title=""/></a>
-            <a class="BIR2_T4" href="<?php echo site_url("cereri-rugaciune"); ?>"><img src="<?php echo IMAGES_PATH;?>BIR2_T4.jpg" width="135" height="100"
+            <a class="BIR2_T4" href="<?php echo site_url("cereri-rugaciune"); ?>"><img src="<?php echo IMAGES_PATH;?>BIR2_T4.png" width="135" height="100"
                                              alt="cerere de rugaciune" title=""/></a>
         </div>
-        <div class="p_text">
+        <div id="i_home" class="p_text">
             <div class="i_title">Biserica Poarta Cerului</div>
-            <div class="i_details"><p class="intins">Biserica "Poarta Cerului" din Timișoara a luat ființă prin voia lui Dumnezeu, ca
+            <div class="i_details i_home"><p class="intins">Biserica "Poarta Cerului" din Timișoara a luat ființă prin voia lui Dumnezeu, ca
                 urmare a viziunii pe care El a dat-o păstorului
-                Nelu Filip în anul 2005.</p>
+                Nelu Filip în anul 2005.
 
-                <p class="intins">Împreună cu un grup de 28 de credincioși au început să se adune la părtășii de rugaciune timp de
+              Împreună cu un grup de 28 de credincioși au început să se adune la părtășii de rugaciune timp de
                     câteva luni, perioadă în care această viziune s-a cristalizat, iar în 11 decembrie ale aceluiași an
                     Poarta Cerului și-a deschis porțile pentru oameni doritori să intre pe dorita poarta a cerului, a
-                    fericirii veșnice cu Isus Cristos.</p>
+                    fericirii veșnice cu Isus Cristos.<br/>
 
-                <p class="intins">Biserica Poarta Cerului este o biserica tânără, formată din familii tinere care și-au pus la
+                Biserica Poarta Cerului este o biserica tânără, formată din familii tinere care și-au pus la
                     dispoziția lui Dumnezeu talentele lor, puterea lor, timpul lor și viața lor.</p></div>
         </div>
+
+
     </div>
+
 <div class="clearBoth"/>
+

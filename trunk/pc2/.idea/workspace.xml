@@ -1,15 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" readonly="true" id="fa0a1cc2-3201-406d-b359-f243ddec67c5" name="Default" comment="">
+    <list default="true" readonly="true" id="168414a5-5bce-47fd-80a7-af41b440ee79" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/images/BIR2_T1.jpg" afterPath="$PROJECT_DIR$/static/images/BIR2_T1.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controllers/frontend/contact.php" afterPath="$PROJECT_DIR$/application/controllers/frontend/contact.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/frontend/contact/contact.php" afterPath="$PROJECT_DIR$/application/views/frontend/contact/contact.php" />
-    </list>
-    <list id="544e905b-5237-49b2-8e53-ae274362d139" name="dont" comment="data la arhiva audio +  modificare numelui js-ului cu cereri rugaciune">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/admin/includes/head_includes.php" afterPath="$PROJECT_DIR$/application/views/admin/includes/head_includes.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/frontend/includes/head_includes.php" afterPath="$PROJECT_DIR$/application/views/frontend/includes/head_includes.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/frontend/resurse/audio.php" afterPath="$PROJECT_DIR$/application/views/frontend/resurse/audio.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/config/database.php" afterPath="$PROJECT_DIR$/application/config/database.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/frontend/homepage/homepage.php" afterPath="$PROJECT_DIR$/application/views/frontend/homepage/homepage.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/frontend/includes/footer.php" afterPath="$PROJECT_DIR$/application/views/frontend/includes/footer.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/frontend/includes/header.php" afterPath="$PROJECT_DIR$/application/views/frontend/includes/header.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/frontend/template.php" afterPath="$PROJECT_DIR$/application/views/frontend/template.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/css/poartacerului.css" afterPath="$PROJECT_DIR$/static/css/poartacerului.css" />
     </list>
     <ignored path="pc2.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -35,21 +37,28 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="ajaxul.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/static/js/ajaxul.js">
+      <file leaf-file-name="poartacerului.css" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/static/css/poartacerului.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="105" column="0" selection-start="3448" selection-end="3448" vertical-scroll-proportion="-40.8">
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-              </folding>
+            <state line="2075" column="11" selection-start="41043" selection-end="41043" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="contact.php" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/application/views/frontend/contact/contact.php">
+      <file leaf-file-name="footer.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/application/views/frontend/includes/footer.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="47" column="0" selection-start="1862" selection-end="1862" vertical-scroll-proportion="0.71257484">
+            <state line="15" column="24" selection-start="652" selection-end="652" vertical-scroll-proportion="0.6007067">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="cerere_model.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/models/cerere_model.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="61" column="5" selection-start="815" selection-end="1339" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -58,7 +67,52 @@
       <file leaf-file-name="contact.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/controllers/frontend/contact.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="34" column="17" selection-start="924" selection-end="924" vertical-scroll-proportion="0.0">
+            <state line="40" column="54" selection-start="1117" selection-end="1117" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/index.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="29" column="0" selection-start="892" selection-end="892" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="routes.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/config/routes.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="46" column="25" selection-start="1697" selection-end="1703" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="homepage.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/views/frontend/homepage/homepage.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="97" column="14" selection-start="6280" selection-end="6280" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="header.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/views/frontend/includes/header.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="1" column="25" selection-start="51" selection-end="51" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="template.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/views/frontend/template.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="32" column="63" selection-start="1189" selection-end="1189" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -74,22 +128,13 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/static/js/pc_ajax.js" />
-        <option value="$PROJECT_DIR$/application/views/frontend/devotional/lista.php" />
-        <option value="$PROJECT_DIR$/application/views/frontend/includes/header.php" />
-        <option value="$PROJECT_DIR$/index.php" />
+        <option value="$PROJECT_DIR$/application/config/database.php" />
         <option value="$PROJECT_DIR$/application/views/frontend/homepage/homepage.php" />
-        <option value="$PROJECT_DIR$/application/controllers/frontend/homepage.php" />
-        <option value="$PROJECT_DIR$/application/controllers/admin/imaginepromo.php" />
-        <option value="$PROJECT_DIR$/application/views/admin/imaginepromo/edit.php" />
-        <option value="$PROJECT_DIR$/application/controllers/frontend/audio.php" />
+        <option value="$PROJECT_DIR$/application/views/frontend/includes/header.php" />
+        <option value="$PROJECT_DIR$/application/views/frontend/template.php" />
         <option value="$PROJECT_DIR$/static/css/poartacerului.css" />
-        <option value="$PROJECT_DIR$/application/views/admin/includes/head_includes.php" />
-        <option value="$PROJECT_DIR$/application/views/frontend/includes/head_includes.php" />
-        <option value="$PROJECT_DIR$/application/views/frontend/resurse/audio.php" />
-        <option value="$PROJECT_DIR$/static/css/jplayer.blue.monday.css" />
-        <option value="$PROJECT_DIR$/application/views/frontend/contact/contact.php" />
-        <option value="$PROJECT_DIR$/application/controllers/frontend/contact.php" />
+        <option value="$PROJECT_DIR$/index.php" />
+        <option value="$PROJECT_DIR$/application/views/frontend/includes/footer.php" />
       </list>
     </option>
   </component>
@@ -100,7 +145,7 @@
     <option name="width" value="1382" />
     <option name="height" value="754" />
   </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
     <OptionsSetting value="true" id="Remove" />
     <OptionsSetting value="true" id="Checkout" />
@@ -126,6 +171,16 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope">
+        <subPane subId="Project Files">
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -154,56 +209,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="static" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pc2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pc2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="static" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pc2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pc2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="static" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="css" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pc2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pc2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="application" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -270,7 +275,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="contact" />
+              <option name="myItemId" value="includes" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -314,14 +319,22 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-        </subPane>
-      </pane>
-      <pane id="Scope">
-        <subPane subId="Project Files">
           <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pc2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pc2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="application" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="config" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
@@ -329,46 +342,11 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatWidth1" value="113" />
-    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatWidth0" value="95" />
-    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatWidth3" value="46" />
-    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatWidth2" value="113" />
-    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatOrder1" value="1" />
-    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatOrder0" value="0" />
-    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatOrder3" value="3" />
-    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatOrder2" value="2" />
-    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeWidth2" value="99" />
-    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatOrder5" value="5" />
-    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeWidth1" value="98" />
-    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatOrder4" value="4" />
-    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeWidth0" value="99" />
-    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeWidth5" value="774" />
-    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeWidth4" value="100" />
-    <property name="GoToClass.includeJavaFiles" value="false" />
-    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeWidth3" value="99" />
+    <property name="options.splitter.main.proportions" value="0.3" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatWidth4" value="114" />
-    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatWidth5" value="788" />
-    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeOrder5" value="5" />
-    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeOrder3" value="3" />
-    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeOrder4" value="4" />
-    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeOrder1" value="1" />
-    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeOrder2" value="2" />
-    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeOrder0" value="0" />
-  </component>
-  <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\xampp\htdocs\site-pc\pc2\application\views\frontend" />
-      <recent name="C:\xampp\htdocs\site-pc\pc2\application\views\frontend\scoalabiblica" />
-      <recent name="C:\xampp\htdocs\site-pc\pc2\application\controllers\frontend" />
-      <recent name="C:\xampp\htdocs\site-pc\pc2\application\views\frontend\resurse" />
-      <recent name="C:\xampp\htdocs\site-pc\pc2\application\views\admin\devotional" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\xampp\htdocs\site-pc\pc2\static\images\buletin" />
-      <recent name="C:\xampp\htdocs\site-pc\pc2\static\js" />
-      <recent name="C:\xampp\htdocs\site-pc\pc2\static\css" />
-    </key>
+    <property name="options.lastSelected" value="web-ide.project.structure" />
+    <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
   </component>
   <component name="RunManager">
     <configuration default="true" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
@@ -376,18 +354,6 @@
       <method>
         <option name="PhingTarget" enabled="false" />
       </method>
-    </configuration>
-    <configuration default="true" type="PhpLocalRunConfigurationType" factoryName="PHP Console">
-      <method>
-        <option name="PhingTarget" enabled="false" />
-      </method>
-    </configuration>
-    <configuration default="true" type="JavascriptDebugSession" factoryName="Local">
-      <JSDebuggerConfigurationSettings>
-        <option name="engineId" value="embedded" />
-        <option name="fileUrl" />
-      </JSDebuggerConfigurationSettings>
-      <method />
     </configuration>
     <list size="0" />
   </component>
@@ -418,6 +384,10 @@
           <option name="myVcsRoot" value="C:\xampp\htdocs\pc2" />
           <option name="myCopyRoot" value="C:\xampp\htdocs\pc2" />
         </SvnCopyRootSimple>
+        <SvnCopyRootSimple>
+          <option name="myVcsRoot" value="C:\xampp\htdocs\pc2\.idea" />
+          <option name="myCopyRoot" value="C:\xampp\htdocs\pc2\.idea" />
+        </SvnCopyRootSimple>
       </list>
     </option>
     <option name="myMoreRealMappingRoots">
@@ -431,171 +401,13 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="fa0a1cc2-3201-406d-b359-f243ddec67c5" name="Default" comment="" />
-      <changelist id="544e905b-5237-49b2-8e53-ae274362d139" name="dont" comment="" />
-      <created>1341149551310</created>
-      <updated>1341149551310</updated>
+      <changelist id="168414a5-5bce-47fd-80a7-af41b440ee79" name="Default" comment="" />
+      <created>1373364968373</created>
+      <updated>1373364968373</updated>
     </task>
-    <task id="LOCAL-00002" summary="pagina de contact (buna, cu harta)">
-      <created>1344429843103</created>
-      <updated>1344429843103</updated>
-    </task>
-    <task id="LOCAL-00003" summary="despre noi, varianta buna">
-      <created>1344429933100</created>
-      <updated>1344429933100</updated>
-    </task>
-    <task id="LOCAL-00004" summary="gaseste-ti locul, varianta buna, cu afiseaza mai mult rezolvat">
-      <created>1344429960100</created>
-      <updated>1344429960100</updated>
-    </task>
-    <task id="LOCAL-00005">
-      <created>1344429972100</created>
-      <updated>1344429972100</updated>
-    </task>
-    <task id="LOCAL-00006" summary="modificari pentru gaseste-ti locul">
-      <created>1344430011101</created>
-      <updated>1344430011101</updated>
-    </task>
-    <task id="LOCAL-00007" summary="thumb devotional&#10;">
-      <created>1344430037100</created>
-      <updated>1344430037100</updated>
-    </task>
-    <task id="LOCAL-00008">
-      <created>1344433732100</created>
-      <updated>1344433732100</updated>
-    </task>
-    <task id="LOCAL-00009" summary="gaseste-ti locul BUN">
-      <created>1344433741100</created>
-      <updated>1344433741100</updated>
-    </task>
-    <task id="LOCAL-00010" summary="butoanele de cautare // paginare lista resurse(admin) // afisare cereri de rugaciune //">
-      <created>1347301097163</created>
-      <updated>1347301097163</updated>
-    </task>
-    <task id="LOCAL-00011" summary="design: buletin duminical, cereri de rugaciune. Update in administrator + paginari / &amp; buton delete">
-      <created>1348681293126</created>
-      <updated>1348681293126</updated>
-    </task>
-    <task id="LOCAL-00012" summary="css bun, formular la cereri rugaciune, buletine&#10;">
-      <created>1348766338141</created>
-      <updated>1348766338141</updated>
-    </task>
-    <task id="LOCAL-00013" summary="incercare de afisare buletin">
-      <created>1348859999130</created>
-      <updated>1348859999130</updated>
-    </task>
-    <task id="LOCAL-00014" summary="afisare buletine + paginare">
-      <created>1348866684100</created>
-      <updated>1348866684100</updated>
-    </task>
-    <task id="LOCAL-00015" summary="allow_resize">
-      <created>1348904807147</created>
-      <updated>1348904807147</updated>
-    </task>
-    <task id="LOCAL-00016" summary="update pagina buletine finalizata">
-      <created>1348918157100</created>
-      <updated>1348918157100</updated>
-    </task>
-    <task id="LOCAL-00017" summary="adaugare/editare devotional + upload + lista">
-      <created>1348924960102</created>
-      <updated>1348924960102</updated>
-    </task>
-    <task id="LOCAL-00018" summary="afisare devotional / cu thumburi :)">
-      <created>1348950988149</created>
-      <updated>1348950988149</updated>
-    </task>
-    <task id="LOCAL-00019" summary="postari recente - in dreapta devotionalelor + paginare devotionale + copy/paste arhiva video ?!?!?!?!">
-      <created>1348952711100</created>
-      <updated>1348952711100</updated>
-    </task>
-    <task id="LOCAL-00020" summary="paginare in administrare // lista devotionale // lista buletine // lista evenimente.">
-      <created>1348988561143</created>
-      <updated>1348988561144</updated>
-    </task>
-    <task id="LOCAL-00021" summary="chitibusuri (flashdata la contact // niciun rezultat gasit la audio // poze despre noi // ajustare text gaseste-ti locul. css">
-      <created>1348993558100</created>
-      <updated>1348993558100</updated>
-    </task>
-    <task id="LOCAL-00022" summary="imagine la devotional (trebuie sa mearga), adaugare cerere (1 singura - dar doar pe pagina 1), buletine cu butoane si functional (4 pagini)">
-      <created>1349198808169</created>
-      <updated>1349198808169</updated>
-    </task>
-    <task id="LOCAL-00023" summary="imagine la devotional (trebuie sa mearga), adaugare cerere (1 singura - dar doar pe pagina 1), buletine cu butoane si functional (4 pagini)">
-      <created>1349202893100</created>
-      <updated>1349202893100</updated>
-    </task>
-    <task id="LOCAL-00024" summary="pagina de calendar">
-      <created>1349211093100</created>
-      <updated>1349211093100</updated>
-    </task>
-    <task id="LOCAL-00025" summary="arhiva video - paginare + rutele + meniu functional">
-      <created>1349299929152</created>
-      <updated>1349299929152</updated>
-    </task>
-    <task id="LOCAL-00026" summary="arhiva video - afisarea, fara player. problema paginare cautare video">
-      <created>1349384088227</created>
-      <updated>1349384088227</updated>
-    </task>
-    <task id="LOCAL-00027" summary="paginare corectata arhiva video&#10;">
-      <created>1349384385100</created>
-      <updated>1349384385100</updated>
-    </task>
-    <task id="LOCAL-00028" summary="aspect arhiva video modificat - eroare paginare + pagina scoala biblica">
-      <created>1349471500143</created>
-      <updated>1349471500143</updated>
-    </task>
-    <task id="LOCAL-00029" summary="evenimentele de pe prima pagine (cu link) si scurtare text.">
-      <created>1349638221157</created>
-      <updated>1349638221157</updated>
-    </task>
-    <task id="LOCAL-00030" summary="ceva modificari css / data la calendar ...">
-      <created>1349642312100</created>
-      <updated>1349642312100</updated>
-    </task>
-    <task id="LOCAL-00031" summary="modificari final - site --contact bun">
-      <created>1350078566201</created>
-      <updated>1350078566201</updated>
-    </task>
-    <task id="LOCAL-00032" summary="rezolvare editare tip la resurse.">
-      <created>1350399695185</created>
-      <updated>1350399695186</updated>
-    </task>
-    <task id="LOCAL-00033" summary="mica modificare in admin">
-      <created>1350573819151</created>
-      <updated>1350573819151</updated>
-    </task>
-    <task id="LOCAL-00034" summary="rezolvare problema cereri rugaciune">
-      <created>1351793702182</created>
-      <updated>1351793702182</updated>
-    </task>
-    <task id="LOCAL-00035" summary="modificare denumire js ajax">
-      <created>1353952009198</created>
-      <updated>1353952009198</updated>
-    </task>
-    <task id="LOCAL-00036" summary="modificare truncate la titlul in lista de devotionale">
-      <created>1354481606253</created>
-      <updated>1354481606253</updated>
-    </task>
-    <task id="LOCAL-00037" summary="modificare logo + afisare autori la lista devotional">
-      <created>1355753492212</created>
-      <updated>1355753492212</updated>
-    </task>
-    <task id="LOCAL-00038" summary="modificare bara de sub meniu.">
-      <created>1355764614269</created>
-      <updated>1355764614269</updated>
-    </task>
-    <task id="LOCAL-00039" summary="watermark doar pe LIVE">
-      <created>1357337741189</created>
-      <updated>1357337741189</updated>
-    </task>
-    <task id="LOCAL-00040" summary="panou administrare">
-      <created>1357493123102</created>
-      <updated>1357493123102</updated>
-    </task>
-    <option name="localTasksCounter" value="41" />
     <servers />
   </component>
-  <component name="TodoView" selected-index="0">
+  <component name="TodoView" selected-index="1">
     <todo-panel id="selected-file">
       <are-packages-shown value="false" />
       <are-modules-shown value="false" />
@@ -619,21 +431,21 @@
     <frame x="-8" y="-8" width="1382" height="754" extended-state="0" />
     <editor active="false" />
     <layout>
-      <window_info id="Data Sources" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3294753" sideWeight="0.73702425" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Changes" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32996634" sideWeight="0.0" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32996634" sideWeight="0.49695122" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.34825492" sideWeight="0.6700337" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Data Sources" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32928678" sideWeight="0.8060708" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.4030354" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32715008" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.6728499" order="1" side_tool="true" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2693475" sideWeight="0.5969646" order="0" side_tool="true" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32659933" sideWeight="0.50990856" order="9" side_tool="true" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3292683" sideWeight="0.6728499" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.26262626" sideWeight="0.49390244" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32996634" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32996634" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="SVN Repositories" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3288364" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -676,7 +488,7 @@
     <option name="SHOW_VCS_ERROR_NOTIFICATIONS" value="true" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="handle eroare contact" />
+    <option name="LAST_COMMIT_MESSAGE" value="icons - modificari footer" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -688,123 +500,63 @@
     <option name="UPDATE_GROUP_BY_PACKAGES" value="false" />
     <option name="UPDATE_GROUP_BY_CHANGELIST" value="false" />
     <option name="SHOW_FILE_HISTORY_AS_TREE" value="false" />
-    <option name="FILE_HISTORY_SPLITTER_PROPORTION" value="0.73839664" />
-    <MESSAGE value="afisare devotional / cu thumburi :)" />
-    <MESSAGE value="postari recente - in dreapta devotionalelor + paginare devotionale + copy/paste arhiva video ?!?!?!?!" />
-    <MESSAGE value="paginare in administrare // lista devotionale // lista buletine // lista evenimente." />
-    <MESSAGE value="chitibusuri (flashdata la contact // niciun rezultat gasit la audio // poze despre noi // ajustare text gaseste-ti locul. css" />
-    <MESSAGE value="imagine la devotional (trebuie sa mearga), adaugare cerere (1 singura - dar doar pe pagina 1), buletine cu butoane si functional (4 pagini)" />
-    <MESSAGE value="pagina de calendar" />
-    <MESSAGE value="arhiva video - paginare + rutele + meniu functional" />
-    <MESSAGE value="arhiva video - afisarea, fara player. problema paginare cautare video" />
-    <MESSAGE value="paginare corectata arhiva video&#10;" />
-    <MESSAGE value="aspect arhiva video modificat - eroare paginare" />
-    <MESSAGE value="aspect arhiva video modificat - eroare paginare + pagina scoala biblica" />
-    <MESSAGE value="evenimentele de pe prima pagine (cu link) si scurtare text." />
-    <MESSAGE value="ceva modificari css / data la calendar ..." />
-    <MESSAGE value="modificari final - site --contact bun" />
-    <MESSAGE value="rezolvare editare tip la resurse." />
-    <MESSAGE value="mica modificare in admin" />
-    <MESSAGE value="rezolvare problema cereri rugaciune" />
-    <MESSAGE value="modificare denumire js ajax" />
-    <MESSAGE value="modificare truncate la titlul in lista de devotionale" />
-    <MESSAGE value="modificare logo + afisare autori la lista devotional" />
-    <MESSAGE value="modificare bara de sub meniu." />
-    <MESSAGE value="watermark doar pe LIVE" />
-    <MESSAGE value="panou administrare" />
-    <MESSAGE value="data la arhiva audio +  modificare numelui js-ului cu cereri rugaciune" />
-    <MESSAGE value="handle eroare contact" />
+    <option name="FILE_HISTORY_SPLITTER_PROPORTION" value="0.6" />
+    <MESSAGE value="icons - modificari footer" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/static/css/css_vechi.css">
+    <entry file="file://$PROJECT_DIR$/application/config/database.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
+        <state line="50" column="34" selection-start="2360" selection-end="2360" vertical-scroll-proportion="0.49119717" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/controllers/frontend/audio.php">
+    <entry file="file://$PROJECT_DIR$/static/css/poartacerului.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="42" selection-start="1039" selection-end="1039" vertical-scroll-proportion="0.0" />
+        <state line="2075" column="11" selection-start="41043" selection-end="41043" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/static/js/general.js">
+    <entry file="file://$PROJECT_DIR$/application/models/cerere_model.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="9" selection-start="292" selection-end="292" vertical-scroll-proportion="-0.022988506" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/admin/template.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="11" selection-start="248" selection-end="248" vertical-scroll-proportion="-3.9230769" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/admin/includes/header.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="19" selection-start="982" selection-end="983" vertical-scroll-proportion="-4.509804" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/models/resurse_model.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="376" column="26" selection-start="11979" selection-end="11992" vertical-scroll-proportion="-4.56" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/js/jquery.jplayer.min.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="481" selection-start="12622" selection-end="12624" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/frontend/resurse/audio.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="191" column="160" selection-start="8922" selection-end="8922" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/css/jplayer.blue.monday.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="256" column="1" selection-start="5772" selection-end="5772" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/frontend/includes/head_includes.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="43" column="72" selection-start="2620" selection-end="2620" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/admin/includes/head_includes.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="45" column="88" selection-start="2763" selection-end="2763" vertical-scroll-proportion="-8.153846">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/config/routes.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="87" column="14" selection-start="3544" selection-end="3550" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/controllers/frontend/playonline.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="26" selection-start="416" selection-end="416" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/js/ajaxul.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="105" column="0" selection-start="3448" selection-end="3448" vertical-scroll-proportion="-40.8">
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
+        <state line="61" column="5" selection-start="815" selection-end="1339" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/controllers/frontend/contact.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="17" selection-start="924" selection-end="924" vertical-scroll-proportion="0.0">
+        <state line="40" column="54" selection-start="1117" selection-end="1117" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/config/routes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="46" column="25" selection-start="1697" selection-end="1703" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/frontend/homepage/homepage.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="97" column="14" selection-start="6280" selection-end="6280" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/frontend/includes/header.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="25" selection-start="51" selection-end="51" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/frontend/template.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="32" column="63" selection-start="1189" selection-end="1189" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="29" column="0" selection-start="892" selection-end="892" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/frontend/contact/contact.php">
+    <entry file="file://$PROJECT_DIR$/application/views/frontend/includes/footer.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="47" column="0" selection-start="1862" selection-end="1862" vertical-scroll-proportion="0.71257484">
+        <state line="15" column="24" selection-start="652" selection-end="652" vertical-scroll-proportion="0.6007067">
           <folding />
         </state>
       </provider>

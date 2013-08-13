@@ -32,7 +32,6 @@
 		<!-- Footer -->
 		<?php $this->load->view('frontend/includes/footer'); ?>
 
-        </div>
-    </div>
+
     </body>
     </html>
