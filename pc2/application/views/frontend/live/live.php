@@ -37,7 +37,7 @@ $mesaj = 'id="mesaj"';
        <div class="i_title">Cerere de rugaciune</div>
   <div class="i_details" >
       <!--   <p style="color: red;"><?php  //echo $this->session->flashdata('cerere'); ?></p>-->
-        <p style="font-style: italic;">“Tot ce veti cere cu credinta, prin rugaciune, veti primi” Matei 21:21 </p>
+        <p style="font-style: italic;">“Tot ce veti cere cu credinta, prin rugaciune, veti primi” Matei 21:22 </p>
 <p>
 Daca aveti o cerere de rugaciune sau un motiv de multumire si ati dori sa il impartisiti cu noi, va rugam sa completati mai jos detaliile legate de cererea dumneavoastra si impreuna, ca biserica si familie in Cristos ne vom ruga pentru dumneavoastra.</p>
     </p>
