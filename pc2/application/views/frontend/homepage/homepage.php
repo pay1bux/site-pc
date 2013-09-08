@@ -15,7 +15,7 @@
                             <?php if ($imaginiPromo != null): ?>
                                 <?php foreach ($imaginiPromo as $key => $ip): ?>
                                     <?php if(isset($ip['r_url'])): ?>
-                                        <a href="<?php echo $ip['r_url'];?> target="_blank" ">
+                                        <a href="<?php echo $ip['r_url'];?>" target="_blank">
                                           <img src="<?php echo BASE_URL . $ip['url'] ?>" width="722" height="406" alt="promo<?php echo $key; ?>"/>
                                         </a>
                                     <?php else: ?>
