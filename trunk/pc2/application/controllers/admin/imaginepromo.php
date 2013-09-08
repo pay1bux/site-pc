@@ -39,8 +39,12 @@ class ImaginePromo extends CI_Controller {
                 'views' => 0,
                 'download' => 0,
                 'vizibil' => $postdata['vizibil'],
+                'url' => $postdata['url'],
                 'tip_id' => $tipImaginePromo->id
             );
+
+         if($postdata['url'] == '')
+             $input['url']= NULL;
 
             $this->load->model('resurse_model');
             if (isset($idImagine)) {
