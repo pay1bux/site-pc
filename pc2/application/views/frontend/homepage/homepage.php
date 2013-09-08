@@ -14,7 +14,13 @@
                             <?php endif; ?>
                             <?php if ($imaginiPromo != null): ?>
                                 <?php foreach ($imaginiPromo as $key => $ip): ?>
-                                    <img src="<?php echo BASE_URL . $ip['url'] ?>" width="722" height="406" alt="promo<?php echo $key; ?>"/>
+                                    <?php if(isset($ip['r_url'])): ?>
+                                        <a href="<?php echo $ip['r_url'];?>">
+                                          <img src="<?php echo BASE_URL . $ip['url'] ?>" width="722" height="406" alt="promo<?php echo $key; ?>"/>
+                                        </a>
+                                    <?php else: ?>
+                                          <img src="<?php echo BASE_URL . $ip['url'] ?>" width="722" height="406" alt="promo<?php echo $key; ?>"/>
+                                    <?php endif; ?>
                                 <?php endforeach; ?>
                             <?php endif; ?>
                         </div>

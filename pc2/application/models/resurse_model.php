@@ -184,7 +184,7 @@ class Resurse_model extends CI_Model
             if (isset($filters['count_rows'])) {
                 $sql = "SELECT COUNT(*)";
             } else {
-                $sql = "SELECT r.*, r.id AS r_id, a.*, a.id as atasament_id, tr.*, tr.nume as nume_tip, aut.nume as nume_autor ";
+                $sql = "SELECT r.*, r.id AS r_id, r.url AS r_url, a.*, a.id as atasament_id, tr.*, tr.nume as nume_tip, aut.nume as nume_autor ";
 
                 if (isset($filters["tip"]) && $filters["tip"] == 'evenimente') {
                     $sql .= ", de.* ";
@@ -249,6 +249,7 @@ class Resurse_model extends CI_Model
         if (isset($filters["vizibil"])) {
             $sql .= " AND r.vizibil = " . $filters["vizibil"] . " ";
         }
+
         if (isset($filters["order"])) {
             $sql .= " ORDER BY " . $filters["order"] . " ";
         }

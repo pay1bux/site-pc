@@ -24,6 +24,10 @@
             <td><?php echo form_input('imaginePromo[titlu]', (isset($form_values['titlu']) ? $form_values['titlu'] : ''), $textlung); ?></td>
         </tr>
         <tr>
+            <td><?php echo form_label('Link', 'imaginePromo[url]');?> </td>
+            <td><?php echo form_input('imaginePromo[url]', (isset($form_values['url']) ? $form_values['url'] : ''), $textlung); ?></td>
+        </tr>
+        <tr>
             <td><?php echo form_label('Vizibil', 'imaginePromo[vizibil]');?> </td>
             <td>
                 <?php $eveniment = array(

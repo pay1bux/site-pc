@@ -758,3 +758,15 @@ CREATE TABLE IF NOT EXISTS `user` (
 -- Salvarea datelor din tabel `user`
 --
 
+
+
+
+--
+-- Adaugarea campului url - folosit pentru linkuri la imaginile din zona promo
+--
+
+ALTER TABLE  `resurse` ADD  `url` VARCHAR( 90 ) NULL DEFAULT NULL AFTER  `id` ;
+
+--
+--  Adaugarea campului url - folosit pentru linkuri la imaginile din zona promo
+--
