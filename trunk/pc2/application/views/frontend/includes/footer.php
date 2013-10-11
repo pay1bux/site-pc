@@ -6,7 +6,7 @@
 <div class="content">
     <p>Ne-ar placea sa intri in contact cu noi pe</p>
     <a href="https://www.facebook.com/BisericaPoartaCerului" target="_blank"> <div id="fb" class="icon"></div> </a>
-    <a href="https://plus.google.com/104138337810512556594/posts" target="_blank"> <div id="gp" class="icon"></div> </a>
+    <a href="https://plus.google.com/u/0/107941983089275280376/posts" target="_blank"> <div id="gp" class="icon"></div> </a>
     <a href="http://www.youtube.com/user/poartacerului/videos" target="_blank"> <div id="yt" class="icon"></div> </a>
     <a href="<?php echo site_url("contact")?>"> <div id="em" class="icon"></div> </a>
 
