@@ -1,57 +1,63 @@
 <div class="clearBoth"/>
-<div class="admin">
-    <br />
-    <a href="<?php echo site_url("pcadmin"); ?>" class="backadmin"> <div id="backadmin">Administrare</div></a>
-    <br />
+
     <h1>Lista useri</h1>
     <br />
+    <div class="row">
+        <div class="col-md-1">
+            <a href="<?php echo BASE_URL();?>index.php/admin/adauga-user/">
+                <button type="button" class="btn btn-default btn-md">
+                    <span class="glyphicon glyphicon-plus"></span> Adauga user
+                </button>
+            </a>
+        </div>
+    </div>
+    <br />
 
-    <p><a href="<?php echo site_url('admin/adauga-user'); ?>">(+) Adauga user</a>
-    </p>
-    <br/>
-    <table class="lista">
-        <tr>
-            <td style="background-color:#b6bb40;" class="lista">
+    <table class="table table-striped table-hover table-bordered centerHead" >
+        <thead>
+        <tr class="success" >
+            <th>
                 Nume
-            </td>
-            <td style="background-color:#b6bb40;" class="lista">
+            </th>
+            <th>
                 Email
-            </td>
-            <td style="background-color:#b6bb40;" class="lista">
+            </th>
+            <th>
                 Telefon
-            </td>
-            <td style="background-color:#b6bb40;" class="lista">
+            </th>
+            <th>
                 Public
-            </td>
-            <td style="background-color:#b6bb40;" class="lista">
+            </th>
+            <th>
                 Edit
-            </td>
-            <td style="background-color:#b6bb40;" class="lista">
+            </th>
+            <th>
                 Delete
-            </td>
+            </th>
         </tr>
+        </thead>
         <?php foreach ($useri as $user) : ?>
         <tr>
-            <td class="lista">
+            <td>
                 <?php echo $user['nume']; ?>
             </td>
-            <td class="lista">
+            <td>
                 <?php echo $user['email']; ?>
             </td>
-            <td class="lista">
+            <td>
                 <?php echo $user['telefon']; ?>
             </td>
-            <td class="lista">
+            <td>
                 <?php echo $user['public']; ?>
             </td>
-            <td class="lista">
+            <td>
                 <center>
-                    <a href="<?php echo site_url('admin/editeaza-user/' . $user['id']); ?>">EDIT</a>
+                    <a href="<?php echo site_url('admin/editeaza-user/' . $user['id']); ?>"><button type="button" class="btn btn-warning btn-sm">Editeaza</button></a>
                 </center>
             </td>
-            <td class="lista">
+            <td>
                 <center>
-                    <a href="<?php echo site_url('admin/sterge-user/' . $user['id']); ?>"  class="sterge" >DELETE</a>
+                    <a href="<?php echo site_url('admin/sterge-user/' . $user['id']); ?>"  class="sterge" ><button type="button" class="btn btn-danger btn-sm">Sterge</button></a>
                 </center>
             </td>
         </tr>
@@ -59,4 +65,3 @@
         <?php endforeach; ?>
     </table>
 
-</div>

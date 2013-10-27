@@ -266,7 +266,7 @@ class Resurse_model extends CI_Model
         }
         
         $q = $this->db->query($sql);
-       // var_dump($sql);
+//        var_dump($sql);
 
         if ($q->num_rows() > 0) {
             return $q->result_array();

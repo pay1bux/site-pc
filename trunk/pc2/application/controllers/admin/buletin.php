@@ -208,15 +208,15 @@ class Buletin extends CI_Controller {
         $config['last_link'] = '';
         $config['first_link'] = '';
         $config['uri_segment'] = 3;
-        $config['num_tag_open'] = '<div class="pagina_s">';
-        $config['num_tag_close'] = '</div>';
-        $config['cur_tag_open'] = '<div class="pagina_a">';
-        $config['cur_tag_close'] = '</div>';
+        $config['num_tag_open'] = '<li>';
+        $config['num_tag_close'] = '</li>';
+        $config['cur_tag_open'] = '<li class="active"><a href="#">';
+        $config['cur_tag_close'] = '</a></li>';
 
-        $config['prev_tag_open'] = '<div class="pagina_b">';
-        $config['prev_tag_close'] = '</div>';
-        $config['next_tag_open'] = '<div class="pagina_b">';
-        $config['next_tag_close'] = '</div>';
+        $config['prev_tag_open'] = '<li>';
+        $config['prev_tag_close'] = '</li>';
+        $config['next_tag_open'] = '<li>';
+        $config['next_tag_close'] = '</li>';
 
 
         $this->pagination->initialize($config);

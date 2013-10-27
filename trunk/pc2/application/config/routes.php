@@ -99,8 +99,7 @@ $route['admin/editeaza-resursa/(\d+)'] = "admin/resurse/edit/$1";
 $route['admin/sterge-resursa/(\d+)'] = "admin/resurse/delete/$1";
 $route['admin/lista-resurse'] = "admin/resurse/lista";
 $route['admin/lista-resurse/(\d+)'] = "admin/resurse/lista/$1";
-$route['admin/lista-resurse/(:any)'] = "admin/resurse/lista/$1";
-$route['admin/lista-resurse/cauta/(:any)/(:\d+)'] = "admin/resurse/lista/$1/$2";
+$route['admin/lista-resurse/cauta/(\d+)/(:any)/(\d+)'] = "admin/resurse/lista/$1/$2/$3";
 
 $route['admin/adauga-autori'] = "admin/autori/add";
 $route['admin/editeaza-autori/(\d+)'] = "admin/autori/edit/$1";

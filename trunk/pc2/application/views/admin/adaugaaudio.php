@@ -1,25 +1,19 @@
-<script>
-    $(function() {
-        $( "#datepicker" ).datepicker( {dateFormat: "yy-mm-dd",  showOn: "both" });
-    });
-</script>
+
 <div class="clearBoth"/>
-<div class="admin">
-    <br />
-    <a href="<?php echo site_url("pcadmin"); ?>"> <div id="backadmin">Administrare</div></a>
-    <br />
+
     <h1>Adauga audio multiple</h1>
     <br />
+
+<div class="row">
+    <div class="form-group col-md-4">
     <?php
     $this->load->helper('form');
-
-    echo form_fieldset('Adauga audio multiple');
+    $buton = 'class = "btn btn-default"';
 
     if (isset($url_nou)) {
         echo "Resurse pentru adaugare: " . count($files);
         echo " la adresa: " . $url_nou;
     }
-
     if (isset($fisiereCuErori) && count($fisiereCuErori) > 0) {
         echo "<br />Fisiere neadaugate dar mutate in ". $url_nou;
         foreach($fisiereCuErori as $f)
@@ -28,24 +22,23 @@
 
     echo form_open_multipart(current_url());
     ?>
-    <table>
-        <tr>
-            <td><?php echo form_label('Data', 'data');?> </td>
+    </div>
+    </div>
+    <div class="row">
+        <div class="form-group col-md-4">
+            <?php echo form_label('Data', 'data');?>
             <?php $data = array(
             'name'        => 'data',
             'value'       => isset($data_adaugarii) ? $data_adaugarii : '',
-            'id'     => "datepicker");
+            'class' => "datepicker form-group");
             ?>
-            <td><?php echo form_input($data); ?></td>
-        </tr>
-        <tr>
-            <td colspan="2">
+            <?php echo form_input($data); ?>
+        </div>
+    </div>
+    <div class="row">
+        <div class="form-group col-md-4">
                 <?php
-                echo form_fieldset_close();
-                echo form_submit('sumbit', 'Adauga');
+                echo form_submit('sumbit', 'Adauga', $buton);
                 echo form_close(); ?>
-            </td>
-        </tr>
-
-    </table>
-</div>
+        </div>
+    </div>

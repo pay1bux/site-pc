@@ -1,23 +1,31 @@
-<div id="GreenBar"></div>
-<div id="SiteContent">
-    <a id="Logo" href="<?php echo site_url("acasa")?>">&nbsp;</a>
-    <div id="TopMenu">
-        <ul>
-            <li class="i_mt"><a href="<?php echo site_url("live")?>">Live</a></li>
-            <li class="i_mt"><a href="<?php echo site_url("contact")?>">Contact</a></li>
-            <li class="nod"><a href="#"><strong>Resurse</strong><span class="i_icon">&nbsp;</span></a>
-                <ul class="submenu_">
-                    <li class="i_smt"><a href="<?php echo site_url("arhiva-video")?>">Resurse video</a></li>
-                    <li class="i_smt"><a href="<?php echo site_url("arhiva-audio")?>">Resurse audio</a></li>
-                    <li class="i_smt"><a href="<?php echo site_url("buletin-duminical")?>">Buletin duminical</a></li>
-                    <li class="i_smt last"><a href="<?php echo site_url("cereri-rugaciune")?>">Cereri de rugăciune</a></li>
-                </ul>
-            </li>
-            <li class="i_mt"><a href="<?php echo site_url("devotional")?>">Devoțional</a></li>
-            <li class="i_mt"><a href="<?php echo site_url("gaseste")?>">Găsește-ți locul</a></li>
-            <li class="i_mt"><a href="<?php echo site_url("despre-noi")?>">Despre noi</a></li>
-            <li class="i_mt"><a href="<?php echo site_url("acasa")?>">Acasă</a></li>
+<nav class="navbar navbar-default" role="navigation">
+    <div class="navbar-header" style="width: 100%">
 
-        </ul>
-        <div class="FooterLine" style="width: 600px; margin-top : 35px; margin-left: 63px;"></div>
+        <a class="navbar-brand" href="<?php echo site_url("pcadmin"); ?>">Poarta Cerului <i>admin</i></a>
+
+        <div class="pull-right">
+        <a  href="http://www.poartacerului.ro"><button type="button" class="btn btn-default navbar-btn">Inapoi la site</button></a>
+        <?php
+            if(isset($email)):
+        ?>
+        <div class="btn-group">
+            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                <?php echo $email;?>
+                <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu">
+                <li> <a href="<?php echo site_url('admin/logout'); ?>"><span class="glyphicon glyphicon-log-out"></span> Deconectare</a></li>
+                <li> <a href="<?php echo site_url('admin/schimba-parola'); ?>"><span class="glyphicon glyphicon-user"></span> Schimba parola</a></li>
+
+            </ul>
+        </div>
+        <?php endif;
+        ?>
+        </div>
     </div>
+
+
+</nav>
+
+
+<div class="container">

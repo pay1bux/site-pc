@@ -1,70 +1,70 @@
-<script>
-    $(function() {
-        $( "#datepicker" ).datepicker( {dateFormat: "yy-mm-dd",  showOn: "both" });
-    });
-</script>
+
 <div class="clearBoth"/>
-<div class="admin">
-    <br />
-    <a href="<?php echo site_url("pcadmin"); ?>" class="backadmin"> <div id="backadmin">Administrare</div></a>
-    <br />
+
     <h1>Adauga / Editeaza resursa</h1>
-    <br />
+    <br/>
     <?php
+    $select = 'class="selectFormPicker"';
+    $input = 'class = "form-control"';
+    $buton = 'class = "btn btn-default"';
     $this->load->helper('form');
 
-    echo form_fieldset('Adauga / Editeaza resursa');
 
     echo validation_errors();
     echo form_open(current_url());
     ?>
-    <table>
-        <tr>
-            <td><?php echo form_label('Titlu', 'resurse[titlu]');?> </td>
-            <td><?php echo form_input('resurse[titlu]', (isset($form_values['titlu']) ? $form_values['titlu'] : '')); ?></td>
-        </tr>
 
-        <tr>
-            <td><?php echo form_label('Autor', 'resurse[autor]');  ?></td>
-            <td><?php echo form_dropdown('resurse[autor]', $autori, (isset($form_values['autor_id']) ? $form_values['autor_id'] : '')); ?></td>
-        </tr>
+    <div class="row">
 
+        <div class="form-group col-md-4 ">
+            <?php echo form_label('Titlu', 'resurse[titlu]'); ?>
+            <?php echo form_input('resurse[titlu]', (isset($form_values['titlu']) ? $form_values['titlu'] : ''), $input); ?>
+        </div>
 
-        <tr>
-            <td><?php echo form_label('Tipul', 'resurse[tip_id]');  ?></td>
-            <td><?php echo form_dropdown('resurse[tip_id]', $tipuri, (isset($form_values['tip_id']) ? $form_values['tip_id'] : '')); ?></td>
-        </tr>
+    </div>
+    <div class="row">
+        <div class="form-group col-md-4">
+            <?php echo form_label('Autor', 'resurse[autor]'); ?>
+            <?php echo form_dropdown('resurse[autor]', $autori, (isset($form_values['autor_id']) ? $form_values['autor_id'] : ''), $select); ?>
+        </div>
+        </div>
+        <div class="row">
+            <div class="form-group col-md-4">
+                <?php echo form_label('Tipul', 'resurse[tip_id]'); ?>
+                <?php echo form_dropdown('resurse[tip_id]', $tipuri, (isset($form_values['tip_id']) ? $form_values['tip_id'] : ''), $select); ?>
+            </div>
+        </div>
+        <div class="row">
+            <div class="form-group col-md-4">
+                <?php echo form_label('Categorie', 'resurse[categorie]'); ?>
+                <?php echo form_dropdown('resurse[categorie]', $categorii, (isset($form_values['categorie_id']) ? $form_values['categorie_id'] : ''), $select); ?>
+            </div>
+        </div>
+        <div class="row">
+            <div class="form-group col-md-4">
+                <?php echo form_label('Continut', 'resurse[continut]'); ?>
+                <?php echo form_textarea('resurse[continut]', (isset($form_values['continut']) ? $form_values['continut'] : ''), $input); ?>
+            </div>
+        </div>
+        <div class="row">
+            <div class="form-group col-md-4">
+               <?php echo form_label('Data', 'resurse[data]'); ?><br/>
+                <?php $data = array(
+                    'name' => 'resurse[data]',
+                    'value' => isset($form_values['data']) ? $form_values['data'] : '',
+                    'class' => "datepicker form-group");
+                ?>
+                <?php echo form_input($data); ?>
+            </div>
+        </div>
 
-        <tr>
-            <td><?php echo form_label('Categorie', 'resurse[categorie]'); ?></td>
-            <td><?php echo form_dropdown('resurse[categorie]', $categorii, (isset($form_values['categorie_id']) ? $form_values['categorie_id'] : '')); ?></td>
-        </tr>
-
-        <tr>
-            <td><?php echo form_label('Continut', 'resurse[continut]');?></td>
-            <td><?php echo form_textarea('resurse[continut]', (isset($form_values['continut']) ? $form_values['continut'] : '')); ?> </td>
-        </tr>
-
-        <tr>
-            <td><?php echo form_label('Data', 'resurse[data]'); ?></td>
-            <?php $data = array(
-            'name'        => 'resurse[data]',
-            'value'       => isset($form_values['data']) ? $form_values['data'] : '',
-            'id'     => "datepicker");
-            ?>
-            <td><?php echo form_input($data); ?></td>
-        </tr>
-
-        <tr>
-            <td colspan="2">
+        <div class="row">
+            <div class="form-group col-md-4">
                 <?php
-                echo form_fieldset_close();
-
-                echo form_submit('sumbit', 'Salveaza');
+                echo form_submit('sumbit', 'Salveaza', $buton);
 
                 echo form_close(); ?>
-            </td>
-        </tr>
 
-    </table>
-</div>
+            </div>
+
+    </div>

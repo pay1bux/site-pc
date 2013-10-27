@@ -1,39 +1,44 @@
 <div class="clearBoth"/>
-<div class="admin">
-    <br />
-    <a href="<?php echo site_url("pcadmin"); ?>" class="backadmin"> <div id="backadmin">Administrare</div></a>
-    <br />
-    <h1>Lista imagini promo</h1>
-    <br />
 
-    <p><a href="<?php echo site_url('admin/adauga-imagine-promo'); ?>">(+) Adauga imagine promo</a>
-    </p>
-    <br/>
-    <table class="lista">
-        <tr>
-            <td style="background-color:#b6bb40;" class="lista">
+
+    <h2>Lista imagini promo</h2>
+<div class="row">
+    <div class="col-md-1">
+        <a href="<?php echo BASE_URL();?>index.php/admin/adauga-imagine-promo/">
+            <button type="button" class="btn btn-default btn-md">
+                <span class="glyphicon glyphicon-plus"></span> Adauga
+            </button>
+        </a>
+    </div>
+</div>
+<br/>
+    <table class="table table-striped table-hover table-bordered centerHead" >
+        <thead>
+        <tr class="success" >
+            <th>
                 Titlu
-            </td>
-            <td style="background-color:#b6bb40;" class="lista">
+            </th>
+            <th>
                 Edit
-            </td>
-            <td style="background-color:#b6bb40;" class="lista">
+            </th>
+            <th>
                 Delete
-            </td>
+            </th>
         </tr>
+        </thead>
         <?php foreach ($resurse as $resursa) : ?>
         <tr>
             <td class="lista">
                 <?php echo $resursa['titlu']; ?>
             </td>
-            <td class="lista">
+            <td>
                 <center>
-                    <a href="<?php echo site_url('admin/editeaza-imagine-promo/' . $resursa['r_id']); ?>">EDIT</a>
+                    <a href="<?php echo site_url('admin/editeaza-imagine-promo/' . $resursa['r_id']); ?>"><button type="button" class="btn btn-warning btn-sm">Editeaza</button></a>
                 </center>
             </td>
-            <td class="lista">
+            <td>
                 <center>
-                    <a href="<?php echo site_url('admin/sterge-imagine-promo/' . $resursa['r_id']); ?>"  class="sterge" >DELETE</a>
+                    <a href="<?php echo site_url('admin/sterge-imagine-promo/' . $resursa['r_id']); ?>"  class="sterge" ><button type="button" class="btn btn-danger btn-sm">Sterge</button></a>
                 </center>
             </td>
         </tr>
@@ -41,4 +46,3 @@
         <?php endforeach; ?>
     </table>
 
-</div>

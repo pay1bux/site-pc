@@ -1,35 +1,37 @@
-<div class="clearBoth" style="height:10px;"></div>
-<div id="PageContent">
-    <div style="margin: 0 auto; width: 200px; height: 400px;">
-        <?php
-            $this->load->helper('form');
-            echo validation_errors();
-            echo form_open('login-form');
-        ?>
+<?php
+$this->load->helper('form');
+echo validation_errors();
+echo form_open('login-form');
 
-        <h1>ADMINISTRARE</h1>
-        <br/>
+?>
 
-        <h2>Logheaza-te aici</h2>
-        <table>
-            <tr>
-                <td>Email</td>
-                <td><input type="text" class="camp" name="email" value="<?php echo set_value('email');?>"/></td>
-            </tr>
-            <tr>
-                <td> Parola</td>
-                <td><input type="password" class="camp" name="password" value="<?php echo set_value('password'); ?>"/>
-                </td>
-            </tr>
-            <tr>
-                <td colspan="2" style="text-align: right;">
-                    <input type="submit" value="Login" style="background-color: #acb139; width: 50px; height: 20px;"/>
 
-                </td>
-            </tr>
+<div class="form-group col-md-4 col-md-push-4">
+<h2>Logheaza-te aici</h2>
+<div class="row">
+    <div class="form-group col-md-12">
+        Email
+        <input type="text" class="form-control" name="email" value="<?php echo set_value('email'); ?>"/>
     </div>
-    </table>
-    </form>
+</div>
+<div class="row">
+    <div class="form-group col-md-12">
+        Parola
+        <input type="password" class="form-control" name="password" value="<?php echo set_value('password'); ?>"/>
+
+    </div>
+</div>
+<div class="row">
+    <div class="form-group col-md-12">
+
+        <input type="submit" class="btn btn-default" value="Login"/>
+
+
+    </div>
 </div>
 
-<div class="clearBoth"></div>
+</form>
+    </div>
+
+
+

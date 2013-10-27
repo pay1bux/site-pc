@@ -60,4 +60,16 @@ class Tip_model extends CI_Model{
             return null;
         }
     }
+
+
+    function getTipById($id){
+        $sql = "SELECT * FROM $this->table WHERE id='$id' LIMIT 1";
+        $q = $this->db->query($sql);
+
+        if ($q->num_rows() > 0) {
+            return $q->row_array();
+        } else {
+            return null;
+        }
+    }
 }
