@@ -41,6 +41,6 @@ class Password extends CI_Controller
         }
 
         $data['main_content'] = 'admin/user/password';
-        $this->load->view('frontend/template', $data);
+        $this->load->view('admin/template', $data);
     }
 }
