@@ -1,45 +1,51 @@
 <div class="clearBoth"/>
 <div class="admin">
-    <br />
-    <a href="<?php echo site_url("pcadmin"); ?>" class="backadmin"> <div id="backadmin">Administrare</div></a>
-    <br />
+
+
     <h1>Lista Autorilor</h1>
-    <br />
-
-    <p><a href="<?php echo site_url('admin/autori/add');?>">(+) Adauga autor</a></p>
     <br/>
+    <div class="row">
+        <div class="col-md-1">
+            <a href="<?php echo BASE_URL();?>index.php/admin/adauga-autori">
+                <button type="button" class="btn btn-default btn-md">
+                    <span class="glyphicon glyphicon-plus"></span> Adauga
+                </button>
+            </a>
+        </div>
+    </div>
+<br/>
 
-    <table class="lista">
-        <tr>
-            <td style="background-color:#b6bb40;" class="lista">
+    <table class="table table-striped table-hover table-bordered centerHead" >
+        <thead>
+        <tr class="success" >
+            <th>
 
                 Nume
-            </td>
-            <td style="background-color:#b6bb40;" class="lista">
+            </th>
+            <th>
 
                 Editeaza
-            </td>
-            </td>
-            <td style="background-color:#b6bb40;" class="lista">
+            </th>
+            <th>
                 Sterge
-            </td>
+            </th>
         </tr>
+        </thead>
         <?php
         foreach ($autori as $autor) {
             ?>
 
             <tr>
-                <td class="lista">
+                <td>
                     <?php echo $autor['nume']; ?>
                 </td>
-                <td class="lista">
-                    <center><a href="<?php echo site_url('admin/editeaza-autori');?>/<?php echo $autor['id']; ?>"/>EDIT
-                    </center>
+                <td>
+                    <center><a href="<?php echo site_url('admin/editeaza-autori'); ?>/<?php echo $autor['id']; ?>"/><button type="button" class="btn btn-warning btn-sm">Editeaza</button></center>
                 </td>
-                <td class="lista">
-                    <center>DELETE</center>
+                <td>
+                    <center><button type="button" class="btn btn-danger btn-sm">Sterge</button></center>
                 </td>
             </tr>
-            <?php }?>
+        <?php } ?>
     </table>
 </div>

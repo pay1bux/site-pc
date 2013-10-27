@@ -1,4 +1,6 @@
-﻿html, body, div, span, applet, object, iframe,
+﻿@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300);
+
+html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
 del, dfn, em, font, img, ins, kbd, q, s, samp,
@@ -127,7 +129,7 @@ body {
 }
 
 body {
-    background-color: #edefee;
+    background-color: #edefee !important;
 }
 
 #GreenBar {
@@ -303,7 +305,7 @@ img.thumb_buletin
     display: block;
     margin-top: 10px;
 
-    font-family: sans-serif, "Open Sans";
+    font-family: 'Open Sans', sans-serif;
     font-size: 16px;
     color: #666;
     line-height: 20px;
@@ -401,7 +403,7 @@ img.thumb_buletin
     padding-left: 24px;
     width: 171px;
     display: block;
-    font-family: sans-serif, "Open Sans";
+    font-family: 'Open Sans', sans-serif;
     height: 19px;
     line-height: 20px;
     border: 1px solid #7d7a6d;
@@ -772,7 +774,7 @@ img.thumb_buletin
 .p_text ul{
     list-style-type: square;
     font-size: 15px;
-    font-family: sans-serif, "Open Sans";
+    font-family: 'Open Sans', sans-serif;
     margin-left: 20px;
     margin-bottom: 20px;
 }
@@ -804,7 +806,7 @@ p.intins
     font-size: 24px;
     font-weight: normal;
     color: #787878;
-    font-family: sans-serif, "Open Sans";
+    font-family: 'Open Sans', sans-serif;
 }
 
 .titluri
@@ -817,7 +819,7 @@ p.intins
     font-size: 15px;
     font-weight: normal;
     color: #787878;
-    font-family: sans-serif, "Open Sans";
+    font-family: 'Open Sans', sans-serif;
 }
 
 .p_text .i_title {
@@ -829,7 +831,7 @@ p.intins
     font-size: 24px;
     font-weight: normal;
     color: #787878;
-    font-family: sans-serif, "Open Sans";
+    font-family: 'Open Sans', sans-serif;
 }
 
 .right_text .i_title .box_cautare {
@@ -839,8 +841,7 @@ p.intins
     padding: 3px;
     margin-bottom: 2px;
     color: #787878;
-    font-family: sans-serif, "Open Sans";
-    font-weight: lighter;
+    font-family: 'Open Sans', sans-serif;
     border: 1px solid #c4c4c4;
 }
 
@@ -849,17 +850,17 @@ p.intins
 
 .p_text .i_details {
     text-align: left;
-    font-family: sans-serif, "Open Sans";
-    font-weight: 100;
+    font-family: 'Open Sans', sans-serif;
     color: #787878;
 }
 
 .p_text .i_details p {
     display: block;
     margin-bottom: 15px;
-    font-size: 16px;
+    font-size: 13px;
     color: #666;
-    line-height: 20px;
+    line-height: 18px;
+
 }
 
 .p_text .i_details a {
@@ -1477,7 +1478,7 @@ background-color: black;
 .videoclip p
 {
     text-align: left;
-    font-family: sans-serif, "Open Sans";
+    font-family: 'Open Sans', sans-serif;
     font-weight: 100;
     color: #868686;
     font-size: 12px;
@@ -2093,7 +2094,7 @@ width: 470px;
 #contact_bar p{
     color:white;
     font-size: 16px;
-    font-family: sans-serif, "Open Sans";
+    font-family: 'Open Sans', sans-serif;
     line-height: 62px;
     float: left;
     margin-right: 20px;
@@ -2136,3 +2137,11 @@ width: 470px;
     filter: alpha(opacity = 100);
     opacity: 1.0;
 }
+
+
+/* ADMIN */
+
+table.centerHead th {
+text-align: center;
+}
+

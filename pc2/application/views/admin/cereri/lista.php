@@ -1,76 +1,74 @@
-<script>
-    $(function() {
-        $( "#fromDate" ).datepicker( {dateFormat: "yy-mm-dd",  showOn: "both" });
-        $( "#toDate" ).datepicker( {dateFormat: "yy-mm-dd",  showOn: "both" });
-    });
-</script>
-    <?php     $this->load->helper('form'); ?>
+
+    <?php     $this->load->helper('form');
+    $input = 'class = "form-control"';
+
+    ?>
 <div class="clearBoth"/>
 <div class="admin">
-    <br />
-    <a href="<?php echo site_url("pcadmin"); ?>" class="backadmin"> <div id="backadmin">Administrare</div></a>
-    <br />
+
     <h1>Lista cereri</h1>
     <br />
     <?php echo form_open(current_url()); ?>
     <p>
-        <?php $fromDate = array('name' => 'cerere[fromDate]', 'value' => '', 'id' => "fromDate"); ?>
-        Din data de<?php echo form_input($fromDate,''); ?>
+        <?php $fromDate = array('name' => 'cerere[fromDate]', 'value' => '', 'id' => "fromDate", 'class' => "datepicker form-group"); ?>
+        Din data de <?php echo form_input($fromDate,''); ?>
     </p>
 
     <p>
-        <?php $toDate = array('name' => 'cerere[toDate]', 'value' => '', 'id' => "toDate"); ?>
-        In data de<?php echo form_input($toDate,''); ?>
+        <?php $toDate = array('name' => 'cerere[toDate]', 'value' => '', 'id' => "toDate", 'class' => "datepicker form-group"); ?>
+        In data de <?php echo form_input($toDate,''); ?>
     </p>
     <?php
-        $submit = Array ("name" => "submit", "value" => "Tipareste", "class" => "salveaza");
+        $submit = Array ("name" => "submit", "value" => "Tipareste", "class" => "salveaza btn btn-default");
         echo form_submit($submit);
         echo form_close();
     ?>
     <br/>
     <br/>
-    <table class="lista">
-        <tr>
-            <td style="background-color:#b6bb40;" class="lista">
+    <table class="table table-striped table-hover table-bordered centerHead" >
+        <thead>
+        <tr class="success" >
+            <th>
                 Nume
-            </td>
-            <td style="background-color:#b6bb40;" class="lista">
+            </th>
+            <th>
                 Localitate
-            </td>
-            <td style="background-color:#b6bb40;" class="lista">
+            </th>
+            <th>
                 Data
-            </td>
-            <td style="background-color:#b6bb40;" class="lista">
+            </th>
+            <th>
                 Text
-            </td>
-            <td style="background-color:#b6bb40;" class="lista">
+            </th>
+            <th>
                 Public
-            </td>
-            <td style="background-color:#b6bb40;" class="lista">
+            </th>
+            <th>
                 Delete
-            </td>
+            </th>
         </tr>
+        </thead>
         <?php if ($cereri != null): ?>
             <?php foreach ($cereri as $cerere) : ?>
             <tr>
-                <td class="lista">
+                <td>
                     <?php echo $cerere['nume']; ?>
                 </td>
-                <td class="lista">
+                <td>
                     <?php echo $cerere['localitate']; ?>
                 </td>
-                <td class="lista">
+                <td>
                     <?php echo $cerere['data']; ?>
                 </td>
-                <td class="lista">
+                <td>
                     <?php echo myTruncate($cerere['continut'], 80); ?>
                 </td>
-                <td class="lista">
+                <td>
                     <?php echo ($cerere['public'] == 1? 'Da': 'Nu'); ?>
                 </td>
-                <td class="lista">
+                <td>
                     <center>
-                        <a href="<?php echo site_url("admin/sterge-cerere/" . $cerere['id']);?>"  class="sterge" >DELETE</a>
+                        <a href="<?php echo site_url("admin/sterge-cerere/" . $cerere['id']);?>"  class="sterge" ><button type="button" class="btn btn-danger btn-sm">Sterge</button></a>
                     </center>
                 </td>
             </tr>
@@ -78,19 +76,23 @@
             <?php endforeach; ?>
         <?php else: ?>
             <tr>
-                <td class="lista" colspan="6">
+                <td>
                     Nu exista nicio cerere de rugaciune.
                 </td>
             </tr>
         <?php endif; ?>
     </table>
 
-    <div class="paginare" style="  margin-top: 20px;">
-        <?php
-        if (isset($paginare)) {
-            echo $paginare;
-        }
-        ?>
+
+
+    <div class="text-center">
+        <ul class="pagination pagination-centered">
+            <?php
+            if (isset($paginare)) {
+                echo $paginare;
+            }
+            ?>
+        </ul>
     </div>
 
 </div>

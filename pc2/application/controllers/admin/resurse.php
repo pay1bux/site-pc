@@ -2,7 +2,7 @@
 
 class Resurse extends CI_Controller {
 
-  public $search = false;
+//  public $search = false;
 
     function __construct() {
         parent::__construct();
@@ -107,65 +107,73 @@ class Resurse extends CI_Controller {
         $this->load->model('resurse_model');
         $config['per_page'] = 10;
 
-        if($tip == null)
-        {
-            $tip=$cuvinte;
-
-        }
-
         if($cuvinte != null)
         {
-        $search=true;
-        }
 
-            if($search == true)
-            {
             $cuvinte = urldecode($cuvinte);
             $data['cuvinte'] = $cuvinte;
             $cuvinte = explode(" ", $cuvinte);
+            $toate = 1;
+
+            $config['uri_segment'] = 6;
+            $config['base_url'] = site_url('admin/lista-resurse/cauta') . '/' . $tip . '/' . $data['cuvinte'];
 
             //*pentru paginare pe cautare
-            $filters = array( 'count_rows' => 'true', 'cuvinte' => $cuvinte );
+            if( $tip != 0){
+                $this->load->model('tip_model');
+                $tip = $this->tip_model->getTipById($tip);
+                $data['selectedTip'] = $tip['nume'];
+                $tip=$tip['cod'];
+                $filters = array( 'count_rows' => 'true', 'cuvinte' => $cuvinte, 'tip' => $tip);
+                $toate = 0;
+            }
+            else
+                $filters = array( 'count_rows' => 'true', 'cuvinte' => $cuvinte);
+
+
             $counter = $this->resurse_model->getResurseWithAtt($filters);
             $numar = $counter[0]['COUNT(*)'];
 
             //*cautare dupa cuvinte cheie
-            $filters = array('order' => 'data_adaugare', 'orderType' => 'DESC', 'limit' => $page, 'number' => $config['per_page'], "cuvinte" => $cuvinte);
+            if( $toate == 0)
+                $filters = array('order' => 'data_adaugare', 'orderType' => 'DESC', 'limit' => $page, 'number' => $config['per_page'], "cuvinte" => $cuvinte, 'tip' => $tip);
+            else
+                $filters = array('order' => 'data_adaugare', 'orderType' => 'DESC', 'limit' => $page, 'number' => $config['per_page'], "cuvinte" => $cuvinte);
+
         }
         else{
+            if(isset($tip))
+                $page = $tip;
+            else
+                $tip = 0;
             //*pentru paginarea tuturor resurselor
+            $config['base_url'] = site_url('admin/lista-resurse');
+            $config['uri_segment'] = 3;
             $filters = array( 'count_rows' => 'true');
             $counter = $this->resurse_model->getResurseWithAtt($filters);
             $numar = $counter[0]['COUNT(*)'];
 
-
-            $filters = array('order' => 'data_adaugare', 'orderType' => 'DESC', 'limit' => $page, 'number' => $config['per_page'], "cuvinte" => $cuvinte);
-
+            $filters = array('order' => 'data_adaugare', 'orderType' => 'DESC', 'limit' => $page, 'number' => $config['per_page']);
         }
 
-
-
         $this->load->library('pagination');
-
-
-
-        $config['base_url'] = site_url('admin/lista-resurse');
         $config['total_rows'] = $numar;
-        $config['per_page'] = 15;
         $config['first_url'] = '0';
         $config['num_links'] = 3;
         $config['last_link'] = '';
         $config['first_link'] = '';
-        $config['num_tag_open'] = '<div class="pagina_s">';
-        $config['num_tag_close'] = '</div>';
-        $config['cur_tag_open'] = '<div class="pagina_a">';
-        $config['cur_tag_close'] = '</div>';
+        $config['num_tag_open'] = '<li>';
+        $config['num_tag_close'] = '</li>';
+        $config['cur_tag_open'] = '<li class="active"><a href="#">';
+        $config['cur_tag_close'] = '</a></li>';
 
-        $config['prev_tag_open'] = '<div class="pagina_b">';
-        $config['prev_tag_close'] = '</div>';
-        $config['next_tag_open'] = '<div class="pagina_b">';
-        $config['next_tag_close'] = '</div>';
+        $config['prev_tag_open'] = '<li>';
+        $config['prev_tag_close'] = '</li>';
+        $config['next_tag_open'] = '<li>';
+        $config['next_tag_close'] = '</li>';
         $this->pagination->initialize($config);
+
+
 
         $data['paginare'] = $this->pagination->create_links();
 
@@ -177,6 +185,10 @@ class Resurse extends CI_Controller {
         $this->load->model('atasament_model');
         $nr_atasamente = $this->atasament_model->getNumarAtasamente(2);
         $data['nr_atasamente'] = $nr_atasamente;
+
+        $this->load->model('tip_model');
+        $tipuri = $this->tip_model->getTipuri();
+        $data['tipuri'] = $this->adaptArray($tipuri);
 
         $data['main_content'] = 'admin/resurse/lista';
         $this->load->view('admin/template', $data);

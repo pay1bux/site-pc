@@ -90,16 +90,41 @@ $(document).ready(
 
         $('#buton_cautare_admin').click(function() {
             var cuvinte =$('#text_cautare_admin').val();
-            cuvinte = encodeURIComponent(trim(cuvinte));
-            var url = getBaseUrl() + 'admin/lista-resurse/' + cuvinte;
-            document.location = url;
+            if( cuvinte != '' ){
+                var tip =$('#tip_cautare_admin').val();
+                var page = 0;
+                cuvinte = encodeURIComponent(trim(cuvinte));
+                var url = getBaseUrl() + 'admin/lista-resurse/cauta/'+ tip + '/' + cuvinte + '/' + page;
+                document.location = url;
+            }
+            else{
+                $('#text_cautare_admin').css("background-color", "#e77373");
+            }
+
         });
 
         $('.sterge').click(function(){
                 if(!confirm('Esti sigur(a) ca doresti sa stergi aceasta resursa?'))
                     return false;
             });
-        }
+
+
+
+        $('.selectpicker').selectpicker({
+            width: 'auto'
+        });
+
+        $('.selectFormPicker').selectpicker({
+            width: '100%'
+        });
+
+        $('.datepicker').datepicker({
+           format: 'yyyy-mm-dd'
+
+        });
+
+
+    }
 
 );
 
@@ -111,9 +136,17 @@ function key(object, e, url) {
     var code = (e.keyCode ? e.keyCode : e.which);
     if(code == 13) { //Enter keycode
         var cuvinte = object.val();
+        if ( cuvinte != '')
+        {
+        var tip =$('#tip_cautare_admin').val();
+        var page = 0;
         cuvinte = encodeURIComponent(trim(cuvinte));
-        var url = getBaseUrl() + url + cuvinte;
+        var url = getBaseUrl() + url + 'cauta/' + tip + '/' + cuvinte + '/' + page;
         document.location = url;
+        }
+        else
+            $('#text_cautare_admin').css("background-color", "#e77373");
+
     }
 }
 
