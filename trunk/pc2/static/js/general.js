@@ -108,22 +108,6 @@ $(document).ready(
                     return false;
             });
 
-
-
-        $('.selectpicker').selectpicker({
-            width: 'auto'
-        });
-
-        $('.selectFormPicker').selectpicker({
-            width: '100%'
-        });
-
-        $('.datepicker').datepicker({
-           format: 'yyyy-mm-dd'
-
-        });
-
-
     }
 
 );
