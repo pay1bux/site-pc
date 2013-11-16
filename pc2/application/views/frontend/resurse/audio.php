@@ -1,3 +1,4 @@
+<link rel="stylesheet" charset="utf-8" type="text/css" href="<?php echo CSS_PATH; ?>jplayer.blue.monday.css" />
 <script type="text/javascript">
     //<![CDATA[
 

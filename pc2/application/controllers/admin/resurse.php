@@ -85,8 +85,6 @@ class Resurse extends CI_Controller {
         $this->load->model('categorie_model');
         $categorii = $this->categorie_model->getCategorii();
         $data['categorii'] = $this->adaptArray($categorii);
-//        var_dump($data['form_values']);
-//        die();
 
         $data['main_content'] = 'admin/resurse/edit';
         $this->load->view('admin/template', $data);

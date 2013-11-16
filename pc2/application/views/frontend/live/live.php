@@ -84,4 +84,20 @@ pe site-ul bisericii Poarta cerului in cadrul listei de rugaciune</p></td>
 
   <div class="clearBoth"></div>
 
-        
+
+        <!-- start of ANUNT -->
+<!---->
+<!--        <div class="ui-pnotify ui-widget ui-helper-clearfix" style="width: 300px; opacity: 1; display: block; right: 15px; top: 15px;">-->
+<!--            <div class="ui-pnotify-container ui-pnotify-shadow ui-corner-all ui-state-highlight" style="min-height: 16px;">-->
+<!--                <div class="ui-pnotify-closer" style="cursor: pointer;">-->
+<!--                    <span class="ui-icon ui-icon-circle-close"></span>-->
+<!--                </div>-->
+<!--                <div class="ui-pnotify-icon">-->
+<!--                    <span class="ui-icon ui-icon-info"></span>-->
+<!--                </div>-->
+<!--                <h4 class="ui-pnotify-title">Anunt</h4>-->
+<!--                <div class="ui-pnotify-text">"Avand in vedere ca Biserica Poarta Cerului se afla intr-o saptamana de post si rugaciune, in aceasta serara nu vom transmit Live.<br /><br /> Rugati-va impreuna cu noi."</div>-->
+<!--            </div>-->
+<!--        </div>-->
+
+        <!-- end of ANUNT -->

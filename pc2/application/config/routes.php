@@ -49,6 +49,8 @@ $route['devotional/(:any)/(\d+)'] = "frontend/devotional/index/$1/$2";
 
 $route['live'] = "frontend/live/live";
 
+$route['radio'] = "frontend/radio/index";
+
 $route['despre-noi'] = "frontend/despre/index";
 
 $route['gaseste'] = "frontend/gaseste/index";

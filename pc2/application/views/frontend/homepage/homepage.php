@@ -1,3 +1,26 @@
+<!-- RADIO -->
+<link href="<?php echo CSS_PATH; ?>jplayer.radio.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript">
+    //<![CDATA[
+    $(document).ready(function(){
+
+        $("#jquery_jplayer_1").jPlayer({
+            ready: function (event) {
+                $(this).jPlayer("setMedia", {
+                    m4a:"http://www.jplayer.org/audio/m4a/TSP-01-Cro_magnon_man.m4a",
+                    oga:"http://www.jplayer.org/audio/ogg/TSP-01-Cro_magnon_man.ogg"
+                });
+            },
+            swfPath: "js",
+            supplied: "m4a, oga",
+            wmode: "window",
+            smoothPlayBar: true,
+            keyEnabled: true
+        });
+    });
+    //]]>
+</script>
+<!-- /RADIO -->
 <div class="clearBoth" style="height:10px;"></div>
     <div id="PageContent">
         <div id="jQueryGallery">
@@ -32,27 +55,20 @@
                 </div>
             </div>
             <div class="i_right">
-                <form class="i_search" method="post" action="">
-                    <fieldset>
-                        <button class="i_icon" type="submit" id="buton_sub_buletin">&nbsp;</button>
-                        <!--codul nostru--><input id="subscribe" type="text" name="buletin"
-                                                  value="Abonează-te la buletinul duminical"
-                                                  class="cleardefault i_text"/>
-                        <!-- <input id="Newsletter" class="i_text" type="text" name="words" value="Aboneaza-te la buletinul duminical" onclick="input_default_text('Newsletter', 'Aboneaza-te la buletinul duminical');" onblur="input_default_text('Newsletter', 'Aboneaza-te la buletinul duminical');" />-->
-                    </fieldset>
-                </form>
+
                 <div class="i_item1">
-                    <div class="ii_title">Transmisie LIVE Poarta Cerului</div>
-                    <div class="ii_title2">Închinare</div>
+                    <div class="ii_title">TRANSMISIE</div>
+                    <div class="ii_title2">LIVE</div>
                     <span class="but_live">&nbsp;</span>
                 </div>
                 <div class="i_item2">
-                    <div class="ii_title"><span>&nbsp;Vezi arhiva video&nbsp;<br/>&nbsp;Poarta Cerului&nbsp;</span>
+                    <div class="ii_title">ARHIVA<br/>
+                        <span>VIDEO</span>
                     </div>
                     <a class="but_play" href="<?php echo site_url("arhiva-video")?>">&nbsp;</a>
                 </div>
                 <div class="i_item3">
-                    <div class="ii_title"><span>&nbsp;Ascultă arhiva audio&nbsp;<br/>&nbsp;Poarta Cerului&nbsp;</span>
+                    <div class="ii_title">ASCULTA ARHIVA AUDIO<br/><span>POARTA CERULUI</span>
                     </div>
                     <a class="but_play" href="<?php echo site_url("arhiva-audio"); ?>">&nbsp;</a>
                 </div>
@@ -60,17 +76,65 @@
         </div>
         <div class="BoxInRow">
             <div class="BIR_T1">
-                <div class="i_title">Devoțional</div>
+                <div class="i_title">DEVOTIONAL</div>
                 <div class="i_p1"> <?php echo $devotional["titlu"]; ?></div>
                 <div class="i_p2"> <?php echo myTruncate($devotional["continut"], 120, " "); ?></div>
-                <a class="but_details"
-                   href="<?php echo linkDevotional($devotional["titlu"], $devotional["id"])?>"><strong>Vezi
-                    detalii</strong><span class="i_icon">&nbsp;</span></a>
+              <center> <a class="but_details"
+                   href="<?php echo linkDevotional($devotional["titlu"], $devotional["id"])?>"><strong>CITESTE ARTICOLUL</strong></a></center>
             </div>
-           <a href="http://www.youtube.com/poartacerului" target="_blank" title="Canalul Youtube Poarta Cerului"><div class="BIR_T2">
 
 
-            </div></a>
+               <div class="BIR_T2">
+                   <div id="radioBox">
+                       <div class="top"></div>
+
+                       <div id="jquery_jplayer_1" class="jp-jplayer"></div>
+
+                       <div id="jp_container_1" class="jp-audio">
+                           <div class="jp-type-single">
+                               <div class="jp-gui jp-interface">
+                                   <div id="player">
+                                       <ul class="jp-controls">
+                                           <li><a href="javascript:;" class="jp-mute" tabindex="1" title="mute">mute</a></li>
+                                           <li><a href="javascript:;" class="jp-unmute" tabindex="1" title="unmute">unmute</a></li>
+                                           <li><a href="javascript:;" class="jp-volume-max" tabindex="1" title="max volume">max volume</a></li>
+                                           <li>&nbsp; | &nbsp; </li>
+                                           <li><a href="#" id="radioExpand"></a></li>
+                                       </ul>
+                                       <div class="jp-volume-bar">
+                                           <div class="jp-volume-bar-value"></div>
+                                       </div>
+                                   </div>
+                               </div>
+                               <div id="playerInfo">
+                                   <div class="jp-gui jp-interface">
+                                       <ul class="jp-controls" style="width: 73px; float: left;">
+                                           <li><a href="javascript:;" class="jp-play" tabindex="1">play</a></li>
+                                           <li><a href="javascript:;" class="jp-pause" tabindex="1">pause</a></li>
+
+                                       </ul>
+                                       <div class="jp-title" style="float:left;">
+                                           <ul>
+                                               <li>Asculti: Numai T...</li>
+                                           </ul>
+                                       </div>
+                                   </div>
+                                   <div class="clearLeft"></div>
+
+
+
+
+                                   <div class="jp-no-solution">
+                                       <span>Update Required</span>
+                                       To play the media you will need to either update your browser to a recent version or update your <a href="http://get.adobe.com/flashplayer/" target="_blank">Flash plugin</a>.
+                                   </div>
+                               </div>
+                           </div>
+                       </div>
+                   </div>
+            </div>
+
+
             <div class="BIR_T3">
                 <div class="i_title">Următoarele transmisii live</div>
                 <?php if ($evenimente != null): ?>
@@ -88,7 +152,7 @@
                 <?php else: ?>
                 <div class="ii_text">Nu există transmisii</div>
                 <?php endif; ?>
-                <a class="but_details" href="<?php echo site_url("lista-evenimente") ?>"><strong>Vezi calendar</strong><span class="i_icon">&nbsp;</span></a>
+                <a class="but_details" href="<?php echo site_url("lista-evenimente") ?>"><strong>VEZI CALENDAR</strong></a>
             </div>
         </div>
         <div class="BoxInRow2">
@@ -122,3 +186,20 @@
 
 <div class="clearBoth"/>
 
+
+<!-- start of ANUNT -->
+
+<!--<div class="ui-pnotify ui-widget ui-helper-clearfix" style="width: 300px; opacity: 1; display: block; right: 15px; top: 15px;">-->
+<!--    <div class="ui-pnotify-container ui-pnotify-shadow ui-corner-all ui-state-highlight" style="min-height: 16px;">-->
+<!--        <div class="ui-pnotify-closer" style="cursor: pointer; visibility: visible;">-->
+<!--            <span class="ui-icon ui-icon-circle-close"></span>-->
+<!--        </div>-->
+<!--        <div class="ui-pnotify-icon">-->
+<!--            <span class="ui-icon ui-icon-info"></span>-->
+<!--        </div>-->
+<!--        <h4 class="ui-pnotify-title">Anunt</h4>-->
+<!--        <div class="ui-pnotify-text">"Avand in vedere ca Biserica Poarta Cerului se afla intr-o saptamana de post si rugaciune, in aceasta serara nu vom transmit Live.<br /><br /> Rugati-va impreuna cu noi."</div>-->
+<!--    </div>-->
+<!--</div>-->
+
+<!-- end of ANUNT -->

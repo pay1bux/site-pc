@@ -108,10 +108,17 @@ $(document).ready(
                     return false;
             });
 
+        $("#radioExpand").click( function() { radioExpand(); });
+
     }
 
 );
 
+function radioExpand() {
+    var left = ($(window).width()/2)-(200/2),
+        top = ($(window).height()/2)-(150/2),
+        pop = window.open("radio", "popup", "width=276, height=206, top="+top+", left="+left);
+}
 
 
 

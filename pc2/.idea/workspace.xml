@@ -2,33 +2,88 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" readonly="true" id="f76d3e2e-a12f-4bc6-9247-29ce719b99c9" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/js/bootstrap-select.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/radio.htm" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/js/radio.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/controllers/frontend/radio.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/views/frontend/radio.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/frontend/resurse/audio.php" afterPath="$PROJECT_DIR$/application/views/frontend/resurse/audio.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/general.js" afterPath="$PROJECT_DIR$/static/js/general.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/frontend/includes/head_includes.php" afterPath="$PROJECT_DIR$/application/views/frontend/includes/head_includes.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/frontend/homepage/homepage.php" afterPath="$PROJECT_DIR$/application/views/frontend/homepage/homepage.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/jquery.jplayer.min.js" afterPath="$PROJECT_DIR$/static/js/jquery.jplayer.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/frontend/live/live.php" afterPath="$PROJECT_DIR$/application/views/frontend/live/live.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/css/poartacerului.css" afterPath="$PROJECT_DIR$/static/css/poartacerului.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controllers/admin/resurse.php" afterPath="$PROJECT_DIR$/application/controllers/admin/resurse.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/config/routes.php" afterPath="$PROJECT_DIR$/application/config/routes.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <list id="3933325a-9f1d-46a8-b676-dd247d402a10" name="Failed commit: Default" comment="select picker fixed&#10;" />
+    <list id="5ac08641-aa12-47a3-adeb-6e37c194ad7f" name="Failed commit: Default (2)" comment="homepage changes + radio page." />
     <ignored path="pc.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/poartacerului.css" changelist="f76d3e2e-a12f-4bc6-9247-29ce719b99c9" time="1382795833727" ignored="false" />
-    <file path="/a.dummy" changelist="f76d3e2e-a12f-4bc6-9247-29ce719b99c9" time="1382821354968" ignored="false" />
-    <file path="/head_includes.php" changelist="f76d3e2e-a12f-4bc6-9247-29ce719b99c9" time="1382816518274" ignored="false" />
+    <file path="/poartacerului.css" changelist="f76d3e2e-a12f-4bc6-9247-29ce719b99c9" time="1384442179012" ignored="false" />
+    <file path="/a.dummy" changelist="f76d3e2e-a12f-4bc6-9247-29ce719b99c9" time="1383572246841" ignored="false" />
+    <file path="/head_includes.php" changelist="f76d3e2e-a12f-4bc6-9247-29ce719b99c9" time="1383685291247" ignored="false" />
     <file path="/administrator.php" changelist="f76d3e2e-a12f-4bc6-9247-29ce719b99c9" time="1382617397342" ignored="false" />
-    <file path="/resurse.php" changelist="f76d3e2e-a12f-4bc6-9247-29ce719b99c9" time="1382817747584" ignored="false" />
+    <file path="/resurse.php" changelist="f76d3e2e-a12f-4bc6-9247-29ce719b99c9" time="1384163403381" ignored="false" />
     <file path="/header.php" changelist="f76d3e2e-a12f-4bc6-9247-29ce719b99c9" time="1382621761473" ignored="false" />
     <file path="/footer.php" changelist="f76d3e2e-a12f-4bc6-9247-29ce719b99c9" time="1382620546322" ignored="false" />
     <file path="/lista.php" changelist="f76d3e2e-a12f-4bc6-9247-29ce719b99c9" time="1382891103369" ignored="false" />
     <file path="/devotional.php" changelist="f76d3e2e-a12f-4bc6-9247-29ce719b99c9" time="1382622956453" ignored="false" />
     <file path="/bootstrap.css" changelist="f76d3e2e-a12f-4bc6-9247-29ce719b99c9" time="1382698474611" ignored="false" />
     <file path="/bootstrap-select.min.css" changelist="f76d3e2e-a12f-4bc6-9247-29ce719b99c9" time="1382703835883" ignored="false" />
-    <file path="/general.js" changelist="f76d3e2e-a12f-4bc6-9247-29ce719b99c9" time="1382817063901" ignored="false" />
+    <file path="/general.js" changelist="f76d3e2e-a12f-4bc6-9247-29ce719b99c9" time="1384443681433" ignored="false" />
     <file path="/tip_model.php" changelist="f76d3e2e-a12f-4bc6-9247-29ce719b99c9" time="1382713301692" ignored="false" />
     <file path="/edit.php" changelist="f76d3e2e-a12f-4bc6-9247-29ce719b99c9" time="1382892001558" ignored="false" />
     <file path="/poartaceruluiAdmin.css" changelist="f76d3e2e-a12f-4bc6-9247-29ce719b99c9" time="1382795597058" ignored="false" />
     <file path="/adaugaaudio.php" changelist="f76d3e2e-a12f-4bc6-9247-29ce719b99c9" time="1382822956698" ignored="false" />
-    <file path="/Dummy.txt" changelist="f76d3e2e-a12f-4bc6-9247-29ce719b99c9" time="1383169554348" ignored="false" />
+    <file path="/Dummy.txt" changelist="f76d3e2e-a12f-4bc6-9247-29ce719b99c9" time="1384611373409" ignored="false" />
     <file path="/login.php" changelist="f76d3e2e-a12f-4bc6-9247-29ce719b99c9" time="1382893767727" ignored="false" />
     <file path="/password.php" changelist="f76d3e2e-a12f-4bc6-9247-29ce719b99c9" time="1382894674799" ignored="false" />
     <file path="/bootstrap-select.min.js" changelist="f76d3e2e-a12f-4bc6-9247-29ce719b99c9" time="1383169407300" ignored="false" />
+    <file path="/homepage.php" changelist="f76d3e2e-a12f-4bc6-9247-29ce719b99c9" time="1384442949830" ignored="false" />
+    <file path="/jquery.pnotify.min.js" changelist="f76d3e2e-a12f-4bc6-9247-29ce719b99c9" time="1383231366894" ignored="false" />
+    <file path="/jquery.pnotify.default.css" changelist="f76d3e2e-a12f-4bc6-9247-29ce719b99c9" time="1383232604572" ignored="false" />
+    <file path="/demo-01-bm.htm" changelist="f76d3e2e-a12f-4bc6-9247-29ce719b99c9" time="1383917276043" ignored="false" />
+    <file path="/jplayer.radio.css" changelist="f76d3e2e-a12f-4bc6-9247-29ce719b99c9" time="1384442863992" ignored="false" />
+    <file path="/butler-add.html" changelist="f76d3e2e-a12f-4bc6-9247-29ce719b99c9" time="1383569358990" ignored="false" />
+    <file path="$USER_HOME$/PhpstormProjects/taxibutler/deployment/src/main/webapp/public/venues/templates/butler-add.html" changelist="f76d3e2e-a12f-4bc6-9247-29ce719b99c9" time="1383569374641" ignored="false" />
+    <file path="$USER_HOME$/PhpstormProjects/taxibutler/deployment/src/main/webapp/public/venues/js/controllers/VenueButlersCtrl.js" changelist="f76d3e2e-a12f-4bc6-9247-29ce719b99c9" time="1383569458591" ignored="false" />
+    <file path="$USER_HOME$/PhpstormProjects/taxibutler/deployment/src/main/webapp/public/index.html" changelist="f76d3e2e-a12f-4bc6-9247-29ce719b99c9" time="1383580178463" ignored="false" />
+    <file path="$USER_HOME$/PhpstormProjects/taxibutler/deployment/src/main/webapp/public/js/taxi.app.js" changelist="f76d3e2e-a12f-4bc6-9247-29ce719b99c9" time="1383580178463" ignored="false" />
+    <file path="$USER_HOME$/PhpstormProjects/taxibutler/deployment/src/main/webapp/public/.gitignore" changelist="f76d3e2e-a12f-4bc6-9247-29ce719b99c9" time="1383570331612" ignored="false" />
+    <file path="$USER_HOME$/PhpstormProjects/taxibutler/.idea/inspectionProfiles/Strict_Inspections_Project_Profile.xml" changelist="f76d3e2e-a12f-4bc6-9247-29ce719b99c9" time="1383570356512" ignored="false" />
+    <file path="$USER_HOME$/PhpstormProjects/taxibutler/deployment/src/main/webapp/public/company-profile/js/config/config.js" changelist="f76d3e2e-a12f-4bc6-9247-29ce719b99c9" time="1383570778695" ignored="false" />
+    <file path="$USER_HOME$/PhpstormProjects/taxibutler/deployment/src/main/webapp/public/company/js/config/config.js" changelist="f76d3e2e-a12f-4bc6-9247-29ce719b99c9" time="1383573627035" ignored="false" />
+    <file path="$USER_HOME$/PhpstormProjects/taxibutler/deployment/src/main/webapp/public/js/config/config.js" changelist="f76d3e2e-a12f-4bc6-9247-29ce719b99c9" time="1383574749960" ignored="false" />
+    <file path="/config.js" changelist="f76d3e2e-a12f-4bc6-9247-29ce719b99c9" time="1383656046917" ignored="false" />
+    <file path="/info.html" changelist="f76d3e2e-a12f-4bc6-9247-29ce719b99c9" time="1383571645573" ignored="false" />
+    <file path="$USER_HOME$/PhpstormProjects/taxibutler/deployment/src/main/webapp/public/venues/templates/info.html" changelist="f76d3e2e-a12f-4bc6-9247-29ce719b99c9" time="1383571660129" ignored="false" />
+    <file path="$USER_HOME$/PhpstormProjects/taxibutler/deployment/src/main/webapp/public/company/js/controllers/CompanyProfileCtrl.js" changelist="f76d3e2e-a12f-4bc6-9247-29ce719b99c9" time="1383573249373" ignored="false" />
+    <file path="$USER_HOME$/PhpstormProjects/taxibutler/deployment/src/main/webapp/public/company/templates/company-profile.html" changelist="f76d3e2e-a12f-4bc6-9247-29ce719b99c9" time="1383575105030" ignored="false" />
+    <file path="/CompanyProfileCtrl.js" changelist="f76d3e2e-a12f-4bc6-9247-29ce719b99c9" time="1383572507869" ignored="false" />
+    <file path="$USER_HOME$/PhpstormProjects/taxibutler/deployment/src/main/webapp/public/company/templates/navbar.html" changelist="f76d3e2e-a12f-4bc6-9247-29ce719b99c9" time="1383574933219" ignored="false" />
+    <file path="/navbar.html" changelist="f76d3e2e-a12f-4bc6-9247-29ce719b99c9" time="1383574923070" ignored="false" />
+    <file path="/company-profile.html" changelist="f76d3e2e-a12f-4bc6-9247-29ce719b99c9" time="1383656089624" ignored="false" />
+    <file path="$USER_HOME$/PhpstormProjects/taxibutler/deployment/src/main/webapp/public/venues/js/config/config.js" changelist="f76d3e2e-a12f-4bc6-9247-29ce719b99c9" time="1383573588539" ignored="false" />
+    <file path="$USER_HOME$/PhpstormProjects/taxibutler/deployment/src/main/webapp/public/Gruntfile.js" changelist="f76d3e2e-a12f-4bc6-9247-29ce719b99c9" time="1383580178463" ignored="false" />
+    <file path="$USER_HOME$/PhpstormProjects/taxibutler/deployment/src/main/webapp/public/js/taxi.libs.js" changelist="f76d3e2e-a12f-4bc6-9247-29ce719b99c9" time="1383580178463" ignored="false" />
+    <file path="$USER_HOME$/PhpstormProjects/taxibutler/deployment/src/main/webapp/static/Gruntfile.js" changelist="f76d3e2e-a12f-4bc6-9247-29ce719b99c9" time="1383580697831" ignored="false" />
+    <file path="$USER_HOME$/PhpstormProjects/taxibutler/deployment/src/main/webapp/static/js/taxi.libs.js" changelist="f76d3e2e-a12f-4bc6-9247-29ce719b99c9" time="1383580700067" ignored="false" />
+    <file path="$USER_HOME$/PhpstormProjects/taxibutler/deployment/src/main/webapp/static/js/config/config.js" changelist="f76d3e2e-a12f-4bc6-9247-29ce719b99c9" time="1383656048359" ignored="false" />
+    <file path="$USER_HOME$/PhpstormProjects/taxibutler/deployment/src/main/webapp/static/company/templates/company-profile.html" changelist="f76d3e2e-a12f-4bc6-9247-29ce719b99c9" time="1383656089624" ignored="false" />
+    <file path="$USER_HOME$/PhpstormProjects/taxibutler/deployment/src/main/webapp/static/company/js/config/config.js" changelist="f76d3e2e-a12f-4bc6-9247-29ce719b99c9" time="1383655417008" ignored="false" />
+    <file path="$USER_HOME$/PhpstormProjects/taxibutler/deployment/src/main/webapp/static/js/taxi.app.js" changelist="f76d3e2e-a12f-4bc6-9247-29ce719b99c9" time="1383656049845" ignored="false" />
+    <file path="$USER_HOME$/PhpstormProjects/taxibutler/deployment/src/main/webapp/static/company/js/controllers/CompanyContactCtrl.js" changelist="f76d3e2e-a12f-4bc6-9247-29ce719b99c9" time="1383655621109" ignored="false" />
+    <file path="$USER_HOME$/PhpstormProjects/taxibutler/deployment/src/main/webapp/static/company/templates/company-contact.html" changelist="f76d3e2e-a12f-4bc6-9247-29ce719b99c9" time="1383659734175" ignored="false" />
+    <file path="$USER_HOME$/PhpstormProjects/taxibutler/deployment/src/main/webapp/static/company/templates/company-butler.html" changelist="f76d3e2e-a12f-4bc6-9247-29ce719b99c9" time="1383656012359" ignored="false" />
+    <file path="/company-butler.html" changelist="f76d3e2e-a12f-4bc6-9247-29ce719b99c9" time="1383656011536" ignored="false" />
+    <file path="/company-contact.html" changelist="f76d3e2e-a12f-4bc6-9247-29ce719b99c9" time="1383659701997" ignored="false" />
+    <file path="$USER_HOME$/PhpstormProjects/taxibutler/deployment/src/main/webapp/static/venues/templates/venues.html" changelist="f76d3e2e-a12f-4bc6-9247-29ce719b99c9" time="1383660144534" ignored="false" />
+    <file path="/demo-08-bm.htm" changelist="f76d3e2e-a12f-4bc6-9247-29ce719b99c9" time="1383917794856" ignored="false" />
+    <file path="/radio.htm" changelist="f76d3e2e-a12f-4bc6-9247-29ce719b99c9" time="1384262602676" ignored="false" />
+    <file path="/radio.php" changelist="f76d3e2e-a12f-4bc6-9247-29ce719b99c9" time="1384443171890" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,48 +103,37 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="edit.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/views/admin/devotional/edit.php">
+      <file leaf-file-name="radio.htm" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/static/radio.htm">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="0" selection-start="177" selection-end="215" vertical-scroll-proportion="0.0">
+            <state line="66" column="29" selection-start="0" selection-end="2775" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="password.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/views/admin/user/password.php">
+      <file leaf-file-name="radio.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/views/frontend/radio.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="22" column="10" selection-start="518" selection-end="518" vertical-scroll-proportion="-13.75">
+            <state line="4" column="0" selection-start="57" selection-end="57" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="general.js" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="radio.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/controllers/frontend/radio.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="13" column="0" selection-start="281" selection-end="281" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="general.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/static/js/general.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="111" column="0" selection-start="2926" selection-end="2926" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="bootstrap-select.min.js" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/static/js/bootstrap-select.min.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="534" column="5" selection-start="22616" selection-end="22616" vertical-scroll-proportion="0.948244">
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="user.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/controllers/admin/user.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="115" column="25" selection-start="4113" selection-end="4117" vertical-scroll-proportion="0.0">
+            <state line="104" column="0" selection-start="2745" selection-end="2745" vertical-scroll-proportion="0.2916112">
               <folding />
             </state>
           </provider>
@@ -98,43 +142,52 @@
       <file leaf-file-name="routes.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/config/routes.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="149" column="22" selection-start="6643" selection-end="6651" vertical-scroll-proportion="0.0">
+            <state line="51" column="39" selection-start="1905" selection-end="1905" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="password.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/controllers/admin/password.php">
+      <file leaf-file-name="homepage.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/views/frontend/homepage/homepage.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="43" column="32" selection-start="1293" selection-end="1293" vertical-scroll-proportion="0.0">
+            <state line="101" column="74" selection-start="5007" selection-end="5018" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="taguri.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/controllers/admin/taguri.php">
+      <file leaf-file-name="head_includes.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/views/frontend/includes/head_includes.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="45" column="53" selection-start="1622" selection-end="1622" vertical-scroll-proportion="0.0">
+            <state line="16" column="58" selection-start="1080" selection-end="1102" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="template.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/views/admin/template.php">
+      <file leaf-file-name="audio.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/views/frontend/resurse/audio.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+            <state line="30" column="58" selection-start="1147" selection-end="1147" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="lista.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/views/admin/user/lista.php">
+      <file leaf-file-name="poartacerului.css" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/static/css/poartacerului.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="64" selection-start="177" selection-end="179" vertical-scroll-proportion="0.0">
+            <state line="636" column="18" selection-start="14025" selection-end="14025" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="jplayer.radio.css" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/static/css/jplayer.radio.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="298" column="67" selection-start="6153" selection-end="6153" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -150,22 +203,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/application/views/admin/adaugaaudio.php" />
-        <option value="$PROJECT_DIR$/application/views/admin/imaginepromo/lista.php" />
-        <option value="$PROJECT_DIR$/application/views/admin/buletin/edit.php" />
-        <option value="$PROJECT_DIR$/application/views/admin/imaginepromo/edit.php" />
-        <option value="$PROJECT_DIR$/application/views/admin/user/edit.php" />
-        <option value="$PROJECT_DIR$/application/views/admin/user/lista.php" />
-        <option value="$PROJECT_DIR$/application/views/admin/resurse/lista.php" />
-        <option value="$PROJECT_DIR$/application/controllers/admin/cereri.php" />
-        <option value="$PROJECT_DIR$/application/views/admin/cereri/lista.php" />
-        <option value="$PROJECT_DIR$/application/views/admin/eveniment/edit.php" />
-        <option value="$PROJECT_DIR$/application/views/admin/eveniment/lista.php" />
-        <option value="$PROJECT_DIR$/application/views/admin/login.php" />
-        <option value="$PROJECT_DIR$/application/controllers/admin/password.php" />
-        <option value="$PROJECT_DIR$/application/views/admin/user/password.php" />
+        <option value="$USER_HOME$/Downloads/jQuery.jPlayer.2.4.0.demos/demo-08-bm.htm" />
+        <option value="$PROJECT_DIR$/static/demmo.htm" />
+        <option value="$PROJECT_DIR$/static/js/jquery.jplayer.min.js" />
+        <option value="$PROJECT_DIR$/static/demo-01-bm.htm" />
+        <option value="$PROJECT_DIR$/static/demo-08-bm.htm" />
+        <option value="$PROJECT_DIR$/application/controllers/admin/resurse.php" />
+        <option value="$PROJECT_DIR$/static/radio.htm" />
+        <option value="$PROJECT_DIR$/application/views/frontend/resurse/audio.php" />
+        <option value="$PROJECT_DIR$/application/views/frontend/includes/head_includes.php" />
+        <option value="$PROJECT_DIR$/static/css/poartacerului.css" />
+        <option value="$PROJECT_DIR$/static/css/jplayer.radio.css" />
+        <option value="$PROJECT_DIR$/application/views/frontend/radio.php" />
+        <option value="$PROJECT_DIR$/application/config/routes.php" />
+        <option value="$PROJECT_DIR$/application/controllers/frontend/radio.php" />
+        <option value="$PROJECT_DIR$/application/views/frontend/homepage/homepage.php" />
         <option value="$PROJECT_DIR$/static/js/general.js" />
-        <option value="$PROJECT_DIR$/static/js/bootstrap-select.min.js" />
       </list>
     </option>
   </component>
@@ -202,6 +255,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -217,6 +271,20 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="pc" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pc" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pc" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="static" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -251,6 +319,10 @@
               <option name="myItemId" value="static" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="css" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -266,15 +338,122 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pc" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pc" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="application" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pc" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pc" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="application" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="frontend" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pc" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pc" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="application" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="controllers" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pc" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pc" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="application" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="controllers" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="frontend" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pc" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pc" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="application" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="controllers" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="admin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$USER_HOME$/PhpstormProjects/machinexs/machinexs-ui" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="GoToClass.includeJavaFiles" value="false" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/application/controllers/frontend" />
+      <recent name="$PROJECT_DIR$/static" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration default="true" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
@@ -282,6 +461,13 @@
       <method />
     </configuration>
     <configuration default="true" type="PhpLocalRunConfigurationType" factoryName="PHP Console">
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugSession" factoryName="Local" singleton="true">
+      <JSDebuggerConfigurationSettings>
+        <option name="engineId" value="embedded" />
+        <option name="fileUrl" />
+      </JSDebuggerConfigurationSettings>
       <method />
     </configuration>
     <list size="0" />
@@ -342,7 +528,11 @@
       <created>1382894717104</created>
       <updated>1382894717104</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="select picker fixed&#10;">
+      <created>1383169633111</created>
+      <updated>1383169633111</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -369,21 +559,21 @@
     <frame x="64" y="-4" width="1857" height="1085" extended-state="6" />
     <editor active="false" />
     <layout>
-      <window_info id="Changes" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.35859126" sideWeight="0.47595358" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.14834578" sideWeight="0.48369265" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3290735" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.27363184" sideWeight="0.64140874" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24820343" sideWeight="0.85165423" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.35859126" sideWeight="0.5240464" order="9" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.14834578" sideWeight="0.51630735" order="10" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.5272145" sideWeight="0.4997236" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.110491075" sideWeight="0.49938875" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -431,7 +621,7 @@
     <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="false" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="select picker fixed&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="homepage changes + radio page." />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -449,112 +639,117 @@
     <MESSAGE value="Backend *login page* styling with Bootstrap 3.0" />
     <MESSAGE value="Backend *change password page* styling with Bootstrap 3.0" />
     <MESSAGE value="select picker fixed&#10;" />
+    <MESSAGE value="homepage changes + radio page." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/application/views/admin/eveniment/lista.php">
+    <entry file="file://$PROJECT_DIR$/static/demo-08-bm.htm">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="21" selection-start="333" selection-end="333" vertical-scroll-proportion="-6.25" />
+        <state line="56" column="0" selection-start="1548" selection-end="1548" vertical-scroll-proportion="1.0013089" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/admin/eveniment/edit.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="83" column="16" selection-start="3298" selection-end="3298" vertical-scroll-proportion="-6.4166665" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/admin/administrator.php">
+    <entry file="file://$PROJECT_DIR$/application/controllers/admin/administrator.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/admin/devotional/lista.php">
+    <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="12" selection-start="317" selection-end="317" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/admin/login.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="0" selection-start="171" selection-end="227" vertical-scroll-proportion="0.0">
+        <state line="34" column="27" selection-start="969" selection-end="969" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/admin/devotional/edit.php">
+    <entry file="file://$PROJECT_DIR$/application/controllers/admin/resurse.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="0" selection-start="177" selection-end="215" vertical-scroll-proportion="0.0">
+        <state line="107" column="28" selection-start="3587" selection-end="3587" vertical-scroll-proportion="-0.625">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/admin/template.php">
+    <entry file="file://$PROJECT_DIR$/static/js/jquery.jplayer.min.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+        <state line="25" column="16" selection-start="996" selection-end="996" vertical-scroll-proportion="0.2596538">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/admin/user/lista.php">
+    <entry file="file://$PROJECT_DIR$/static/js/radio.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="64" selection-start="177" selection-end="179" vertical-scroll-proportion="0.0">
+        <state line="30" column="47" selection-start="1134" selection-end="1134" vertical-scroll-proportion="-0.7388535">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/controllers/admin/taguri.php">
+    <entry file="file://$PROJECT_DIR$/static/css/poartacerului.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="45" column="53" selection-start="1622" selection-end="1622" vertical-scroll-proportion="0.0">
+        <state line="636" column="18" selection-start="14025" selection-end="14025" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/controllers/admin/user.php">
+    <entry file="file://$PROJECT_DIR$/static/css/jplayer.radio.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="115" column="25" selection-start="4113" selection-end="4117" vertical-scroll-proportion="0.0">
+        <state line="298" column="67" selection-start="6153" selection-end="6153" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/config/routes.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="149" column="22" selection-start="6643" selection-end="6651" vertical-scroll-proportion="0.0">
+        <state line="51" column="39" selection-start="1905" selection-end="1905" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/controllers/admin/password.php">
+    <entry file="file://$PROJECT_DIR$/static/radio.htm">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="43" column="32" selection-start="1293" selection-end="1293" vertical-scroll-proportion="0.0">
+        <state line="66" column="29" selection-start="0" selection-end="2775" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/static/css/bootstrap-datepicker.css">
+    <entry file="file://$PROJECT_DIR$/application/views/frontend/resurse/audio.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="12" selection-start="634" selection-end="634" vertical-scroll-proportion="0.71202534" />
+        <state line="30" column="58" selection-start="1147" selection-end="1147" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/admin/user/password.php">
+    <entry file="file://$PROJECT_DIR$/application/views/frontend/includes/head_includes.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="10" selection-start="518" selection-end="518" vertical-scroll-proportion="-13.75">
+        <state line="16" column="58" selection-start="1080" selection-end="1102" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controllers/frontend/radio.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="0" selection-start="281" selection-end="281" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/frontend/homepage/homepage.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="101" column="74" selection-start="5007" selection-end="5018" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/frontend/radio.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="0" selection-start="57" selection-end="57" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/static/js/general.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="111" column="0" selection-start="2926" selection-end="2926" vertical-scroll-proportion="0.0">
+        <state line="104" column="0" selection-start="2745" selection-end="2745" vertical-scroll-proportion="0.2916112">
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/js/bootstrap-select.min.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="534" column="5" selection-start="22616" selection-end="22616" vertical-scroll-proportion="0.948244">
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
