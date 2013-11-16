@@ -375,9 +375,10 @@ img.thumb_buletin
 
 #jQueryGallery .i_right {
     float: right;
-    margin-right: -16px;
+    margin-right: -14px;
     width: 220px;
     height: 406px;
+    font-family: 'Open Sans', sans-serif;
 }
 
 #jQueryGallery .i_right .i_search {
@@ -446,13 +447,13 @@ img.thumb_buletin
 }
 
 #jQueryGallery .i_right .i_item1 {
-    margin-top: 10px;
+    margin-top: 9px;
     width: 197px;
-    height: 105px;
+    height: 123px;
     background-attachment: scroll;
     background-clip: border-box;
     background-color: transparent;
-    background-image: url(../images/jQG_item1.jpg);
+    background-image: url(../images/jQG_item1.png);
     background-origin: padding-box;
     background-position: 0 0;
     background-repeat: no-repeat;
@@ -460,17 +461,18 @@ img.thumb_buletin
 }
 
 #jQueryGallery .i_right .i_item1 .ii_title {
-    color: #cb9328;
+    color: #030302;
     display: block;
-    padding: 6px 0 0 10px;
+    padding: 15px 0 0 10px;
+    font-size: 20px;
 }
 
 #jQueryGallery .i_right .i_item1 .ii_title2 {
-    color: #cb9328;
+    color: #030302;
     display: block;
-    padding: 15px 0 0 10px;
+    padding: 12px 0 0 10px;
     text-transform: uppercase;
-    font-size: 22px;
+    font-size: 20px;
     font-weight: bold;
 }
 
@@ -480,17 +482,17 @@ img.thumb_buletin
 }
 
 #jQueryGallery .i_right .i_item1 .but_live:hover {
-    background-position: -61px 0;
+    background-position: -63px 0;
 }
 
 #jQueryGallery .i_right .i_item2 {
-    margin-top: 10px;
+    margin-top: 9px;
     width: 197px;
-    height: 107px;
+    height: 123px;
     background-attachment: scroll;
     background-clip: border-box;
     background-color: transparent;
-    background-image: url(../images/jQG_item2.jpg);
+    background-image: url(../images/jQG_item2.png);
     background-origin: padding-box;
     background-position: 0 0;
     background-repeat: no-repeat;
@@ -498,15 +500,16 @@ img.thumb_buletin
 }
 
 #jQueryGallery .i_right .i_item2 .ii_title {
-    padding: 11px 0 0 10px;
+    padding: 25px 0 0 10px;
+    color: #fff;
+    font-size: 16px;
 }
 
 #jQueryGallery .i_right .i_item2 .ii_title span {
-    background-color: #c7ca77;
-    padding: 2px 0;
-    line-height: 20px;
-    color: #464542;
-    font-size: 14px
+    line-height: 25px;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
 }
 
 #jQueryGallery .i_right .i_item2 .but_play {
@@ -514,17 +517,17 @@ img.thumb_buletin
 }
 
 #jQueryGallery .i_right .i_item2 .but_play:hover {
-    background-position: -61px -24px;
+    background-position: -63px -25px;
 }
 
 #jQueryGallery .i_right .i_item3 {
-    margin-top: 10px;
+    margin-top: 9px;
     width: 197px;
-    height: 108px;
+    height: 123px;
     background-attachment: scroll;
     background-clip: border-box;
     background-color: transparent;
-    background-image: url(../images/jQG_item3.jpg);
+    background-image: url(../images/jQG_item3.png);
     background-origin: padding-box;
     background-position: 0 0;
     background-repeat: no-repeat;
@@ -532,15 +535,17 @@ img.thumb_buletin
 }
 
 #jQueryGallery .i_right .i_item3 .ii_title {
-    padding: 11px 0 0 10px;
+    padding: 25px 0 0 10px;
+    color: #fff;
+    font-size: 15px;
 }
 
 #jQueryGallery .i_right .i_item3 .ii_title span {
-    background-color: #c7ca77;
     padding: 2px 0;
     line-height: 20px;
-    color: #464542;
-    font-size: 14px;
+    color: #fff;
+    font-size: 15px;
+
 }
 
 #jQueryGallery .i_right .i_item3 .but_play {
@@ -548,7 +553,8 @@ img.thumb_buletin
 }
 
 #jQueryGallery .i_right .i_item3 .but_play:hover {
-    background-position: -61px -24px;
+    background-position: -63px -25px;
+
 }
 
 .BoxInRow {
@@ -566,7 +572,6 @@ img.thumb_buletin
     background-attachment: scroll;
     background-clip: border-box;
     background-color: transparent;
-    background-image: url(../images/BIR_T1.gif);
     background-origin: padding-box;
     background-position: center top;
     background-repeat: no-repeat;
@@ -576,10 +581,14 @@ img.thumb_buletin
     box-shadow: 0 0 7px #999;
 }
 
+.BoxInRow .BIR_T1 {
+    background-color : #cac4b9;
+}
+
 .BoxInRow .BIR_T1 .i_title {
     height: 20px;
     line-height: 20px;
-    color: #757575;
+    color: #fff;
     text-align: center;
     display: block;
     margin-top: 20px;
@@ -590,7 +599,7 @@ img.thumb_buletin
 }
 
 .BoxInRow .BIR_T1 .i_p1 {
-    color: #9f692a;
+    color: #302825;
     margin-bottom: 20px;
     padding: 0 10px;
     font-size: 16px;
@@ -598,7 +607,7 @@ img.thumb_buletin
 }
 
 .BoxInRow .BIR_T1 .i_p2 {
-    color: #7F7F7F;
+    color: #fff;
     display: block;
     height: 70px;
     text-align: center;
@@ -610,27 +619,40 @@ img.thumb_buletin
 }
 
 .BoxInRow .BIR_T1 .but_details {
-    margin-left: 15px !important;
+    width: 95px;
+    margin-top: 5px;
 }
 
 .BoxInRow .BIR_T2 {
-    background-image: url(../images/BIR_T2.gif);
+    background-color: #dcd9d1;
+    border: 1px solid #c5c0aa;
     margin-left: 26px;
 }
 
-.BoxInRow .BIR_T2 .altfel_de_click {
-    height: 128px;
-    margin-top: 25px;
-    margin-left: 4px;
-    margin-right: 5px;
-    background-attachment: scroll;
-    background-clip: border-box;
-    background-color: transparent;
-    background-image: url(../images/altfel_de_click.png);
-    background-origin: padding-box;
-    background-position: left top;
-    background-repeat: no-repeat;
-    background-size: auto;
+
+.BoxInRow .BIR_T2 #radioBox .top, #radioBox .top  {
+    background-image: url("../images/radioHead.png");
+    background-size: 100%;
+    width: 277px;
+    height: 118px;
+}
+
+.BoxInRow .BIR_T2 #player
+, #player {
+    background-color: #fcfcf8;
+    width: 277px;
+    height: 21px;
+    border-bottom: 1px solid #c5c0aa;
+
+}
+
+.BoxInRow .BIR_T2 #playerInfo, #playerInfo {
+    background-color: #dcd9d1;
+    width: 277px;
+    height: 66px;
+    border-bottom: 1px solid #c5c0aa;
+    border-right: 1px solid #c5c0aa;
+
 }
 
 .BoxInRow .BIR_T2 .i_p1 {
@@ -1045,12 +1067,12 @@ p.mediu {
 .but_live {
     display: block;
     float: left;
-    width: 61px;
-    height: 24px;
+    width: 63px;
+    height: 25px;
     background-attachment: scroll;
     background-clip: border-box;
     background-color: transparent;
-    background-image: url(../images/buttons.gif);
+    background-image: url(../images/buttons.png);
     background-origin: padding-box;
     background-position: 0 0;
     background-repeat: no-repeat;
@@ -1060,31 +1082,34 @@ p.mediu {
 .but_play {
     display: block;
     float: left;
-    width: 59px;
-    height: 22px;
+    width: 63px;
+    height: 25px;
     background-attachment: scroll;
     background-clip: border-box;
     background-color: transparent;
-    background-image: url(../images/buttons.gif);
+    background-image: url(../images/buttons.png);
     background-origin: padding-box;
-    background-position: 0 -24px;
+    background-position: 0px -25px;
     background-repeat: no-repeat;
     background-size: auto;
 }
 
 .but_details {
-    float: left;
+    display: block;
     text-align: center;
-    padding: 0 8px 0 10px;
-    line-height: 26px;
-    color: #000;
-    font-size: 12px;
-    height: 26px;
-    border: 1px solid #bfbebd;
+    padding: 0 15px 0 15px;
+    line-height: 29px;
+    color: #212121;
+    font-size: 10px;
+    height: 29px;
+    font-family: 'Open Sans', sans-serif;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
     background-attachment: scroll;
     background-clip: border-box;
     background-color: transparent;
-    background-image: url(../images/repeat_x.gif);
+    background-image: url(../images/repeat-x.png);
     background-origin: padding-box;
     background-position: 0 0;
     background-repeat: repeat-x;
@@ -1092,7 +1117,8 @@ p.mediu {
 }
 
 .but_details:hover {
-    background-position: 0 -26px;
+    background-image: none;
+    background-color: #f7f7f7;
 }
 
 .but_details strong {
@@ -1986,7 +2012,7 @@ margin-bottom: 40px;
 width: 135px;
 height: 25px;
 color: white;
-font-size: 18px; 	
+font-size: 18px;
 text-align: center;
 vertical-align: middle;
 line-height: 22px;
@@ -2085,7 +2111,7 @@ margin-left: 68px;
 }
 
 #contact_bar .content{
-width: 470px;
+width: 490px;
     height: 62px;
     margin: 0 auto;
 
