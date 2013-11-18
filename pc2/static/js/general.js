@@ -71,8 +71,24 @@ $(document).ready(
         });
 
         $('#text_cautare_admin').keyup( function(e){
-            key($(this), e, 'admin/lista-resurse/');
+            var code = (e.keyCode ? e.keyCode : e.which);
+            if(code == 13) { //Enter keycode
+                var cuvinte = $(this).val();
+                if ( cuvinte != '')
+                {
+                    var url = 'admin/lista-resurse/';
+                    var tip =$('#tip_cautare_admin').val();
+                    var page = 0;
+                    cuvinte = encodeURIComponent(trim(cuvinte));
+                    var url = getBaseUrl() + url + 'cauta/' + tip + '/' + cuvinte + '/' + page;
+                    document.location = url;
+                }
+                else
+                    $('#text_cautare_admin').css("background-color", "#e77373");
+
+            }
         });
+
 
         $('#buton_cautare_audio').click(function() {
             var cuvinte =$('#text_cautare_audio').val();
@@ -123,21 +139,37 @@ function radioExpand() {
 
 
 
+
+
 function key(object, e, url) {
     var code = (e.keyCode ? e.keyCode : e.which);
     if(code == 13) { //Enter keycode
         var cuvinte = object.val();
-        if ( cuvinte != '')
-        {
-        var tip =$('#tip_cautare_admin').val();
-        var page = 0;
         cuvinte = encodeURIComponent(trim(cuvinte));
-        var url = getBaseUrl() + url + 'cauta/' + tip + '/' + cuvinte + '/' + page;
+        var url = getBaseUrl() + url  + cuvinte;
         document.location = url;
-        }
-        else
-            $('#text_cautare_admin').css("background-color", "#e77373");
-
     }
 }
 
+
+
+//
+//
+//function key(object, e, url) {
+//    var code = (e.keyCode ? e.keyCode : e.which);
+//    if(code == 13) { //Enter keycode
+//        var cuvinte = object.val();
+//        if ( cuvinte != '')
+//        {
+//        var tip =$('#tip_cautare_admin').val();
+//        var page = 0;
+//        cuvinte = encodeURIComponent(trim(cuvinte));
+//        var url = getBaseUrl() + url + 'cauta/' + tip + '/' + cuvinte + '/' + page;
+//        document.location = url;
+//        }
+//        else
+//            $('#text_cautare_admin').css("background-color", "#e77373");
+//
+//    }
+//}
+//
