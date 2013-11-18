@@ -68,9 +68,10 @@
                 <div class="i_title">Ultima înregistrare</div>
             </div>
             <div>
-                <div align="center" id="blcPlayer"></div>
+                <div align="center" id="blcPlayer" style="clear: both; margin: auto"></div>
                 <?php
                     $thumbmare = str_replace("240", "720", $video[0]['thumb']);
+
                 ?>
                 <script type="text/javascript"
                         src="http://embed.bisericilive.com/get?cid=poartaceruluiro&w=625&h=351&autoPlay=false&stoppedImage=<?php echo $thumbmare ?>">

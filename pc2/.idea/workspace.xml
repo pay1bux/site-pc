@@ -2,20 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" readonly="true" id="f76d3e2e-a12f-4bc6-9247-29ce719b99c9" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/radio.htm" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/js/radio.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/controllers/frontend/radio.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/views/frontend/radio.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/frontend/resurse/audio.php" afterPath="$PROJECT_DIR$/application/views/frontend/resurse/audio.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/general.js" afterPath="$PROJECT_DIR$/static/js/general.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/frontend/includes/head_includes.php" afterPath="$PROJECT_DIR$/application/views/frontend/includes/head_includes.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/frontend/homepage/homepage.php" afterPath="$PROJECT_DIR$/application/views/frontend/homepage/homepage.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/jquery.jplayer.min.js" afterPath="$PROJECT_DIR$/static/js/jquery.jplayer.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/frontend/live/live.php" afterPath="$PROJECT_DIR$/application/views/frontend/live/live.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/css/poartacerului.css" afterPath="$PROJECT_DIR$/static/css/poartacerului.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controllers/admin/resurse.php" afterPath="$PROJECT_DIR$/application/controllers/admin/resurse.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/config/routes.php" afterPath="$PROJECT_DIR$/application/config/routes.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/frontend/resurse/video.php" afterPath="$PROJECT_DIR$/application/views/frontend/resurse/video.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <list id="3933325a-9f1d-46a8-b676-dd247d402a10" name="Failed commit: Default" comment="select picker fixed&#10;" />
@@ -38,7 +25,7 @@
     <file path="/edit.php" changelist="f76d3e2e-a12f-4bc6-9247-29ce719b99c9" time="1382892001558" ignored="false" />
     <file path="/poartaceruluiAdmin.css" changelist="f76d3e2e-a12f-4bc6-9247-29ce719b99c9" time="1382795597058" ignored="false" />
     <file path="/adaugaaudio.php" changelist="f76d3e2e-a12f-4bc6-9247-29ce719b99c9" time="1382822956698" ignored="false" />
-    <file path="/Dummy.txt" changelist="f76d3e2e-a12f-4bc6-9247-29ce719b99c9" time="1384611373409" ignored="false" />
+    <file path="/Dummy.txt" changelist="f76d3e2e-a12f-4bc6-9247-29ce719b99c9" time="1384770446255" ignored="false" />
     <file path="/login.php" changelist="f76d3e2e-a12f-4bc6-9247-29ce719b99c9" time="1382893767727" ignored="false" />
     <file path="/password.php" changelist="f76d3e2e-a12f-4bc6-9247-29ce719b99c9" time="1382894674799" ignored="false" />
     <file path="/bootstrap-select.min.js" changelist="f76d3e2e-a12f-4bc6-9247-29ce719b99c9" time="1383169407300" ignored="false" />
@@ -84,6 +71,7 @@
     <file path="/demo-08-bm.htm" changelist="f76d3e2e-a12f-4bc6-9247-29ce719b99c9" time="1383917794856" ignored="false" />
     <file path="/radio.htm" changelist="f76d3e2e-a12f-4bc6-9247-29ce719b99c9" time="1384262602676" ignored="false" />
     <file path="/radio.php" changelist="f76d3e2e-a12f-4bc6-9247-29ce719b99c9" time="1384443171890" ignored="false" />
+    <file path="/video.php" changelist="f76d3e2e-a12f-4bc6-9247-29ce719b99c9" time="1384724694082" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -130,11 +118,32 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="general.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="general.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/static/js/general.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="104" column="0" selection-start="2745" selection-end="2745" vertical-scroll-proportion="0.2916112">
+            <state line="104" column="0" selection-start="2745" selection-end="2745" vertical-scroll-proportion="0.0">
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ajaxul.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/static/js/ajaxul.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="102" column="19" selection-start="2890" selection-end="3590" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="video.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/application/views/frontend/resurse/video.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="70" column="84" selection-start="3095" selection-end="3095" vertical-scroll-proportion="0.0625">
+              <folding>
+                <marker date="1384724694334" expanded="false" signature="681:706" placeholder="..." />
+                <marker date="1384724694334" expanded="false" signature="1088:1100" placeholder="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -175,24 +184,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="poartacerului.css" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/static/css/poartacerului.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="636" column="18" selection-start="14025" selection-end="14025" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="jplayer.radio.css" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/static/css/jplayer.radio.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="298" column="67" selection-start="6153" selection-end="6153" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
     </leaf>
   </component>
   <component name="FindManager">
@@ -203,7 +194,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$USER_HOME$/Downloads/jQuery.jPlayer.2.4.0.demos/demo-08-bm.htm" />
         <option value="$PROJECT_DIR$/static/demmo.htm" />
         <option value="$PROJECT_DIR$/static/js/jquery.jplayer.min.js" />
         <option value="$PROJECT_DIR$/static/demo-01-bm.htm" />
@@ -219,15 +209,16 @@
         <option value="$PROJECT_DIR$/application/controllers/frontend/radio.php" />
         <option value="$PROJECT_DIR$/application/views/frontend/homepage/homepage.php" />
         <option value="$PROJECT_DIR$/static/js/general.js" />
+        <option value="$PROJECT_DIR$/application/views/frontend/resurse/video.php" />
       </list>
     </option>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="64" />
-    <option name="y" value="-4" />
-    <option name="width" value="1857" />
-    <option name="height" value="1085" />
+    <option name="x" value="163" />
+    <option name="y" value="123" />
+    <option name="width" value="1676" />
+    <option name="height" value="1043" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -255,7 +246,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -392,6 +382,32 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="frontend" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resurse" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pc" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pc" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="application" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="controllers" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -442,6 +458,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -532,7 +549,11 @@
       <created>1383169633111</created>
       <updated>1383169633111</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="homepage changes + radio page.">
+      <created>1384611479122</created>
+      <updated>1384611479122</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -556,24 +577,24 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="64" y="-4" width="1857" height="1085" extended-state="6" />
+    <frame x="163" y="123" width="1676" height="1043" extended-state="0" />
     <editor active="false" />
     <layout>
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.14834578" sideWeight="0.48369265" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.6379888" sideWeight="0.48341525" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3290735" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24820343" sideWeight="0.85165423" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2862408" sideWeight="0.36201116" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.14834578" sideWeight="0.51630735" order="10" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.6379888" sideWeight="0.51658475" order="10" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.110491075" sideWeight="0.49938875" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32960895" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -621,7 +642,7 @@
     <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="false" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="homepage changes + radio page." />
+    <option name="LAST_COMMIT_MESSAGE" value="unversioned changelist" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -640,61 +661,41 @@
     <MESSAGE value="Backend *change password page* styling with Bootstrap 3.0" />
     <MESSAGE value="select picker fixed&#10;" />
     <MESSAGE value="homepage changes + radio page." />
+    <MESSAGE value="resurse video / player fixed&#10;" />
+    <MESSAGE value="unversioned changelist" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/static/demo-08-bm.htm">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="56" column="0" selection-start="1548" selection-end="1548" vertical-scroll-proportion="1.0013089" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/controllers/admin/administrator.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="27" selection-start="969" selection-end="969" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="34" column="27" selection-start="969" selection-end="969" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/controllers/admin/resurse.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="107" column="28" selection-start="3587" selection-end="3587" vertical-scroll-proportion="-0.625">
-          <folding />
-        </state>
+        <state line="107" column="28" selection-start="3587" selection-end="3587" vertical-scroll-proportion="-0.625" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/static/js/jquery.jplayer.min.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="16" selection-start="996" selection-end="996" vertical-scroll-proportion="0.2596538">
-          <folding />
-        </state>
+        <state line="25" column="16" selection-start="996" selection-end="996" vertical-scroll-proportion="0.2596538" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/static/js/radio.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="47" selection-start="1134" selection-end="1134" vertical-scroll-proportion="-0.7388535">
-          <folding />
-        </state>
+        <state line="30" column="47" selection-start="1134" selection-end="1134" vertical-scroll-proportion="-0.7388535" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/static/css/poartacerului.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="636" column="18" selection-start="14025" selection-end="14025" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="636" column="18" selection-start="14025" selection-end="14025" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/static/css/jplayer.radio.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="298" column="67" selection-start="6153" selection-end="6153" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="298" column="67" selection-start="6153" selection-end="6153" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/config/routes.php">
@@ -748,8 +749,25 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/static/js/general.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="104" column="0" selection-start="2745" selection-end="2745" vertical-scroll-proportion="0.2916112">
+        <state line="104" column="0" selection-start="2745" selection-end="2745" vertical-scroll-proportion="0.0">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/js/ajaxul.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="102" column="19" selection-start="2890" selection-end="3590" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/frontend/resurse/video.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="70" column="84" selection-start="3095" selection-end="3095" vertical-scroll-proportion="0.0625">
+          <folding>
+            <marker date="1384724694334" expanded="false" signature="681:706" placeholder="..." />
+            <marker date="1384724694334" expanded="false" signature="1088:1100" placeholder="..." />
+          </folding>
         </state>
       </provider>
     </entry>
