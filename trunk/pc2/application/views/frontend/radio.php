@@ -15,12 +15,11 @@
             $("#jquery_jplayer_1").jPlayer({
                 ready: function (event) {
                     $(this).jPlayer("setMedia", {
-                        m4a:"http://www.jplayer.org/audio/m4a/TSP-01-Cro_magnon_man.m4a",
-                        oga:"http://www.jplayer.org/audio/ogg/TSP-01-Cro_magnon_man.ogg"
+                        mp3:"http://audio.poartaceruluiro.bisericilive.com:8080/poartaceruluiro.mp3"
                     });
                 },
-                swfPath: "js",
-                supplied: "m4a, oga",
+                swfPath: "static/js",
+                supplied: "mp3",
                 wmode: "window",
                 smoothPlayBar: true,
                 keyEnabled: true
@@ -63,9 +62,6 @@
                     </div>
                 </div>
                 <div class="clearLeft"></div>
-
-
-
 
                 <div class="jp-no-solution">
                     <span>Update Required</span>
