@@ -10,26 +10,25 @@
 <link href="css/poartacerului.css" rel="stylesheet" type="text/css" />
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
 <script type="text/javascript" src="js/jquery.jplayer.min.js"></script>
-<script type="text/javascript">
-//<![CDATA[
-$(document).ready(function(){
+    <script type="text/javascript">
+        //<![CDATA[
+        $(document).ready(function(){
 
-	$("#jquery_jplayer_1").jPlayer({
-		ready: function (event) {
-			$(this).jPlayer("setMedia", {
-				m4a:"http://www.jplayer.org/audio/m4a/TSP-01-Cro_magnon_man.m4a",
-				oga:"http://www.jplayer.org/audio/ogg/TSP-01-Cro_magnon_man.ogg"
-			});
-		},
-		swfPath: "js",
-		supplied: "m4a, oga",
-		wmode: "window",
-		smoothPlayBar: true,
-		keyEnabled: true
-	});
-});
-//]]>
-</script>
+            $("#jquery_jplayer_1").jPlayer({
+                ready: function (event) {
+                    $(this).jPlayer("setMedia", {
+                        mp3:"http://audio.poartaceruluiro.bisericilive.com:8080/poartaceruluiro.mp3"
+                    });
+                },
+                swfPath: "static/js",
+                supplied: "mp3",
+                wmode: "window",
+                smoothPlayBar: true,
+                keyEnabled: true
+            });
+        });
+        //]]>s
+    </script>
 </head>
 <body>
 <div id="radioBox">

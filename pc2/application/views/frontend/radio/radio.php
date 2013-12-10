@@ -3,10 +3,13 @@
 <head>
     <meta charset=utf-8 />
 
+    <title>Radio Poarta Cerului</title>
     <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
     <link href="<?php echo CSS_PATH; ?>jplayer.radio.css" rel="stylesheet" type="text/css" />
     <link href="<?php echo CSS_PATH; ?>poartacerului.css" rel="stylesheet" type="text/css" />
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+    <script type="text/javascript" src="<?php echo JS_PATH; ?>nivo-slider/jquery-1.6.1.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
     <script type="text/javascript" src="<?php echo JS_PATH; ?>jquery.jplayer.min.js"></script>
     <script type="text/javascript">
         //<![CDATA[
@@ -26,7 +29,46 @@
             });
         });
         //]]>
+
+        setIntHandlerID = setInterval(UpdateAudioCurrentStats, 60000);
+        UpdateAudioCurrentStats();
+
+        function UpdateAudioCurrentStats() {
+            $.get('http://embed.bisericilive.com/audiocurrentstats', { src: "http://audio.poartaceruluiro.bisericilive.com:8080/poartaceruluiro.mp3" }, function(data) {
+                if (data == '') {
+                    $('.stream-listeners').hide();
+                    $('.stream-song').html('OFFLINE');
+                    $('.stream-song').css({ "color": "red" });
+                } else {
+                    var tokens = data.split('\n');
+
+                    if ($('.stream-song').html() != '<marquee scrollamount="2">' + tokens[0].trim() + '</marquee>') {
+                        $('.stream-song').html(tokens[0].trim());
+                        if ($('.stream-song').width() > 100)
+                            $('.stream-song').html('<marquee scrollamount="2">' + tokens[0].trim() + '</marquee>');
+                    }
+
+
+                }
+            });
+        }
+
     </script>
+
+    <style>
+        html, body {
+            overflow: hidden;
+        }
+    </style>
+
+
+
+
+
+
+
+
+
 </head>
 <body>
 <div id="radioBox">
@@ -57,11 +99,14 @@
                     </ul>
                     <div class="jp-title" style="float:left;">
                         <ul>
-                            <li>Asculti: Numai T...</li>
+                            <li class="stream-song">RADIO OFFLINE</li>
                         </ul>
                     </div>
                 </div>
                 <div class="clearLeft"></div>
+
+
+
 
                 <div class="jp-no-solution">
                     <span>Update Required</span>

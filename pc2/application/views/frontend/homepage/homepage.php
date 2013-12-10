@@ -18,6 +18,30 @@
         });
     });
     //]]>
+
+    setIntHandlerID = setInterval(UpdateAudioCurrentStats, 60000);
+    UpdateAudioCurrentStats();
+
+    function UpdateAudioCurrentStats() {
+        $.get('http://embed.bisericilive.com/audiocurrentstats', { src: "http://audio.poartaceruluiro.bisericilive.com:8080/poartaceruluiro.mp3" }, function(data) {
+            if (data == '') {
+                $('.stream-listeners').hide();
+                $('.stream-song').html('OFFLINE');
+                $('.stream-song').css({ "color": "red" });
+            } else {
+                var tokens = data.split('\n');
+
+                if ($('.stream-song').html() != '<marquee scrollamount="2">' + tokens[0].trim() + '</marquee>') {
+                    $('.stream-song').html(tokens[0].trim());
+                    if ($('.stream-song').width() > 100)
+                        $('.stream-song').html('<marquee scrollamount="2">' + tokens[0].trim() + '</marquee>');
+                }
+
+
+            }
+        });
+    }
+
 </script>
 <!-- /RADIO -->
 <div class="clearBoth" style="height:10px;"></div>
@@ -114,7 +138,7 @@
                                        </ul>
                                        <div class="jp-title" style="float:left;">
                                            <ul>
-                                               <li>Asculti: Numai T...</li>
+                                               <li class="stream-song">RADIO OFFLINE</li>
                                            </ul>
                                        </div>
                                    </div>
