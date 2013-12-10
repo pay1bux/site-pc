@@ -121,7 +121,7 @@
                     <center><a href="<?php echo site_url('admin/editeaza-resursa/' . $resursa['r_id']); ?>"/><button type="button" class="btn btn-warning btn-sm">Editeaza</button></center>
                 </td>
                 <td>
-                    <center><a href="sterge-resursa/<?php echo $resursa['r_id'];?>" class="sterge" ><button type="button" class="btn btn-danger btn-sm">Sterge</button></a></center>
+                    <center><a href="<?php echo site_url('admin/sterge-resursa/' . $resursa['r_id']);?>" class="sterge" ><button type="button" class="btn btn-danger btn-sm">Sterge</button></a></center>
                 </td>
             </tr>
 
