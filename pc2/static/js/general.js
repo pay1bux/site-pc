@@ -126,6 +126,12 @@ $(document).ready(
 
         $("#radioExpand").click( function() { radioExpand(); });
 
+        $(".om").click( function() {
+            $(".divDespre").hide();
+
+            $("#"+this.id+"info").show();
+        })
+
     }
 
 );
@@ -150,7 +156,6 @@ function key(object, e, url) {
         document.location = url;
     }
 }
-
 
 
 //
