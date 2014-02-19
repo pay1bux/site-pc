@@ -33,7 +33,7 @@
             <div class="clearBoth"></div>
         </div>
         <div class="clearBoth"></div>
-
+<!--
         <div id="incontinut" style="">
             <div class="item">
                 <div class="picture"
@@ -73,7 +73,33 @@
         </div>
         <p>Flavius Măguran</p>
     </div>
-</div>
+
+
+</div>-->
+
+        <div id="1info" class="divDespre" style="width: 400px; height: 300px; background-color: red;">
+            varianta 1 NEE
+        </div>
+        <div id="2info" class="divDespre" style="width: 400px; height: 300px; background-color: red; display: none;">
+            varianta 2  DORU
+        </div>
+        <div id="3info" class="divDespre" style="width: 400px; height: 300px; background-color: red; display: none;">
+            varianta 3 EUSEBIU
+        </div>
+        <div id="4info" class="divDespre" style="width: 400px; height: 300px; background-color: red; display: none;">
+            varianta 4  GULER
+        </div>
+        <div id="5info" class="divDespre" style="width: 400px; height: 300px; background-color: red; display: none;">
+            varianta 5 FLAVIUS
+        </div>
+
+
+
+        <p id="1" class="om">Nelu</p>
+        <p id="2" class="om">Doru</p>
+        <p id="3" class="om">Eusebiu</p>
+        <p id="4" class="om">Guler</p>
+        <p id="5" class="om">flavius</p>
 </div>
 
 <div id="right">
