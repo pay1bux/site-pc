@@ -17,7 +17,7 @@ class Adaugaaudio extends CI_Controller {
         $this->load->model('tip_model');
         $this->load->model('meniu_model');
         $result = array();
-        $url = str_replace("http://tineretpc.net/upload-arhiva-audio/", "", $url);
+        $url = str_replace("http://74.220.207.111/~tineretp/upload-arhiva-audio/", "", $url);
         $expl = explode("/", $url);
 
         // Cautam tipul resursei
@@ -71,7 +71,7 @@ class Adaugaaudio extends CI_Controller {
     function add() {
         if (! strcmp($_SERVER['REQUEST_METHOD'],'POST')) {
             $dataAdaugarii = $this->input->post('data');
-            $result = file_get_contents("http://tineretpc.net/getaudioinfodetails.php?data=" . $dataAdaugarii);
+            $result = file_get_contents("http://74.220.207.111/~tineretp/getaudioinfodetails.php?data=" . $dataAdaugarii);
             $result = json_decode($result);
             $data['url_nou'] = $result->url_nou;
             $data['files'] = $result->files;
