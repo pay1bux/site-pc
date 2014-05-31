@@ -17,7 +17,7 @@
                         $size = filesize($file)  / 1024;
                         $play = getAudioFilePlayTime($inspector, $file);
                         rename($file, $folder_nou . basename($file));
-                        $file = str_replace("/home1/tineretp/www", "http://tineretpc.net", $file);
+                        $file = str_replace("/home1/tineretp/www", "http://74.220.207.111/~tineretp/", $file);
                         $array_items[] = array("path" => $file, "size" => $size, "play_time" => $play);
 					}
 				}
@@ -52,7 +52,7 @@
 
     $luna_text = $luni[intval($luna)];
     $data_text = $zi . "." . $luna . "." . $an;
-    $url_nou = "http://tineretpc.net/audio/" . $luna_text . " " . $an . "/" . $data_text . "/";
+    $url_nou = "http://74.220.207.111/~tineretp/audio/" . $luna_text . " " . $an . "/" . $data_text . "/";
     $folder_nou = "/home1/tineretp/www/audio/" . $luna_text . " " . $an . "/" . $data_text . "/";
 
     if(!file_exists("/home1/tineretp/www/audio/" . $luna_text . " " . $an)) {
