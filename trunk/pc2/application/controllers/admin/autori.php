@@ -64,22 +64,21 @@ class Autori extends CI_Controller {
 		$this->load->view('admin/template', $data);
     }
 
-    function adaptArray($arr) {
-        $arrayBun = array();
-        foreach($arr as $ar) {
-            $arrayBun[$ar["id"]] = $ar["nume"];
-        }
-        return $arrayBun;
-    }
-
-
-
     function lista() {
         $this->load->model('autor_model');
         $autori = $this->autor_model->getAutori();
-        $data['autori'] = $autori;
+        $data['autori'] = $this->adaptArray($autori);
+        asort($data['autori']);
         $data['main_content'] = 'admin/autori/lista';
 		$this->load->view('admin/template', $data);
+    }
+
+    function adaptArray($arr) {
+        $arrayBun = array();
+        foreach($arr as $ar) {
+            $arrayBun[$ar['id']] = $ar['nume'];
+        }
+        return $arrayBun;
     }
 }
 
