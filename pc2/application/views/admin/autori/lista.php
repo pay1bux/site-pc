@@ -32,15 +32,15 @@
         </tr>
         </thead>
         <?php
-        foreach ($autori as $autor) {
+        foreach ($autori as $idAutor => $autor) {
             ?>
 
             <tr>
                 <td>
-                    <?php echo $autor['nume']; ?>
+                    <?php echo $autor ?>
                 </td>
                 <td>
-                    <center><a href="<?php echo site_url('admin/editeaza-autori'); ?>/<?php echo $autor['id']; ?>"/><button type="button" class="btn btn-warning btn-sm">Editeaza</button></center>
+                    <center><a href="<?php echo site_url('admin/editeaza-autori'); ?>/<?php echo $idAutor; ?>"/><button type="button" class="btn btn-warning btn-sm">Editeaza</button></center>
                 </td>
                 <td>
                     <center><button type="button" class="btn btn-danger btn-sm">Sterge</button></center>
