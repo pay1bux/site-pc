@@ -98,6 +98,7 @@ class Devotional extends CI_Controller {
         $this->load->model('autor_model');
         $autori = $this->autor_model->getAutori();
         $data['autori'] = $this->adaptArray($autori);
+        asort($data['autori']);
 
         if (isset($idDevotional)) {
             $this->load->model('resurse_model');
