@@ -10,7 +10,7 @@
                     <a href="<?php echo site_url("devotional/autor/" . $devotionale[0]['nume_autor']);?>" style="text-decoration: underline; display: inline; font-size: 12px;"><?php echo $devotionale[0]['nume_autor'];?></a>
                 </p>
                 <br/>
-                <img src="<?php echo BASE_URL . $devotionale[0]['url'];?>" width=250px; align="left"
+                <img src="<?php echo BASE_URL . $devotionale[0]['url'];?>" width=150px; align="left"
                      style="padding: 0 10px 10px 0;">
 
                 <p style="text-align: justify;"><?php echo nl2br($devotionale[0]['continut']);?> </p>
