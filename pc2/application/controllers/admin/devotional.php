@@ -71,8 +71,8 @@ class Devotional extends CI_Controller {
                 $config['create_thumb'] = TRUE;
                 $config['thumb_marker'] = "_thumb";
                 $config['maintain_ratio'] = TRUE;
-                $config['width'] = 142;
-                $config['height'] = 121;
+                $config['width'] = 122;
+                $config['height'] = 149;
                 $this->load->library('image_lib', $config);
                 $thumbnailFilename = $uploadData['raw_name'] . $config['thumb_marker'] . $uploadData['file_ext'];
 
