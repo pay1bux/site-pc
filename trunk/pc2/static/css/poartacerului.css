@@ -953,8 +953,8 @@ p.mediu {
 .imgdev {
     float: left;
     margin-right: 10px;
-    width: 142px;
-    height: 107px;
+    width: 122px;
+    height: 149px;
 }
 
 .ModuleLine {
@@ -2171,3 +2171,78 @@ table.centerHead th {
 text-align: center;
 }
 
+/* DESPRE */
+
+.despre {
+
+    width: 660px;
+    height: 287px;
+    margin-left: 10px;
+    margin-top: 30px;
+    background-color: #afafaf;
+    border: 2px solid #c7c7c7;
+    border-left: none;
+    border-top: none;
+}
+
+.despre:not(:nth-of-type(1)) {
+    display: none;
+}
+
+.despre img{
+    float: left;
+
+}
+
+.despre .info {
+    width: 468px;
+    float: left;
+}
+
+.despre .info h1 {
+    margin: 20px 0px 0px 20px;
+    font-size: 35px;
+    line-height: 100%;
+    color: #3e3e3e;
+
+}
+
+.despre .info p {
+    font-family: "Segoe UI", "Arial";
+    margin: 10px 20px 0px 20px;
+    line-height: 18px;
+    color: white;
+    text-align: justify;
+    font-weight: lighter;
+    font-size: 12px;
+    margin-top: 10px;
+}
+
+.comitet:not(:last-of-type) {
+
+    margin-right: 6px;
+}
+
+
+.comitet {
+    float: left;
+width: 98px;
+}
+
+.comitet p {
+    color: #747474;
+    font-size: 13px;
+    margin-top: 5px;
+}
+
+#desprePanel {
+    float: left;
+    padding: 15px 30px 0px 30px;
+    width: 620px;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+#ucenic {
+    background-image: url('http://www.poartacerului.ro/media/bt.png');
+}
