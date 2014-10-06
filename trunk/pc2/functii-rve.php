@@ -17,7 +17,28 @@ function select_db($link) {
 }
 
 function getLocalitati() {
-	$q = "SELECT * FROM localitati";
+	$q = "SELECT * FROM localitati limit 100";
+	$r = mysql_query($q);
+
+    return $r;
+}
+
+function getBiblioteci() {
+	$q = "SELECT * FROM biblioteci";
+	$r = mysql_query($q);
+
+    return $r;
+}
+
+function getBiblioteciFinal() {
+	$q = "SELECT * FROM biblioteci_final";
+	$r = mysql_query($q);
+
+    return $r;
+}
+
+function insertBiblioteciFinal($nume, $adresa) {
+	$q = "INSERT into biblioteci_final (nume, adresa) VALUES ('$nume', '$adresa')";
 	$r = mysql_query($q);
 
     return $r;
