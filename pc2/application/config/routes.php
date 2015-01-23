@@ -87,6 +87,8 @@ $route['cereri-rugaciune/(\d+)'] = "frontend/cereri/index/$1";
 $route['ajax/abonare-buletin'] = "frontend/ajax/abonareBuletin";
 $route['lista-evenimente'] = "frontend/eveniment/lista";
 $route['lista-evenimente/(\d+-\d+-\d+)'] = "frontend/eveniment/lista/$1";
+$route['plan-citire-biblie'] = "frontend/plan/index";
+$route['plan-citire-biblie/(\d+-\d+-\d+)'] = "frontend/plan/index/$1";
 
 $route['download/(\d+)'] = "frontend/download/down/$1";
 $route['playonline/(\d+)'] = "frontend/playonline/play/$1";
