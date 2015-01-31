@@ -52,9 +52,9 @@ class Eveniment extends CI_Controller {
 
            {heading_row_start}<tr>{/heading_row_start}
 
-           {heading_previous_cell}<th height = 35px; width= 30px; style="vertical-align: middle; text-align: center; border-right:1px solid #acb137; background-image: url('.IMAGES_PATH.'calendar/header_calendar.png); background-position: 0px 0px;" ><a href="' . site_url("lista-evenimente/01-" . $luna_ant . "-" . $an_ant) . '"><p class="t_calendar">&lt;</p></a></th>{/heading_previous_cell}
-           {heading_title_cell}<th height = 35px; style="vertical-align: middle; text-align: center; background-image: url('.IMAGES_PATH.'calendar/header_calendar.png); background-position: -15px 0px;" colspan="{colspan}"><p class="t_calendar">{heading}</p></th>{/heading_title_cell}
-           {heading_next_cell}<th height = 35px; width= 30px; style="vertical-align: middle; text-align: center; border-left:1px solid #acb137; background-image: url('.IMAGES_PATH.'calendar/header_calendar.png); background-position: -196px 0px;" ><a href="' . site_url("lista-evenimente/01-" . $luna_urm . "-" . $an_urm) . '"><p class="t_calendar">&gt;</p></a></th>{/heading_next_cell}
+           {heading_previous_cell}<th class="calendar_arrow left" height = 35px; width= 30px;><a href="' . site_url("lista-evenimente/01-" . $luna_ant . "-" . $an_ant) . '"><p class="t_calendar">&lt;</p></a></th>{/heading_previous_cell}
+           {heading_title_cell}<th height = 35px; class="calendar_heading" colspan="{colspan}"><p class="t_calendar">{heading}</p></th>{/heading_title_cell}
+           {heading_next_cell}<th height = 35px; width= 30px; class="calendar_arrow right" ><a href="' . site_url("lista-evenimente/01-" . $luna_urm . "-" . $an_urm) . '"><p class="t_calendar">&gt;</p></a></th>{/heading_next_cell}
 
            {heading_row_end}</tr>{/heading_row_end}
 

@@ -1893,7 +1893,19 @@ p.aliniat
 {
     width: 62px;
     height: 83px;
-    background-image: url(../images/calendar/badge-data.png);
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    background: #302825; /* Old browsers */
+    /* IE9 SVG, needs conditional override of 'filter' to 'none' */
+    background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzMwMjgyNSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiM0ZjQ0NDAiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+    background: -moz-linear-gradient(top, #302825 0%, #4f4440 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#302825), color-stop(100%,#4f4440)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #302825 0%,#4f4440 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #302825 0%,#4f4440 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, #302825 0%,#4f4440 100%); /* IE10+ */
+    background: linear-gradient(to bottom, #302825 0%,#4f4440 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#302825', endColorstr='#4f4440',GradientType=0 ); /* IE6-8 */
     display: block;
     float: left;
 }
@@ -1903,7 +1915,7 @@ div.badge-data p.ziua
     font-size: 2.5em;
     font-family: Arial, Helvetica, sans-serif;
     color: white;
-    text-shadow: 1px 1px #a5aa2f;
+    text-shadow: 1px 1px #5d5032;
     text-align: center;
     padding-top: 20px;
 }
@@ -1914,7 +1926,7 @@ div.badge-data p
     font-size: 1em;
     font-family: Arial, Helvetica, sans-serif;
     color: white;
-    text-shadow: 1px 1px #a5aa2f;
+    text-shadow: 1px 1px #5d5032;
     text-align: center;
 
 
@@ -1938,31 +1950,53 @@ div.badge-data p
     font-family: Arial, Helvetica, sans-serif;
     color: #757575;
     padding: 5px 0 5px 0;
-
-
-
-
 }
 
 
 .calendar-table
 {
-    width: 215px;
+    /*width: 215px;*/
     font-family: Arial, Helvetica, sans-serif;
     color: black;
 
     font-size: 1.3em;
     background-color: #ffffff;
 
-
 }
 
+.calendar_arrow, .calendar_heading {
+    vertical-align: middle;
+    text-align: center;
+    text-shadow: none;
+    background: #302825; /* Old browsers */
+    /* IE9 SVG, needs conditional override of 'filter' to 'none' */
+    background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzMwMjgyNSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiM0ZjQ0NDAiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+    background: -moz-linear-gradient(top, #302825 0%, #4f4440 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#302825), color-stop(100%,#4f4440)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #302825 0%,#4f4440 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #302825 0%,#4f4440 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, #302825 0%,#4f4440 100%); /* IE10+ */
+    background: linear-gradient(to bottom, #302825 0%,#4f4440 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#302825', endColorstr='#4f4440',GradientType=0 ); /* IE6-8 */
+}
+
+.calendar_arrow.left {
+    -webkit-border-top-left-radius: 4px;
+    -moz-border-radius-topleft: 4px;
+    border-top-left-radius: 4px;
+}
+
+
+.calendar_arrow.right {
+    -webkit-border-top-right-radius: 4px;
+    -moz-border-radius-topright: 4px;
+    border-top-right-radius: 4px;
+}
 
 .t_calendar{
 
     font-family: Arial, Helvetica, sans-serif;
     color: white;
-    text-shadow: 1px 1px #969696;
     font-size: 1.3em;
 
 
@@ -1970,28 +2004,46 @@ div.badge-data p
 
 td.calendar_c
 {
-    background-color: white;
-    color: #b3b3b3;
+    background-color: #dcd9d1;
+    color: #302825;
     height: 30px;
     width: 30px;
     text-align: center;
-    border: 1px solid #e6e6e6;
-    vertical-align: middle;
 
+    border: 1px solid #c5c0aa;
+    vertical-align: middle;
+}
+
+.calendar_c .highlight a{
+    color: #d1d55f;
+    text-shadow: 1px 0 #787463;
 }
 
 .exista_eveniment{
     width: 30px;
-    height: 30px;
     display: block;
-    text-shadow: 1px 1px #969696;
+    padding: 8px 0 10px 0;
+    border: 1px solid #302825;
+    /*text-shadow: 1px 1px #969696;*/
     color: white;
     vertical-align: middle;
-    background-image: url(../images/calendar/exista.png);}
+    /*background-color: #302825;*/
+    background: #302825; /* Old browsers */
+    /* IE9 SVG, needs conditional override of 'filter' to 'none' */
+    background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzMwMjgyNSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiM0ZjQ0NDAiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+    background: -moz-linear-gradient(top,  #302825 0%, #4f4440 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#302825), color-stop(100%,#4f4440)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  #302825 0%,#4f4440 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  #302825 0%,#4f4440 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  #302825 0%,#4f4440 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  #302825 0%,#4f4440 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#302825', endColorstr='#4f4440',GradientType=0 ); /* IE6-8 */
+
+}
 
 .exista_eveniment a:active
 {
-    background-color: green;
+    background-color: #dcd9d1;
 }
 
 #adminpanel{
@@ -2245,4 +2297,33 @@ width: 98px;
 
 #ucenic {
     background-image: url('http://www.poartacerului.ro/media/bt.png');
+}
+
+
+.citeste_biblia {
+    margin-top: 20px;
+}
+
+.citeste_biblia a{
+    float: left;
+    color: #302724;
+    transition: all 0.5s ease;
+
+}
+
+.citeste_biblia a:first-child:hover {
+    background-color: #dcd9d1;
+    color: #302724;
+    transition: all 0.5s ease;
+
+}
+
+.citeste_biblia .online {
+    border: 2px solid #302724;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    font-size: 14px;
+    border-radius: 10px;
+    padding: 14px 40px;
+    vertical-align: middle;
 }

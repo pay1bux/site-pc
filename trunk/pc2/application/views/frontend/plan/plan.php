@@ -34,6 +34,22 @@ $buton = 'class="submit"';
                 </div>
 
                 <div class="clearLeft"></div>
+
+        <div class="citeste_biblia">
+
+            <a class="online" href="http://biblia.resursecrestine.ro">
+                Citeste online
+            </a>
+                <a style="margin: 15px 20px;">- sau - </a>
+            <a href="https://play.google.com/store/search?q=pub:adellphos">
+                <img alt="Get it on Google Play"
+                     src="https://developer.android.com/images/brand/ro_generic_rgb_wo_45.png" />
+            </a>
+
+        </div>
+
+
+
 <!---->
 <!--                --><?php //if(count($evenimente) != $i+1):?>
 <!--                    <div class="FooterLine" style="margin: 20px 0 20px 0;"></div>-->
