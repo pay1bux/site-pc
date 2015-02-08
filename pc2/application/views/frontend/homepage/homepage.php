@@ -106,53 +106,67 @@
                    href="<?php echo linkDevotional($devotional["titlu"], $devotional["id"])?>"><strong>CITESTE ARTICOLUL</strong></a></center>
             </div>
 
+            <div class="BIR_T2">
+<a href="<?php echo site_url("plan-citire-biblie").'/'.$currentDate?>"><div class="appIcon"></div></a>
 
-               <div class="BIR_T2">
-                   <div id="radioBox">
-                       <div class="top"></div>
+                <div class="bibleHeading">Plan de citire a Bibliei</div>
+                <div class="currentDay">Ziua <span><?php echo $dayOfYear?></span></div>
+                <div class="e_text"><?php echo $planSaptamana[0]["gand"]; ?></div>
 
-                       <div id="jquery_jplayer_1" class="jp-jplayer"></div>
-
-                       <div id="jp_container_1" class="jp-audio">
-                           <div class="jp-type-single">
-                               <div class="jp-gui jp-interface">
-                                   <div id="player">
-                                       <ul class="jp-controls">
-                                           <li><a href="javascript:;" class="jp-mute" tabindex="1" title="mute">mute</a></li>
-                                           <li><a href="javascript:;" class="jp-unmute" tabindex="1" title="unmute">unmute</a></li>
-                                           <li><a href="javascript:;" class="jp-volume-max" tabindex="1" title="max volume">max volume</a></li>
-                                           <li>&nbsp; | &nbsp; </li>
-                                           <li><a href="#" id="radioExpand"></a></li>
-                                       </ul>
-                                       <div class="jp-volume-bar">
-                                           <div class="jp-volume-bar-value"></div>
-                                       </div>
-                                   </div>
-                               </div>
-                               <div id="playerInfo">
-                                   <div class="jp-gui jp-interface">
-                                       <ul class="jp-controls" style="width: 73px; float: left;">
-                                           <li><a href="javascript:;" class="jp-play" tabindex="1">play</a></li>
-                                           <li><a href="javascript:;" class="jp-pause" tabindex="1">pause</a></li>
-
-                                       </ul>
-                                       <div class="jp-title" style="float:left;">
-                                           <ul>
-                                               <li class="stream-song">RADIO OFFLINE</li>
-                                           </ul>
-                                       </div>
-                                   </div>
-                                   <div class="clearLeft"></div>
-
-                                   <div class="jp-no-solution">
-                                       <span>Update Required</span>
-                                       To play the media you will need to either update your browser to a recent version or update your <a href="http://get.adobe.com/flashplayer/" target="_blank">Flash plugin</a>.
-                                   </div>
-                               </div>
-                           </div>
-                       </div>
-                   </div>
+                <div class="e_text"><b>De citit azi:</b>
+                    <a class="online" href="http://biblia.resursecrestine.ro/<?php echo $biblePath?>">
+                        <?php foreach($plan as $p) echo $p["referinta"].". "; ?>
+                    </a>
+                </div>
             </div>
+
+
+<!--               <div class="BIR_T2">-->
+<!--                   <div id="radioBox">-->
+<!--                       <div class="top"></div>-->
+<!---->
+<!--                       <div id="jquery_jplayer_1" class="jp-jplayer"></div>-->
+<!---->
+<!--                       <div id="jp_container_1" class="jp-audio">-->
+<!--                           <div class="jp-type-single">-->
+<!--                               <div class="jp-gui jp-interface">-->
+<!--                                   <div id="player">-->
+<!--                                       <ul class="jp-controls">-->
+<!--                                           <li><a href="javascript:;" class="jp-mute" tabindex="1" title="mute">mute</a></li>-->
+<!--                                           <li><a href="javascript:;" class="jp-unmute" tabindex="1" title="unmute">unmute</a></li>-->
+<!--                                           <li><a href="javascript:;" class="jp-volume-max" tabindex="1" title="max volume">max volume</a></li>-->
+<!--                                           <li>&nbsp; | &nbsp; </li>-->
+<!--                                           <li><a href="#" id="radioExpand"></a></li>-->
+<!--                                       </ul>-->
+<!--                                       <div class="jp-volume-bar">-->
+<!--                                           <div class="jp-volume-bar-value"></div>-->
+<!--                                       </div>-->
+<!--                                   </div>-->
+<!--                               </div>-->
+<!--                               <div id="playerInfo">-->
+<!--                                   <div class="jp-gui jp-interface">-->
+<!--                                       <ul class="jp-controls" style="width: 73px; float: left;">-->
+<!--                                           <li><a href="javascript:;" class="jp-play" tabindex="1">play</a></li>-->
+<!--                                           <li><a href="javascript:;" class="jp-pause" tabindex="1">pause</a></li>-->
+<!---->
+<!--                                       </ul>-->
+<!--                                       <div class="jp-title" style="float:left;">-->
+<!--                                           <ul>-->
+<!--                                               <li class="stream-song">RADIO OFFLINE</li>-->
+<!--                                           </ul>-->
+<!--                                       </div>-->
+<!--                                   </div>-->
+<!--                                   <div class="clearLeft"></div>-->
+<!---->
+<!--                                   <div class="jp-no-solution">-->
+<!--                                       <span>Update Required</span>-->
+<!--                                       To play the media you will need to either update your browser to a recent version or update your <a href="http://get.adobe.com/flashplayer/" target="_blank">Flash plugin</a>.-->
+<!--                                   </div>-->
+<!--                               </div>-->
+<!--                           </div>-->
+<!--                       </div>-->
+<!--                   </div>-->
+<!--            </div>-->
 
 
             <div class="BIR_T3">
