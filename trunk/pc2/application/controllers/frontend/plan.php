@@ -45,13 +45,17 @@ class Plan extends CI_Controller {
 
         if((int)$plan[0]['referinta'][0] > 0) {
             $biblePath = explode(" ", $plan[0]['referinta'], 4);
-            $chapters = explode("-", $biblePath[2],2);
-            $biblePath[2] = $chapters[0];
+            if($biblePath[2]) {
+                $chapters = explode("-", $biblePath[2],2);
+                $biblePath[2] = $chapters[0];
+            }
             $data['biblePath'] = $biblePath[0]."-".$biblePath[1]."/".$biblePath[2];
         } else {
             $biblePath = explode(" ", $plan[0]['referinta'], 3);
-            $chapters = explode("-", $biblePath[2],2);
-            $biblePath[1] = $chapters[0];
+            if($biblePath[2]) {
+                $chapters = explode("-", $biblePath[2],2);
+                $biblePath[1] = $chapters[0];
+            }
             $data['biblePath'] = $biblePath[0]."/".$biblePath[1];
         }
 
