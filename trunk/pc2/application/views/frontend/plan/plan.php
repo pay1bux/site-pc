@@ -10,7 +10,7 @@ $buton = 'class="submit"';
 ?>
 <div class="clearBoth" style="height:10px;"></div>
 <div id="PageContent">
-    <div id="header" style="background-image: url(<?php echo IMAGES_PATH; ?>banner/evenimente.png)"></div>
+    <div id="header" style="background-image: url(<?php echo IMAGES_PATH; ?>banner/biblia.png)"></div>
     <div id="continut">
             <div class="p_text" style="margin-bottom: 20px;">
                 <div class="i_title">
@@ -37,11 +37,11 @@ $buton = 'class="submit"';
 
         <div class="citeste_biblia">
 
-            <a class="online" href="http://biblia.resursecrestine.ro">
+            <a class="online" href="http://biblia.resursecrestine.ro/<?php echo $biblePath?>">
                 Citeste online
             </a>
                 <a style="margin: 15px 20px;">- sau - </a>
-            <a href="https://play.google.com/store/search?q=pub:adellphos">
+            <a href="https://play.google.com/store/apps/details?id=ro.adellphos.plancitirebiblie">
                 <img alt="Get it on Google Play"
                      src="https://developer.android.com/images/brand/ro_generic_rgb_wo_45.png" />
             </a>

@@ -629,6 +629,52 @@ img.thumb_buletin
     margin-left: 26px;
 }
 
+.BoxInRow .BIR_T2 .bibleHeading {
+    background-color: #413531;
+    width: 200px;
+    margin-top: 20px;
+    height: 36px;
+    color: #fff;
+    font-size: 15px;
+    font-family: "Trajan Pro";
+    line-height: 36px;
+    padding-left: 75px;
+}
+
+.BoxInRow .BIR_T2 .online {
+    text-decoration: underline;
+    color: #413531;
+}
+
+.BoxInRow .BIR_T2 .currentDay {
+    text-align: right;
+    margin: 5px 10px 0 0;
+}
+
+.BoxInRow .BIR_T2 .currentDay span {
+    font-size: 14px;
+}
+
+.BoxInRow .BIR_T2 .e_text {
+    margin: 10px 10px 0 10px;
+
+}
+
+.BoxInRow .BIR_T2 .appIcon {
+    width: 45px;
+    height: 45px;
+    background-image: url("../images/icons/bibleapp.png");
+    background-color: #adaf4a;
+    background-repeat: no-repeat;
+    background-position: center center;
+    border: 1px solid #413531;
+    padding: 4px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    position: absolute;
+    margin: 10px;
+}
 
 .BoxInRow .BIR_T2 #radioBox .top, #radioBox .top  {
     background-image: url("../images/radioHead.png");
