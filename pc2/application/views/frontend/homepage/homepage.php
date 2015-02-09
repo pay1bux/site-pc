@@ -106,20 +106,21 @@
                    href="<?php echo linkDevotional($devotional["titlu"], $devotional["id"])?>"><strong>CITESTE ARTICOLUL</strong></a></center>
             </div>
 
-            <div class="BIR_T2">
-<a href="<?php echo site_url("plan-citire-biblie").'/'.$currentDate?>"><div class="appIcon"></div></a>
+            <a href="<?php echo site_url("plan-citire-biblie").'/'.$currentDate?>" class="birtLink">
+              <div class="BIR_T2">
+                <div class="appIcon"></div>
 
-                <div class="bibleHeading">Plan de citire a Bibliei</div>
-                <div class="currentDay">Ziua <span><?php echo $dayOfYear?></span></div>
-                <div class="e_text"><?php echo $planSaptamana[0]["gand"]; ?></div>
+                    <div class="bibleHeading">Plan de citire a Bibliei</div>
+                    <div class="currentDay">Ziua <span><?php echo $dayOfYear?></span></div>
+                    <div class="e_text"><?php echo $planSaptamana[0]["gand"]; ?></div>
 
-                <div class="e_text"><b>De citit azi:</b>
-                    <a class="online" href="http://biblia.resursecrestine.ro/<?php echo $biblePath?>">
+                    <div class="e_text"><b>De citit azi:</b>
                         <?php foreach($plan as $p) echo $p["referinta"].". "; ?>
-                    </a>
-                </div>
-            </div>
+                    </div>
 
+
+           </div>
+            </a>
 
 <!--               <div class="BIR_T2">-->
 <!--                   <div id="radioBox">-->

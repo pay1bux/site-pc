@@ -42,18 +42,6 @@ class Homepage extends CI_Controller {
         $plan = $this->plan_model->getPlanByDay($dayOfYear);
         $planSaptamana = $this->plan_saptamana_model->getPlanSaptamanaByWeek($weekOfYear);
 
-        if((int)$plan[0]['referinta'][0] > 0) {
-            $biblePath = explode(" ", $plan[0]['referinta'], 4);
-            $chapters = explode("-", $biblePath[2],2);
-            $biblePath[2] = $chapters[0];
-            $data['biblePath'] = $biblePath[0]."-".$biblePath[1]."/".$biblePath[2];
-        } else {
-            $biblePath = explode(" ", $plan[0]['referinta'], 3);
-            $chapters = explode("-", $biblePath[1],2);
-            $biblePath[1] = $chapters[0];
-            $data['biblePath'] = $biblePath[0]."/".$biblePath[1];
-        }
-
         $data['plan'] = $plan;
         $data['planSaptamana'] = $planSaptamana;
 

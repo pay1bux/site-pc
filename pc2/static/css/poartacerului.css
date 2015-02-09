@@ -629,6 +629,11 @@ img.thumb_buletin
     margin-left: 26px;
 }
 
+.BoxInRow a.birtLink{
+    color: #413531;
+}
+
+
 .BoxInRow .BIR_T2 .bibleHeading {
     background-color: #413531;
     width: 200px;
