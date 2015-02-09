@@ -57,6 +57,7 @@ class Plan extends CI_Controller {
 
 
         $data['plan'] = $plan;
+        $data['page_title'] = "Plan de citire a Bibliei";
         $data['planSaptamana'] = $planSaptamana;
 
         $this->lang->load('calendar', 'romana');
