@@ -16,7 +16,7 @@
 <script type="text/javascript" src="<?php echo JS_PATH; ?>nivo-slider/jquery.nivo.slider.js"></script>
 <script type="text/javascript" src="<?php echo JS_PATH; ?>jquery.simplyscroll.js"></script>
 <script type="text/javascript" src="<?php echo JS_PATH; ?>jquery.tinyscrollbar.min.js"></script>
-<script type="text/javascript" src="http://live.jahos.net/swfobject.js"></script>
+<!--<script type="text/javascript" src="http://live.jahos.net/swfobject.js"></script>-->
 <script type="text/javascript" src="<?php echo JS_PATH; ?>general.js"></script>
 <link rel="stylesheet" charset="utf-8" type="text/css" href="<?php echo CSS_PATH; ?>prettyPhoto.css" />
 <script type="text/javascript" src="<?php echo JS_PATH; ?>jquery.prettyPhoto.js"></script>

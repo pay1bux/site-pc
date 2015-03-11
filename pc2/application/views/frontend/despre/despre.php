@@ -72,7 +72,7 @@
             </div>
         </div>
 
-        <div id="comitet_4" class="despre">
+        <div id="comitet_3" class="despre">
             <img src="<?php echo IMAGES_PATH; ?>comitet/4.png">
             <div class="info">
                 <h1>Eusebiu Stanilă</h1>
@@ -101,7 +101,7 @@
             </div>
         </div>
 
-        <div id="comitet_5" class="despre">
+        <div id="comitet_4" class="despre">
             <img src="<?php echo IMAGES_PATH; ?>comitet/5.png">
             <div class="info">
                 <h1>Romică Florescu</h1>
@@ -130,27 +130,6 @@
             </div>
         </div>
 
-        <div id="comitet_6" class="despre">
-            <img src="<?php echo IMAGES_PATH; ?>comitet/6.png">
-            <div class="info">
-                <h1>Flavius Măguran</h1>
-
-                <p>S-a născut în data de 17 noiembrie 1981 în localitatea Gurahont, judeţul Arad, unde
-
-                    a si copilarit. Este absolvent al Universitatii Ioan Slavici, Facultatea de calculatoare,
-
-                    din Timisoara, promoţia 2000-2005 si al Facultatii de Teologie Betania Arad, studii
-
-                    desfasurate in perioada 2005-2008. Este căsătorit cu Marta, împreună cu care are
-
-                    doi copii.
-
-                    </p><p>Din anul 2010 si pana in prezent slujeşte ca diacon în Biserica Penticostală
-
-                    Poarta Cerului din Timisoara, iar din 2010 preluand si lucrarea cu tineretul.</p>
-            </div>
-        </div>
-
 <div id="desprePanel">
         <div id="1" class="comitet">
             <img src="<?php echo IMAGES_PATH; ?>comitet/1thumb.png">
@@ -160,17 +139,13 @@
             <img src="<?php echo IMAGES_PATH; ?>comitet/2thumb.png">
             <p style="text-align: center;">Sandu Guler</p>
         </div>
-        <div id="4" class="comitet">
+        <div id="3" class="comitet">
             <img src="<?php echo IMAGES_PATH; ?>comitet/4thumb.png">
             <p>Eusebiu Stanilă</p>
         </div>
-        <div id="5" class="comitet">
+        <div id="4" class="comitet">
             <img src="<?php echo IMAGES_PATH; ?>comitet/5thumb.png">
             <p>Romică Florescu</p>
-        </div>
-        <div id="6" class="comitet">
-            <img src="<?php echo IMAGES_PATH; ?>comitet/6thumb.png">
-            <p>Flavius Măguran</p>
         </div>
 </div>
 </div>

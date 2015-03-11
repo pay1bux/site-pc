@@ -17,7 +17,7 @@
 <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
 <script type="text/javascript" src="<?php echo JS_PATH; ?>jquery.tinyscrollbar.min.js"></script>
 <script type="text/javascript" src="<?php echo JS_PATH; ?>bootstrap-datepicker.js"></script>
-<script type="text/javascript" src="http://live.jahos.net/swfobject.js"></script>
+<!--<script type="text/javascript" src="http://live.jahos.net/swfobject.js"></script>-->
 <script type="text/javascript" src="<?php echo JS_PATH; ?>general.js"></script>
 
 
