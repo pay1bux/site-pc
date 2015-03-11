@@ -68,14 +68,21 @@ $buton = 'class="submit"';
         <div style="float:left; margin-top: 10px;">
             <div class="p_text" style="float: none;">
                 <div class="i_title">Biserica Penticostală Poarta Cerului</div>
-                <div class="i_details">
+                <div class="i_details" style="float:left">
                     <p class="mic ">Str. Banul Mărăcine nr.25</p>
 
                     <p class="mic ">Timișoara</p>
 
                     <p class="mic ">0256-472002</p>
                     <br/>
-
+                </div>
+                <div class="i_details" style="float:right">
+                    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                        <input type="hidden" name="cmd" value="_s-xclick">
+                        <input type="hidden" name="hosted_button_id" value="LQ82KWP92D7AJ">
+                        <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+                        <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+                    </form>
                 </div>
             </div>
 
