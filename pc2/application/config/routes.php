@@ -50,6 +50,7 @@ $route['devotional/(:any)/(\d+)'] = "frontend/devotional/index/$1/$2";
 $route['live'] = "frontend/live/live";
 
 $route['radio'] = "frontend/radio/index";
+$route['radio-expand'] = "frontend/radioexpand/index";
 
 $route['despre-noi'] = "frontend/despre/index";
 
@@ -156,6 +157,8 @@ $route['admin/schimba-parola'] = "admin/password/schimbaparola";
 $route['admin/lista-cereri'] = "admin/cereri/lista";
 $route['admin/lista-cereri/(\d+)'] = "admin/cereri/lista/$1";
 $route['admin/sterge-cerere/(\d+)'] = "admin/cereri/delete/$1";
+
+$route['youtube'] = "admin/youtube/lista";
 
 $route['404_override'] = '';
 
