@@ -31,9 +31,9 @@
     </script>
     <script>
         $(document).ready(function() {
-            $("#headerLiveHolder").airtimeLiveInfo({
+            $("#headerLiveTrackHolder").airtimeLiveTrackInfo({
                 sourceDomain: "https://89.238.218.26:600/",
-                text: {onAirNow:"Ruleaza acum", offline:"Offline", current:"Acum", next:"Urmeaza"},
+                text: {onAirNow:"", offline:"Offline", current:"Acum", next:"Urmeaza"},
                 updatePeriod: 20 //seconds
             });
             $("#onAirToday").airtimeShowSchedule({
@@ -72,7 +72,7 @@
                     </ul>
                     <div class="jp-title" style="float:left;">
                         <ul>
-                            <li id="headerLiveHolder">RADIO OFFLINE</li>
+                            <li id="headerLiveTrackHolder">RADIO OFFLINE</li>
                         </ul>
                     </div>
                 </div>
@@ -86,7 +86,7 @@
     </div>
 </div>
 <br/>
-<!--<div id="headerLiveHolder" style="border: 1px solid #999999; padding: 10px;"></div>-->
+<!--<div id="headerLiveTrackHolder" style="border: 1px solid #999999; padding: 10px;"></div>-->
 <br/>
 <div id="onAirToday"></div>
 <br/>
