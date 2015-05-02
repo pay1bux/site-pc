@@ -29,7 +29,7 @@
 	  }
 	#headerLiveTrackHolder span#status-current-show {
 	  font-size:10px;
-	  color:#68bd44;
+	  /*color:#68bd44;*/
 	  text-transform:uppercase;
 	  font-weight:normal;
 	  line-height:12px;
