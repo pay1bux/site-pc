@@ -201,13 +201,11 @@
                }
 
                obj.empty();
-               //obj.append("<span id='status-current-show' style='display:inline'>"+showStatus+currentShowName+"</span>");
-                       //"<span class='current' id='time-elapsed' class='time-elapsed'>"+timeElapsed+"</span>" +
-                       //"<span class='current' id='time-remaining' class='time-remaining'>"+timeRemaining+"</span>");
+               obj.append("<span id='status-current-show' style='display:inline'>"+currentShowName+"</span>");
                obj.append("<ul class='widget now-playing-bar'>" +
-                   "<li class='current track-metadata'>"+options.text.current+": "+currentShowName+"</li>" +
-                   "<li class='next track-metadata'>"+options.text.next+": "+sd.nextTrack.getTitle()+"</span></li>" +                   
-                   "</ul>");
+                   "<li class='current track-metadata'>"+options.text.current+": "+sd.currentTrack.getTitle()+"</li>" +
+                   "<li class='next track-metadata'>"+options.text.next+": "+sd.nextTrack.getTitle()+"</span></li>" +
+               "</ul>");
            }
 
            function processData(data){
