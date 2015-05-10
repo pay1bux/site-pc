@@ -47,35 +47,43 @@
 <div class="clearBoth" style="height:10px;"></div>
     <div id="PageContent">
         <div id="jQueryGallery">
-<!--            <div class="i_watermark"></div>-->
+            <!--            <div class="i_watermark"></div>-->
             <div class="i_left">
-                <div id="wrapper1">
-                    <div class="slider-wrapper theme-default">
-                        <div class="ribbon"></div>
-                        <div id="slider" class="nivoSlider">
-                            <?php if ($imaginiEvenimente != null): ?>
-                                <?php foreach ($imaginiEvenimente as $key => $ie): ?>
-                                    <img src="<?php echo BASE_URL . $ie['url'] ?>" width="722" height="406" alt="evenimente<?php echo $key; ?>"/>
-                                <?php endforeach; ?>
-                            <?php endif; ?>
-                            <?php if ($imaginiPromo != null): ?>
-                                <?php foreach ($imaginiPromo as $key => $ip): ?>
-                                    <?php if(isset($ip['r_url'])): ?>
-                                        <a href="<?php echo $ip['r_url'];?>" target="_blank">
-                                          <img src="<?php echo BASE_URL . $ip['url'] ?>" width="722" height="406" alt="promo<?php echo $key; ?>"/>
-                                        </a>
-                                    <?php else: ?>
-                                          <img src="<?php echo BASE_URL . $ip['url'] ?>" width="722" height="406" alt="promo<?php echo $key; ?>"/>
-                                    <?php endif; ?>
-                                <?php endforeach; ?>
-                            <?php endif; ?>
+                <?php if ($evenimentLive): ?>
+                    <div id="wrapper1">
+                        <div align="center" id="blcPlayer"></div><script type="text/javascript" src="http://embed.bisericilive.com/get?cid=poartaceruluiro&w=720&h=404&sc=false"></script>
+                    </div>
+                    <div id="wrapper2">
+                        <!--                    <div class="i_watermark"></div>-->
+                    </div>
+                <?php else: ?>
+                    <div id="wrapper1">
+                        <div class="slider-wrapper theme-default">
+                            <div class="ribbon"></div>
+                            <div id="slider" class="nivoSlider">
+                                <?php if ($imaginiEvenimente != null): ?>
+                                    <?php foreach ($imaginiEvenimente as $key => $ie): ?>
+                                        <img src="<?php echo BASE_URL . $ie['url'] ?>" width="722" height="406" alt="evenimente<?php echo $key; ?>"/>
+                                    <?php endforeach; ?>
+                                <?php endif; ?>
+                                <?php if ($imaginiPromo != null): ?>
+                                    <?php foreach ($imaginiPromo as $key => $ip): ?>
+                                        <?php if(isset($ip['r_url'])): ?>
+                                            <a href="<?php echo $ip['r_url'];?>" target="_blank">
+                                              <img src="<?php echo BASE_URL . $ip['url'] ?>" width="722" height="406" alt="promo<?php echo $key; ?>"/>
+                                            </a>
+                                        <?php else: ?>
+                                              <img src="<?php echo BASE_URL . $ip['url'] ?>" width="722" height="406" alt="promo<?php echo $key; ?>"/>
+                                        <?php endif; ?>
+                                    <?php endforeach; ?>
+                                <?php endif; ?>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div id="wrapper2">
-<!--                    <div class="i_watermark"></div>-->
-
-                </div>
+                    <div id="wrapper2">
+    <!--                    <div class="i_watermark"></div>-->
+                    </div>
+                <?php endif; ?>
             </div>
             <div class="i_right">
 

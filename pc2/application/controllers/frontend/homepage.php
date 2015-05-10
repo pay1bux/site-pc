@@ -12,6 +12,12 @@ class Homepage extends CI_Controller {
         $data['buletin'] = $this->resurse_model->getUltimulBuletin();
 
         $evenimenteFinal = array();
+        $evenimentLive = false;
+        $serverDiffFromUTC = date("Z") / 3600;
+        $currentDate = new DateTime(date("d") .'-' . date('m') . '-' . date('Y') . ' Europe/Helsinki');
+        $summerTime = $currentDate->format('I');
+        $ourDiffFromUTC = ($summerTime == 1)? 3 : 2;
+        $shiftedCurrentHour = date("G") + ($ourDiffFromUTC - $serverDiffFromUTC);
         for ($i = 0; $i < 30; $i++) {
             $date  = mktime(0, 0, 0, date("m")  , date("d")+$i, date("Y"));
             $date = date("Y-m-d", $date);
@@ -19,8 +25,13 @@ class Homepage extends CI_Controller {
             if ($evenimente != null) {
                 foreach($evenimente as $eveniment) {
                     if ($eveniment['live'] == 1) {
-                        if ($i == 0 && $eveniment['ora_sfarsit'] < (date("G") + 1)) {
-                            continue;
+                        if ($i == 0)
+                            if ($eveniment['ora_sfarsit'] < ($shiftedCurrentHour + 1)) {
+                                continue;
+                            } else {
+                                if ($eveniment['ora_inceput'] < ($shiftedCurrentHour + 1)) {
+                                    $evenimentLive = true;
+                            }
                         }
                         $eveniment['data'] = $date;
                         $evenimenteFinal[] = $eveniment;
@@ -46,6 +57,7 @@ class Homepage extends CI_Controller {
         $data['planSaptamana'] = $planSaptamana;
 
         $data['evenimente'] = $evenimenteFinal;
+        $data['evenimentLive'] = $evenimentLive;
 
         $data['imaginiEvenimente'] = $this->resurse_model->getUrmatoareleEvenimente(5);
 
