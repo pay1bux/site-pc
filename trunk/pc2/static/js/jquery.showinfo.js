@@ -6,7 +6,6 @@
     var defaults = {
         updatePeriod: 20, //seconds
         sourceDomain: "http://localhost/", //where to get show status from
-        text: {onAirToday:"On air today"},
         showLimit: 5
     };
     options = $.extend(true, defaults, options);
@@ -24,7 +23,6 @@
             var shows = currentShow.length == 0 ? nextShows : currentShow.concat(nextShows);
 
             tableString = "";
-            tableString += "<h3>" + options.text.onAirToday + "</h3>";
             tableString += "<table width='100%' border='0' cellspacing='0' cellpadding='0' class='widget widget now-playing-list small'>"+
                 "<tbody>";
             
@@ -165,6 +163,7 @@
 
        return this.each(function() {
            var obj = $(this);
+
            var sd = null;
            getServerData();
 
@@ -200,12 +199,21 @@
                    nextShowRange = nextShows[0].getRange();
                }
 
-               obj.empty();
-               obj.append("<span id='status-current-show' style='display:inline'>"+currentShowName+"</span>");
-               obj.append("<ul class='widget now-playing-bar'>" +
-                   "<li class='current track-metadata'>"+options.text.current+": "+sd.currentTrack.getTitle()+"</li>" +
-                   "<li class='next track-metadata'>"+options.text.next+": "+sd.nextTrack.getTitle()+"</span></li>" +
-               "</ul>");
+               var statusCurrentShow = $('#status-current-show');
+               if (statusCurrentShow.text()!=currentShowName) {
+                   statusCurrentShow.html(currentShowName);
+               }
+
+               var statusCurrentTrack = $('#status-current-track');
+               if (statusCurrentTrack.text()!=sd.currentTrack.getTitle()) {
+                   statusCurrentTrack.html(sd.currentTrack.getTitle());
+               }
+
+               var statusNextTrack = $('#status-next-track');
+               if (statusNextTrack.text()!=sd.nextTrack.getTitle()) {
+                   statusNextTrack.html(sd.nextTrack.getTitle());
+               }
+
            }
 
            function processData(data){
@@ -229,6 +237,47 @@
        });
     };
    })(jQuery);
+
+ function scrollText(txt, parent){
+     txt.bind('scroll', function () {
+         var el = $(this);
+         // Scroll state machine
+         var scrollState = el.data("scrollState") || 0;
+         el.data("scrollState", (scrollState + 1) % 4);
+         switch (scrollState) {
+             case 0: // initial wait
+                 el.css({ left: 0 });
+                 el.show();
+                 window.setTimeout(function () {
+                     el.trigger("scroll");
+                 }, 5000);
+                 break;
+             case 1: // start scroll
+                 var delta = parent.width() - el.width();
+                 if (delta < 0) {
+                     el.animate({ left: delta }, 2000-delta*10, "linear", function () {
+                         el.trigger("scroll");
+                     });
+                 } else {
+                     el.data("scrollState", 1);
+                     window.setTimeout(function () {
+                         el.trigger("scroll");
+                     }, 5000);
+                 }
+                 break;
+             case 2: // delay before scroll back
+                 window.setTimeout(function () {
+                     el.trigger("scroll");
+                 }, 2000);
+                 break;
+             case 3: // fade out
+                 el.fadeOut("slow", function () {
+                     el.trigger("scroll");
+                 });
+                 break;
+         }
+     }).trigger("scroll");
+ }
 
 (function($){
  $.fn.airtimeWeekSchedule = function(options) {

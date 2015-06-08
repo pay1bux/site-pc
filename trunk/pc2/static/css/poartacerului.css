@@ -1,4 +1,4 @@
-﻿@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300);
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300);
 
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -681,13 +681,6 @@ img.thumb_buletin
     margin: 10px;
 }
 
-.BoxInRow .BIR_T2 #radioBox .top, #radioBox .top  {
-    background-image: url("../images/radioHead.png");
-    background-size: 100%;
-    width: 277px;
-    height: 118px;
-}
-
 .BoxInRow .BIR_T2 #player
 , #player {
     background-color: #fcfcf8;
@@ -969,7 +962,7 @@ p.intins
 }
 
 #i_home p {
-font-size: 15px;
+    font-size: 15px;
 }
 
 #i_home .i_title{
@@ -1084,7 +1077,7 @@ p.mediu {
 }
 
 #Footer .mic ul li a{
-  font-size: 11px;
+    font-size: 11px;
     float: left;
     line-height: 18px;
 }
@@ -1442,9 +1435,9 @@ ul#arhiva div.submenu2 a.selected {
 ul#arhiva div.submenu2 {
     padding-left: 40px;
     line-height: 23px;
-        /*background-image: url(../images/player-audio/submenu_arrow.png);*/
-        /*background-repeat: no-repeat;*/
-        /*background-position: 8px 6px;*/
+    /*background-image: url(../images/player-audio/submenu_arrow.png);*/
+    /*background-repeat: no-repeat;*/
+    /*background-position: 8px 6px;*/
 }
 
 
@@ -1532,7 +1525,7 @@ ul#arhiva a:hover {
 }
 .videoclip_text
 {
-   float: left;
+    float: left;
     padding: 5px;
     padding-left: 10px;
     width: 190px;
@@ -1544,10 +1537,10 @@ ul#arhiva a:hover {
     border: 1px solid #cbcbcb;
     width: 200px;
     height: 112px;
-text-align: center;
+    text-align: center;
 
 
-background-color: black;
+    background-color: black;
 ;
 
 }
@@ -2103,49 +2096,49 @@ td.calendar_c
 }
 
 .adminItem{
-width: 135px;
-height: 85px;
-background-color: white;
-float: left;
-margin-right: 40px;
-margin-bottom: 40px;
+    width: 135px;
+    height: 85px;
+    background-color: white;
+    float: left;
+    margin-right: 40px;
+    margin-bottom: 40px;
 }
 
 .adminItemTitle{
-width: 135px;
-height: 25px;
-color: white;
-font-size: 18px;
-text-align: center;
-vertical-align: middle;
-line-height: 22px;
-background-color: #bdc169;
+    width: 135px;
+    height: 25px;
+    color: white;
+    font-size: 18px;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 22px;
+    background-color: #bdc169;
 }
 
 .adminButtAdd{
-background-image: url(../images/admin/adminbuttadd.png);
-width: 40px;
-height: 42px;
-margin-top: 9px;
-float: left;
-margin-left: 15px;
+    background-image: url(../images/admin/adminbuttadd.png);
+    width: 40px;
+    height: 42px;
+    margin-top: 9px;
+    float: left;
+    margin-left: 15px;
 
 }
 
 .adminButtList{
-background-image: url(../images/admin/adminbuttlist.png);
-width: 28px;
-height: 42px;
-margin-top: 9px;
-float: left;
-margin-left: 32px;
+    background-image: url(../images/admin/adminbuttlist.png);
+    width: 28px;
+    height: 42px;
+    margin-top: 9px;
+    float: left;
+    margin-left: 32px;
 }
 
 #adminAcc
 {
-float: right;
-text-align: right;
-color: #000000;
+    float: right;
+    text-align: right;
+    color: #000000;
 }
 
 /* scroller AUDIO */
@@ -2182,7 +2175,7 @@ color: #000000;
     width: 360px;
 
     margin-bottom: 1em;
-margin-left: 68px;
+    margin-left: 68px;
     top: 29px;
 }
 
@@ -2214,7 +2207,7 @@ margin-left: 68px;
 }
 
 #contact_bar .content{
-width: 490px;
+    width: 490px;
     height: 62px;
     margin: 0 auto;
 
@@ -2271,7 +2264,7 @@ width: 490px;
 /* ADMIN */
 
 table.centerHead th {
-text-align: center;
+    text-align: center;
 }
 
 /* DESPRE */
@@ -2329,7 +2322,7 @@ text-align: center;
 
 .comitet {
     float: left;
-width: 98px;
+    width: 98px;
 }
 
 .comitet p {
@@ -2377,4 +2370,91 @@ width: 98px;
     border-radius: 10px;
     padding: 14px 40px;
     vertical-align: middle;
+}
+
+#header-campanie {
+    width: 935px;
+    height: 470px;
+    border: 2px solid #FFF;
+    margin-top: 0px;
+    background-attachment: scroll;
+    background-clip: border-box;
+    background-color: #000;
+    /*background-image:url(../img/gallery.jpg);*/
+    background-origin: padding-box;
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: auto;
+    -moz-box-shadow: 0 0 10px #999;
+    -webkit-box-shadow: 0 0 10px #999;
+    box-shadow: 0 0 10px #999;
+    display: block;
+}
+
+#video-campanie {
+    margin-left: 436px;
+    margin-top: 102px;
+}
+
+.obiectiv_campanie {
+    margin-top: 15px;
+    width: 937px;
+    min-height: 240px;
+    background-color: white;
+}
+
+.obiectiv_campanie .head {
+    padding: 10px;
+    background-color: #acb139;
+    width: 917px;
+    font-size: 20px;
+    color: white;
+}
+
+.obiectiv_campanie .subtitlu {
+    color: #933818;
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.counter_donatii {
+    width: 550px;
+    display: block;
+    height: 20px;
+    background-color: #e2e2e2;
+    stroke: 1px solid gray;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    border-radius: 50px;
+    text-align: right;
+
+}
+
+.counter_donat {
+    /*width: 150px;*/
+    padding-top: 4px;
+    color: white;
+    display: block;
+    height: 16px;
+    background-color: #b9c44f;
+    stroke: 1px solid gray;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    border-radius: 50px;
+    text-align: center;
+}
+
+.counter_donatii  {
+    text-align: right;
+}
+
+.text_campanie {
+    margin-top: 20px;
+}
+
+.text_campanie p {
+    color: #787878;
+    line-height: 120%;
+    font-size: 16px;
+    margin-top: 10px;
 }
