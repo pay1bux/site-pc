@@ -15,14 +15,28 @@
     <script type="text/javascript">
         //<![CDATA[
         $(document).ready(function(){
+            var stream = {
+                    title: "Radio Poarta Cerului",
+                    mp3: "http://89.238.218.26:8000/airtime_128"
+                },
+                ready = false;
             $("#jquery_jplayer_1").jPlayer({
                 ready: function (event) {
-                    $(this).jPlayer("setMedia", {
-                        mp3:"http://89.238.218.26:8000/airtime_128"
-                    }).jPlayer("play");;
+                    ready = true;
+                    $(this).jPlayer("setMedia", stream).jPlayer("play");
+                },
+                pause: function() {
+                    $(this).jPlayer("clearMedia");
+                },
+                error: function(event) {
+                    if(ready && event.jPlayer.error.type === $.jPlayer.error.URL_NOT_SET) {
+                        // Setup the media stream again and play it.
+                        $(this).jPlayer("setMedia", stream).jPlayer("play");
+                    }
                 },
                 swfPath: "static/js",
                 supplied: "mp3",
+                preload: "none",
                 wmode: "window",
                 smoothPlayBar: true,
                 keyEnabled: true
