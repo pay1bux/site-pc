@@ -91,14 +91,14 @@
 	  font-size:12px;
       }
 	  #onAirToday table tbody tr {
-		height: 30px;
+		height: 40px;
 		}
 		#onAirToday table tbody tr td {
 		  border-bottom: 1px dotted #d9d9d9;
-		  height: 30px;
+		  height: 40px;
           padding-left: 7px;
           white-space: nowrap;
-          font-family: 'Gotham-Book';
+          font-family: 'Gotham-Book', sans-serif;
           color: #BA9F86;
           vertical-align: middle;
 		  }

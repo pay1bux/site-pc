@@ -162,15 +162,11 @@
        options.sourceDomain = addEndingBackslash(options.sourceDomain);
 
        return this.each(function() {
-           var obj = $(this);
-
            var sd = null;
            getServerData();
 
-           //refresh the UI to update the elapsed/remaining time
-           setInterval(updateWidget, 1000);
-
-           function updateWidget(){
+           var d = $.Deferred();
+           var updateWidget = function () {
                if (sd == null){
                    return;
                }
@@ -178,25 +174,25 @@
                var currentShow = sd.getCurrentShow();
                var nextShows = sd.getNextShows();
 
-               var showStatus = options.text.offline;
                var currentShowName = "";
-               var timeElapsed = "";
-               var timeRemaining = "";
-
                var nextShowName = "";
-               var nextShowRange = "";
+               var nextShowStartTime = 0;
+
+               var nextTrackName = sd.nextTrack.getTitle();
+               var nextTrackStartTime = convertDateToPosixTime(sd.nextTrack.trackData.starts, 3);
+
+               var currentTrackName = sd.currentTrack.getTitle();
+               if (currentTrackName.indexOf(" - ", currentTrackName.length - 3) !== -1) {
+                   currentTrackName = currentTrackName.substring(0, currentTrackName.length-3);
+               }
 
                if (currentShow.length > 0){
-                   showStatus = options.text.onAirNow;
                    currentShowName = currentShow[0].getName();
-
-                   timeElapsed = sd.getShowTimeElapsed(currentShow[0]);
-                   timeRemaining = sd.getShowTimeRemaining(currentShow[0]);
                }
 
                if (nextShows.length > 0){
                    nextShowName = nextShows[0].getName();
-                   nextShowRange = nextShows[0].getRange();
+                   nextShowStartTime = convertDateToPosixTime(nextShows[0].getStartTimestamp(), 0);
                }
 
                var statusCurrentShow = $('#status-current-show');
@@ -205,16 +201,28 @@
                }
 
                var statusCurrentTrack = $('#status-current-track');
-               if (statusCurrentTrack.text()!=sd.currentTrack.getTitle()) {
-                   statusCurrentTrack.html(sd.currentTrack.getTitle());
+               if (statusCurrentTrack.text()!=currentTrackName) {
+                   statusCurrentTrack.html(currentTrackName);
                }
 
                var statusNextTrack = $('#status-next-track');
-               if (statusNextTrack.text()!=sd.nextTrack.getTitle()) {
-                   statusNextTrack.html(sd.nextTrack.getTitle());
+               if(nextTrackStartTime==nextShowStartTime) {
+                   statusNextTrack.html(nextShowName);
+               } else if (statusNextTrack.text()!=nextTrackName) {
+                   statusNextTrack.html(nextTrackName);
                }
 
-           }
+               d.resolve();
+           };
+
+           $.when(d).done(function () {
+               scrollText($('#status-current-show'), $("#liveTrackHolder"), $('#currentShowFadeLeft'), $('#currentShowFadeRight'));
+               scrollText($('#status-current-track'), $("#liveTrackHolder"), $('#currentTrackFadeLeft'), $('#currentTrackFadeRight'));
+               scrollText($('#status-next-track'), $("#nextTrackHolder"), $('#nextTrackFadeLeft'), $('#nextTrackFadeRight'));
+           });
+
+           //refresh the UI to update the elapsed/remaining time
+           setInterval(updateWidget, 1000);
 
            function processData(data){
                checkWidgetVersion(data);
@@ -238,7 +246,7 @@
     };
    })(jQuery);
 
- function scrollText(txt, parent){
+ function scrollText(txt, parent, fadeLeft, fadeRight){
      txt.bind('scroll', function () {
          var el = $(this);
          // Scroll state machine
@@ -248,6 +256,10 @@
              case 0: // initial wait
                  el.css({ left: 0 });
                  el.show();
+                 if (parent.width() - el.width() < 0) {
+                     fadeLeft.hide();
+                     fadeRight.show();
+                 }
                  window.setTimeout(function () {
                      el.trigger("scroll");
                  }, 5000);
@@ -255,6 +267,8 @@
              case 1: // start scroll
                  var delta = parent.width() - el.width();
                  if (delta < 0) {
+                     fadeLeft.show();
+                     fadeRight.hide();
                      el.animate({ left: delta }, 2000-delta*10, "linear", function () {
                          el.trigger("scroll");
                      });
@@ -262,7 +276,7 @@
                      el.data("scrollState", 1);
                      window.setTimeout(function () {
                          el.trigger("scroll");
-                     }, 5000);
+                     }, 10000);
                  }
                  break;
              case 2: // delay before scroll back
@@ -411,7 +425,7 @@ function ScheduleData(data){
     this.currentTrack = new AudioTrack(data.current);
     this.nextTrack = new AudioTrack(data.next);
 
-    this.schedulePosixTime = convertDateToPosixTime(data.schedulerTime);
+    this.schedulePosixTime = convertDateToPosixTime(data.schedulerTime, 0);
     //this.schedulePosixTime += parseInt(data.timezoneOffset, 10)*1000;
     var date = new Date();
     this.localRemoteTimeOffset = date.getTime() - this.schedulePosixTime;
@@ -434,14 +448,14 @@ ScheduleData.prototype.getNextShows = function() {
 ScheduleData.prototype.getShowTimeElapsed = function(show) {
     this.secondsTimer();
 
-    var showStart = convertDateToPosixTime(show.getStartTimestamp());
+    var showStart = convertDateToPosixTime(show.getStartTimestamp(), 0);
     return convertToHHMMSS(this.estimatedSchedulePosixTime - showStart);
 };
 
 ScheduleData.prototype.getShowTimeRemaining = function(show) {
     this.secondsTimer();
 
-    var showEnd = convertDateToPosixTime(show.getEndTimestamp());
+    var showEnd = convertDateToPosixTime(show.getEndTimestamp(), 0);
     return convertToHHMMSS(showEnd - this.estimatedSchedulePosixTime);
 };
 /* ScheduleData class END */
@@ -466,6 +480,9 @@ Show.prototype.getStartTimestamp = function(){
 Show.prototype.getEndTimestamp = function(){
     return this.showData.end_timestamp;
 }
+ Show.prototype.getZero = function(){
+     return this.showData[0];
+ }
 /* Show class END */
 
 /* AudioTrack class BEGINS */
@@ -515,7 +532,7 @@ function convertToHHMMSS(timeInMS){
 
 /* Takes in a string of format similar to 2011-02-07 02:59:57,
  * and converts this to epoch/posix time. */
-function convertDateToPosixTime(s){
+function convertDateToPosixTime(s, hourGain){
     var datetime = s.split(" ");
 
     var date = datetime[0].split("-");
@@ -524,7 +541,7 @@ function convertDateToPosixTime(s){
 	var year = date[0];
 	var month = date[1];
 	var day = date[2];
-	var hour = time[0];
+	var hour = parseInt(time[0])+ hourGain;
 	var minute = time[1];
     var sec = 0;
     var msec = 0;

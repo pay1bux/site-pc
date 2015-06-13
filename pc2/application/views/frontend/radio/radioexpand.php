@@ -17,7 +17,7 @@
         $(document).ready(function(){
             var stream = {
                     title: "Radio Poarta Cerului",
-                    mp3: "http://89.238.218.26:8000/airtime_128"
+                    mp3: "http://88.198.54.194:8089/pc_128"
                 },
                 ready = false;
             $("#jquery_jplayer_1").jPlayer({
@@ -47,19 +47,15 @@
     <script>
         $(document).ready(function() {
             $("#radioPlayer").airtimeLiveTrackInfo({
-                sourceDomain: "http://89.238.218.26:6010/",
+                sourceDomain: "http://88.198.54.194:6010/",
                 text: {onAirNow:"", offline:"Offline", current:"Acum", next:"Urmeaza"},
                 updatePeriod: 20 //seconds
             });
             $("#onAirToday").airtimeShowSchedule({
-                sourceDomain: "http://89.238.218.26:6010/",
+                sourceDomain: "http://88.198.54.194:6010/",
                 updatePeriod: 20, //seconds
                 showLimit: 10
             });
-
-            //scrollText($('#status-current-show'), $("#liveTrackHolder"));
-            scrollText($('#status-current-track'), $("#liveTrackHolder"));
-            scrollText($('#status-next-track'), $("#nextTrackHolder"));
 
             $('#dialog').jqm();
         });
@@ -80,26 +76,38 @@
     </div>
 
     <div class="radioInfo">
+        <div style="height: 5%"></div>
         <div class="radioTitle">
             <br/>
             Radio Poarta Cerului
         </div>
-        <div style="height: 15%"></div>
+        <div style="height: 10%"></div>
         <div id="radioPlayer" class="radioPlayer">
             <div id="liveTrackHolder" class="liveTrackHolder">
                 <table>
-                    <tr><td><div id='status-current-show' class='currentShowName'><br></div></td></tr>
-                    <tr><td><div id='status-current-track' class='currentTrackName'><br></div></td></tr>
+                    <tr><td style="position: relative">
+                            <div id='status-current-show' class='currentShowName'><br></div>
+                            <div id='currentShowFadeLeft' class="leftFadeOverlay" style="display: none"></div>
+                            <div id='currentShowFadeRight' class="rightFadeOverlay" style="display: none"></div>
+                        </td></tr>
+                    <tr><td style="position: relative">
+                            <div id='status-current-track' class='currentTrackName'><br></div>
+                            <div id='currentTrackFadeLeft' class="leftFadeOverlay" style="display: none"></div>
+                            <div id='currentTrackFadeRight' class="rightFadeOverlay" style="display: none"></div>
+                        </td></tr>
                 </table>
                 <div class='currentInfoLabel'>RULEAZA ACUM</div>
             </div>
             <div class="radioSeparator">
-
             </div>
             <div id="nextTrackHolder" class="nextTrackHolder">
                 <table>
-                    <tr><td><div style='padding: 3px'><br/></div></td></tr>
-                    <tr><td><div id='status-next-track' class='nextTrackName'><br/></div></td></tr>
+                    <tr><td><div style='padding: 8px'><br/></div></td></tr>
+                    <tr><td style="position: relative">
+                            <div id='status-next-track' class='nextTrackName'><br/></div>
+                            <div id='nextTrackFadeLeft' class="leftFadeOverlay" style="display: none"></div>
+                            <div id='nextTrackFadeRight' class="rightFadeOverlay" style="display: none"></div>
+                        </td></tr>
                 </table>
                 <div class='nextInfoLabel'>URMEAZA</div>
             </div>
